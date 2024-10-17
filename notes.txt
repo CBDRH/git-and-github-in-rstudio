@@ -1,0 +1,23 @@
+Data ingress
+download.file()
+openxlsx::read.xlsx(
+
+
+Data cleaning
+names()
+make.unique()
+factor()
+
+Data manipulation
+filter()
+select()
+rename()
+mutate()
+arrange()
+slice()
+case_when()
+pivot_longer()
+
+Saving data
+save()
+write.csv()

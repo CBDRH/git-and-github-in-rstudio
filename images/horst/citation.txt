@@ -1,0 +1,25 @@
+[Arthur Welle](https://github.com/arthurwelle)
+
+piping-is-like-baking.mp4
+
+
+
+[Selina Cheng R for Ecology](https://www.rforecology.com/post/how-to-use-pipes/)
+Pipes.png
+
+
+Illustrations from the [Openscapes](https://www.openscapes.org/) blog [GitHub for supporting, contributing, and failing safely](https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/) by Allison Horst and Julia Lowndes.
+
+git-commit.png
+
+
+
+Illustrations from the [Openscapes](https://www.openscapes.org/) blog [Tidy Data for reproducibility, efficiency, and collaboration](https://www.openscapes.org/blog/2020/10/12/tidy-data/) by Julia Lowndes and Allison Horst"
+
+tidy-data-*.jpg
+
+
+
+[Artwork by @allison_horst](https://twitter.com/allison_horst)
+
+Everything else

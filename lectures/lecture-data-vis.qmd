@@ -1,0 +1,16 @@
+---
+title: "Nearly there"
+author: "John Doe"
+format: revealjs
+footer: '<a href="/lectures/lectures.qmd">Back</a>'
+---
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Going to sleep
+
+- Get in bed
+- Count sheep

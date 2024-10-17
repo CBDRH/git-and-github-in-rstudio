@@ -1,0 +1,61 @@
+/*-- scss:defaults --*/
+
+$presentation-h2-font-size: 1.5em;
+$presentation-h3-font-size: 1em;
+
+/*-- scss:rules --*/
+
+.reveal .slide blockquote {
+  color: lighten($link-color, 20%);
+  border-left: 5px solid $link-color;
+  padding-left: 1.5em;
+}
+
+.white-slide {
+  background-color: "aquamarine";
+  color: $light-bg-text-color;
+}
+
+.figLab {
+  font-size: 0.5em;
+  color: grey !important;
+}
+
+.figLabBR {
+  font-size: 0.5em;
+  color: grey !important;
+  position: absolute;
+  bottom: 0;  /* Align to the bottom */
+  right: 0; 
+}
+
+
+.clock {
+  font-size: 0.7em;
+  color: #b1cfc3 !important;
+  margin-bottom: 1.2em;
+}
+
+.list-container {
+  display: flex;
+  align-items: center; /* Vertically center the list items */
+  width: 100%;
+}
+
+.clickable-list {
+  list-style-type: none; /* Remove bullet points */
+}
+
+.clickable-list li a {
+  display: block;
+  width: 80%;
+  min-height: 100px;
+  padding-top: 15px;
+  background-color: #F5F5F5;
+  text-decoration: none; /* Remove underline */
+  border-radius: 15px;
+}
+
+.clickable-list li a:hover {
+  background-color: #E7E7E7; /* Color change on hover */
+}

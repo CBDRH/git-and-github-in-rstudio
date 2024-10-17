@@ -1,0 +1,117 @@
+---
+title: "Version control with git and GitHub"
+format: 
+  revealjs:
+    theme: [night, custom.scss]
+    title-slide-attributes:
+      data-background-image: ../images/github-logo.png
+      data-background-size: contain
+      data-background-opacity: "0.2"
+footer: '<a href="/lectures/lectures.qmd">Back</a>'
+slide-number: c/t
+---
+
+## The challenge
+
+As data analysts, we produce a lot of files
+
+* code 
+* figures 
+* tables 
+* reports 
+
+Organising these files is an important, albeit often unglamorous, part of our job.  
+
+
+## The Challenge
+
+**Managing versions** What do you do with old code? 
+
+**Ensuring reproducibility** Can others reproduce your results? What about your future self? 
+
+**Facilitating collaboration** Can other team members easily contribute?
+
+
+## The old school solution 🛵 {.smaller}
+
+The old school solution combines many practical strategies:
+
+::: {.incremental}
+* Using file naming conventions to track different file versions 
+
+    * analysis-16jun2024.do 
+    * analysis-19jun2024-mh.do 
+    * analysis-final.do 
+    * analysis-final-final.do
+
+* Note changes directly in code comments or separate documentation
+
+* Use shared folders, google drive etc 
+
+* Share code and code snippets over email, slack etc
+
+:::
+
+
+## The old school solution 🛵
+
+> This is ok(ish) for one person working on a small project. But if the project is **large**, involves **many people** or goes on for a **long time** this approach very quickly breaks down 
+
+## The new school solution 🚀
+
+The new school solution is to use dedicated **version control software**. 
+
+There are a few options out there but by far the most popular choice is the combination of **git** + **GitHub**
+
+## {background-color=white}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+<img src="../images/git-logo.png" style="width: 100%">
+
+::: {.figLab}
+[Via git-scm.com](https://git-scm.com/)
+:::
+
+<br>
+
+Git is software for tracking different versions of code files you are working on **locally**. 
+:::
+
+
+
+::: {.column width="50%"}
+
+<img src="../images/github-logo.png" style="width: 60%">
+
+::: {.figLab}
+[Via logos-world.net](https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo-700x394.png)
+:::
+
+<br>
+
+GitHub is a **cloud-based** platform for sharing and collaborating on projects managed with Git 
+:::
+
+::::
+
+
+## How does it work?
+
+### Committing, branching and merging with Git
+
+![](../images/commit.gif)
+
+## How does it work?
+
+### Committing, branching and merging with Git
+
+![](../images/commit-gif-end.png)
+
+
+## How does it work?
+
+### Sharing versions with GitHub
+
+![](../images/commit-gif-end.png)
