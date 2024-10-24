@@ -1,0 +1,63 @@
+---
+title: "Data cleaning"
+format: 
+  html:
+    css: ../lectures/custom.scss
+---
+
+# Aims
+
+In this exercise you will use `dplyr` and other tools to read-in and clean the self-assessed health data from the National Health Survey. The raw data is the `.xlsx` file downloaded from the ABS data. The final output will be a `.csv` file in tidy data format. Essentially, we will use code to go...
+
+
+:::: {.column-page}
+
+::: {layout-ncol=2}
+
+**From this messy excel sheet**
+
+**To this tidy dataframe!** 
+
+![](../images/figure1-raw-data-screenshot.png)
+
+```{r}
+#| echo: false
+load("../clean-data/vis1.Rda")
+DT::datatable(df1Clean,
+              options = list(pageLength = 7, 
+                             searching = FALSE,
+                             lengthChange = FALSE))
+```
+
+:::
+
+:::: 
+
+::: {.callout-tip}
+
+## Tidy data 
+
+Remember, in a tidy dataset:
+
+1. Each variable is a column; each column is a variable.
+1. Each observation is a row; each row is an observation.
+1. Each value is a cell; each cell is a single value.
+
+If you examine the output above you will see this is true for the clean data: there are three columns, and each column is a variable: status, state, and percent. Each row is an observation, telling us the per cent for every state and status combination. Finally, each cell is a single value---there are no merged cells. 
+
+None of these rules of tidy datasets hold for the original `.xlsx` file!
+
+::: {.figLab}
+[R for Data Science (2nd Edition)](https://r4ds.hadley.nz/data-tidy.html)
+:::
+
+:::
+
+
+# Step 1: Read in the data
+
+
+
+
+
+

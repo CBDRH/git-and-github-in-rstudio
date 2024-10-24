@@ -2,6 +2,13 @@
 title: "Lectures"
 ---
 
+```{=html}
+<iframe src="lecture-data-cleaning.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+
+<a href='lecture-data-cleaning.html' target="_blank">View slides in full screen</a>
+
+
 <ul class="clickable-list">
 
 <li>

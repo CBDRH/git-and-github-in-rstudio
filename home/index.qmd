@@ -4,6 +4,8 @@ title: "Welcome to the course"
 
 # Welcome 
 
+Welcome to Reproducible Data Visualisation with R!
+
 # Housekeeping
 
 # Prerequisites

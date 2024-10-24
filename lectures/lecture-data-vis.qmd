@@ -1,16 +1,977 @@
 ---
-title: "Nearly there"
-author: "John Doe"
-format: revealjs
+title: "Visualising data with `ggplot2`"
+author: "Mark Hanly"
+format: 
+  revealjs:
+    theme: [night, custom.scss]
+    highlight-style: monokai
 footer: '<a href="/lectures/lectures.qmd">Back</a>'
 ---
 
-## Getting up
+## Something motivational
 
-- Turn off alarm
-- Get out of bed
 
-## Going to sleep
+<!-- ##  {background-iframe="https://www.data-to-viz.com/"} -->
 
-- Get in bed
-- Count sheep
+## 
+
+![](../images/from-data-to-vis.png)
+
+##
+
+::: {.center-xy}
+![](../images/horst/ggplot2-data-masterpiece.png)
+:::
+
+::: {.figLab}
+[Artwork by @allison_horst](https://twitter.com/allison_horst)
+:::
+
+## `ggplot2`
+
+:::: {.columns}
+
+::: {.column .incremental width=60%}
+
+* A grammar of graphics
+
+* Consistent syntax 
+
+* Flexible
+
+* Customisable
+
+* [ggplot2.tidyverse.org](https://ggplot2.tidyverse.org/)
+
+* [exts.ggplot2.tidyverse.org/gallery](https://exts.ggplot2.tidyverse.org/gallery/)
+
+
+:::
+
+
+::: {.column width=40%}
+![](../images/ggplot2.png)
+:::
+
+::::
+
+
+## Components of a `ggplot` 
+
+::: {.incremental}
+
+* Data (`data = `)
+
+* Coordinate system (`x` and `y`)
+ 
+* Aesthetics (`aes()`)
+
+* Geometries (`geom_*`)
+
+:::
+
+## `ggplot2` components: Data
+
+```{r}
+#| echo: true
+#| output-location: column
+
+# Load libraries
+library(ggplot2)
+library(palmerpenguins)
+
+# Call ggplot
+ggplot(
+  data = penguins
+)
+```
+
+## `ggplot2` components: Coordinates
+
+```{r}
+#| echo: true
+#| output-location: column
+
+# Load libraries
+library(ggplot2)
+library(palmerpenguins)
+
+# Call ggplot
+ggplot(
+  data = penguins,
+  aes(x = body_mass_g)
+)
+```
+
+## `ggplot2` components: Geom
+
+```{r}
+#| echo: true
+#| output-location: column
+
+# Load libraries
+library(ggplot2)
+library(palmerpenguins)
+
+# Call ggplot
+ggplot(
+  data = penguins,
+  aes(x = body_mass_g)
+) + 
+  geom_histogram()
+```
+
+## `ggplot2` components: Aesthetics
+
+```{r}
+#| echo: true
+#| output-location: column
+
+# Load libraries
+library(ggplot2)
+library(palmerpenguins)
+
+# Call ggplot
+ggplot(
+  data = penguins,
+  aes(x = body_mass_g)
+) + 
+  geom_histogram(
+    color = 'navy',
+    fill = 'lightblue'
+  )
+```
+
+## `ggplot2` A note on style {.smaller}
+
+
+:::: {.columns}
+
+::: {.column}
+```{r}
+#| echo: true
+#| eval: false
+
+# Load libraries
+library(ggplot2)
+library(palmerpenguins)
+
+# Call ggplot
+ggplot(
+  data = penguins,
+  aes(x = body_mass_g)
+) + 
+  geom_histogram(
+    color = 'navy',
+    fill = 'lightblue'
+  )
+```
+:::
+
+::: {.column .incremental}
+
+* `library()` calls on top
+* Plenty of `# Comments`
+* Spacing `x = body_mass_g`
+* Indentation
+* `data = ` and (`aes()`) on separate lines
+* Geoms on new lines
+* `color` and `fill` on new lines
+
+:::
+
+::::
+
+. . . 
+
+<br>
+
+```{r}
+#| echo: true
+#| eval: false
+
+ggplot(data=penguins,aes(x=body_mass_g))+geom_histogram(color='navy',fill='lightblue')
+```
+
+Does the same but harder to read and debug!
+
+
+
+## 
+
+::: {.callout-tip icon=false}
+
+## {{< fa rocket >}} Mini Exercise
+
+::: {.clock}
+
+{{< fa clock >}} 5 minutes
+
+:::
+
+#### Practice with ggplot2!
+
+Modify the code on the left to produce the figure on the right!
+<br>
+
+:::: {.columns}
+
+::: {.column}
+
+```{r}
+#| echo: true
+#| eval: false
+
+# Load libraries
+library(ggplot2)
+library(palmerpenguins)
+
+# Call ggplot
+ggplot(
+  data = penguins,
+  aes(x = body_mass_g)
+) + 
+  geom_histogram(
+    color = 'navy',
+    fill = 'lightblue'
+  )
+```
+
+:::
+
+::: {.column}
+```{r}
+#| echo: false
+
+# Call ggplot
+ggplot(
+  data = penguins,
+  aes(x = flipper_length_mm)) + 
+  geom_density(
+    color = 'black',
+    fill = 'white',
+    linetype = 'dashed',
+    linewidth = 3
+  )
+```
+:::
+
+::::
+
+::: {style="font-size:0.7em;"}
+
+**Hints**
+
+* This is a _density_ plot
+* Enter `?geom_density()` at the console to open the R Documentation. Scroll down to the section on **Aesthetics** to read about other modifiable aesthetics.
+
+:::
+
+:::
+
+
+# Adding aesthetic mappings
+
+## Two numeric
+
+### Scatterplot
+
+```{r}
+#| echo: true
+#| output-location: column
+
+# Plot
+ggplot(
+  data = penguins,
+  aes(x = flipper_length_mm, 
+      y = bill_length_mm)
+) + 
+  geom_point()
+```
+
+
+## One numeric, One categorical
+
+```{r}
+#| echo: true
+#| output-location: column
+
+# Plot
+ggplot(
+  data = penguins,
+  aes(x = island, 
+      y = body_mass_g)
+) + 
+  geom_boxplot()
+```
+
+
+
+## Aesthetic mappings
+
+Map variables to visual elements
+
+::: {.incremental}
+
+* Colour
+* Fill
+* Shape
+* Size
+* Line type
+
+:::
+
+## Map flipper length to x position and bill length to y position
+
+```{r}
+#| echo: true
+#| output-location: column
+
+# Scatterplot
+ggplot(
+  data = penguins,
+  aes(x = flipper_length_mm, 
+      y = bill_length_mm)
+) + 
+  geom_point()
+```
+
+
+## Map flipper length to colour
+
+```{r}
+#| echo: true
+#| output-location: column
+
+# Scatterplot
+ggplot(
+  data = penguins,
+  aes(
+    x = flipper_length_mm, 
+    y = bill_length_mm,
+    color = flipper_length_mm)
+) + 
+  geom_point()
+```
+
+## Map flipper length to size
+
+```{r}
+#| echo: true
+#| output-location: column
+
+# Scatterplot
+ggplot(
+  data = penguins,
+  aes(
+    x = flipper_length_mm, 
+    y = bill_length_mm,
+    size = flipper_length_mm)
+) + 
+  geom_point()
+```
+
+## Map species to colour
+
+```{r}
+#| echo: true
+#| output-location: column
+
+# Scatterplot
+ggplot(
+  data = penguins,
+  aes(
+    x = flipper_length_mm, 
+    y = bill_length_mm,
+    color = species)
+) + 
+  geom_point()
+```
+
+
+## Map species to colour and shape
+
+```{r}
+#| echo: true
+#| output-location: column
+
+# Scatterplot
+ggplot(
+  data = penguins,
+  aes(
+    x = flipper_length_mm, 
+    y = bill_length_mm,
+    color = species,
+    shape = species)
+) + 
+  geom_point()
+```
+
+
+## 
+
+::: {.callout-tip icon=false}
+
+## {{< fa rocket >}} Mini Exercise
+
+::: {.clock}
+
+{{< fa clock >}} 5 minutes
+
+:::
+
+#### Practice with ggplot2!
+
+Modify the code on the left to produce the figure on the right!
+<br>
+
+:::: {.columns}
+
+::: {.column}
+
+```{r}
+#| echo: true
+#| eval: false
+
+# Plot
+ggplot(
+  data = penguins,
+  aes(x = island, 
+      y = body_mass_g)
+) + 
+  geom_boxplot()
+```
+
+
+:::
+
+::: {.column}
+
+```{r}
+#| echo: false
+
+# Plot
+ggplot(
+  data = penguins,
+  aes(x = species, 
+      y = body_mass_g,
+      fill = species)
+) + 
+  geom_boxplot(
+    color = "grey30",
+    alpha = 0.2)
+```
+
+:::
+
+::::
+
+::: {style="font-size:0.7em;"}
+
+**Hints**
+
+* 
+
+:::
+
+:::
+
+
+# Building more complex plots
+
+## Data prep
+
+```{r}
+#| echo: true
+#| output-location: fragment
+  
+library(dplyr)
+
+penguins |> 
+  group_by(year, species) |> 
+  summarise(count = n()) 
+```
+
+## Plot as a scatterplot 
+
+```{r}
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "1-9|1-3|4"
+
+penguins |> 
+  group_by(year, species) |> 
+  summarise(count = n()) |> 
+  ggplot(
+    aes(x = year, 
+        y = count)
+  ) +
+  geom_point()
+```
+
+## Adding another layer 
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-9|9"  
+penguins |> 
+  group_by(year, species) |> 
+  summarise(count = n()) |> 
+  ggplot(
+    aes(x = year, 
+        y = count)
+  ) +
+  geom_point() + 
+  geom_line()
+```
+
+## Adding `group` 
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-20|7"  
+penguins |> 
+  group_by(year, species) |> 
+  summarise(count = n()) |> 
+  ggplot(
+    aes(x = year, 
+        y = count,
+        group = species)
+  ) +
+  geom_point() + 
+  geom_line()
+```
+
+## Layering geoms
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-20|8,12"  
+ 
+penguins |> 
+  group_by(year, species) |> 
+  summarise(count = n()) |> 
+  ggplot(
+    aes(x = year, 
+        y = count,
+        group = species,
+        label = count)
+  ) +
+  geom_point() + 
+  geom_line() + 
+  geom_text()
+```
+
+## Layering geoms
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-20|12"  
+ 
+penguins |> 
+  group_by(year, species) |> 
+  summarise(count = n()) |> 
+  ggplot(
+    aes(x = year, 
+        y = count,
+        group = species,
+        label = count)
+  ) +
+  geom_point() + 
+  geom_line() + 
+  geom_text(nudge_y = 2)
+```
+
+
+## Global mapping Vs local mapping
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-20|9"  
+ 
+penguins |> 
+  group_by(year, species) |> 
+  summarise(count = n()) |> 
+  ggplot(
+    aes(x = year, 
+        y = count,
+        group = species,
+        label = count,
+        color = species)
+  ) +
+  geom_point() + 
+  geom_line() + 
+  geom_text(nudge_y = 2)
+```
+
+
+## Global mapping Vs local mapping
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-20|11-13"  
+ 
+penguins |> 
+  group_by(year, species) |> 
+  summarise(count = n()) |> 
+  ggplot(
+    aes(x = year, 
+        y = count,
+        group = species,
+        label = count)
+  ) +
+  geom_point() + 
+  geom_line(
+    aes(color = species)
+  ) + 
+  geom_text(nudge_y = 2)
+
+```
+
+## Geom-specific properties
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-20|10-12,16-18"  
+ 
+penguins |> 
+  group_by(year, species) |> 
+  summarise(count = n()) |> 
+  ggplot(
+    aes(x = year, 
+        y = count,
+        group = species,
+        label = count)
+  ) +
+  geom_point(
+    size = 3
+  ) + 
+  geom_line(
+    aes(color = species)
+  ) + 
+  geom_text(
+    nudge_y = 2,
+    color = "grey40")
+
+```
+
+
+## Scales
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-20|1"  
+ 
+p <- penguins |> 
+  group_by(year, species) |> 
+  summarise(count = n()) |> 
+  ggplot(
+    aes(x = year, 
+        y = count,
+        group = species,
+        label = count)
+  ) +
+  geom_point(
+    size = 3
+  ) + 
+  geom_line(
+    aes(color = species)
+  ) + 
+  geom_text(
+    nudge_y = 2,
+    color = "grey40")
+
+p
+
+```
+
+## Scales
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-20|1"  
+p
+
+```
+
+## Scales: x-axis
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-20|2-4,3,4"  
+#| 
+p + 
+  scale_x_continuous(
+    "Year",
+    breaks = 2007:2009)
+
+```
+
+. . . 
+
+<br>
+
+Try entering `2007:2009` at the console!
+
+
+## Scales: y-axis
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-20|5-7,6,7"  
+ 
+p + 
+  scale_x_continuous(
+    "Year",
+    breaks = 2007:2009)  + 
+  scale_y_continuous(
+    "Count",
+    limits = c(0,75))
+
+```
+
+
+## Scales: y-axis
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-20|8"  
+ 
+p + 
+  scale_x_continuous(
+    "Year",
+    breaks = 2007:2009)  + 
+  scale_y_continuous(
+    "Count",
+    limits = c(0,75),
+    breaks = seq(0, 75, 25))
+
+```
+
+. . . 
+
+<br>
+
+Try entering `seq(0, 75, 25)` at the console!
+
+
+## Axis scales {.smaller}
+
+We chose `scale_x_continuous()` and `scale_y_continuous()` because these are the natural scales for **year** and **count** which are numeric variables.
+
+<br>
+
+There are many other axis scales available for plotting different types of variables.
+
+::: {.incremental}
+
+* `scale_*_continuous()`
+* `scale_*discrete()`
+* `scale_*_binned()`
+* `scale_*_log10()`
+* `scale_*_date()`
+* `scale_*_datetime()`
+
+:::
+
+## Scales: Colour
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-20|9-14,10,11-13"  
+ 
+p + 
+  scale_x_continuous(
+    "Year",
+    breaks = 2007:2009)  + 
+  scale_y_continuous(
+    "Count",
+    limits = c(0,75),
+    breaks = seq(0, 75, 25)) + 
+  scale_color_manual(
+    NULL,
+    values = c('red',
+               'orange',
+               'blue')
+  )
+
+```
+
+
+## Scales: Colour
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-20|14-18"  
+ 
+p + 
+  scale_x_continuous(
+    "Year",
+    breaks = 2007:2009)  + 
+  scale_y_continuous(
+    "Count",
+    limits = c(0,75),
+    breaks = seq(0, 75, 25)) + 
+  scale_color_manual(
+    NULL,
+    values = c('red',
+               'orange',
+               'blue'),
+    label = c(
+      'Gentoo' = 'Fast Swimmer',
+      'Adelie' = 'Ice Dweller',
+      'Chinstrap' = 'Rock Climber')
+    )
+
+```
+
+
+## Scales: Colour
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-20|9-11"  
+ 
+p + 
+  scale_x_continuous(
+    "Year",
+    breaks = 2007:2009)  + 
+  scale_y_continuous(
+    "Count",
+    limits = c(0,75),
+    breaks = seq(0, 75, 25)) + 
+  scale_color_brewer(
+    type = "qual",
+    palette = "set1")
+```
+
+## Scales: Colour
+
+```{r}
+#| echo: true
+#| fig-height: 6
+#| fig-width: 10
+ 
+library(RColorBrewer)
+display.brewer.all()
+```
+
+## 
+
+::::: {.callout-tip icon=false}
+
+## {{< fa rocket >}} Mini Exercise
+
+::: {.clock}
+
+{{< fa clock >}} 20 minutes
+
+:::
+
+#### Practice with ggplot2!
+
+
+:::: {.columns}
+
+::: {.column}
+
+::: {.panel-tabset}
+
+### Goal
+
+Can you use `ggplot2` and the `penguins` data to produce the figure on the right? 
+
+### Hints
+
+::: {.smaller}
+
+* Start by identifying the `x`, `y` and `fill` aesthetics that will go in to `aes()`.
+* This plot combines `geom_jitter()` and `geom_boxplot()`
+* Setting the `alpha =` argument makes the boxplots transparent
+* Use `scale_fill_manual()` to control the fill colors for the three different species
+
+:::
+
+### {{< fa skull-crossbones >}} Seriously, help
+
+```{r}
+#| echo: true
+#| eval: false
+
+# Fill in the blanks!
+ggplot(
+  data = ,
+  aes(x = ,
+      y = ,
+      fill = )) +
+  geom_jitter(shape = ) +
+  geom_boxplot(
+    alpha = ) + 
+  scale_y_continuous(
+    " ",
+    limits = c( ,  )) + 
+  scale_x_discrete(NULL) + 
+  scale_fill_manual(NULL,
+    values = c(' ',' ',' '))
+
+
+```
+
+:::
+
+:::
+
+::: {.column}
+
+```{r}
+#| echo: false
+
+ggplot(
+  data = penguins,
+  aes(x = species,
+      y = body_mass_g,
+      fill = species)
+) +
+  geom_jitter(shape=21) +
+  geom_boxplot(
+    alpha = 0.5) + 
+  scale_y_continuous(
+    "Body Mass (g)",
+    limits = c(2000, 6000)) + 
+  scale_x_discrete(NULL) + 
+  scale_fill_manual(
+    NULL,
+    values = c('grey80',
+               'grey80',
+               'deeppink')
+  )
+
+
+```
+
+:::
+
+::::
+
+:::::
+
+
+
+
+
+

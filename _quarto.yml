@@ -1,36 +1,46 @@
 project:
   type: website
-
+  output-dir: docs
 website:
+  title: Data Viz with R
+  favicon: images/favicon.ico
   navbar: 
     search: true
     left:
       - text: "Home"
         href: home/index.qmd
+        icon: house-fill
       - text: "Lectures"
         href: lectures/lectures.qmd
+        icon: easel3-fill
       - text: "Exercises"
-        href: exercises/exercises.qmd  
-  title: "Reproducible Data Visualisation with R"
-  
+        href: exercises/overview.qmd  
+        icon: code-slash
+
   sidebar:
-    - title: "Home"
       style: "floating"
+      collape-level: 1
+      title: Orientation
       contents:
-        - home/index.qmd
-    - title: "Lectures"
-      style: "floating"
-      contents:
-        - lectures/lectures.qmd
-        - lectures/lecture1.qmd
-        - lectures/lecture2.qmd  
-    - title: "Exercises"
-      style: "floating"
-      contents:
-        - exercises/exercises.qmd
-        - exercises/exercise1.qmd
-        - exercises/exercise2.qmd
-      
+        - text: "Orientation"
+          href: home/index.qmd
+        - section: "Lectures"
+          contents:
+            - lectures/lectures.qmd
+            - lectures/lecture1.qmd
+            - lectures/lecture2.qmd  
+        - section: "Exercises"
+          contents:
+            - text: Overview
+              href: exercises/overview.qmd
+            - section: "Exercise 1"
+              contents:
+                  - exercises/exercise1-1.qmd
+                  - exercises/exercise1-2.qmd
+            - section: "Exercise 2"
+              contents:
+              - exercises/exercise2.qmd
+
 format:
   html:
     theme:
