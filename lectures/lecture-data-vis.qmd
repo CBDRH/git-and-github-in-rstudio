@@ -3,7 +3,7 @@ title: "Visualising data with `ggplot2`"
 author: "Mark Hanly"
 format: 
   revealjs:
-    theme: [night, custom.scss]
+    theme: [night, ../custom.scss]
     highlight-style: monokai
 footer: '<a href="/lectures/lectures.qmd">Back</a>'
 ---

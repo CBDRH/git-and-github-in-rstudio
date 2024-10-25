@@ -2,7 +2,7 @@
 title: "Guided exercises"
 format:
   html:
-    css: custom.scss
+    css: ../custom.scss
 ---
 
 

@@ -3,6 +3,7 @@ project:
   output-dir: docs
 website:
   title: Data Viz with R
+  page-navigation: true
   favicon: images/favicon.ico
   navbar: 
     search: true
@@ -39,7 +40,8 @@ website:
                   - exercises/exercise1-2.qmd
             - section: "Exercise 2"
               contents:
-              - exercises/exercise2.qmd
+              - exercises/exercise2-1.qmd
+              - exercises/exercise2-2.qmd
 
 format:
   html:
@@ -48,6 +50,13 @@ format:
       dark: cyborg
     css: custom.scss
     toc: true
+
+
+crossref:
+  custom:
+    - kind: float
+      reference-prefix: ☠ Hint
+      key: hint
 
 execute:
   freeze: auto

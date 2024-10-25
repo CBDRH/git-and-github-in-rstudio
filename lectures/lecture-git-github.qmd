@@ -2,7 +2,7 @@
 title: "Version control with git and GitHub"
 format: 
   revealjs:
-    theme: [night, custom.scss]
+    theme: [night, ../custom.scss]
     title-slide-attributes:
       data-background-image: ../images/github-logo.png
       data-background-size: contain

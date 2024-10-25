@@ -2,7 +2,7 @@
 title: Orientation to RStudio
 format: 
   closeread-html:
-    css: custom.scss
+    css: ../custom.scss
     code-overflow: wrap
 ---
 

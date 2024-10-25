@@ -3,7 +3,7 @@ title: "Cleaning data with `dplyr` and friends"
 author: "Mark Hanly"
 format: 
   revealjs:
-    theme: [night, custom.scss]
+    theme: [night, ../custom.scss]
     highlight-style: monokai
 footer: '<a href="/lectures/lectures.qmd">Back</a>'
 ---
