@@ -32,17 +32,34 @@ website:
             - lectures/lecture2.qmd  
         - section: "Exercises"
           contents:
-            - text: Overview
-              href: exercises/overview.qmd
-            - section: "Exercise 1"
+            - section: "Data cleaning"
               contents:
+              - text: Overview
+                href: exercises/overview.qmd
+              - section: "Exercise 1"
+                contents:
                   - exercises/exercise1-1.qmd
                   - exercises/exercise1-2.qmd
-            - section: "Exercise 2"
+              - section: "Exercise 2"
+                contents:
+                  - exercises/exercise2-1.qmd
+                  - exercises/exercise2-2.qmd
+            - section: "Visualisation"
               contents:
-              - exercises/exercise2-1.qmd
-              - exercises/exercise2-2.qmd
-
+              - text: Overview
+                href: exercises/overview.qmd
+              - section: "Exercise 3"
+                contents:
+                  - exercises/exercise3-1.qmd
+                  - section: "Step-by-step guide"
+                    contents:
+                    - exercises/exercise3-2.qmd
+                    - exercises/exercise3-3.qmd
+                    - exercises/exercise3-4.qmd
+              - section: "Exercise 4"
+                contents:
+                  - exercises/exercise4-1.qmd
+                  - exercises/exercise4-2.qmd            
 format:
   html:
     theme:
@@ -50,7 +67,9 @@ format:
       dark: cyborg
     css: custom.scss
     toc: true
-
+    code-copy: true
+filters:
+  - line-highlight
 
 crossref:
   custom:

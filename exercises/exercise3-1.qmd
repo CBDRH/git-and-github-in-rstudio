@@ -1,0 +1,72 @@
+---
+title: "Getting started"
+format: 
+  html:
+    execute:
+      echo: true
+      eval: false 
+---
+
+
+# Aims
+
+In this exercise you will use `ggplot2` and other tools to transform your tidy data frame to an attractive chart. You will geoms as the basic building blocks, Essentially, we will use code to go...
+
+
+:::: {.column-page}
+
+::: {layout-ncol=2}
+
+**this tidy dataframe!**
+
+```{r}
+#| echo: false
+#| eval: true
+load("../clean-data/vis1.Rda")
+DT::datatable(df1Clean,
+              options = list(pageLength = 7, 
+                             searching = FALSE,
+                             lengthChange = FALSE))
+```
+
+**To this nice chart** 
+
+![](../images/self-assessed-health.png)
+
+
+:::
+
+:::: 
+
+
+# How to complete this exercise
+
+This first data visualisation exercise is fully guided---just follow the steps and copy-paste the code snippets into your own code file to build up the visualisation code. 
+
+Note that some steps are incremental, for example Step 6 provides code to filter data.
+
+```{r}
+# Filter to these rows
+df1Clean <- df1Raw |>
+  filter(X %in% healthStatus)
+```
+
+In the next step, Step 7, you are given code to select certain variables.
+
+```{r}
+# Append this line to the previous code using |>
+select(c(X, ends_with(".1"), -'Australia.1'))
+```
+
+But note the comment:
+
+> Append this line to the previous code using |>
+
+This means that you should append the code in Step 7 to the previous code in Step 6 using the `|>` operator to connect the two. So after you complete Step 7 the code in your file will look like this:
+
+```{r}
+# Filter to these rows
+df1Clean <- df1Raw |>
+  filter(X %in% healthStatus) |> 
+  select(c(X, ends_with(".1"), -'Australia.1'))
+```

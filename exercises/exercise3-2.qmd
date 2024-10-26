@@ -1,0 +1,379 @@
+---
+title: "Part 1. The base plot"
+format: 
+  html:
+    execute:
+      echo: true
+      warning: false
+      results: hide
+number-sections: true      
+---
+
+![The goal for Exercise 3](../images/self-assessed-health.png){#fig-chart1}
+
+# Set up your code file meta data
+
+As before, start by setting up your code file meta information.
+
+1. In RStudio, open the file `code/exercise-3.R`
+2. Update the details in the title box. 
+
+<hr>
+
+# Load libraries
+
+Remember to load all your libraries in one place at the top of the script all the libraries you need in a script in one place at the top of the file. 
+
+Start with the libraries below. We'll need to load more libraries as we go so remember to add them to this section of code.
+
+```{r}
+## Load libraries
+library(dplyr) 
+library(ggplot2)
+```
+
+
+# Load your data
+
+The data might already be loaded into your R environment, but we should make this step an explicit part of the code.
+
+```{r}
+# Load cleaned data
+load('../clean-data/vis1.Rda')
+```
+
+<hr>
+
+# Start plotting 
+
+Looking back at @fig-chart1, we can quickly surmise the main aesthetic mappings in the chart:
+
+* `x` is mapped to **percent**
+* `y` is mapped to **state**
+* `fill` is mapped to **status**
+
+This is all we need to get a passable plot!
+
+```{r}
+#| code-fold: show
+ggplot(
+  data=df1Clean,
+  aes(x = percent, y = state, fill=status)) + 
+  geom_col()
+```
+
+This is a good start for just a few lines of code, but there are a lot of things to fix!
+
+<hr>
+
+# Order the states from most healthy to least healthy
+
+The final plot orders the states on the y-axis from most healthy to least healthy. In order to sort the states in this way, we need to create a new variable equal to the sum of the proportions in the categories **Excellent** and **Very good**. We can do this using some `dplyr` code.
+
+```{r}
+# Create variable indicating % very good or excellent health
+df1Plot <- df1Clean |>
+  group_by(state) |>
+  slice(4:5) |>
+  summarise(totalHealthy = sum(percent)) |>
+  left_join(df1Clean, by = 'state')
+```
+
+This basically creates the following summary table, and then merges it back to the original dataset, assigning the result to a new dataframe **df1Plot**.
+
+```{r}
+#| echo: false
+df1Clean |>
+  group_by(state) |>
+  slice(4:5) |>
+  summarise(totalHealthy = sum(percent))
+```
+
+Now that we have the right variable to sort on, we can use the `fct_reorder()` function from the `forcats` package to sort the states directly in the ggplot code. Don't forget to add `library(forcats)` to your list of loaded libraries at the top of your script!
+
+```{r}
+#| code-fold: show
+
+library(forcats)
+
+ggplot(
+  data=df1Plot,
+  aes(x = percent, 
+      y = fct_reorder(state, totalHealthy), 
+  fill=status)) + 
+  geom_col()
+```
+
+<hr>
+
+# Reverse the order of the health-assessment categories
+
+Notice that the health categories are currently ordered from **Excellent** to **Poor**. we'd like to reverse this so that **Poor** is on the left and **Excellent** is on the right. We can do this by setting `reverse=TRUE` in the `position_stack()` argument in `geom_col()`.
+
+```{r}
+#| code-fold: show
+
+ggplot(
+  data=df1Plot,
+  aes(x = percent, 
+      y = fct_reorder(state, totalHealthy), 
+      fill=status)) + 
+  geom_col(position = position_stack(reverse = TRUE))
+```
+
+<hr>
+
+
+# Customise the colour scheme
+
+We've done a lot already! Next we will really improve the plot by updating the colour scheme. The default coloring is categorical and the colours don't carry any meaning. The target plot uses a familiar traffic light colour scheme that also carries meaning (red generally has negative connotations and green generally has positive connotations, in the Anglosphere at least). 
+
+::: {.aside}
+
+The psychological and cultural associations of colors varies across place and time. In 1700s Europe men wore <span style="color: pink; font-weight: 600;">pink</span> as a sign of their wealth and power; today it is almost exclusively a colour associate with girls, so much so that Mattel---the Corporation behind Barbie---have trademark rights to Barbie Pink (<span style="color: #DA1884; font-weight: 600;">Pantone 219C</span>).<br><br>Here we use <span style="color: #1A9641; font-weight: 600;">green</span> to connote a positive outcome but green is also associated with jealousy ("green with envy"), sickness 🤢, and inexperience ("a greenhorn"). Meanwhile <span style="color: #D7191C; font-weight: 600;">red</span> is the colour of danger, but also of love ❤️ and (in China) an auspicious colour associated with prosperity 🧧.
+
+:::
+
+While we could define our colours manually, the `RColorBrewer` package provides several [colour palettes for R](https://r-graph-gallery.com/38-rcolorbrewers-palettes.html). We will use the brewer.pal() function to access the diverging red-yellow-green (RdYlGn) palette below. Here are the colour hex codes:
+
+```{r}
+# Add the library call to the top of your script!
+library(RColorBrewer)
+
+brewer.pal(name='RdYlGn', n=5)
+```
+
+We can use the function `display.brewer.pal` to see the actual colours.
+
+```{r}
+#| fig-height: 3
+display.brewer.pal(name='RdYlGn', n=5)
+```
+
+Finally, make sure to save the five colours in an R vector as below.
+
+```{r}
+# Custom bar colours
+barCols <- RColorBrewer::brewer.pal(5, 'RdYlGn')
+```
+
+Now that we have our five colours stored as a vector we can map these to the health categories using `scale_fill_manual()`. The legend name doesn't add much here so we can remove it entirely by setting `name = NULL`. 
+
+```{r}
+#| code-fold: true
+# Customise colours
+ggplot(
+  data=df1Plot,
+  aes(x = percent, 
+      y = fct_reorder(state, totalHealthy), 
+      fill=status)) + 
+  geom_col(position = position_stack(reverse = TRUE)) +
+  scale_fill_manual(name = NULL,
+                    values = barCols)
+```
+
+Amazing!!
+
+<hr>
+
+
+# Get rid of the axis labels
+
+Looking back at @fig-chart1, notice that the axis labels are deleted entirely. I think that is safe here because the states and territories are obvious, and when we add titles it will be clear that the numbers are percentages. 
+
+A simple way to do this is with the `labs()` function, but here I will use `scale_x_` and `scale_y_` functions. This is from habit---often we need to customise aspects of the axes that can only be controlled via the `scale_*` functions.
+
+```{r}
+#| code-fold: true
+ggplot(
+  data=df1Plot,
+  aes(x = percent, 
+      y = fct_reorder(state, totalHealthy), 
+      fill=status)) + 
+  geom_col(position = position_stack(reverse = TRUE)) +
+  scale_fill_manual(name = NULL,
+                    values = barCols) +
+  scale_y_discrete(NULL) +
+  scale_x_continuous(NULL)
+```
+
+# Add a title, subtitle and caption
+
+Add a title, subtitle and caption using the `labs()` function. The final figure colours in some of the words but we will come to that later.
+
+```{r}
+#| code-fold: true
+
+ggplot(
+  data=df1Plot,
+  aes(x = percent, 
+      y = fct_reorder(state, totalHealthy), 
+      fill=status)) + 
+  geom_col(position = position_stack(reverse = TRUE)) +
+  scale_fill_manual(name = NULL,
+                    values = barCols) +
+  scale_y_discrete(NULL) +
+  scale_x_continuous(NULL) +
+  labs(
+    title = 'Victorians most likely to rate their health as Excellent or Very Good',
+    subtitle = 'Self-assessed health status by states and territories',
+    caption = 'Source: National Health Survey, 2022')
+
+```
+
+<hr>
+
+# Shift the titles to the right
+
+Notice that the titles are aligned with the panel area by default, but these can often look better if they are shifted over to the right of the plot. That is easy to do by setting the `plot.title.position = 'plot'` argument in the `theme()` function.
+
+```{r}
+#| code-fold: true
+
+# Shift the titles to the right and remove the grey background box
+ggplot(
+  data=df1Plot,
+  aes(x = percent, 
+      y = fct_reorder(state, totalHealthy), 
+      fill=status)) + 
+  geom_col(position = position_stack(reverse = TRUE)) +
+  scale_fill_manual(name = NULL,
+                    values = barCols) +
+  scale_y_discrete(NULL) +
+  scale_x_continuous(NULL) +
+  labs(
+    title = 'Victorians most likely to rate their health as Excellent or Very Good',
+    subtitle = 'Self-assessed health status by states and territories',
+    caption = 'Source: National Health Survey, 2022') +
+  theme(
+    plot.title.position = 'plot'
+  )
+```
+
+<hr>
+
+# Remove the default grey panel background
+
+To remove the grey panel background, add the option `panel.background = element_blank()` to the theme function.
+
+```{r}
+#| code-fold: true
+
+# Remove the grey background
+ggplot(
+  data=df1Plot,
+  aes(x = percent, 
+      y = fct_reorder(state, totalHealthy), 
+      fill=status)) + 
+  geom_col(position = position_stack(reverse = TRUE)) +
+  scale_fill_manual(name = NULL,
+                    values = barCols) +
+  scale_y_discrete(NULL) +
+  scale_x_continuous(NULL) +
+  labs(
+    title = 'Victorians most likely to rate their health as Excellent or Very Good',
+    subtitle = 'Self-assessed health status by states and territories',
+    caption = 'Source: National Health Survey, 2022') +
+  theme(
+    plot.title.position = 'plot',
+    panel.background = element_blank()
+  )
+```
+
+<hr>
+
+# Remove the y-axis ticks
+
+Having removed the panel background we are left with unsightly y-axis ticks. We can pluck these out like unwanted nostril hairs by including the argument `axis.ticks.y = element_blank()` in the `theme()` function.
+
+```{r}
+#| code-fold: true
+
+ggplot(
+  data=df1Plot,
+  aes(x = percent, 
+      y = fct_reorder(state, totalHealthy), 
+      fill=status)) + 
+  geom_col(position = position_stack(reverse = TRUE),
+           color = "white") +
+  scale_fill_manual(name = NULL,
+                    values = barCols) +
+  scale_y_discrete(NULL) +
+  scale_x_continuous(NULL) +
+  labs(
+    title = 'Victorians most likely to rate their health as Excellent or Very Good',
+    subtitle = 'Self-assessed health status by states and territories',
+    caption = 'Source: National Health Survey, 2022') +
+  theme(
+    plot.title.position = 'plot',
+    axis.ticks.y = element_blank()
+  )
+```
+
+Much better!
+
+
+# Add white spacing betweeen the colours 
+
+Looking back at @fig-chart1, notice that there is thin white line between the colours of the health status categories. The effect is subtle but pleasing. We can control this by setting `colour = "white"` in our call to `geom_col()`.
+
+```{r}
+#| code-fold: true
+
+# White spacing between colours
+ggplot(
+  data=df1Plot,
+  aes(x = percent, 
+      y = fct_reorder(state, totalHealthy), 
+      fill=status)) + 
+  geom_col(position = position_stack(reverse = TRUE),
+           color = "white") +
+  scale_fill_manual(name = NULL,
+                    values = barCols) +
+  scale_y_discrete(NULL) +
+  scale_x_continuous(NULL) +
+  labs(
+    title = 'Victorians most likely to rate their health as Excellent or Very Good',
+    subtitle = 'Self-assessed health status by states and territories',
+    caption = 'Source: National Health Survey, 2022') +
+  theme(
+    plot.title.position = 'plot',
+    panel.background = element_blank(),
+    axis.ticks.y = element_blank()
+  )
+```
+
+This is looking pretty good! If it was Friday evening you could probably call it a day and leave it at that. But if you're still full of vim, let's see if we can text labels to our chart. 
+
+```{r}
+#| echo: false
+#| results: hide
+
+ggplot(
+  data=df1Plot,
+  aes(x = percent, 
+      y = fct_reorder(state, totalHealthy), 
+      fill=status)) + 
+  geom_col(position = position_stack(reverse = TRUE),
+           color = "white") +
+  scale_fill_manual(name = NULL,
+                    values = barCols) +
+  scale_y_discrete(NULL) +
+  scale_x_continuous(NULL) +
+  labs(
+    title = 'Victorians most likely to rate their health as Excellent or Very Good',
+    subtitle = 'Self-assessed health status by states and territories',
+    caption = 'Source: National Health Survey, 2022') +
+  theme(
+    plot.title.position = 'plot',
+    panel.background = element_blank(),
+    axis.ticks.y = element_blank()
+  )
+
+ggsave(
+  filename = "../images/fig1-checkpoint1.png",
+       width = 6,
+       height = 4,
+       units = 'in')
+```
+
