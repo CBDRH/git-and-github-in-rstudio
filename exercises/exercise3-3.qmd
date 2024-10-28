@@ -22,7 +22,7 @@ library(forcats)
 library(RColorBrewer)
 
 # Load cleaned data
-load('../clean-data/vis1.Rda')
+load('exercises/3-clean-data/vis1.Rda')
 
 # Create variable indicating % very good or excellent health
 df1Plot <- df1Clean |>
@@ -59,8 +59,8 @@ If you have successfully navigated the previous section, your code should look a
 ###############################################################
 # Project:  National Health Survey 2022 Analysis
 # Purpose:  Plot self-assessed health data by state
-# Inputs:   clean-data/vis1.Rda
-# Outputs:  plots/yyyy-mm-dd-self-assessed-health.png
+# Inputs:   exercises/3-clean-data/vis1.Rda
+# Outputs:  exercises/4-outputs/yyyy-mm-dd-self-assessed-health.png
 # Author:   Mark Hanly
 ###############################################################
 
@@ -75,7 +75,7 @@ library(forcats)
 library(RColorBrewer)
 
 # Load cleaned data
-load('../clean-data/vis1.Rda')
+load('exercises/3-clean-data/vis1.Rda')
 
 # Create variable indicating % very good or excellent health
 df1Plot <- df1Clean |>

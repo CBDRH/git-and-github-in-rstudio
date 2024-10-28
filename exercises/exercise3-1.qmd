@@ -5,6 +5,8 @@ format:
     execute:
       echo: true
       eval: false 
+filters:
+  - line-highlight
 ---
 
 
@@ -17,19 +19,19 @@ In this exercise you will use `ggplot2` and other tools to transform your tidy d
 
 ::: {layout-ncol=2}
 
-**this tidy dataframe!**
+**From this tidy dataframe...**
+
+**To this nice chart!** 
 
 ```{r}
 #| echo: false
 #| eval: true
-load("../clean-data/vis1.Rda")
+load("exercises/3-clean-data/vis1.Rda")
 DT::datatable(df1Clean,
               options = list(pageLength = 7, 
                              searching = FALSE,
                              lengthChange = FALSE))
 ```
-
-**To this nice chart** 
 
 ![](../images/self-assessed-health.png)
 
@@ -43,30 +45,36 @@ DT::datatable(df1Clean,
 
 This first data visualisation exercise is fully guided---just follow the steps and copy-paste the code snippets into your own code file to build up the visualisation code. 
 
-Note that some steps are incremental, for example Step 6 provides code to filter data.
+Note that many of the steps are incremental, and involve editing the previous code. For example, in one step you will use this code to plot a simple chart.
 
 ```{r}
-# Filter to these rows
-df1Clean <- df1Raw |>
-  filter(X %in% healthStatus)
+#| code-fold: show
+#| class-source: "numberLines"
+ggplot(
+  data=df1Clean,
+  aes(x = percent, 
+      y = state, 
+      fill=status)) + 
+  geom_col()
 ```
 
-In the next step, Step 7, you are given code to select certain variables.
+In the next step, you need to add a new library and update the y mapping in `aes()`. The lines that change are highlighted, as below. 
 
 ```{r}
-# Append this line to the previous code using |>
-select(c(X, ends_with(".1"), -'Australia.1'))
+#| code-fold: show
+#| class-source: "numberLines"
+#| source-line-numbers: "1,6"
+
+library(forcats)
+
+ggplot(
+  data=df1Plot,
+  aes(x = percent, 
+      y = fct_reorder(state, totalHealthy), 
+      fill=status)) + 
+  geom_col()
 ```
 
-But note the comment:
+You should add these new lines in your code to see how the chart is incrementally improved. You could also copy over the whole chunk replacing the previous one in your code, but this is less conducive to learning. 
 
-> Append this line to the previous code using |>
-
-This means that you should append the code in Step 7 to the previous code in Step 6 using the `|>` operator to connect the two. So after you complete Step 7 the code in your file will look like this:
-
-```{r}
-# Filter to these rows
-df1Clean <- df1Raw |>
-  filter(X %in% healthStatus) |> 
-  select(c(X, ends_with(".1"), -'Australia.1'))
-```
+Notice the <span style="color: #6c757d; font-weight: 600">{{<fa play>}} Code</span> button allows you to expand and collapse the code snippets. These are usually not expanded by default, especially for large code sections, so you need to click the button to see the code. 

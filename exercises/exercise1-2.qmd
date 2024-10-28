@@ -12,11 +12,11 @@ number-sections: true
 
 It's good practice to include some code file meta information in the form of commented text at the top of every code file. This information is to help orientate you to what you were trying to do with this code when you come back to it in the future.
 
-1. In RStudio, open the file `code/data-cleaning-1.R`
+1. In RStudio, open the file `exercises/1-code/1-clean-self-assessed-health.R`
 2. Update the details in the title box. You can edit this to include what you like. Standard items to list include: 
     - A project name and purpose
-    - The input file (here `raw-data/national-health-survey-2022-table-2.xlsx`)
-    - Any outputs that the code generates (here the output file will be the cleaned data `clean-data/vis1.Rda`)
+    - The input file (here `exercises/2-raw-data/national-health-survey-2022-table-2.xlsx`)
+    - Any outputs that the code generates (here the output file will be the cleaned data saved in `exercises/3-clean-data/vis1.Rda`)
     - Code author names
 
 I tend not to include the date because, assuming you work on the code over time, dates are better captured in Git commits.  
@@ -56,7 +56,7 @@ Note that you don't need to wrap the package name in quotation marks when loadin
 Start as you mean to go on and commit your changes to git, then push these to your repo on GitHub.
 
 1. Make sure to save your changes to the code file
-2. In the git panel, tick the box next to `code/data-cleaning-1.R` @Aarathy
+2. In the git panel, tick the box next to `exercises/1-code/clean-self-assessed-health.R` @Aarathy
 
 ::: {.aside}
 ![In the Git panel tick the box then slect commit](../images/screenshot-placeholder.png)
@@ -108,7 +108,7 @@ myURL <- "https://www.abs.gov.au/statistics/health/health-conditions-and-risks/n
 ```{r}
 # Download the file locally
 download.file(url = myURL,
-              destfile = 'raw-data/national-health-survey-2022-table-2.xlsx')
+              destfile = 'exercises/2-raw-data/national-health-survey-2022-table-2.xlsx')
 ```
 
 ::: {.aside}
@@ -120,7 +120,7 @@ The `destfile` argument indicates the file path where the downloaded file is to 
 ::: {.callout-caution}
 
 ## Checkpoint
-If you have run this code successfully, the file `national-health-survey-2022-table-2.xlsx` should be saved in your `raw-data` folder. Go ahead and open it---you can do so from within R Studio by going to the **Files** tab, clicking on the file name and selecting **View File**. @Aarathy
+If you have run this code successfully, the file `national-health-survey-2022-table-2.xlsx` should be saved in your `exercises/2-raw-data` folder. Go ahead and open it---you can do so from within R Studio by going to the **Files** tab, clicking on the file name and selecting **View File**. @Aarathy
 
 :::
 
@@ -139,7 +139,7 @@ We now have the raw `.xlsx` file in our project folder. To open the file in R we
 ```{r}
 # Read in the raw data
 df1Raw <- read_excel(
-            path = 'raw-data/national-health-survey-2022-table-2.xlsx',
+            path = 'exercises/2-raw-data/national-health-survey-2022-table-2.xlsx',
             sheet = 'Table 2.3_Proportions',
             skip = 5,
             .name_repair = ~ make.names(.x, unique = TRUE)
@@ -385,17 +385,17 @@ arrange(state, status)
 
 Having gone to all that effort to clean the data, we definitely want to save it! We will save it in two formats: an R data file `.Rda` for working in R and a plain old `.csv` which is a good option if you want to share the data underlying your chart with non-R users.
 
-Add the following blocks of code to your script to save the `df1Clean` file in your `clean-data` folder.
+Add the following blocks of code to your script to save the `df1Clean` file in your `exercises/3-clean-data` folder.
 
 ```{r}
 # Save the data in .Rda format
-save(df1Clean, file=here::here('clean-data/vis1.Rda'))
+save(df1Clean, file=here::here('exercises/3-clean-data/vis1.Rda'))
 ```
 
 ```{r}
 # Save the data in .csv format
 write.csv(df1Clean,
-          file=here::here('clean-data/vis1.csv'),
+          file=here::here('exercises/3-clean-data/vis1.csv'),
           row.names = FALSE)
 ```
 

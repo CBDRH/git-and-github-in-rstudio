@@ -86,7 +86,7 @@ download.file(
 ::: callout-caution
 ## Checkpoint
 
-You should see the `.xlsx` spreadsheet downloaded into your **raw-data** folder.
+You should see the `.xlsx` spreadsheet downloaded into your **exercises/2-raw-data** folder.
 :::
 
 <hr>

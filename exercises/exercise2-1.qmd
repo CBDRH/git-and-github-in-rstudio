@@ -31,7 +31,7 @@ In this exercise you will use `dplyr` and other tools to read-in and clean the s
 
 ::: {layout-ncol=2}
 
-**From this messy excel sheet**
+**From this messy excel sheet...**
 
 **To this tidy dataframe!** 
 
@@ -40,7 +40,7 @@ In this exercise you will use `dplyr` and other tools to read-in and clean the s
 ```{r}
 #| echo: false
 #| eval: true
-load("../clean-data/vis2.Rda")
+load("../3-clean-data/vis2.Rda")
 DT::datatable(df2Clean,
               options = list(pageLength = 7, 
                              searching = FALSE,

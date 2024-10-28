@@ -47,7 +47,7 @@ In this exercise you will use `dplyr` and other tools to read-in and clean the s
 ```{r}
 #| echo: false
 #| eval: true
-load("../clean-data/vis1.Rda")
+load("exercises/3-clean-data/vis1.Rda")
 DT::datatable(df1Clean,
               options = list(pageLength = 7, 
                              searching = FALSE,

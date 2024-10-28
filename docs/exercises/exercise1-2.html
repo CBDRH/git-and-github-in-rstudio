@@ -399,12 +399,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 data-number="1"><span class="header-section-number">1</span> Set up your code file meta data</h1>
 <p>It’s good practice to include some code file meta information in the form of commented text at the top of every code file. This information is to help orientate you to what you were trying to do with this code when you come back to it in the future.</p>
 <ol type="1">
-<li>In RStudio, open the file <code>code/data-cleaning-1.R</code></li>
+<li>In RStudio, open the file <code>exercises/1-code/1-clean-self-assessed-health.R</code></li>
 <li>Update the details in the title box. You can edit this to include what you like. Standard items to list include:
 <ul>
 <li>A project name and purpose</li>
-<li>The input file (here <code>raw-data/national-health-survey-2022-table-2.xlsx</code>)</li>
-<li>Any outputs that the code generates (here the output file will be the cleaned data <code>clean-data/vis1.Rda</code>)</li>
+<li>The input file (here <code>exercises/2-raw-data/national-health-survey-2022-table-2.xlsx</code>)</li>
+<li>Any outputs that the code generates (here the output file will be the cleaned data saved in <code>exercises/3-clean-data/vis1.Rda</code>)</li>
 <li>Code author names</li>
 </ul></li>
 </ol>
@@ -437,7 +437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Start as you mean to go on and commit your changes to git, then push these to your repo on GitHub.</p>
 <ol type="1">
 <li>Make sure to save your changes to the code file</li>
-<li>In the git panel, tick the box next to <code>code/data-cleaning-1.R</code> <span class="citation" data-cites="Aarathy">@Aarathy</span></li>
+<li>In the git panel, tick the box next to <code>exercises/1-code/clean-self-assessed-health.R</code> <span class="citation" data-cites="Aarathy">@Aarathy</span></li>
 </ol>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
@@ -506,7 +506,7 @@ Checkpoint
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download the file locally</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> myURL,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">destfile =</span> <span class="st">'raw-data/national-health-survey-2022-table-2.xlsx'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">destfile =</span> <span class="st">'exercises/2-raw-data/national-health-survey-2022-table-2.xlsx'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
@@ -521,7 +521,7 @@ Checkpoint
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you have run this code successfully, the file <code>national-health-survey-2022-table-2.xlsx</code> should be saved in your <code>raw-data</code> folder. Go ahead and open it—you can do so from within R Studio by going to the <strong>Files</strong> tab, clicking on the file name and selecting <strong>View File</strong>. <span class="citation" data-cites="Aarathy">@Aarathy</span></p>
+<p>If you have run this code successfully, the file <code>national-health-survey-2022-table-2.xlsx</code> should be saved in your <code>exercises/2-raw-data</code> folder. Go ahead and open it—you can do so from within R Studio by going to the <strong>Files</strong> tab, clicking on the file name and selecting <strong>View File</strong>. <span class="citation" data-cites="Aarathy">@Aarathy</span></p>
 </div>
 </div>
 
@@ -540,7 +540,7 @@ Checkpoint
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the raw data</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df1Raw <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">path =</span> <span class="st">'raw-data/national-health-survey-2022-table-2.xlsx'</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">path =</span> <span class="st">'exercises/2-raw-data/national-health-survey-2022-table-2.xlsx'</span>,</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">sheet =</span> <span class="st">'Table 2.3_Proportions'</span>,</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">skip =</span> <span class="dv">5</span>,</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">.name_repair =</span> <span class="sc">~</span> <span class="fu">make.names</span>(.x, <span class="at">unique =</span> <span class="cn">TRUE</span>)</span>
@@ -782,15 +782,15 @@ Checkpoint
 <section id="save-the-clean-data" class="level1 page-columns page-full" data-number="13">
 <h1 data-number="13"><span class="header-section-number">13</span> Save the clean data</h1>
 <p>Having gone to all that effort to clean the data, we definitely want to save it! We will save it in two formats: an R data file <code>.Rda</code> for working in R and a plain old <code>.csv</code> which is a good option if you want to share the data underlying your chart with non-R users.</p>
-<p>Add the following blocks of code to your script to save the <code>df1Clean</code> file in your <code>clean-data</code> folder.</p>
+<p>Add the following blocks of code to your script to save the <code>df1Clean</code> file in your <code>exercises/3-clean-data</code> folder.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the data in .Rda format</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(df1Clean, <span class="at">file=</span>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">'clean-data/vis1.Rda'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(df1Clean, <span class="at">file=</span>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">'exercises/3-clean-data/vis1.Rda'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the data in .csv format</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(df1Clean,</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">file=</span>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">'clean-data/vis1.csv'</span>),</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">file=</span>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">'exercises/3-clean-data/vis1.csv'</span>),</span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 

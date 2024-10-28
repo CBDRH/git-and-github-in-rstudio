@@ -15,7 +15,7 @@ number-sections: true
 
 As before, start by setting up your code file meta information.
 
-1. In RStudio, open the file `code/exercise-3.R`
+1. In RStudio, open the file `exercsies/1-code/3-plot-self-assessed-health.R`
 2. Update the details in the title box. 
 
 <hr>
@@ -39,7 +39,7 @@ The data might already be loaded into your R environment, but we should make thi
 
 ```{r}
 # Load cleaned data
-load('../clean-data/vis1.Rda')
+load('exercises/3-clean-data/vis1.Rda')
 ```
 
 <hr>
