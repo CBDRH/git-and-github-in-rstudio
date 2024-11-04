@@ -72,7 +72,7 @@ Start as you mean to go on and commit your changes to git, then push these to yo
 5. Click Push
 
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 
 ## How often to commit?
 

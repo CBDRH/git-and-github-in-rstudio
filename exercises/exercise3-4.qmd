@@ -1,0 +1,203 @@
+---
+title: "Part 3. Adding highlight colours in the title"
+format: 
+  html:
+    execute:
+      echo: true
+      warning: false
+      results: hide
+number-sections: true   
+filters:
+  - line-highlight
+---
+
+
+```{r setup}
+#| echo: false
+
+# Load libraries
+library(dplyr)
+library(ggplot2)
+library(forcats)
+library(RColorBrewer)
+library(colorspace)
+
+# Load cleaned data
+load('exercises/3-clean-data/vis1.Rda')
+
+# Create variable indicating % very good or excellent health
+df1Plot <- df1Clean |>
+  group_by(state) |>
+  slice(4:5) |>
+  summarise(totalHealthy = sum(percent)) |>
+  left_join(df1Clean, by = 'state')
+
+# Custom bar colours
+barCols <- RColorBrewer::brewer.pal(5, 'RdYlGn')
+
+# Custom colors for bar labels 
+label_text_colors <- c('transparent',
+                       darken(barCols[2], 0.4),
+                       darken(barCols[3], 0.4),
+                       darken(barCols[4], 0.4),
+                       lighten(barCols[5], 0.6))
+```
+
+# Overview
+
+In this section we will use techniques of data storytelling to help communicate the main message from the chart. First, we will highlight the key words <span style="color: #1A9641; font-weight: 600;">Excellent</span> and <span style="color: #A6D96A; font-weight: 600;">Good</span> in the title, using a bold font to help them stand out and corresponding colours to help match the key words to the chart. We will also use text hierarchy to adjust the font size and weight of the subtitle relative to the title, more clearly distinguishing the different types of information for the viewer. 
+
+# Bold font for key words in the title
+
+Normally, we would use theme elements like `element_text()` to format titles, axis labels, and captions. However, these functions target the whole text string that comprises the title, axis label etc. In order to target specific words within the title we will use the theme element `element_markdown()` from the `ggtext` package. 
+
+To make this work we work we need to specify `plot.title = element_text()` in our call to `theme()`. Having done this, we can now use simple Markdown and HTML in our title; for example to make a word bold we can use the Markdown convention of wrapping it in two asterisks like \*\***this**\*\*. 
+
+
+```{r}
+#| code-fold: true
+#| class-source: "numberLines"
+#| source-line-numbers: "23,28"
+ 
+# Add this to your loaded libraries
+library(ggtext)
+
+# Bold font in title
+ggplot(
+  data=df1Plot,
+  aes(x = percent, 
+      y = fct_reorder(state, totalHealthy), 
+      fill = status,
+      color = status,
+      label = paste0(format(percent, nsmall=1), '%'))) + 
+  geom_col(position = position_stack(reverse = TRUE),
+           color = "white") +
+  geom_text(
+    position = position_stack(reverse = TRUE),
+    size = 8/.pt, 
+    hjust = 1.1) +
+  scale_fill_manual(name = NULL, values = barCols) +
+  scale_colour_manual(name = NULL, values = label_text_colors) +
+  scale_y_discrete(NULL) +
+  scale_x_continuous(NULL) +
+  labs(
+    title = 'Victorians most likely to rate their health as **Excellent** or **Very Good**',
+    subtitle = 'Self-assessed health status by states and territories',
+    caption = 'Source: National Health Survey, 2022') +
+  theme(
+    plot.title.position = 'plot',
+    plot.title = element_markdown(),
+    panel.background = element_blank(),
+    axis.ticks.y = element_blank(),
+    legend.position = "none"
+  )
+
+```
+
+# Colour in key words in the title
+
+To colour in the words we have to use some basic HTML and CSS. In particular we will will wrap the key words in the `<span></span>` HTML tag and use the `style` attribute to change the colour. 
+
+::: {.aside}
+Don't worry if this is new to you, you can copy the code provided for now, and apply the same patterns elsewhere. HTML and CSS are core web technologies so it is worth learning the basics of these if you are going to be doing doing a lot of visualisation in R, especially if you are working with tools like shiny or quarto. A little knowledge in this area will really help elevate your outputs! [Here](https://albert-rapp.de/posts/16_html_css_for_r/16_html_css_for_r.html) is a nice summary from the wonderful [Albert Rapp](https://albert-rapp.de/). 
+:::
+
+The colours are set to <span style="color: #1A9641;">**#1A9641**</span> and <span style="color: #A6D96A;">**#A6D96A**</span>' which are the last two colors from our colour palette `barCols`. To confirm this you try entering `barCols` in the console. 
+
+```{r}
+barCols
+```
+
+
+```{r}
+#| code-fold: true
+#| class-source: "numberLines"
+#| source-line-numbers: "23"
+ 
+# Add this to your loaded libraries
+library(ggtext)
+
+# Bold font in title
+ggplot(
+  data=df1Plot,
+  aes(x = percent, 
+      y = fct_reorder(state, totalHealthy), 
+      fill = status,
+      color = status,
+      label = paste0(format(percent, nsmall=1), '%'))) + 
+  geom_col(position = position_stack(reverse = TRUE),
+           color = "white") +
+  geom_text(
+    position = position_stack(reverse = TRUE),
+    size = 8/.pt, 
+    hjust = 1.1) +
+  scale_fill_manual(name = NULL, values = barCols) +
+  scale_colour_manual(name = NULL, values = label_text_colors) +
+  scale_y_discrete(NULL) +
+  scale_x_continuous(NULL) +
+  labs(
+    title = 'Victorians most likely to rate their health as <span style="color: #1A9641;">**Excellent**</span> or <span style="color: #A6D96A;">**Very Good**</span>',
+    subtitle = 'Self-assessed health status by states and territories',
+    caption = 'Source: National Health Survey, 2022') +
+  theme(
+    plot.title.position = 'plot',
+    plot.title = element_markdown(),
+    panel.background = element_blank(),
+    axis.ticks.y = element_blank(),
+    legend.position = "none"
+  )
+
+```
+
+# Adjust text hierarchy
+
+To help distinguish the title, subtitle and caption we will make the following changes:
+
+* Put the subtitle in a bold font but with a medium grey colour.
+* Put the caption in a smaller font and light grey colour.
+
+This can be done by setting the `size`, `color`, and `face` arguments in `element_text()`.
+
+::: {.aside}
+Note that the when we set `element_text(size=14)` the size argument is defined in points, so we don't have to divide by `.pts` lie we previously did when setting the size of the text labels in `geom_text()`
+:::
+
+```{r}
+#| code-fold: true
+#| class-source: "numberLines"
+#| source-line-numbers: "28-30"
+ 
+# Adjust text hierarchy
+ggplot(
+  data=df1Plot,
+  aes(x = percent, 
+      y = fct_reorder(state, totalHealthy), 
+      fill = status,
+      color = status,
+      label = paste0(format(percent, nsmall=1), '%'))) + 
+  geom_col(position = position_stack(reverse = TRUE),
+           color = "white") +
+  geom_text(
+    position = position_stack(reverse = TRUE),
+    size = 8/.pt, 
+    hjust = 1.1) +
+  scale_fill_manual(name = NULL, values = barCols) +
+  scale_colour_manual(name = NULL, values = label_text_colors) +
+  scale_y_discrete(NULL) +
+  scale_x_continuous(NULL) +
+  labs(
+    title = 'Victorians most likely to rate their health as <span style="color: #1A9641;">**Excellent**</span> or <span style="color: #A6D96A;">**Very Good**</span>',
+    subtitle = 'Self-assessed health status by states and territories',
+    caption = 'Source: National Health Survey, 2022') +
+  theme(
+    plot.title.position = 'plot',
+    plot.title = element_markdown(size=14),
+    plot.subtitle = element_text(size=10, color = 'grey30', face = 'bold'),
+    plot.caption = element_text(size=8, color = 'grey60'),
+    panel.background = element_blank(),
+    axis.ticks.y = element_blank(),
+    legend.position = "none"
+  )
+```
+
+

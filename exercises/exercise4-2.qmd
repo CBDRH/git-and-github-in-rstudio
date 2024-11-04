@@ -1,0 +1,1156 @@
+---
+title: "Part 1. The base plot"
+format: 
+  html:
+    execute:
+      echo: false
+      warning: false
+      results: hide
+number-sections: true      
+---
+
+```{r, setup}
+#| echo: false
+
+library(dplyr)
+library(ggplot2)
+library(ggtext)
+
+# Load cleaned data
+load('exercises/3-clean-data/vis2.Rda')
+
+```
+
+
+
+![The goal for Exercise 4](../images/chronic-conditions-2001-2022.png){#fig-chart2}
+
+# Set up your code file meta data
+
+As before, start by setting up your code file meta information.
+
+1. In RStudio, open the file `exercsies/1-code/4-plot-chronic-conditions.R`
+2. Update the details in the title box. 
+
+<hr>
+
+# Load libraries
+
+Remember to load all your libraries in one place at the top of the script all the libraries you need in a script in one place at the top of the file. 
+
+Start with the usual suspects: `dplyr` and `ggplot2`. You can add more as you go. 
+
+<hr>
+
+# Load your data
+
+The data might already be loaded into your R environment, but we should make this step an explicit part of the code. 
+
+Use the `load()` function to load the second clean dataset from `exercises/3-clean-data`. If you didn't get to the end of the data cleaning exercise you can load the data from `solutions/3-clean-data` instead. 
+
+<hr>
+
+# Start with a base plot 
+
+```{r}
+
+# Base plot
+ggplot(
+  data = df2Clean,
+  aes(
+    y = percent,
+    x = date,
+    group = condition)) + 
+  geom_line()
+```
+
+As a starting point, aim to create this line chart using `geom_line()`. You should be able to identify the `x` and `y` aesthetics from the axis labels above. You will also need to define the `group` aesthetic to make sure the line for each condition is plotted separately. 
+
+
+<hr>
+
+# Add points
+
+```{r}
+
+# Add points
+ggplot(
+  data = df2Clean,
+  aes(
+    y = percent,
+    x = date,
+    group = condition)) + 
+  geom_line() +
+  geom_point()
+```
+
+Add points on top of the lines using `geom_point()`
+
+
+<hr>
+  
+# Add colours
+
+```{r}
+
+# Add color
+df2Plot <- df2Clean |>
+  mutate(
+    highlight = case_when(
+      condition=="Mental health" ~ 'a',
+      condition=="Allergies" ~ 'b',
+      .default = 'c'))
+
+# Define colours
+highlightPalette = c('#BC2C1A', '#377771', 'grey60')
+
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight)) + 
+  geom_line() +
+  geom_point() +
+  scale_colour_manual(values = highlightPalette)
+
+```
+
+Can you add highlight colours for the two upward trending conditions?
+
+To do this:
+
+1. Use `case_when()` to add a new variable to the dataset that codes Mental health as **a**, Allergies as **b** and everything else as **c**. 
+2. Map this new variable to color in `aes()`.
+3. Define your color scale in `scale_color_manual()`
+
+::: aside
+@hint-colours
+:::
+
+::: {style="display: none;"}
+::: {#hint-colours}
+
+Feel free to define whatever palette you like! Here I have used the colours <span style="color: #BC2C1A; font-weight: 600;">#BC2C1A</span> for the Mental health line and <span style="color: #377771; font-weight: 600;">#377771</span> for the Allergies line. The other lines are coloured in grey. 
+
+```{r}
+#| echo: true
+#| eval: false
+
+# Define colours
+highlightPalette = c('#BC2C1A', '#377771', 'grey60')
+
+```
+
+:::
+:::
+
+<hr>
+
+# Add fill colour for the points
+
+```{r}
+library(colorspace)
+
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight,
+    fill = highlight)) + 
+  geom_line() +
+  geom_point(shape = 21) +
+  scale_colour_manual(values = highlightPalette) +
+  scale_fill_manual(values = lighten(highlightPalette, 0.5))
+```
+
+Add fill colour to the points by mapping fill to the same variable as colour in `aes`. You can then define the fill colours in `scale_fill_manual()`
+
+::: aside
+@hint-fill
+:::
+
+::: {style="display: none;"}
+::: {#hint-fill}
+
+The default shape for `geom_point()` is a solid circle---because it is solid we can't define the fill aesthetic. To change this we can specify `shape = 21` which is the code for a circle with a fill. See [here](http://www.sthda.com/english/wiki/r-plot-pch-symbols-the-different-point-shapes-available-in-r#google_vignette) for a list of all the available shapes in R. 
+
+```{r}
+#| echo: true
+#| eval: false
+
+# Set shape to hollow circles
+geom_point(shape = 21)
+
+```
+
+We can use the `lighten()` function from the `colorspace` package to specify a fill colour that is 50% lighter than the color palette. 
+
+```{r}
+#| echo: true
+#| eval: false
+
+# Use the lighten() function
+scale_fill_manual(values = lighten(highlightPalette, 0.5))
+
+```
+
+:::
+:::
+
+<hr>
+
+# Remove the legend
+
+```{r}
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight,
+    fill = highlight)) + 
+  geom_line() +
+  geom_point(shape = 21) +
+  scale_colour_manual(values = highlightPalette) +
+  scale_fill_manual(values = lighten(highlightPalette, 0.25)) +
+  theme(
+    legend.position = "none"
+  )
+```
+
+The legend isn't much use so we can turn it off here. Use the same approach as the previous exercise, setting `legend.position = "none"` in your `theme()`.
+
+
+<hr>
+
+# Remove the axis titles
+
+```{r}
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight,
+    fill = highlight)) + 
+  geom_line() +
+  geom_point(shape = 21) +
+  scale_colour_manual(values = highlightPalette) +
+  scale_fill_manual(values = lighten(highlightPalette, 0.5)) +
+  scale_x_date(NULL) +
+  scale_y_continuous(NULL) +
+  theme(
+    legend.position = "none"
+  )
+```
+
+One way to do this is to add the `scale_*` functions setting `name = NULL`. 
+
+::: aside
+@hint-scale-date
+:::
+
+::: {style="display: none;"}
+::: {#hint-scale-date}
+
+Because `date` is a date variable, the appropriate scale is `scale_date_manual()`.
+
+```{r}
+#| echo: true
+#| eval: false
+scale_x_date(name = NULL)
+```
+
+
+:::
+:::
+
+<hr>
+
+# Adjust the ranges on the x-axis and y-axis
+
+```{r}
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight,
+    fill = highlight)) + 
+  geom_line() +
+  geom_point(shape = 21) +
+  scale_colour_manual(values = highlightPalette) +
+  scale_fill_manual(values = lighten(highlightPalette, 0.5)) +
+  scale_x_date(NULL, 
+               limits = c(as.Date('2000-01-01'), as.Date('2023-01-01')),
+               date_labels = '%Y',
+               breaks = as.Date(c('2000-01-01',
+                                  '2005-01-01',
+                                  '2010-01-01',
+                                  '2015-01-01',
+                                  '2020-01-01',
+                                  '2023-01-01'))) +
+  scale_y_continuous(NULL, limits = c(0, 30)) +
+  theme(
+    legend.position = "none"
+  )
+```
+
+Give the plot some breathing room by expanding the range of the x and y axes. You can do this by setting `limits = c(min, max)` in `scale_x_date()` and `scale_y_continuous()`. Set the x axis to run from 2000 to 2003 and set the y axis to run from 0 to 30. 
+
+::: aside
+@hint-scale-break
+:::
+
+::: {style="display: none;"}
+::: {#hint-scale-break}
+
+The x-axis is a date variable so we need to specify the max and min of the range as a date. We can do this using `as.Date()` for example, the January 1 2000 would be `as.Date('2000-01-01')`. We can also set the date_labels and breaks arguments.
+
+```{r}
+#| echo: true
+#| eval: false
+
+scale_x_date(NULL, 
+               limits = c(as.Date('2000-01-01'), as.Date('2023-01-01')),
+               date_labels = '%Y',
+               breaks = as.Date(c('2000-01-01',
+                                  '2005-01-01',
+                                  '2010-01-01',
+                                  '2015-01-01',
+                                  '2020-01-01',
+                                  '2023-01-01')))
+
+```
+
+
+:::
+:::
+
+<hr>
+
+# Add title, subtitle, and caption
+
+```{r}
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight,
+    fill = highlight)) + 
+  geom_line() +
+  geom_point(shape = 21) +
+  scale_colour_manual(values = highlightPalette) +
+  scale_fill_manual(values = lighten(highlightPalette, 0.5)) +
+  scale_x_date(NULL, 
+               limits = c(as.Date('2000-01-01'), as.Date('2023-01-01')),
+               date_labels = '%Y',
+               breaks = as.Date(c('2000-01-01',
+                                  '2005-01-01',
+                                  '2010-01-01',
+                                  '2015-01-01',
+                                  '2020-01-01',
+                                  '2023-01-01'))) +
+  scale_y_continuous(NULL, 
+                     limits = c(0, 30)) +
+  labs(
+    title = 'Mental health and allergies continue to increase',
+    subtitle = 'Proportion of population with a chronic condition by selected conditions, 2001-2022',
+    caption = 'Source: National Health Survey, 2022') +
+  theme(
+    legend.position = "none"
+  )
+```
+
+Do this using the `labs()` function, as in Exercise 3.
+
+<hr>
+
+# Add text labels
+
+```{r}
+# Add text labels
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight,
+    fill = highlight)) + 
+  geom_line() +
+  geom_point(shape = 21) +
+  geom_text(
+    data = df2Plot |> 
+      group_by(condition) |> 
+      slice_tail(n=1),
+    aes(
+      x = as.Date('2023-01-01'),
+      y = percent,
+      label = condition
+    )) +
+  scale_colour_manual(values = highlightPalette) +
+  scale_fill_manual(values = lighten(highlightPalette, 0.5)) +
+  scale_x_date(NULL, 
+               limits = c(as.Date('2000-01-01'), as.Date('2023-01-01')),
+               date_labels = '%Y',
+               breaks = as.Date(c('2000-01-01',
+                                  '2005-01-01',
+                                  '2010-01-01',
+                                  '2015-01-01',
+                                  '2020-01-01',
+                                  '2023-01-01'))) +
+  scale_y_continuous(NULL, 
+                     limits = c(0, 30)) +
+  labs(
+    title = 'Mental health and allergies continue to increase',
+    subtitle = 'Proportion of population with a chronic condition by selected conditions, 2001-2022',
+    caption = 'Source: National Health Survey, 2022') +
+  theme(
+    legend.position = "none"
+  )
+```
+
+Add text labels using using `geom_text()`, setting the `y` aesthetic to percent and the `x` aesthetic to **2023-01-01**. 
+
+::: aside
+@hint-scale-break
+:::
+
+::: {style="display: none;"}
+::: {#hint-scale-break}
+
+We only want the label for the last data point---to achieve this we can group the dataset by condition and then subset to the last observation within each condition using `slice_tail()`. This can be done on the fly within `geom_text()`, as below. 
+
+```{r}
+#| echo: true
+#| eval: false
+
+  geom_text(
+    data = df2Plot |> 
+      group_by(condition) |> 
+      slice_tail(n=1),
+    aes(
+      x = as.Date('2023-01-01'),
+      y = percent,
+      label = condition
+    ))
+  
+```
+
+:::
+:::
+
+
+<hr>
+
+# Shift text labels to the right and make them smaller
+
+```{r}
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight,
+    fill = highlight)) + 
+  geom_line() +
+  geom_point(shape = 21) +
+  geom_text(
+    data = df2Plot |> 
+      group_by(condition) |> 
+      slice_tail(n=1),
+    aes(
+      x = as.Date('2024-01-01'),
+      y = percent,
+      label = condition),
+    hjust = 0, size = 8/.pt) +
+  scale_colour_manual(values = highlightPalette) +
+  scale_fill_manual(values = lighten(highlightPalette, 0.5)) +
+  scale_x_date(NULL, 
+               limits = c(as.Date('2000-01-01'), as.Date('2024-01-01')),
+               date_labels = '%Y',
+               breaks = as.Date(c('2000-01-01',
+                                  '2005-01-01',
+                                  '2010-01-01',
+                                  '2015-01-01',
+                                  '2020-01-01',
+                                  '2023-01-01'))) +
+  scale_y_continuous(NULL, 
+                     limits = c(0, 30)) +
+  labs(
+    title = 'Mental health and allergies continue to increase',
+    subtitle = 'Proportion of population with a chronic condition by selected conditions, 2001-2022',
+    caption = 'Source: National Health Survey, 2022') +
+  coord_cartesian(clip = 'off') +
+  theme(
+    legend.position = "none",
+    plot.margin = margin(t=10, b=10, r=80, l=10),
+  )
+
+```
+
+Try setting the `size` and `hjust` arguments in `geom_text()` to shift the labels to the right and shrink them a bit. 
+
+::: aside
+@hint-unclip
+:::
+
+::: {style="display: none;"}
+::: {#hint-unclip}
+
+You probably find that the text labels disappear outside of the plot area. There are two tricks to addressing this. First we have to increase the plot margin on the right-hand side of the plot by setting `plot.margin` in our `theme()`. This gives some space for the labels to appear. Second we have to include the line `coord_cartesian(clip = 'off')` in our ggplot code. This allows plot elements to appear outside the plot panel, in the margin space that we have created.
+
+Your updated code should include
+
+```{r}
+#| echo: true
+#| eval: false
+
+  coord_cartesian(clip = 'off') +
+  theme(
+    ... # other theme settings
+    plot.margin = margin(t=10, b=10, r=80, l=10),
+  )
+
+```
+
+:::
+:::
+
+<hr>
+
+# Remove the grey background
+
+```{r}
+
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight,
+    fill = highlight)) + 
+  geom_line() +
+  geom_point(shape = 21) +
+  geom_text(
+    data = df2Plot |> 
+      group_by(condition) |> 
+      slice_tail(n=1),
+    aes(
+      x = as.Date('2024-01-01'),
+      y = percent,
+      label = condition),
+    hjust = 0, size = 8/.pt) +
+  scale_colour_manual(values = highlightPalette) +
+  scale_fill_manual(values = lighten(highlightPalette, 0.5)) +
+  scale_x_date(NULL, 
+               limits = c(as.Date('2000-01-01'), as.Date('2024-01-01')),
+               date_labels = '%Y',
+               breaks = as.Date(c('2000-01-01',
+                                  '2005-01-01',
+                                  '2010-01-01',
+                                  '2015-01-01',
+                                  '2020-01-01',
+                                  '2023-01-01'))) +
+  scale_y_continuous(NULL, 
+                     limits = c(0, 30)) +
+  labs(
+    title = 'Mental health and allergies continue to increase',
+    subtitle = 'Proportion of population with a chronic condition by selected conditions, 2001-2022',
+    caption = 'Source: National Health Survey, 2022') +
+  coord_cartesian(clip = 'off') +
+  theme(
+    legend.position = "none",
+    plot.margin = margin(t=10, b=10, r=80, l=10),
+    panel.background = element_blank()
+  )
+
+```
+
+Let's get rid of the default grey background. We can do this by editing the panel background. 
+
+::: aside
+@hint-panel-background
+:::
+
+::: {style="display: none;"}
+::: {#hint-panel-background}
+
+Try setting `panel.background = element_blank()` in your `theme()`
+
+:::
+:::
+
+<hr>
+
+# Add in major grid lines
+
+``` {r}
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight,
+    fill = highlight)) + 
+  geom_line() +
+  geom_point(shape = 21) +
+  geom_text(
+    data = df2Plot |> 
+      group_by(condition) |> 
+      slice_tail(n=1),
+    aes(
+      x = as.Date('2024-01-01'),
+      y = percent,
+      label = condition),
+    hjust = 0, size = 8/.pt) +
+  scale_colour_manual(values = highlightPalette) +
+  scale_fill_manual(values = lighten(highlightPalette, 0.5)) +
+  scale_x_date(NULL, 
+               limits = c(as.Date('2000-01-01'), as.Date('2024-01-01')),
+               date_labels = '%Y',
+               breaks = as.Date(c('2000-01-01',
+                                  '2005-01-01',
+                                  '2010-01-01',
+                                  '2015-01-01',
+                                  '2020-01-01',
+                                  '2023-01-01'))) +
+  scale_y_continuous(NULL, 
+                     limits = c(0, 30)) +
+  labs(
+    title = 'Mental health and allergies continue to increase',
+    subtitle = 'Proportion of population with a chronic condition by selected conditions, 2001-2022',
+    caption = 'Source: National Health Survey, 2022') +
+  coord_cartesian(clip = 'off') +
+  theme(
+    legend.position = "none",
+    plot.margin = margin(t=10, b=10, r=80, l=10),
+    panel.background = element_blank(),
+    panel.grid.major = element_line(color = 'grey90')
+  )
+
+```
+
+We can add in major grid lines by setting `panel.grid.major` in your `theme`
+
+::: aside
+@hint-panel-grid
+:::
+
+::: {style="display: none;"}
+::: {#hint-panel-grid}
+
+Try setting `panel.grid.major = element_line(color = 'grey90')` in your `theme()`
+
+:::
+:::
+
+<hr>
+
+# Remove axis ticks
+
+``` {r}
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight,
+    fill = highlight)) + 
+  geom_line() +
+  geom_point(shape = 21) +
+  geom_text(
+    data = df2Plot |> 
+      group_by(condition) |> 
+      slice_tail(n=1),
+    aes(
+      x = as.Date('2024-01-01'),
+      y = percent,
+      label = condition),
+    hjust = 0, size = 8/.pt) +
+  scale_colour_manual(values = highlightPalette) +
+  scale_fill_manual(values = lighten(highlightPalette, 0.5)) +
+  scale_x_date(NULL, 
+               limits = c(as.Date('2000-01-01'), as.Date('2024-01-01')),
+               date_labels = '%Y',
+               breaks = as.Date(c('2000-01-01',
+                                  '2005-01-01',
+                                  '2010-01-01',
+                                  '2015-01-01',
+                                  '2020-01-01',
+                                  '2023-01-01'))) +
+  scale_y_continuous(NULL, 
+                     limits = c(0, 30)) +
+  labs(
+    title = 'Mental health and allergies continue to increase',
+    subtitle = 'Proportion of population with a chronic condition by selected conditions, 2001-2022',
+    caption = 'Source: National Health Survey, 2022') +
+  coord_cartesian(clip = 'off') +
+  theme(
+    legend.position = "none",
+    plot.margin = margin(t=10, b=10, r=80, l=10),
+    panel.background = element_blank(),
+    panel.grid.major = element_line(color = 'grey90'),
+    axis.ticks = element_blank()
+  )
+
+```
+
+You can get rid of the axis ticks by setting `axis.ticks()` in the `theme()`.
+
+<hr>
+
+# Increase the line size for the highlighted lines
+
+``` {r}
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight,
+    fill = highlight,
+    linewidth = highlight)) + 
+  geom_line() +
+  geom_point(shape = 21) +
+  geom_text(
+    data = df2Plot |> 
+      group_by(condition) |> 
+      slice_tail(n=1),
+    aes(
+      x = as.Date('2024-01-01'),
+      y = percent,
+      label = condition),
+    hjust = 0, size = 8/.pt) +
+  scale_colour_manual(values = highlightPalette) +
+  scale_fill_manual(values = lighten(highlightPalette, 0.5)) +
+  scale_linewidth_manual(values = c(1.5, 1.5, 0.5)) +
+  scale_x_date(NULL, 
+               limits = c(as.Date('2000-01-01'), as.Date('2024-01-01')),
+               date_labels = '%Y',
+               breaks = as.Date(c('2000-01-01',
+                                  '2005-01-01',
+                                  '2010-01-01',
+                                  '2015-01-01',
+                                  '2020-01-01',
+                                  '2023-01-01'))) +
+  scale_y_continuous(NULL, 
+                     limits = c(0, 30)) +
+  labs(
+    title = 'Mental health and allergies continue to increase',
+    subtitle = 'Proportion of population with a chronic condition by selected conditions, 2001-2022',
+    caption = 'Source: National Health Survey, 2022') +
+  coord_cartesian(clip = 'off') +
+  theme(
+    legend.position = "none",
+    plot.margin = margin(t=10, b=10, r=80, l=10),
+    panel.background = element_blank(),
+    panel.grid.major = element_line(color = 'grey90'),
+    axis.ticks = element_blank()
+  )
+
+```
+
+As well as emphasising the key lines for Mental health and Allergies using colour, we can add extra emphasise by increasing the line size relative to the other conditions. To do this we need to set a new aesthetic `linewidth` which we can then control by setting `scale_linewidth_manual()`. 
+
+::: aside
+@hint-linewidth
+:::
+
+::: {style="display: none;"}
+::: {#hint-linewidth}
+
+Your `aes()` should look something like this
+
+```{r}
+#| echo: true
+#| eval: false
+
+aes(
+  y = percent,
+  x = date,
+  group = condition,
+  color = highlight,
+  fill = highlight,
+  linewidth = highlight)
+```
+
+Then add `scale_linewidth_manual(values = c(1.5, 1.5, 0.5))`. The first two numbers are for **Mental health** and **Allergies**, the last number is for the other lines. Play with different numbers to get line widths that you like. 
+
+:::
+:::
+
+<hr>
+
+# Emphasise the key words in the title
+
+``` {r}
+
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight,
+    fill = highlight,
+    linewidth = highlight)) + 
+  geom_line() +
+  geom_point(shape = 21) +
+  geom_text(
+    data = df2Plot |> 
+      group_by(condition) |> 
+      slice_tail(n=1),
+    aes(
+      x = as.Date('2024-01-01'),
+      y = percent,
+      label = condition),
+    hjust = 0, size = 8/.pt) +
+  scale_colour_manual(values = highlightPalette) +
+  scale_fill_manual(values = lighten(highlightPalette, 0.5)) +
+  scale_linewidth_manual(values = c(1.5, 1.5, 0.5)) +
+  scale_x_date(NULL, 
+               limits = c(as.Date('2000-01-01'), as.Date('2024-01-01')),
+               date_labels = '%Y',
+               breaks = as.Date(c('2000-01-01',
+                                  '2005-01-01',
+                                  '2010-01-01',
+                                  '2015-01-01',
+                                  '2020-01-01',
+                                  '2023-01-01'))) +
+  scale_y_continuous(NULL, 
+                     limits = c(0, 30)) +
+  labs(
+    title = "<span style='color:#BC2C1A;'>**Mental health**</span> and
+             <span style='color:#377771;'>**Allergies**</span> continue to increase",
+    subtitle = 'Proportion of population with a chronic condition by selected conditions, 2001-2022',
+    caption = 'Source: National Health Survey, 2022') +
+  coord_cartesian(clip = 'off') +
+  theme(
+    legend.position = "none",
+    plot.margin = margin(t=10, b=10, r=80, l=10),
+    plot.title = element_markdown(),
+    panel.background = element_blank(),
+    panel.grid.major = element_line(color = 'grey90'),
+    axis.ticks = element_blank()
+  )
+
+``` 
+
+Follow the example in Exercise 3 to emphasise the key words in the title. 
+
+::: aside
+@hint-ggtext
+:::
+
+::: {style="display: none;"}
+::: {#hint-ggtext}
+
+Remember to load the `ggtext` library and set `plot.title = element_markdown()` in the `theme()`. 
+
+:::
+:::
+
+<hr>
+
+
+# Add text hierarchy in the title, subtitle and caption
+
+``` {r}
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight,
+    fill = highlight,
+    linewidth = highlight)) + 
+  geom_line() +
+  geom_point(shape = 21) +
+  geom_text(
+    data = df2Plot |> 
+      group_by(condition) |> 
+      slice_tail(n=1),
+    aes(
+      x = as.Date('2024-01-01'),
+      y = percent,
+      label = condition),
+    hjust = 0, size = 8/.pt) +
+  scale_colour_manual(values = highlightPalette) +
+  scale_fill_manual(values = lighten(highlightPalette, 0.5)) +
+  scale_linewidth_manual(values = c(1.5, 1.5, 0.5)) +
+  scale_x_date(NULL, 
+               limits = c(as.Date('2000-01-01'), as.Date('2024-01-01')),
+               date_labels = '%Y',
+               breaks = as.Date(c('2000-01-01',
+                                  '2005-01-01',
+                                  '2010-01-01',
+                                  '2015-01-01',
+                                  '2020-01-01',
+                                  '2023-01-01'))) +
+  scale_y_continuous(NULL, 
+                     limits = c(0, 30)) +
+  labs(
+    title = "<span style='color:#BC2C1A;'>**Mental health**</span> and
+             <span style='color:#377771;'>**Allergies**</span> continue to increase",
+    subtitle = 'Proportion of population with a chronic condition by selected conditions, 2001-2022',
+    caption = 'Source: National Health Survey, 2022') +
+  coord_cartesian(clip = 'off') +
+  theme(
+    legend.position = "none",
+    plot.margin = margin(t=10, b=10, r=80, l=10),
+    plot.title = element_markdown(size=14),
+    plot.subtitle = element_text(size=10, color = 'grey60', face = 'bold'),
+    plot.caption = element_text(size=8, color = 'grey60'),
+    panel.background = element_blank(),
+    panel.grid.major = element_line(color = 'grey90'),
+    axis.ticks = element_blank()
+  )
+```
+
+Edit the `plot.title`, `plot.subtitle`, and `plot.caption` arguments in `theme()` to achieve this. 
+
+::: aside
+@hint-text-hierarchy
+:::
+
+::: {style="display: none;"}
+::: {#hint-text-hierarchy}
+
+For example, including `plot.subtitle = element_text(size=10, color = 'grey60', face = 'bold')` will alter the colour, font size and font face for the subtitle.
+
+:::
+:::
+
+<hr>
+
+# Add percentage symbol to y-axis label
+
+``` {r}
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight,
+    fill = highlight,
+    linewidth = highlight)) + 
+  geom_line() +
+  geom_point(shape = 21) +
+  geom_text(
+    data = df2Plot |> 
+      group_by(condition) |> 
+      slice_tail(n=1),
+    aes(
+      x = as.Date('2024-01-01'),
+      y = percent,
+      label = condition),
+    hjust = 0, size = 8/.pt) +
+  scale_colour_manual(values = highlightPalette) +
+  scale_fill_manual(values = lighten(highlightPalette, 0.5)) +
+  scale_linewidth_manual(values = c(1.5, 1.5, 0.5)) +
+  scale_x_date(NULL, 
+               limits = c(as.Date('2000-01-01'), as.Date('2024-01-01')),
+               date_labels = '%Y',
+               breaks = as.Date(c('2000-01-01',
+                                  '2005-01-01',
+                                  '2010-01-01',
+                                  '2015-01-01',
+                                  '2020-01-01',
+                                  '2023-01-01'))) +
+  scale_y_continuous(NULL, 
+                     limits = c(0, 30), 
+                     labels = c('0', '10', '20', '30%')) +
+  labs(
+    title = "<span style='color:#BC2C1A;'>**Mental health**</span> and
+             <span style='color:#377771;'>**Allergies**</span> continue to increase",
+    subtitle = 'Proportion of population with a chronic condition by selected conditions, 2001-2022',
+    caption = 'Source: National Health Survey, 2022') +
+  coord_cartesian(clip = 'off') +
+  theme(
+    legend.position = "none",
+    plot.margin = margin(t=10, b=10, r=80, l=10),
+    plot.title = element_markdown(size=14),
+    plot.subtitle = element_text(size=10, color = 'grey60', face = 'bold'),
+    plot.caption = element_text(size=8, color = 'grey60'),
+    panel.background = element_blank(),
+    panel.grid.major = element_line(color = 'grey90'),
+    axis.ticks = element_blank()
+  )
+```
+
+This is a nice subtle way to communicate the meaning of the y-axis without using up too much space or ink. To achieve this you need to edit `scale_y_continuous()`. 
+
+::: aside
+@hint-percent
+:::
+
+::: {style="display: none;"}
+::: {#hint-percent}
+
+Use the `labels` argument in `scale_y_continuous()` to define the axis text labels. You must supply as many labels as there are major breaks in the scale (corresponding to the major gridlines). 
+
+``` {r}
+#| echo: true
+#| eval: false
+
+scale_y_continuous(name = NULL, 
+                   limits = c(0, 30), 
+                   labels = c('0', '10', '20', '30%'))
+
+```
+
+:::
+:::
+
+<hr>
+
+# Tidy up condition labels
+
+``` {r}
+# Add color
+df2Plot <- df2Clean |>
+  mutate(
+    highlight = case_when(
+      condition=="Mental health" ~ 'a',
+      condition=="Allergies" ~ 'b',
+      .default = 'c'),
+    label2 = ifelse(
+      highlight=="c", condition, 
+      paste0(condition, " (", percent, "%)")
+    ))
+
+
+ggplot(
+  data = df2Plot,
+  aes(
+    y = percent,
+    x = date,
+    group = condition,
+    color = highlight,
+    fill = highlight,
+    linewidth = highlight)) + 
+  geom_line() +
+  geom_point(shape = 21) +
+  geom_text(
+    data = df2Plot |> 
+      group_by(condition) |> 
+      slice_tail(n=1) |> 
+      filter(! condition %in% c("Heart, stroke & vascular", "COPD")),
+    aes(
+      x = as.Date('2024-01-01'),
+      y = percent,
+      label = label2),
+    hjust = 0, size = 8/.pt) +
+  scale_colour_manual(values = highlightPalette) +
+  scale_fill_manual(values = lighten(highlightPalette, 0.5)) +
+  scale_linewidth_manual(values = c(1.5, 1.5, 0.5)) +
+  scale_x_date(NULL, 
+               limits = c(as.Date('2000-01-01'), as.Date('2024-01-01')),
+               date_labels = '%Y',
+               breaks = as.Date(c('2000-01-01',
+                                  '2005-01-01',
+                                  '2010-01-01',
+                                  '2015-01-01',
+                                  '2020-01-01',
+                                  '2023-01-01'))) +
+  scale_y_continuous(NULL, 
+                     limits = c(0, 30), 
+                     labels = c('0', '10', '20', '30%')) +
+  labs(
+    title = "<span style='color:#BC2C1A;'>**Mental health**</span> and
+             <span style='color:#377771;'>**Allergies**</span> continue to increase",
+    subtitle = 'Proportion of population with a chronic condition by selected conditions, 2001-2022',
+    caption = 'Source: National Health Survey, 2022') +
+  coord_cartesian(clip = 'off') +
+  theme(
+    legend.position = "none",
+    plot.margin = margin(t=10, b=10, r=80, l=10),
+    plot.title = element_markdown(size=14),
+    plot.subtitle = element_text(size=10, color = 'grey60', face = 'bold'),
+    plot.caption = element_text(size=8, color = 'grey60'),
+    panel.background = element_blank(),
+    panel.grid.major = element_line(color = 'grey90'),
+    axis.ticks = element_blank()
+  )
+``` 
+
+The labels for the conditions are a bit messy. We can take a few steps to tidy these up:
+
+1. Drop some of the overlapping conditions in the dataframe that gets passed to `geom_text()` 
+1. All the percentage for the final data point for our two highlighted conditions. 
+
+Step 1 can be achieved by adding a `filter()` in the code that defines the text label data. Step 2 can be achieved by defining a new variable in the underlying chart dataset. This new variable can should combine the condition and the percent for the highlight lines and just the condition for the other lines. 
+
+::: aside
+@hint-text-labels
+:::
+
+::: {style="display: none;"}
+::: {#hint-text-labels}
+
+One way to drop overlapping labels is to filter them out on the fly in the code that defines the defines the text label data. The code below combines `!` and `%in%` to say filter to conditions that are **not** in the vector.
+
+``` {r}
+#| echo: true
+#| eval: false
+
+geom_text(
+  data = df2Plot |> 
+    group_by(condition) |> 
+    slice_tail(n=1) |> 
+    filter(! condition %in% c("Heart, stroke & vascular", "COPD")),
+  aes(...)
+
+```
+
+Create a new variable to add the percent for the final data point:
+
+``` {r}
+#| echo: true
+#| eval: false
+
+df2Plot <- df2Clean |>
+  mutate(
+    highlight = case_when(
+      condition=="Mental health" ~ 'a',
+      condition=="Allergies" ~ 'b',
+      .default = 'c'),
+    label2 = ifelse(
+      highlight=="c", condition, 
+      paste0(condition, " (", percent, "%)")
+    ))
+
+
+```
+
+To help see what this code is doing, try entering `paste0("COPD", " (", "20.4%", "%)")` at the console. 
+
+:::
+:::
+
+<hr>
+
+::: {style="margin: 0 auto;"}
+
+You are a certified all star!!
+
+<iframe src="https://giphy.com/embed/eUKYlbxwIRnqkjvXcK" width="381" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cool-glasses-so-eUKYlbxwIRnqkjvXcK">via GIPHY</a></p>
+:::

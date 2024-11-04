@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.552">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Data Viz with R - Part 1. The base plot</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../exercises/exercise4-1.html" rel="prev">
+<link href="../images/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/quarto-contrib/line-highlight-1.0.0/line-highlight.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../custom.scss">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Data Viz with R</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../home/index.html" aria-current="page"> <i class="bi bi-house-fill" role="img">
+</i> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../lectures/overview.html"> <i class="bi bi-easel3-fill" role="img">
+</i> 
+<span class="menu-text">Lectures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../exercises/overview.html"> <i class="bi bi-code-slash" role="img">
+</i> 
+<span class="menu-text">Exercises</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Exercises</li><li class="breadcrumb-item"><a href="../exercises/overview.html">Visualisation</a></li><li class="breadcrumb-item"><a href="../exercises/exercise4-1.html">Exercise 4</a></li><li class="breadcrumb-item"><a href="../exercises/exercise4-2.html">Part 1. The base plot</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Home</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../home/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../home/prerequisites.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prerequisites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../home/approach.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Approach</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../home/orientation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Orientation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lectures</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Exercises</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">Data cleaning</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">Exercise 1</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise1-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting started</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise1-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step-by-step guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+ <span class="menu-text">Exercise 2</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise2-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting started</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise2-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step-by-step guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text">Visualisation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+ <span class="menu-text">Exercise 3</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise3-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting started</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+ <span class="menu-text">Step-by-step guide</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise3-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 1. The base plot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise3-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 2. Adding text labels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise3-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 3. Adding highlight colours in the title</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise3-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 4. Adding a bespoke legend</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true">
+ <span class="menu-text">Exercise 4</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise4-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting started</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise4-2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Part 1. The base plot</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#set-up-your-code-file-meta-data" id="toc-set-up-your-code-file-meta-data" class="nav-link active" data-scroll-target="#set-up-your-code-file-meta-data"><span class="header-section-number">1</span> Set up your code file meta data</a></li>
+  <li><a href="#load-libraries" id="toc-load-libraries" class="nav-link" data-scroll-target="#load-libraries"><span class="header-section-number">2</span> Load libraries</a></li>
+  <li><a href="#load-your-data" id="toc-load-your-data" class="nav-link" data-scroll-target="#load-your-data"><span class="header-section-number">3</span> Load your data</a></li>
+  <li><a href="#start-with-a-base-plot" id="toc-start-with-a-base-plot" class="nav-link" data-scroll-target="#start-with-a-base-plot"><span class="header-section-number">4</span> Start with a base plot</a></li>
+  <li><a href="#add-points" id="toc-add-points" class="nav-link" data-scroll-target="#add-points"><span class="header-section-number">5</span> Add points</a></li>
+  <li><a href="#add-colours" id="toc-add-colours" class="nav-link" data-scroll-target="#add-colours"><span class="header-section-number">6</span> Add colours</a></li>
+  <li><a href="#add-fill-colour-for-the-points" id="toc-add-fill-colour-for-the-points" class="nav-link" data-scroll-target="#add-fill-colour-for-the-points"><span class="header-section-number">7</span> Add fill colour for the points</a></li>
+  <li><a href="#remove-the-legend" id="toc-remove-the-legend" class="nav-link" data-scroll-target="#remove-the-legend"><span class="header-section-number">8</span> Remove the legend</a></li>
+  <li><a href="#remove-the-axis-titles" id="toc-remove-the-axis-titles" class="nav-link" data-scroll-target="#remove-the-axis-titles"><span class="header-section-number">9</span> Remove the axis titles</a></li>
+  <li><a href="#adjust-the-ranges-on-the-x-axis-and-y-axis" id="toc-adjust-the-ranges-on-the-x-axis-and-y-axis" class="nav-link" data-scroll-target="#adjust-the-ranges-on-the-x-axis-and-y-axis"><span class="header-section-number">10</span> Adjust the ranges on the x-axis and y-axis</a></li>
+  <li><a href="#add-title-subtitle-and-caption" id="toc-add-title-subtitle-and-caption" class="nav-link" data-scroll-target="#add-title-subtitle-and-caption"><span class="header-section-number">11</span> Add title, subtitle, and caption</a></li>
+  <li><a href="#add-text-labels" id="toc-add-text-labels" class="nav-link" data-scroll-target="#add-text-labels"><span class="header-section-number">12</span> Add text labels</a></li>
+  <li><a href="#shift-text-labels-to-the-right-and-make-them-smaller" id="toc-shift-text-labels-to-the-right-and-make-them-smaller" class="nav-link" data-scroll-target="#shift-text-labels-to-the-right-and-make-them-smaller"><span class="header-section-number">13</span> Shift text labels to the right and make them smaller</a></li>
+  <li><a href="#remove-the-grey-background" id="toc-remove-the-grey-background" class="nav-link" data-scroll-target="#remove-the-grey-background"><span class="header-section-number">14</span> Remove the grey background</a></li>
+  <li><a href="#add-in-major-grid-lines" id="toc-add-in-major-grid-lines" class="nav-link" data-scroll-target="#add-in-major-grid-lines"><span class="header-section-number">15</span> Add in major grid lines</a></li>
+  <li><a href="#remove-axis-ticks" id="toc-remove-axis-ticks" class="nav-link" data-scroll-target="#remove-axis-ticks"><span class="header-section-number">16</span> Remove axis ticks</a></li>
+  <li><a href="#increase-the-line-size-for-the-highlighted-lines" id="toc-increase-the-line-size-for-the-highlighted-lines" class="nav-link" data-scroll-target="#increase-the-line-size-for-the-highlighted-lines"><span class="header-section-number">17</span> Increase the line size for the highlighted lines</a></li>
+  <li><a href="#emphasise-the-key-words-in-the-title" id="toc-emphasise-the-key-words-in-the-title" class="nav-link" data-scroll-target="#emphasise-the-key-words-in-the-title"><span class="header-section-number">18</span> Emphasise the key words in the title</a></li>
+  <li><a href="#add-text-hierarchy-in-the-title-subtitle-and-caption" id="toc-add-text-hierarchy-in-the-title-subtitle-and-caption" class="nav-link" data-scroll-target="#add-text-hierarchy-in-the-title-subtitle-and-caption"><span class="header-section-number">19</span> Add text hierarchy in the title, subtitle and caption</a></li>
+  <li><a href="#add-percentage-symbol-to-y-axis-label" id="toc-add-percentage-symbol-to-y-axis-label" class="nav-link" data-scroll-target="#add-percentage-symbol-to-y-axis-label"><span class="header-section-number">20</span> Add percentage symbol to y-axis label</a></li>
+  <li><a href="#tidy-up-condition-labels" id="toc-tidy-up-condition-labels" class="nav-link" data-scroll-target="#tidy-up-condition-labels"><span class="header-section-number">21</span> Tidy up condition labels</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Exercises</li><li class="breadcrumb-item"><a href="../exercises/overview.html">Visualisation</a></li><li class="breadcrumb-item"><a href="../exercises/exercise4-1.html">Exercise 4</a></li><li class="breadcrumb-item"><a href="../exercises/exercise4-2.html">Part 1. The base plot</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Part 1. The base plot</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="fig-chart2" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-chart2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/chronic-conditions-2001-2022.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-chart2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The goal for Exercise 4
+</figcaption>
+</figure>
+</div>
+<section id="set-up-your-code-file-meta-data" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Set up your code file meta data</h1>
+<p>As before, start by setting up your code file meta information.</p>
+<ol type="1">
+<li>In RStudio, open the file <code>exercsies/1-code/4-plot-chronic-conditions.R</code></li>
+<li>Update the details in the title box.</li>
+</ol>
+<hr>
+</section>
+<section id="load-libraries" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Load libraries</h1>
+<p>Remember to load all your libraries in one place at the top of the script all the libraries you need in a script in one place at the top of the file.</p>
+<p>Start with the usual suspects: <code>dplyr</code> and <code>ggplot2</code>. You can add more as you go.</p>
+<hr>
+</section>
+<section id="load-your-data" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Load your data</h1>
+<p>The data might already be loaded into your R environment, but we should make this step an explicit part of the code.</p>
+<p>Use the <code>load()</code> function to load the second clean dataset from <code>exercises/3-clean-data</code>. If you didn’t get to the end of the data cleaning exercise you can load the data from <code>solutions/3-clean-data</code> instead.</p>
+<hr>
+</section>
+<section id="start-with-a-base-plot" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Start with a base plot</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>As a starting point, aim to create this line chart using <code>geom_line()</code>. You should be able to identify the <code>x</code> and <code>y</code> aesthetics from the axis labels above. You will also need to define the <code>group</code> aesthetic to make sure the line for each condition is plotted separately.</p>
+<hr>
+</section>
+<section id="add-points" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Add points</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Add points on top of the lines using <code>geom_point()</code></p>
+<hr>
+</section>
+<section id="add-colours" class="level1 page-columns page-full" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Add colours</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Can you add highlight colours for the two upward trending conditions?</p>
+<p>To do this:</p>
+<ol type="1">
+<li>Use <code>case_when()</code> to add a new variable to the dataset that codes Mental health as <strong>a</strong>, Allergies as <strong>b</strong> and everything else as <strong>c</strong>.</li>
+<li>Map this new variable to color in <code>aes()</code>.</li>
+<li>Define your color scale in <code>scale_color_manual()</code></li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><a href="#hint-colours" class="quarto-xref">☠ Hint&nbsp;1</a></p>
+</div></div><div style="display: none;">
+<div id="hint-colours" class="quarto-float">
+<figure class="quarto-float quarto-float-hint figure">
+<div aria-describedby="hint-colours-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>Feel free to define whatever palette you like! Here I have used the colours <span style="color: #BC2C1A; font-weight: 600;">#BC2C1A</span> for the Mental health line and <span style="color: #377771; font-weight: 600;">#377771</span> for the Allergies line. The other lines are coloured in grey.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define colours</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>highlightPalette <span class="ot">=</span> <span class="fu">c</span>(<span class="st">'#BC2C1A'</span>, <span class="st">'#377771'</span>, <span class="st">'grey60'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint quarto-uncaptioned" id="hint-colours-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+☠ Hint&nbsp;1
+</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="add-fill-colour-for-the-points" class="level1 page-columns page-full" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Add fill colour for the points</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Add fill colour to the points by mapping fill to the same variable as colour in <code>aes</code>. You can then define the fill colours in <code>scale_fill_manual()</code></p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><a href="#hint-fill" class="quarto-xref">☠ Hint&nbsp;2</a></p>
+</div></div><div style="display: none;">
+<div id="hint-fill" class="quarto-float">
+<figure class="quarto-float quarto-float-hint figure">
+<div aria-describedby="hint-fill-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>The default shape for <code>geom_point()</code> is a solid circle—because it is solid we can’t define the fill aesthetic. To change this we can specify <code>shape = 21</code> which is the code for a circle with a fill. See <a href="http://www.sthda.com/english/wiki/r-plot-pch-symbols-the-different-point-shapes-available-in-r#google_vignette">here</a> for a list of all the available shapes in R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set shape to hollow circles</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">21</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We can use the <code>lighten()</code> function from the <code>colorspace</code> package to specify a fill colour that is 50% lighter than the color palette.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the lighten() function</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">lighten</span>(highlightPalette, <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint quarto-uncaptioned" id="hint-fill-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+☠ Hint&nbsp;2
+</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="remove-the-legend" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Remove the legend</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The legend isn’t much use so we can turn it off here. Use the same approach as the previous exercise, setting <code>legend.position = "none"</code> in your <code>theme()</code>.</p>
+<hr>
+</section>
+<section id="remove-the-axis-titles" class="level1 page-columns page-full" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Remove the axis titles</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>One way to do this is to add the <code>scale_*</code> functions setting <code>name = NULL</code>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><a href="#hint-scale-date" class="quarto-xref">☠ Hint&nbsp;3</a></p>
+</div></div><div style="display: none;">
+<div id="hint-scale-date" class="quarto-float">
+<figure class="quarto-float quarto-float-hint figure">
+<div aria-describedby="hint-scale-date-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>Because <code>date</code> is a date variable, the appropriate scale is <code>scale_date_manual()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_x_date</span>(<span class="at">name =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint quarto-uncaptioned" id="hint-scale-date-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+☠ Hint&nbsp;3
+</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="adjust-the-ranges-on-the-x-axis-and-y-axis" class="level1 page-columns page-full" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Adjust the ranges on the x-axis and y-axis</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Give the plot some breathing room by expanding the range of the x and y axes. You can do this by setting <code>limits = c(min, max)</code> in <code>scale_x_date()</code> and <code>scale_y_continuous()</code>. Set the x axis to run from 2000 to 2003 and set the y axis to run from 0 to 30.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><a href="#hint-scale-break" class="quarto-xref">☠ Hint&nbsp;5</a></p>
+</div></div><div style="display: none;">
+<div id="hint-scale-break" class="quarto-float">
+<figure class="quarto-float quarto-float-hint figure">
+<div aria-describedby="hint-scale-break-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>The x-axis is a date variable so we need to specify the max and min of the range as a date. We can do this using <code>as.Date()</code> for example, the January 1 2000 would be <code>as.Date('2000-01-01')</code>. We can also set the date_labels and breaks arguments.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_x_date</span>(<span class="cn">NULL</span>, </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">limits =</span> <span class="fu">c</span>(<span class="fu">as.Date</span>(<span class="st">'2000-01-01'</span>), <span class="fu">as.Date</span>(<span class="st">'2023-01-01'</span>)),</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">date_labels =</span> <span class="st">'%Y'</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">breaks =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">'2000-01-01'</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'2005-01-01'</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'2010-01-01'</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'2015-01-01'</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'2020-01-01'</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'2023-01-01'</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint quarto-uncaptioned" id="hint-scale-break-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+☠ Hint&nbsp;4
+</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="add-title-subtitle-and-caption" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Add title, subtitle, and caption</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Do this using the <code>labs()</code> function, as in Exercise 3.</p>
+<hr>
+</section>
+<section id="add-text-labels" class="level1 page-columns page-full" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Add text labels</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Add text labels using using <code>geom_text()</code>, setting the <code>y</code> aesthetic to percent and the <code>x</code> aesthetic to <strong>2023-01-01</strong>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><a href="#hint-scale-break" class="quarto-xref">☠ Hint&nbsp;5</a></p>
+</div></div><div style="display: none;">
+<div id="hint-scale-break" class="quarto-float">
+<figure class="quarto-float quarto-float-hint figure">
+<div aria-describedby="hint-scale-break-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>We only want the label for the last data point—to achieve this we can group the dataset by condition and then subset to the last observation within each condition using <code>slice_tail()</code>. This can be done on the fly within <code>geom_text()</code>, as below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> df2Plot <span class="sc">|&gt;</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">group_by</span>(condition) <span class="sc">|&gt;</span> </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">slice_tail</span>(<span class="at">n=</span><span class="dv">1</span>),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="fu">as.Date</span>(<span class="st">'2023-01-01'</span>),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> percent,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">label =</span> condition</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint quarto-uncaptioned" id="hint-scale-break-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+☠ Hint&nbsp;5
+</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="shift-text-labels-to-the-right-and-make-them-smaller" class="level1 page-columns page-full" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> Shift text labels to the right and make them smaller</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Try setting the <code>size</code> and <code>hjust</code> arguments in <code>geom_text()</code> to shift the labels to the right and shrink them a bit.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><a href="#hint-unclip" class="quarto-xref">☠ Hint&nbsp;6</a></p>
+</div></div><div style="display: none;">
+<div id="hint-unclip" class="quarto-float">
+<figure class="quarto-float quarto-float-hint figure">
+<div aria-describedby="hint-unclip-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>You probably find that the text labels disappear outside of the plot area. There are two tricks to addressing this. First we have to increase the plot margin on the right-hand side of the plot by setting <code>plot.margin</code> in our <code>theme()</code>. This gives some space for the labels to appear. Second we have to include the line <code>coord_cartesian(clip = 'off')</code> in our ggplot code. This allows plot elements to appear outside the plot panel, in the margin space that we have created.</p>
+<p>Your updated code should include</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">clip =</span> <span class="st">'off'</span>) <span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    ... <span class="co"># other theme settings</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="at">t=</span><span class="dv">10</span>, <span class="at">b=</span><span class="dv">10</span>, <span class="at">r=</span><span class="dv">80</span>, <span class="at">l=</span><span class="dv">10</span>),</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint quarto-uncaptioned" id="hint-unclip-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+☠ Hint&nbsp;6
+</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="remove-the-grey-background" class="level1 page-columns page-full" data-number="14">
+<h1 data-number="14"><span class="header-section-number">14</span> Remove the grey background</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Let’s get rid of the default grey background. We can do this by editing the panel background.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><a href="#hint-panel-background" class="quarto-xref">☠ Hint&nbsp;7</a></p>
+</div></div><div style="display: none;">
+<div id="hint-panel-background" class="quarto-float">
+<figure class="quarto-float quarto-float-hint figure">
+<div aria-describedby="hint-panel-background-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>Try setting <code>panel.background = element_blank()</code> in your <code>theme()</code></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint quarto-uncaptioned" id="hint-panel-background-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+☠ Hint&nbsp;7
+</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="add-in-major-grid-lines" class="level1 page-columns page-full" data-number="15">
+<h1 data-number="15"><span class="header-section-number">15</span> Add in major grid lines</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We can add in major grid lines by setting <code>panel.grid.major</code> in your <code>theme</code></p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><a href="#hint-panel-grid" class="quarto-xref">☠ Hint&nbsp;8</a></p>
+</div></div><div style="display: none;">
+<div id="hint-panel-grid" class="quarto-float">
+<figure class="quarto-float quarto-float-hint figure">
+<div aria-describedby="hint-panel-grid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>Try setting <code>panel.grid.major = element_line(color = 'grey90')</code> in your <code>theme()</code></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint quarto-uncaptioned" id="hint-panel-grid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+☠ Hint&nbsp;8
+</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="remove-axis-ticks" class="level1" data-number="16">
+<h1 data-number="16"><span class="header-section-number">16</span> Remove axis ticks</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>You can get rid of the axis ticks by setting <code>axis.ticks()</code> in the <code>theme()</code>.</p>
+<hr>
+</section>
+<section id="increase-the-line-size-for-the-highlighted-lines" class="level1 page-columns page-full" data-number="17">
+<h1 data-number="17"><span class="header-section-number">17</span> Increase the line size for the highlighted lines</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>As well as emphasising the key lines for Mental health and Allergies using colour, we can add extra emphasise by increasing the line size relative to the other conditions. To do this we need to set a new aesthetic <code>linewidth</code> which we can then control by setting <code>scale_linewidth_manual()</code>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><a href="#hint-linewidth" class="quarto-xref">☠ Hint&nbsp;9</a></p>
+</div></div><div style="display: none;">
+<div id="hint-linewidth" class="quarto-float">
+<figure class="quarto-float quarto-float-hint figure">
+<div aria-describedby="hint-linewidth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>Your <code>aes()</code> should look something like this</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">aes</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> percent,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> date,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">group =</span> condition,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> highlight,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">fill =</span> highlight,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">linewidth =</span> highlight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint" id="hint-linewidth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+☠ Hint&nbsp;9: Then add <code>scale_linewidth_manual(values = c(1.5, 1.5, 0.5))</code>. The first two numbers are for <strong>Mental health</strong> and <strong>Allergies</strong>, the last number is for the other lines. Play with different numbers to get line widths that you like.
+</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="emphasise-the-key-words-in-the-title" class="level1 page-columns page-full" data-number="18">
+<h1 data-number="18"><span class="header-section-number">18</span> Emphasise the key words in the title</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Follow the example in Exercise 3 to emphasise the key words in the title.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><a href="#hint-ggtext" class="quarto-xref">☠ Hint&nbsp;10</a></p>
+</div></div><div style="display: none;">
+<div id="hint-ggtext" class="quarto-float">
+<figure class="quarto-float quarto-float-hint figure">
+<div aria-describedby="hint-ggtext-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>Remember to load the <code>ggtext</code> library and set <code>plot.title = element_markdown()</code> in the <code>theme()</code>.</p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint quarto-uncaptioned" id="hint-ggtext-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+☠ Hint&nbsp;10
+</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="add-text-hierarchy-in-the-title-subtitle-and-caption" class="level1 page-columns page-full" data-number="19">
+<h1 data-number="19"><span class="header-section-number">19</span> Add text hierarchy in the title, subtitle and caption</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Edit the <code>plot.title</code>, <code>plot.subtitle</code>, and <code>plot.caption</code> arguments in <code>theme()</code> to achieve this.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><a href="#hint-text-hierarchy" class="quarto-xref">☠ Hint&nbsp;11</a></p>
+</div></div><div style="display: none;">
+<div id="hint-text-hierarchy" class="quarto-float">
+<figure class="quarto-float quarto-float-hint figure">
+<div aria-describedby="hint-text-hierarchy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>For example, including <code>plot.subtitle = element_text(size=10, color = 'grey60', face = 'bold')</code> will alter the colour, font size and font face for the subtitle.</p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint quarto-uncaptioned" id="hint-text-hierarchy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+☠ Hint&nbsp;11
+</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="add-percentage-symbol-to-y-axis-label" class="level1 page-columns page-full" data-number="20">
+<h1 data-number="20"><span class="header-section-number">20</span> Add percentage symbol to y-axis label</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This is a nice subtle way to communicate the meaning of the y-axis without using up too much space or ink. To achieve this you need to edit <code>scale_y_continuous()</code>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><a href="#hint-percent" class="quarto-xref">☠ Hint&nbsp;12</a></p>
+</div></div><div style="display: none;">
+<div id="hint-percent" class="quarto-float">
+<figure class="quarto-float quarto-float-hint figure">
+<div aria-describedby="hint-percent-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>Use the <code>labels</code> argument in <code>scale_y_continuous()</code> to define the axis text labels. You must supply as many labels as there are major breaks in the scale (corresponding to the major gridlines).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="cn">NULL</span>, </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>), </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'0'</span>, <span class="st">'10'</span>, <span class="st">'20'</span>, <span class="st">'30%'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint quarto-uncaptioned" id="hint-percent-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+☠ Hint&nbsp;12
+</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="tidy-up-condition-labels" class="level1 page-columns page-full" data-number="21">
+<h1 data-number="21"><span class="header-section-number">21</span> Tidy up condition labels</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercise4-2_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The labels for the conditions are a bit messy. We can take a few steps to tidy these up:</p>
+<ol type="1">
+<li>Drop some of the overlapping conditions in the dataframe that gets passed to <code>geom_text()</code></li>
+<li>All the percentage for the final data point for our two highlighted conditions.</li>
+</ol>
+<p>Step 1 can be achieved by adding a <code>filter()</code> in the code that defines the text label data. Step 2 can be achieved by defining a new variable in the underlying chart dataset. This new variable can should combine the condition and the percent for the highlight lines and just the condition for the other lines.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><a href="#hint-text-labels" class="quarto-xref">☠ Hint&nbsp;13</a></p>
+</div></div><div style="display: none;">
+<div id="hint-text-labels" class="quarto-float">
+<figure class="quarto-float quarto-float-hint figure">
+<div aria-describedby="hint-text-labels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>One way to drop overlapping labels is to filter them out on the fly in the code that defines the defines the text label data. The code below combines <code>!</code> and <code>%in%</code> to say filter to conditions that are <strong>not</strong> in the vector.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_text</span>(</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df2Plot <span class="sc">|&gt;</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(condition) <span class="sc">|&gt;</span> </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">slice_tail</span>(<span class="at">n=</span><span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="sc">!</span> condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Heart, stroke &amp; vascular"</span>, <span class="st">"COPD"</span>)),</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Create a new variable to add the percent for the final data point:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df2Plot <span class="ot">&lt;-</span> df2Clean <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">highlight =</span> <span class="fu">case_when</span>(</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>      condition<span class="sc">==</span><span class="st">"Mental health"</span> <span class="sc">~</span> <span class="st">'a'</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>      condition<span class="sc">==</span><span class="st">"Allergies"</span> <span class="sc">~</span> <span class="st">'b'</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">.default =</span> <span class="st">'c'</span>),</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">label2 =</span> <span class="fu">ifelse</span>(</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>      highlight<span class="sc">==</span><span class="st">"c"</span>, condition, </span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">paste0</span>(condition, <span class="st">" ("</span>, percent, <span class="st">"%)"</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint" id="hint-text-labels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+☠ Hint&nbsp;13: To help see what this code is doing, try entering <code>paste0("COPD", " (", "20.4%", "%)")</code> at the console.
+</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+<div style="margin: 0 auto;">
+<p>You are a certified all star!!</p>
+<iframe src="https://giphy.com/embed/eUKYlbxwIRnqkjvXcK" width="381" height="480" style="" frameborder="0" class="giphy-embed" allowfullscreen="">
+</iframe>
+<p>
+<a href="https://giphy.com/gifs/cool-glasses-so-eUKYlbxwIRnqkjvXcK">via GIPHY</a>
+</p>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../exercises/exercise4-1.html" class="pagination-link" aria-label="Getting started">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Getting started</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script src="../site_libs/quarto-contrib/line-highlight-1.0.0/line-highlight.js" defer="true"></script>
+</body></html>

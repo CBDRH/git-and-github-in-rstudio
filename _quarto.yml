@@ -12,7 +12,7 @@ website:
         href: home/index.qmd
         icon: house-fill
       - text: "Lectures"
-        href: lectures/lectures.qmd
+        href: lectures/overview.qmd
         icon: easel3-fill
       - text: "Exercises"
         href: exercises/overview.qmd  
@@ -21,15 +21,19 @@ website:
   sidebar:
       style: "floating"
       collape-level: 1
-      title: Orientation
       contents:
-        - text: "Orientation"
-          href: home/index.qmd
-        - section: "Lectures"
+        - section: "Home"
           contents:
-            - lectures/lectures.qmd
-            - lectures/lecture1.qmd
-            - lectures/lecture2.qmd  
+          - text: "Welcome"
+            href: home/index.qmd
+          - text: "Prerequisites"
+            href: home/prerequisites.qmd
+          - text: "Approach"
+            href: home/approach.qmd
+          - text: "Orientation"
+            href: home/orientation.qmd
+        - text: "Lectures"
+          href: lectures/overview.qmd
         - section: "Exercises"
           contents:
             - section: "Data cleaning"
@@ -56,6 +60,7 @@ website:
                     - exercises/exercise3-2.qmd
                     - exercises/exercise3-3.qmd
                     - exercises/exercise3-4.qmd
+                    - exercises/exercise3-5.qmd
               - section: "Exercise 4"
                 contents:
                   - exercises/exercise4-1.qmd

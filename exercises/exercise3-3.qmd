@@ -34,6 +34,16 @@ df1Plot <- df1Clean |>
 # Custom bar colours
 barCols <- RColorBrewer::brewer.pal(5, 'RdYlGn')
 
+ggplot(
+  data = df1Clean,
+  aes(x = percent, y = state, fill=status)) +
+  geom_col()
+
+ggsave("../images/figure1-baseplot.png",
+       width = 6,
+       height = 4,
+       units = 'in')
+
 ```
 
 
@@ -323,7 +333,7 @@ label_text_colors <- c('transparent',
 
 * The final position corresponds to <span style="color:#1A9641; font-weight: 600;">Excellent</span>, which is already quite dark so we will make the label colour 60% lighter. 
 
-We can now map the label colours to this new vector by adding `scale_colour_manual("", values = label_text_colors)`.  To make this work we will also have to delete `color='grey30'` from the call to `geom_text()` and add `color = status` to `aes()`.
+We can now map the label colours to this new vector by adding `scale_colour_manual(name = NULL, values = label_text_colors)`.  To make this work we will also have to delete `color='grey30'` from the call to `geom_text()` and add `color = status` to `aes()`.
 
 ```{r}
 #| code-fold: true
@@ -345,7 +355,7 @@ ggplot(
     size = 8/.pt, 
     hjust = 1.1) +
   scale_fill_manual(name = NULL, values = barCols) +
-  scale_colour_manual("", values = label_text_colors) +
+  scale_colour_manual(name = NULL, values = label_text_colors) +
   scale_y_discrete(NULL) +
   scale_x_continuous(NULL) +
   labs(
@@ -385,7 +395,7 @@ ggplot(
     size = 8/.pt, 
     hjust = 1.1) +
   scale_fill_manual(name = NULL, values = barCols) +
-  scale_colour_manual("", values = label_text_colors) +
+  scale_colour_manual(name = NULL, values = label_text_colors) +
   scale_y_discrete(NULL) +
   scale_x_continuous(NULL) +
   labs(

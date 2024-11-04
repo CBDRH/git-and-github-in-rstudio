@@ -70,3 +70,16 @@ $presentation-h3-font-size: 1em;
   justify-content: center;
   align-items: center;
 }
+
+.code-font {
+  font-size: 0.875em;
+  color: var(--bs-code-color);
+  background-color: #f8f9fa;
+    border-radius: .25rem;
+  padding: .125rem .25rem;
+  word-wrap: break-word;
+}
+
+.fa-lightbulb {
+  color: #FFAE42;
+}

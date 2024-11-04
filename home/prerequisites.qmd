@@ -1,0 +1,36 @@
+---
+title: "Prerequisites"
+---
+
+You will need:
+
+* A laptop (and charger!)
+* Ideally at least a basic working knowledge of R and RStudio. If you are a beginner, check out the one-hour webinar [A gengle introduction to tidy statistics in R](https://posit.co/resources/videos/a-gentle-introduction-to-tidy-statistics-in-r/){target="_blank"})
+* A free GitHub [user account](https://happygitwithr.com/github-acct){target="_blank"}
+* A recent version of R (at least v4.3.0) and RStudio (at least a 2024 version) [installed](https://happygitwithr.com/install-r-rstudio){target="_blank"}
+* git [installed](https://happygitwithr.com/install-git){target="_blank"}
+* [Configure](https://happygitwithr.com/https-pat) Git, GitHub and RStudio  
+
+
+::: {.callout-warning}
+
+## Connect Git, GitHub and RStudio
+
+Configuring Git, GitHub and RStudio to work together is half the battle when it comes to using Git in RStudio. 
+
+Luckily there is an excellent online reference for this: 
+[Happy Git and GitHub for the useR](https://happygitwithr.com/) by Jennnifer Byran.
+
+To get up and running, I recommend the following sections from this online book: 
+
+4. Register a GitHub account
+5. Install or upgrade R and RStudio
+6. Install Git
+7. Introduce yourself to Git
+9. Personal access token for HTTPS (especially 9.1 TL;DR)
+
+We won't have time to configure everybody's laptop at the workshop so please try to do this in advance! 
+
+:::
+
+

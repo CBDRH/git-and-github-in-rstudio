@@ -1,12 +1,99 @@
 ---
-title: "Welcome to the course"
+pagetitle: "Welcome to the course"
 ---
 
-# Welcome 
+![](../images/horst/ggplot2-data-masterpiece.png)
 
-Welcome to Reproducible Data Visualisation with R!
+::: {.figLab}
+[Artwork by @allison_horst](https://twitter.com/allison_horst)
+:::
 
-# Housekeeping
+:::{}
 
-# Prerequisites
+# Course schedule
 
+```{r}
+#| echo: false
+
+library(kableExtra)
+library(fontawesome)
+
+time <- c(
+  "9:00 - 9:40",
+  "9:40 - 10:20",
+  "10:20 - 10:40",
+  "10:40 - 11:00",
+  "11:00 - 12:00",
+  "12:00 - 12:20",
+  "12:20 - 13:00",
+  "13:00 - 15:00",
+  "9:00 - 9:40",
+  "9:40 - 10:20",
+  "10:20 - 10:40",
+  "10:40 - 11:00",
+  "11:00 - 12:00",
+  "12:00 - 12:20",
+  "12:20 - 13:00",
+  "13:00 - 15:00"
+)
+
+ activity <- c(
+   "Welcome, housekeeping and orientation to RStudio",
+   "Reproducible research with Git and GitHub",
+   "Morning tea",
+   "Mini-exercise: Working with Git",
+   "Data preparation with <span class='code-font'>dplyr<span>",
+   "Mini-exercise: Working with <span class='code-font'>dplyr<span>",
+   "Lunch",
+   "Hands-on workshop exercises",
+   "Data visualisation with <span class='code-font'>ggplot2<span>",
+   "Storytelling with data",
+   "Morning tea",
+   "Mini-exercise: Working with <span class='code-font'>ggplot2<span>",
+   "Literate programming with <span class='code-font'>rmarkdown<span>",
+   "Mini-exercise: Working with <span class='code-font'>rmarkdown<span>",
+   "Lunch",
+   "Hands-on workshop exercises"
+ )
+
+links <- c(
+  "<a href='../lectures/lecture-rstudio.html'>🔗</a>",
+  "<a href='../lectures/overview.html#version-control-with-git-and-github-with-dplyr'>🔗</a>",
+  "",
+  "",
+  "<a href='../lectures/overview.html#data-cleaning-with-dplyr'>🔗</a>",
+  "",
+  "",
+  "<a href='../exercises/exercise1-1.html'>🔗</a>",
+  "<a href='../lectures/overview.html#data-visualisation-with-ggplot2'>🔗</a>",
+  "<a href='../lectures/overview.html#storytelling-with-data'>🔗</a>",
+  "",
+  "",
+  "<a href='../lectures/overview.html#literate-programming-with-knitr'>🔗</a>",
+  "",
+  "",
+  "<a href='../exercises/exercise3-1.html'>🔗</a>"
+  )
+
+# Combine into dataframe
+df <-
+  data.frame(
+    time = time,
+    activity = activity,
+    links = links
+  )
+
+kbl(df,
+    escape = FALSE, 
+    align = c('l', 'l', 'c'),
+    col.names = c('Time', 'Activity', "") ) |> 
+  pack_rows("Day 1", 1, 8) |> 
+  pack_rows("Day 2", 9, 16) |> 
+  column_spec(1, width = "30%") |> 
+  column_spec(2, width = "60%") |> 
+  column_spec(3, width = "10%") |> 
+  kable_styling(bootstrap_options = "hover")
+  
+```
+
+:::

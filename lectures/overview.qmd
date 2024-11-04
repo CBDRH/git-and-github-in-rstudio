@@ -1,0 +1,46 @@
+---
+title: "Lectures"
+---
+
+# Version control with Git and GitHub with `dplyr`
+
+```{=html}
+<iframe src="lecture-git-github.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+
+<a href='lecture-git-github.html' target="_blank">View slides in full screen</a>
+
+
+# Data cleaning with `dplyr`
+
+```{=html}
+<iframe src="lecture-data-cleaning.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+
+<a href='lecture-data-cleaning.html' target="_blank">View slides in full screen</a>
+
+
+# Data visualisation with `ggplot2`
+
+```{=html}
+<iframe src="lecture-data-vis.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+
+<a href='lecture-data-vis.html' target="_blank">View slides in full screen</a>
+
+# Storytelling with data
+
+```{=html}
+<iframe src="lecture-storytelling.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+
+<a href='lecture-storytelling.html' target="_blank">View slides in full screen</a>
+
+
+# Literate programming with `knitr` 
+
+```{=html}
+<iframe src="lecture-literate-programming.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+
+<a href='lecture-literate-programming.html' target="_blank">View slides in full screen</a>
