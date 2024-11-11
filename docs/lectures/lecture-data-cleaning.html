@@ -13,8 +13,7 @@
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.552">
 
-  <meta name="author" content="Mark Hanly">
-  <title>Data Viz with R - Cleaning data with dplyr and friends</title>
+  <title>Data Viz with R</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -393,26 +392,19 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Cleaning data with <code>dplyr</code> and friends</h1>
 
-<div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Mark Hanly 
-</div>
-</div>
-</div>
+<section id="data-cleaning-with-dplyr" class="slide level2 title-slide center">
+<h2>Data cleaning with <code>dplyr</code></h2>
 
-</section>
-<section id="section" class="slide level2">
+<img src="../images/dplyr.png" class="r-stretch"></section>
+<section id="section" class="slide level2 center-slide">
 <h2></h2>
 
 <img data-src="../images/horst/tidy-data-friends.jpg" class="r-stretch"><div class="figLab">
 <p>Illustrations from the <a href="https://www.openscapes.org/">Openscapes</a> blog <a href="https://www.openscapes.org/blog/2020/10/12/tidy-data/">Tidy Data for reproducibility, efficiency, and collaboration</a> by Julia Lowndes and Allison Horst”</p>
 </div>
 </section>
-<section id="section-1" class="slide level2">
+<section id="section-1" class="slide level2 center-slide">
 <h2></h2>
 
 <img data-src="../images/horst/tidy-data-structure.jpg" class="r-stretch"><div class="figLab">
@@ -1292,21 +1284,20 @@ Mark Hanly
 </div>
 </div>
 </section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<div class="callout callout-tip no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong><i class="fa-solid fa-rocket" aria-label="rocket"></i> Mini Exercise</strong></p>
-</div>
-<div class="callout-content">
+<section id="mini-exercise" class="slide level2">
+<h2>Mini-Exercise</h2>
 <div class="clock">
 <p><i class="fa-solid fa-clock" aria-label="clock"></i> 10 minutes</p>
 </div>
-<h4 id="practice-with-dplyr">Practice with dplyr!</h4>
+<h3 id="practice-with-dplyr">Practice with dplyr!</h3>
+<div class="columns">
+<div class="column" style="width:34%;">
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&amp;color=yellow&amp;hrs=0&amp;min=10&amp;sec=0" frameborder="0">
+</iframe>
+</div><div class="column" style="width:66%;">
 <ol type="1">
 <li><p>In the RStudio menu navigate to <code>Tools &gt; Global Options &gt; Code</code> and tick the box to use the native pipe operator</p></li>
-<li><p>We will use the <code>penguins</code> dataset shipped in the <code>palmerpenguins</code> library. Determine the longest bill length among the top 5 lightest female penguins from the Gentoo species.</p></li>
+<li><p>We will use the <code>penguins</code> dataset shipped in the <code>palmerpenguins</code> library. Determine the longest bill length among the five lightest female penguins from the Gentoo species.</p></li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="co"># Code to get you started</span></span>
@@ -1317,7 +1308,7 @@ Mark Hanly
 </div>
 </div>
 </div>
-</div>
+<h4 id="section-4"></h4>
 </section>
 <section id="factors-in-r" class="slide level2 smaller">
 <h2>Factors in R</h2>
@@ -1493,7 +1484,7 @@ Levels: slow average fast</code></pre>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p><a href="../lectures/lectures.qmd">Back</a></p>
+<p><a href="../lectures/overview.html"><i class="fa-solid fa-house" aria-label="house"></i></a></p>
 </div>
 </div>
 </section>
@@ -1548,7 +1539,7 @@ Levels: slow average fast</code></pre>
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',

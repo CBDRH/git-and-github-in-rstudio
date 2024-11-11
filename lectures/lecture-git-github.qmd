@@ -1,15 +1,15 @@
 ---
-title: "Version control with git and GitHub"
 format: 
   revealjs:
     theme: [night, ../custom.scss]
-    title-slide-attributes:
-      data-background-image: ../images/github-logo.png
-      data-background-size: contain
-      data-background-opacity: "0.2"
-footer: '<a href="/lectures/lectures.qmd">Back</a>'
+    highlight-style: monokai
+footer: '<a href="/lectures/overview.qmd">{{< fa house >}}</a>'
 slide-number: c/t
 ---
+
+## Version control with `Git` and `GitHub` {.title-slide}
+
+<img src="../images/github-mark-white.png"></img>
 
 ## The challenge
 

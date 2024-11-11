@@ -8,7 +8,9 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.552">
 
   <title>Data Viz with R</title>
@@ -396,7 +398,7 @@
 <h1>Literate programming with <code>Rmarkdown</code></h1>
 
 <img src="../images/rmarkdown.png" class="r-stretch"></section>
-<section id="section" class="slide level2">
+<section id="section" class="slide level2 center-slide">
 <h2></h2>
 
 <img data-src="../images/horst/rmarkdown-band.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://twitter.com/allison_horst">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></p></section>
@@ -449,6 +451,9 @@
 <img data-src="../images/cars-analysis-html.png" class="r-stretch quarto-figure-center"><p class="caption">cars-analysis.html</p></section>
 <section id="mini-exercise" class="slide level2 smaller">
 <h2>Mini-Exercise</h2>
+<div class="clock">
+<p><i class="fa-solid fa-clock" aria-label="clock"></i> 3 minutes</p>
+</div>
 <h3 id="create-and-run-a-new-rmarkdown-file">Create and run a new Rmarkdown file</h3>
 <div class="columns">
 <div class="column" style="width:34%;">
@@ -638,6 +643,9 @@
 </section>
 <section id="mini-exercise-1" class="slide level2 smaller">
 <h2>Mini-Exercise</h2>
+<div class="clock">
+<p><i class="fa-solid fa-clock" aria-label="clock"></i> 5 minutes</p>
+</div>
 <h3 id="practice-text-formatting">Practice text formatting</h3>
 <p>Edit the file <code>exercises/5-rmarkdown/poem-exercise.Rmd</code> to generate the output on the right</p>
 <div class="columns">
@@ -688,14 +696,25 @@
 </div>
 </div>
 </section>
+<section id="inline-r-code" class="slide level2">
+<h2>Inline R code</h2>
+<ul>
+<li>Insert values of R objects inline in text</li>
+<li>Useful for quick calculations</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a><span class="in">    Average speed was `r mean(cars$speed)`mph.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Average speed was 15.4mph.</p>
+</section>
 <section id="code-chunks" class="slide level2 smaller">
 <h2>Code chunks</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a><span class="in">    ```{r scatterplot, echo=FALSE}</span></span>
-<span id="cb4-2"><a></a><span class="in">    </span></span>
-<span id="cb4-3"><a></a><span class="in">    plot(cars)</span></span>
-<span id="cb4-4"><a></a><span class="in">    </span></span>
-<span id="cb4-5"><a></a><span class="in">    ```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a><span class="in">    ```{r scatterplot, echo=FALSE}</span></span>
+<span id="cb5-2"><a></a><span class="in">    </span></span>
+<span id="cb5-3"><a></a><span class="in">    plot(cars)</span></span>
+<span id="cb5-4"><a></a><span class="in">    </span></span>
+<span id="cb5-5"><a></a><span class="in">    ```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <div>
@@ -781,17 +800,6 @@
 </div>
 </div>
 </section>
-<section id="inline-r-code" class="slide level2">
-<h2>Inline R code</h2>
-<ul>
-<li>Insert values of R objects inline in text</li>
-<li>Useful for quick calculations</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a><span class="in">    Average speed was `r mean(cars$speed)`mph.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Average speed was 15.4mph.</p>
-</section>
 <section id="global-options" class="slide level2">
 <h2>Global options</h2>
 <p>Use <code>knitr::opts_chunk$set()</code> to set global options</p>
@@ -866,6 +874,9 @@
 </section>
 <section id="mini-exercise-2" class="slide level2 smaller">
 <h2>Mini-Exercise</h2>
+<div class="clock">
+<p><i class="fa-solid fa-clock" aria-label="clock"></i> 15 minutes</p>
+</div>
 <h3 id="update-a-parameterised-r-markdown-powerpoint-slide-deck">Update a parameterised R Markdown Powerpoint slide deck</h3>
 <div class="columns">
 <div class="column" style="width:34%;">
@@ -883,7 +894,7 @@
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p><a href="../lectures/overview.html">All Lectures</a></p>
+<p><a href="../lectures/overview.html"><i class="fa-solid fa-house" aria-label="house"></i></a></p>
 </div>
 </div>
 </section></section>
@@ -938,7 +949,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -1097,44 +1108,6 @@
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

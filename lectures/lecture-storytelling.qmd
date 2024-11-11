@@ -1,0 +1,591 @@
+---
+format: 
+  revealjs:
+    theme: [night, ../custom.scss]
+    highlight-style: monokai
+    bibliography: ../references.bib
+footer: '<a href="/lectures/overview.qmd">{{< fa house >}}</a>'
+slide-number: c/t
+---
+
+## Storytelling with data {.title-slide}
+
+
+<img src="../images/story-image.jpg"></img>
+
+
+## {.center-slide}
+
+![](../images/collaroy-beach-erosion.jpeg)
+
+::: {.figLab}
+Beach erosion at Collaroy in the aftermath of the 2016 'superstorm' that struck Australia's east coast. Photo: [UNSW Sydney](https://www.unsw.edu.au/newsroom/news/2024/07/coastal-storms-national-early-warning-system-will-help-us-better-prepare-for-beach-erosion-and-flooding)
+:::
+
+## {.center-slide}
+
+![](../images/vibracore-sampling.jpeg)
+
+::: {.figLab}
+
+From [enviroscienceinc.com](https://www.enviroscienceinc.com/services/environmental-compliance-services/vibracore-sediment-sampling/)
+
+:::
+
+## {.center-slide}
+
+![](../images/nunn-2015-figure1.png)
+
+::: {.figLab}
+Map of Australia showing the 21 coastal locations from which Aboriginal stories about coastal
+inundation are described. From @nunn2016aboriginal
+:::
+
+## 
+
+>The river now known as the Georges River, but then known as Kai’eemah, joined with the Goolay’yari, or Cooks River and flowed through one of the swamps that once were Botany Bay.
+
+::: {.figLab}
+This story, quoted in @nunn2016aboriginal, was related by [Frances Bodkin, a Dharawal woman](https://wonderground.press/people/dirt-aunty-fran-bodkin/), who heard it from her mother. 
+:::
+
+## 
+
+>A great storm came up, and huge waves washed into the Kai’eemah destroying much of the swampland used for food gathering. The waves crashed into the shore so fiercely that they washed over the land
+
+::: {.figLab}
+This story, quoted in @nunn2016aboriginal, was related by [Frances Bodkin, a Dharawal woman](https://wonderground.press/people/dirt-aunty-fran-bodkin/), who heard it from her mother. 
+:::
+
+##
+
+>Instead of the swamps, there was a great bay, and where the Kai’eemah had met the sea there was high mountains of sand. The two rivers now no longer joined together, but ran into the sea separately.
+
+::: {.figLab}
+This story, quoted in @nunn2016aboriginal, was related by [Frances Bodkin, a Dharawal woman](https://wonderground.press/people/dirt-aunty-fran-bodkin/), who heard it from her mother. 
+:::
+
+# Storytelling is the oldest data storage format
+
+## {center-image}
+
+![](../images/Audio_Compact_Disc.png){width="80%"}
+
+::: {.figLab}
+The compact disc (CD) co-developed by Philips and Sony in 1982 [Wikipedia](https://simple.wikipedia.org/wiki/Compact_disc)
+:::
+
+## 
+
+![](../images/floppy-disk.jpg)
+
+::: {.figLab}
+8-inch, 5¼-inch, and 3½-inch floppy disks. Invented in 1971 by IBM. From [Wikipedia](https://en.wikipedia.org/wiki/Floppy_disk)
+:::
+
+## {.center-slide}
+
+![](../images/ogham.jpg)
+
+::: {.figLab}
+Ogham Stone. 400AD-1000AD [mallonireland.com](https://mallonireland.com/blogs/news/ogham-script)
+:::
+
+## {.center-slide}
+
+![](../images/quipo.jpg)
+
+::: {.figLab}
+Quipu in the Museo Machu Picchu, Casa Concha, Cusco. Andead South America 2600 BC – c.1600 AD [Wikipedia](https://en.wikipedia.org/wiki/Quipu)
+:::
+
+## {.center-slide}
+
+![](../images/story-image.jpg)
+
+<!-- Storytelling for data visualisation -->
+## {background-image="images/section-image.jpg"}
+
+### How storytelling can improve data visualisation {.section-header}
+
+## How storytelling can improve data visualisation
+
+1. Aesthetics 
+1. Narrative
+1. Emotion 
+
+
+
+<!-- Storytelling for data visualisation -->
+## {background-image="../images/section-image.jpg"}
+
+### Aesthetics {.section-header}
+
+## Aesthetics in storytelling
+
+::: {layout-nrow=2}
+
+![Romeo and Juliet (1996)](../images/romeo-and-juliet-1996.jpg){width=60%}
+
+![Gnomeo and Juliet (2011)](../images/gnomeo-and-juliet-2011.jpg){width=60%}
+
+![West Side Story (1961)](../images/west-side-story-1961.jpg){width=60%}
+
+![Romeo and Juliet (1968)](../images/romeo-and-juliet-1968.jpg){width=60%}
+
+:::
+
+
+::: {.notes}
+
+"Romeo + Juliet" (1996): Aesthetic: Modern, Urban
+
+"West Side Story" (1961): Aesthetic: 1950s New York City, Musical
+
+"Gnomeo & Juliet" (2011): Aesthetic: Animated, Family-Friendly
+
+"Romeo and Juliet" (1968): Aesthetic: Historical, Authentic
+
+:::
+
+## Aesthetic-Usability Effect
+
+> People perceive more aesthetic designs as much more intuitive than those considered to be less aesthetically pleasing. 
+
+## {.center-slide}
+
+![](../images/ugly-chart-immigration.webp)
+
+::: {.figLab}
+Ugly charts are harder to read... and harder to believe
+:::
+
+
+## Aesthetics in data visualisation
+
+::: {.incremental}
+1. Color
+1. Font
+1. Text Hierarchy
+:::
+
+
+## Aesthetics in data visualisation
+
+<ol>
+<li style="color: #e7ad52;">Color</li>
+<li style="color: #7fa2a6;">Font</li>
+<li style="color: #7fa2a6;">Text hierarchy</li>
+</ol>
+
+## {.center-slide}
+
+![](../images/flourish-contrast.png)
+
+::: {.figLab}
+See [flourish.studio/blog/color-in-data-visualization](https://flourish.studio/blog/color-in-data-visualization/)
+:::
+
+
+
+## {.center-slide}
+
+![](../images/flourish-map-1.png)
+
+::: {.figLab}
+See [flourish.studio/blog/color-in-data-visualization](https://flourish.studio/blog/color-in-data-visualization/)
+:::
+
+## {.center-slide}
+
+![](../images/flourish-map-2.png)
+
+::: {.figLab}
+See [flourish.studio/blog/color-in-data-visualization](https://flourish.studio/blog/color-in-data-visualization/)
+:::
+
+
+## {.center-slide}
+
+![](../images/stock-prices-english.png)
+
+::: {.figLab}
+Nikkei Stock Average (Nikkei 225). See [indexes.nikkei.co.jp](https://indexes.nikkei.co.jp/)
+:::
+
+## {.center-slide} 
+
+![](../images/stock-prices-japanese.png)
+
+::: {.figLab}
+Nikkei Stock Average (Nikkei 225). See [indexes.nikkei.co.jp](https://indexes.nikkei.co.jp/)
+:::
+
+<!-- Font -->
+## Aesthetics in data visualisation
+
+<ol>
+<li style="color: #7fa2a6;">Color</li>
+<li style="color: #e7ad52;">Font</li>
+<li style="color: #7fa2a6;">Text hierarchy</li>
+</ol>
+
+
+## Font 
+
+> Words have meaning. Type has spirit. The combination is spectacular.
+
+::: {.figLab} 
+---Paula Scher
+:::
+
+## {.center-slide}
+
+![](../images/serif-sans-serif.png)
+
+::: {.figLab}
+See [blog.datawrapper.de/fonts-for-data-visualization/](https://blog.datawrapper.de/fonts-for-data-visualization/)
+:::
+
+
+## {.center-slide}
+
+![](../images/living-among-snakes.png)
+
+::: {.figLab}
+Living among snakes in Queensland, Australia by Diana MacDonald. See [didoesdigital.com/snakes](https://didoesdigital.com/snakes/)
+:::
+
+
+<!-- Text hierarchy -->
+## Aesthetics in data visualisation
+
+<ol>
+<li style="color: #7fa2a6;">Color</li>
+<li style="color: #7fa2a6;">Font</li>
+<li style="color: #e7ad52;">Text hierarchy</li>
+</ol>
+
+## {.center-slide}
+
+![](../images/you-will-read-this-first.jpg)
+
+
+## {.center-slide}
+
+```{r}
+#| echo: true
+#| code-fold: true
+
+library(ggplot2)
+ggplot(
+  data=ToothGrowth, 
+  aes(x=dose, y=len, fill=supp)) + 
+  geom_col(position = 'dodge') +
+  labs(
+    title = "The Effect of Vitamin C on Tooth Growth",
+    x = "Dose",
+    y = "Tooth growth"
+       ) +
+  scale_fill_manual("Supplement", values = c('lightblue', 'maroon'), labels = c('Orange juice', 'Vitamin C'))
+```
+
+
+## {.center-slide}
+
+![](../images/cara-thompson-level-up-plots.png)
+
+::: {.figLab}
+Level Up Your Plots by Cara Thompson [see cararthompson.com/talks](https://www.cararthompson.com/talks/nhsr2023-level-up-workshop/)
+:::
+
+<!-- Narrative -->
+## {background-image="../images/section-image.jpg"}
+
+### Narrative {.section-header}
+
+##  Narrative in storytelling
+
+{{< video https://www.youtube.com/watch?v=oP3c1h8v2ZQ
+    title="Kurt Vonnegut on the Shapes of Stories"
+    start="21"
+    width='100%'
+    height='85%'
+    aspect-ratio="21x9" >}}
+    
+
+::: {.figLab}
+Kurt Vonnegut on the Shapes of Stories. From [YouTube](https://www.youtube.com/watch?v=oP3c1h8v2ZQ)
+:::
+
+##  Narrative in data visualisation
+
+::: {.incremental}
+1. Titles and annotations
+1. Narrative structure
+1. Interactivity
+:::
+
+<!-- Titles and annotations -->
+## Narrative in data visualisation
+
+<ol>
+<li style="color: #e7ad52;">Titles and annotations</li>
+<li style="color: #7fa2a6;">Narrative structure</li>
+<li style="color: #7fa2a6;">Interactivity</li>
+</ol>
+
+
+## {.center-image}
+
+![](../images/hospital-waits-in-england-1.png){width=80%}
+
+::: {.figLab}
+How can the next government improve hospital waits in England? by The Health Foundation. See [health.ork.uk](https://www.health.org.uk/publications/long-reads/how-can-the-next-government-improve-hospital-waits-in-england)
+:::
+
+## 
+
+![](../images/hospital-waits-in-england-2.png){width=80%}
+
+::: {.figLab}
+How can the next government improve hospital waits in England? by The Health Foundation. See [health.ork.uk](https://www.health.org.uk/publications/long-reads/how-can-the-next-government-improve-hospital-waits-in-england)
+:::
+
+
+## {.center-slide}
+
+```{r}
+#| echo: true
+plot(astsa::birth)
+```
+
+
+## {.center-slide}
+
+![](../images/okboomer2_composite_poster-200-01.png){width=60%}
+
+::: {.figLab}
+Visualising the Baby Boom [by Kieran Healy](https://kieranhealy.org/blog/archives/2023/12/20/the-baby-boom-again/)
+:::
+
+## {.center-slide}
+
+![](../images/okboomer-for-sale.png)
+
+::: {.figLab}
+[society6.com](https://society6.com/product/visualizing-the-baby-boom-time-series_print?sku=s6-13435579p4a1v3)
+:::
+
+<!-- Narrative structure -->
+## Narrative in data visualisation
+
+<ol>
+<li style="color: #7fa2a6;">Titles and annotations</li>
+<li style="color: #e7ad52;">Narrative structure</li>
+<li style="color: #7fa2a6;">Interactivity</li>
+</ol>
+
+## Narrative structure
+
+>We are the storytelling ape, and we are incredibly good at it. As soon as we are old enough to want to understand what is happening around us, we begin to live in a world of stories. **We think in narrative**
+
+::: {.figLab}
+---Terry Pratchett
+:::
+
+## {.center-slide}
+
+![](../images/a-star-is-born-2018.jpeg)
+
+::: {.figLab}
+A Star is Born (2018) starring Lady Gaga
+:::
+
+## {.center-slide}
+
+![](../images/a-star-is-born-1976.jpeg)
+
+::: {.figLab}
+A Star is Born (1976) starring Barbra Sreisand
+:::
+
+## {.center-slide}
+
+![](../images/a-star-is-born-1954.jpeg)
+
+::: {.figLab}
+A Star is Born (1954) starring Judy Garland
+:::
+
+## {.center-slide}
+
+![](../images/a-star-is-born-1937.jpeg)
+
+::: {.figLab}
+A Star is Born (1937) starring Janet Gaynor
+:::
+
+
+## Narrative structure
+
+The simplest story structure: 
+
+1. Setup
+1. Conflict
+1. Resolution
+
+## {.center-slide}
+
+![](../images/grattan-sugar-tax-1.png)
+
+::: {.figLab}
+Sickly sweet: It's time for a sugary drinks tax [The Grattan Institute](https://grattan.edu.au/report/sickly-sweet/)
+:::
+
+
+## {.center-slide}
+
+![](../images/grattan-sugar-tax-2.png)
+
+::: {.figLab}
+Sickly sweet: It's time for a sugary drinks tax [The Grattan Institute](https://grattan.edu.au/report/sickly-sweet/)
+:::
+
+## {.center-slide}
+
+![](../images/grattan-sugar-tax-3.png)
+
+::: {.figLab}
+Sickly sweet: It's time for a sugary drinks tax [The Grattan Institute](https://grattan.edu.au/report/sickly-sweet/)
+:::
+
+## {.center-slide}
+
+![](../images/grattan-sugar-tax-4.png)
+
+::: {.figLab}
+Sickly sweet: It's time for a sugary drinks tax [The Grattan Institute](https://grattan.edu.au/report/sickly-sweet/)
+:::
+
+
+## Narrative structure
+
+::: {.fragment .highlight-current-blue}
+1. Diabetes has nearly tripled since 2000
+:::
+
+::: {.fragment .highlight-current-blue}
+2. One can of soft drink can have nearly a day's worth of sugar
+:::
+
+::: {.fragment .highlight-current-blue}
+3. A tiered tax encourages manufacturers to reduce the sugar in their drinks
+4. Under our proposed tax, people would switch from
+high-sugar drinks to low- or no-sugar drinks
+:::
+
+<!-- Interactivity -->
+## Narrative in data visualisation
+
+<ol>
+<li style="color: #7fa2a6;">Titles and annotations</li>
+<li style="color: #7fa2a6;">Narrative structure</li>
+<li style="color: #e7ad52;">Interactivity</li>
+</ol>
+
+
+## {.center-slide}
+
+![](../images/what-if.png){width=60%}
+
+::: {.figLab}
+What if? by Owen Cho. See [healthpolicy.github.io/nhs_whatif](https://healthpolicy.github.io/nhs_whatif/)
+:::
+
+
+<!-- Storytelling for data visualisation -->
+## {background-image="../images/section-image.jpg"}
+
+### Emotion {.section-header}
+
+
+## Emotion in data visualisation
+
+> They may forget what you said — but they will never forget **how you made them feel**.
+
+::: {.figLab}
+---Carl W. Buehner
+:::
+
+
+## Emotion in data visualisation
+
+::: {.incremental}
+1. Empathy
+1. Delight
+1. Fear
+:::
+
+<!-- Empathy -->
+## Emotion in data visualisation
+
+<ol>
+<li style="color: #e7ad52;">Empathy</li>
+<li style="color: #7fa2a6;">Delight</li>
+<li style="color: #7fa2a6;">Fear</li>
+</ol>
+
+
+## {.center-slide}
+
+![](../images/chalabi-2024.jpg)
+
+::: {.figLab}
+
+By [Mona Chalabi](https://monachalabi.com/) via [instagram](https://www.instagram.com/monachalabi)
+
+:::
+
+
+<!-- Delight -->
+## Emotion in data visualisation
+
+<ol>
+<li style="color: #7fa2a6;">Empathy</li>
+<li style="color: #d5a04c;">Delight</li>
+<li style="color: #7fa2a6;">Fear</li>
+</ol>
+
+
+## {.center-slide}
+
+![](../images/1381-usa-wind-power.svg){width=80%}
+
+::: {.figLab}
+Beautiful news daily from [Information is beautiful](https://informationisbeautiful.net/beautifulnews/1381-usa-wind-power/)
+:::
+
+<!-- Fear -->
+## Emotion in data visualisation
+
+<ol>
+<li style="color: #7fa2a6;">Empathy</li>
+<li style="color: #7fa2a6;">Delight</li>
+<li style="color: #e7ad52;">Fear</li>
+</ol>
+
+## 
+
+![](../images/global-mean-sea-level.max-2000x2000.png){width=60%}
+
+::: {.figLab}
+little picture: sea level trend. See [climate.esa.int/en/littlepicturescompetition](https://climate.esa.int/en/littlepicturescompetition/)
+:::
+
+
+
+## Academic References
+
+::: {#refs}
+:::

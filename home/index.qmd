@@ -1,14 +1,9 @@
 ---
 pagetitle: "Welcome to the course"
+toc: false
 ---
 
-![](../images/horst/ggplot2-data-masterpiece.png)
-
-::: {.figLab}
-[Artwork by @allison_horst](https://twitter.com/allison_horst)
-:::
-
-:::{}
+:::{r}
 
 # Course schedule
 
@@ -39,19 +34,19 @@ time <- c(
 
  activity <- c(
    "Welcome, housekeeping and orientation to RStudio",
-   "Reproducible research with Git and GitHub",
+   "Reproducible research with <span class='code-font'>git</span> and <span class='code-font'>GitHub</span>",
    "Morning tea",
-   "Mini-exercise: Working with Git",
-   "Data preparation with <span class='code-font'>dplyr<span>",
-   "Mini-exercise: Working with <span class='code-font'>dplyr<span>",
+   "Mini-exercise: Working with <span class='code-font'>git</span>",
+   "Data preparation with <span class='code-font'>dplyr</span>",
+   "Mini-exercise: Working with <span class='code-font'>dplyr</span>",
    "Lunch",
    "Hands-on workshop exercises",
-   "Data visualisation with <span class='code-font'>ggplot2<span>",
+   "Data visualisation with <span class='code-font'>ggplot2</span>",
    "Storytelling with data",
    "Morning tea",
-   "Mini-exercise: Working with <span class='code-font'>ggplot2<span>",
-   "Literate programming with <span class='code-font'>rmarkdown<span>",
-   "Mini-exercise: Working with <span class='code-font'>rmarkdown<span>",
+   "Mini-exercise: Working with <span class='code-font'>ggplot2</span>",
+   "Literate programming with <span class='code-font'>rmarkdown</span>",
+   "Mini-exercise: Working with <span class='code-font'>rmarkdown</span>",
    "Lunch",
    "Hands-on workshop exercises"
  )
@@ -95,5 +90,46 @@ kbl(df,
   kable_styling(bootstrap_options = "hover")
   
 ```
+
+:::
+
+
+::: {.aside}
+
+**Day 1** `Git` and `GitHub`
+
+![](../images/horst/git-commit.png)
+
+::: {.figLab}
+Illustrations from the [Openscapes](https://www.openscapes.org/) blog [GitHub for supporting, contributing, and failing safely](https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/) by Allison Horst and Julia Lowndes.<br><br>
+:::
+
+**Day 1** `dplyr`
+
+![](../images/horst/tidy-data-friends.jpg)
+
+::: {.figLab}
+Illustrations from the [Openscapes](https://www.openscapes.org/) blog [Tidy Data for reproducibility, efficiency, and collaboration](https://www.openscapes.org/blog/2020/10/12/tidy-data/) by Julia Lowndes and Allison Horst.<br><br>
+:::
+
+**Day 2** `ggplot2`
+
+![](../images/horst/ggplot2-data-masterpiece.png)
+
+::: {.figLab}
+
+[Artwork by @allison_horst](https://twitter.com/allison_horst)<br><br>
+
+:::
+
+**Day 2** `rmarkdown`
+
+![](../images/horst/rmarkdown-band.png)
+
+::: {.figLab}
+
+[Artwork by @allison_horst](https://twitter.com/allison_horst)
+
+:::
 
 :::

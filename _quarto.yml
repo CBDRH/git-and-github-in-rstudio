@@ -24,7 +24,7 @@ website:
       contents:
         - section: "Home"
           contents:
-          - text: "Welcome"
+          - text: "Schedule"
             href: home/index.qmd
           - text: "Prerequisites"
             href: home/prerequisites.qmd
@@ -36,23 +36,21 @@ website:
           href: lectures/overview.qmd
         - section: "Exercises"
           contents:
-            - section: "Data cleaning"
+            - text: Overview
+              href: exercises/overview.qmd
+            - section: "Day 1. Data cleaning"
               contents:
-              - text: Overview
-                href: exercises/overview.qmd
-              - section: "Exercise 1"
+              - section: "Exercise 1 (Beginner)"
                 contents:
                   - exercises/exercise1-1.qmd
                   - exercises/exercise1-2.qmd
-              - section: "Exercise 2"
+              - section: "Exercise 2 (Advanced)"
                 contents:
                   - exercises/exercise2-1.qmd
                   - exercises/exercise2-2.qmd
-            - section: "Visualisation"
+            - section: "Day 2. Visualisation"
               contents:
-              - text: Overview
-                href: exercises/overview.qmd
-              - section: "Exercise 3"
+              - section: "Exercise 3 (Beginner)"
                 contents:
                   - exercises/exercise3-1.qmd
                   - section: "Step-by-step guide"
@@ -61,7 +59,7 @@ website:
                     - exercises/exercise3-3.qmd
                     - exercises/exercise3-4.qmd
                     - exercises/exercise3-5.qmd
-              - section: "Exercise 4"
+              - section: "Exercise 4 (Advanced)"
                 contents:
                   - exercises/exercise4-1.qmd
                   - exercises/exercise4-2.qmd            

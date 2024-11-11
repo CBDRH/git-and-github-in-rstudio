@@ -13,8 +13,7 @@
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.552">
 
-  <meta name="author" content="Mark Hanly">
-  <title>Data Viz with R - Visualising data with ggplot2</title>
+  <title>Data Viz with R</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -393,32 +392,19 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Visualising data with <code>ggplot2</code></h1>
 
-<div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Mark Hanly 
-</div>
-</div>
-</div>
+<section id="data-visualisation-with-ggplot2" class="slide level2 title-slide center">
+<h2>Data visualisation with <code>ggplot2</code></h2>
 
-</section>
-<section id="something-motivational" class="slide level2">
-<h2>Something motivational</h2>
-<!-- ##  {background-iframe="https://www.data-to-viz.com/"} -->
-</section>
+<img src="../images/ggplot2.png" class="r-stretch"></section>
 <section id="section" class="slide level2">
 <h2></h2>
 
 <img data-src="../images/from-data-to-vis.png" class="r-stretch"></section>
-<section id="section-1" class="slide level2">
+<section id="section-1" class="slide level2 center-slide">
 <h2></h2>
-<div class="center-xy">
-<p><img data-src="../images/horst/ggplot2-data-masterpiece.png"></p>
-</div>
-<div class="figLab">
+
+<img data-src="../images/horst/ggplot2-data-masterpiece.png" class="r-stretch"><div class="figLab">
 <p><a href="https://twitter.com/allison_horst">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></p>
 </div>
 </section>
@@ -562,12 +548,11 @@ Mark Hanly
 <span id="cb5-5"><a></a><span class="co"># Call ggplot</span></span>
 <span id="cb5-6"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb5-7"><a></a>  <span class="at">data =</span> penguins,</span>
-<span id="cb5-8"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
-<span id="cb5-9"><a></a>) <span class="sc">+</span> </span>
-<span id="cb5-10"><a></a>  <span class="fu">geom_histogram</span>(</span>
-<span id="cb5-11"><a></a>    <span class="at">color =</span> <span class="st">'navy'</span>,</span>
-<span id="cb5-12"><a></a>    <span class="at">fill =</span> <span class="st">'lightblue'</span></span>
-<span id="cb5-13"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-8"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)) <span class="sc">+</span> </span>
+<span id="cb5-9"><a></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb5-10"><a></a>    <span class="at">color =</span> <span class="st">'navy'</span>,</span>
+<span id="cb5-11"><a></a>    <span class="at">fill =</span> <span class="st">'lightblue'</span></span>
+<span id="cb5-12"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column">
 <ul>
@@ -589,21 +574,32 @@ Mark Hanly
 <p>Does the same but harder to read and debug!</p>
 </div>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-<div class="callout callout-tip no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong><i class="fa-solid fa-rocket" aria-label="rocket"></i> Mini Exercise</strong></p>
-</div>
-<div class="callout-content">
+<section id="mini-exercise" class="slide level2 smaller">
+<h2>Mini-Exercise</h2>
 <div class="clock">
 <p><i class="fa-solid fa-clock" aria-label="clock"></i> 5 minutes</p>
 </div>
-<h4 id="practice-with-ggplot2">Practice with ggplot2!</h4>
-<p>Modify the code on the left to produce the figure on the right! <br></p>
+<h3 id="modify-the-starter-code-to-produce-the-figure">Modify the starter code to produce the figure</h3>
 <div class="columns">
-<div class="column">
+<div class="column" style="width:34%;">
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&amp;color=yellow&amp;hrs=0&amp;min=5&amp;sec=0" frameborder="0">
+</iframe>
+</div><div class="column" style="width:66%;">
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Figure</a></li><li><a href="#tabset-1-2">Starter code</a></li><li><a href="#tabset-1-3">Hints</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="lecture-data-vis_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Load libraries</span></span>
 <span id="cb7-2"><a></a><span class="fu">library</span>(ggplot2)</span>
@@ -612,31 +608,19 @@ Mark Hanly
 <span id="cb7-5"><a></a><span class="co"># Call ggplot</span></span>
 <span id="cb7-6"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb7-7"><a></a>  <span class="at">data =</span> penguins,</span>
-<span id="cb7-8"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
-<span id="cb7-9"><a></a>) <span class="sc">+</span> </span>
-<span id="cb7-10"><a></a>  <span class="fu">geom_histogram</span>(</span>
-<span id="cb7-11"><a></a>    <span class="at">color =</span> <span class="st">'navy'</span>,</span>
-<span id="cb7-12"><a></a>    <span class="at">fill =</span> <span class="st">'lightblue'</span></span>
-<span id="cb7-13"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="lecture-data-vis_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
-</figure>
+<span id="cb7-8"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)) <span class="sc">+</span> </span>
+<span id="cb7-9"><a></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb7-10"><a></a>    <span class="at">color =</span> <span class="st">'navy'</span>,</span>
+<span id="cb7-11"><a></a>    <span class="at">fill =</span> <span class="st">'lightblue'</span></span>
+<span id="cb7-12"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div style="font-size:0.7em;">
-<p><strong>Hints</strong></p>
+<div id="tabset-1-3">
 <ul>
 <li>This is a <em>density</em> plot</li>
 <li>Enter <code>?geom_density()</code> at the console to open the R Documentation. Scroll down to the section on <strong>Aesthetics</strong> to read about other modifiable aesthetics.</li>
 </ul>
+</div>
 </div>
 </div>
 </div>
@@ -656,9 +640,8 @@ Mark Hanly
 <span id="cb8-2"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb8-3"><a></a>  <span class="at">data =</span> penguins,</span>
 <span id="cb8-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, </span>
-<span id="cb8-5"><a></a>      <span class="at">y =</span> bill_length_mm)</span>
-<span id="cb8-6"><a></a>) <span class="sc">+</span> </span>
-<span id="cb8-7"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-5"><a></a>      <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span> </span>
+<span id="cb8-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -678,9 +661,8 @@ Mark Hanly
 <span id="cb9-2"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb9-3"><a></a>  <span class="at">data =</span> penguins,</span>
 <span id="cb9-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> island, </span>
-<span id="cb9-5"><a></a>      <span class="at">y =</span> body_mass_g)</span>
-<span id="cb9-6"><a></a>) <span class="sc">+</span> </span>
-<span id="cb9-7"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-5"><a></a>      <span class="at">y =</span> body_mass_g)) <span class="sc">+</span> </span>
+<span id="cb9-6"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -713,9 +695,8 @@ Mark Hanly
 <span id="cb10-2"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb10-3"><a></a>  <span class="at">data =</span> penguins,</span>
 <span id="cb10-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, </span>
-<span id="cb10-5"><a></a>      <span class="at">y =</span> bill_length_mm)</span>
-<span id="cb10-6"><a></a>) <span class="sc">+</span> </span>
-<span id="cb10-7"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-5"><a></a>      <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span> </span>
+<span id="cb10-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -737,9 +718,8 @@ Mark Hanly
 <span id="cb11-4"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb11-5"><a></a>    <span class="at">x =</span> flipper_length_mm, </span>
 <span id="cb11-6"><a></a>    <span class="at">y =</span> bill_length_mm,</span>
-<span id="cb11-7"><a></a>    <span class="at">color =</span> flipper_length_mm)</span>
-<span id="cb11-8"><a></a>) <span class="sc">+</span> </span>
-<span id="cb11-9"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-7"><a></a>    <span class="at">color =</span> flipper_length_mm)) <span class="sc">+</span> </span>
+<span id="cb11-8"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -761,9 +741,8 @@ Mark Hanly
 <span id="cb12-4"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb12-5"><a></a>    <span class="at">x =</span> flipper_length_mm, </span>
 <span id="cb12-6"><a></a>    <span class="at">y =</span> bill_length_mm,</span>
-<span id="cb12-7"><a></a>    <span class="at">size =</span> flipper_length_mm)</span>
-<span id="cb12-8"><a></a>) <span class="sc">+</span> </span>
-<span id="cb12-9"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-7"><a></a>    <span class="at">size =</span> flipper_length_mm)) <span class="sc">+</span> </span>
+<span id="cb12-8"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -785,9 +764,8 @@ Mark Hanly
 <span id="cb13-4"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb13-5"><a></a>    <span class="at">x =</span> flipper_length_mm, </span>
 <span id="cb13-6"><a></a>    <span class="at">y =</span> bill_length_mm,</span>
-<span id="cb13-7"><a></a>    <span class="at">color =</span> species)</span>
-<span id="cb13-8"><a></a>) <span class="sc">+</span> </span>
-<span id="cb13-9"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-7"><a></a>    <span class="at">color =</span> species)) <span class="sc">+</span> </span>
+<span id="cb13-8"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -810,9 +788,8 @@ Mark Hanly
 <span id="cb14-5"><a></a>    <span class="at">x =</span> flipper_length_mm, </span>
 <span id="cb14-6"><a></a>    <span class="at">y =</span> bill_length_mm,</span>
 <span id="cb14-7"><a></a>    <span class="at">color =</span> species,</span>
-<span id="cb14-8"><a></a>    <span class="at">shape =</span> species)</span>
-<span id="cb14-9"><a></a>) <span class="sc">+</span> </span>
-<span id="cb14-10"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-8"><a></a>    <span class="at">shape =</span> species)) <span class="sc">+</span> </span>
+<span id="cb14-9"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -824,47 +801,41 @@ Mark Hanly
 </div>
 </div>
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<div class="callout callout-tip no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong><i class="fa-solid fa-rocket" aria-label="rocket"></i> Mini Exercise</strong></p>
-</div>
-<div class="callout-content">
+<section id="mini-exercise-1" class="slide level2 smaller">
+<h2>Mini-Exercise</h2>
 <div class="clock">
 <p><i class="fa-solid fa-clock" aria-label="clock"></i> 5 minutes</p>
 </div>
-<h4 id="practice-with-ggplot2-1">Practice with ggplot2!</h4>
-<p>Modify the code on the left to produce the figure on the right! <br></p>
+<h3 id="modify-the-starter-code-to-produce-the-figure-1">Modify the starter code to produce the figure!</h3>
 <div class="columns">
-<div class="column">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co"># Plot</span></span>
-<span id="cb15-2"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb15-3"><a></a>  <span class="at">data =</span> penguins,</span>
-<span id="cb15-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> island, </span>
-<span id="cb15-5"><a></a>      <span class="at">y =</span> body_mass_g)</span>
-<span id="cb15-6"><a></a>) <span class="sc">+</span> </span>
-<span id="cb15-7"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column">
+<div class="column" style="width:34%;">
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&amp;color=yellow&amp;hrs=0&amp;min=5&amp;sec=0" frameborder="0">
+</iframe>
+</div><div class="column" style="width:66%;">
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Figure</a></li><li><a href="#tabset-2-2">Starter code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="lecture-data-vis_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
+<p><img data-src="lecture-data-vis_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
+<div id="tabset-2-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co"># Plot</span></span>
+<span id="cb15-2"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb15-3"><a></a>  <span class="at">data =</span> penguins,</span>
+<span id="cb15-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> island, </span>
+<span id="cb15-5"><a></a>      <span class="at">y =</span> body_mass_g)) <span class="sc">+</span> </span>
+<span id="cb15-6"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div style="font-size:0.7em;">
-<p><strong>Hints</strong></p>
-<ul>
-<li></li>
-</ul>
+</div>
 </div>
 </div>
 </div>
@@ -1353,27 +1324,32 @@ Mark Hanly
 
 </div>
 <img data-src="lecture-data-vis_files/figure-revealjs/unnamed-chunk-35-1.png" width="960" class="r-stretch"></section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<div class="callout callout-tip no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong><i class="fa-solid fa-rocket" aria-label="rocket"></i> Mini Exercise</strong></p>
-</div>
-<div class="callout-content">
+<section id="mini-exercise-2" class="slide level2 smaller">
+<h2>Mini-Exercise</h2>
 <div class="clock">
-<p><i class="fa-solid fa-clock" aria-label="clock"></i> 20 minutes</p>
+<p><i class="fa-solid fa-clock" aria-label="clock"></i> 15 minutes</p>
 </div>
-<h4 id="practice-with-ggplot2-2">Practice with ggplot2!</h4>
+<h3 id="use-ggplot2-and-the-penguins-data-to-produce-the-figure">Use <code>ggplot2</code> and the <code>penguins</code> data to produce the figure</h3>
 <div class="columns">
-<div class="column">
+<div class="column" style="width:34%;">
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&amp;color=yellow&amp;hrs=0&amp;min=15&amp;sec=0" frameborder="0">
+</iframe>
+</div><div class="column" style="width:66%;">
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Goal</a></li><li><a href="#tabset-1-2">Hints</a></li><li><a href="#tabset-1-3"><i class="fa-solid fa-skull-crossbones" aria-label="skull-crossbones"></i> Seriously, help</a></li></ul>
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Figure</a></li><li><a href="#tabset-3-2">Hints</a></li><li><a href="#tabset-3-3"><i class="fa-solid fa-skull-crossbones" aria-label="skull-crossbones"></i> Seriously, help</a></li></ul>
 <div class="tab-content">
-<div id="tabset-1-1">
-<p>Can you use <code>ggplot2</code> and the <code>penguins</code> data to produce the figure on the right?</p>
+<div id="tabset-3-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="lecture-data-vis_files/figure-revealjs/unnamed-chunk-36-1.png" width="960"></p>
+</figure>
 </div>
-<div id="tabset-1-2">
+</div>
+</div>
+</div>
+<div id="tabset-3-2">
 <div class="smaller">
 <ul>
 <li>Start by identifying the <code>x</code>, <code>y</code> and <code>fill</code> aesthetics that will go in to <code>aes()</code>.</li>
@@ -1383,7 +1359,7 @@ Mark Hanly
 </ul>
 </div>
 </div>
-<div id="tabset-1-3">
+<div id="tabset-3-3">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="co"># Fill in the blanks!</span></span>
 <span id="cb35-2"><a></a><span class="fu">ggplot</span>(</span>
@@ -1404,25 +1380,12 @@ Mark Hanly
 </div>
 </div>
 </div>
-</div><div class="column">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="lecture-data-vis_files/figure-revealjs/unnamed-chunk-37-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p><a href="../lectures/lectures.qmd">Back</a></p>
+<p><a href="../lectures/overview.html"><i class="fa-solid fa-house" aria-label="house"></i></a></p>
 </div>
 </div>
 </section></section>

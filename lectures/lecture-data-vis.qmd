@@ -1,27 +1,22 @@
 ---
-title: "Visualising data with `ggplot2`"
-author: "Mark Hanly"
 format: 
   revealjs:
     theme: [night, ../custom.scss]
     highlight-style: monokai
-footer: '<a href="/lectures/lectures.qmd">Back</a>'
+footer: '<a href="/lectures/overview.qmd">{{< fa house >}}</a>'
 ---
 
-## Something motivational
+## Data visualisation with `ggplot2` {.title-slide}
 
-
-<!-- ##  {background-iframe="https://www.data-to-viz.com/"} -->
+<img src="../images/ggplot2.png"></img>
 
 ## 
 
 ![](../images/from-data-to-vis.png)
 
-##
+## {.center-slide}
 
-::: {.center-xy}
 ![](../images/horst/ggplot2-data-masterpiece.png)
-:::
 
 ::: {.figLab}
 [Artwork by @allison_horst](https://twitter.com/allison_horst)
@@ -159,8 +154,7 @@ library(palmerpenguins)
 # Call ggplot
 ggplot(
   data = penguins,
-  aes(x = body_mass_g)
-) + 
+  aes(x = body_mass_g)) + 
   geom_histogram(
     color = 'navy',
     fill = 'lightblue'
@@ -195,13 +189,7 @@ ggplot(data=penguins,aes(x=body_mass_g))+geom_histogram(color='navy',fill='light
 
 Does the same but harder to read and debug!
 
-
-
-## 
-
-::: {.callout-tip icon=false}
-
-## {{< fa rocket >}} Mini Exercise
+## Mini-Exercise {.smaller} 
 
 ::: {.clock}
 
@@ -209,14 +197,37 @@ Does the same but harder to read and debug!
 
 :::
 
-#### Practice with ggplot2!
-
-Modify the code on the left to produce the figure on the right!
-<br>
+### Modify the starter code to produce the figure
 
 :::: {.columns}
 
-::: {.column}
+::: {.column width=34%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=5&sec=0" frameborder="0"></iframe>
+  
+:::
+
+::: {.column width=66%}
+
+::: {.panel-tabset}
+
+### Figure
+
+```{r}
+#| echo: false
+
+# Call ggplot
+ggplot(
+  data = penguins,
+  aes(x = flipper_length_mm)) + 
+  geom_density(
+    color = 'black',
+    fill = 'white',
+    linetype = 'dashed',
+    linewidth = 3)
+```
+
+### Starter code
 
 ```{r}
 #| echo: true
@@ -229,45 +240,22 @@ library(palmerpenguins)
 # Call ggplot
 ggplot(
   data = penguins,
-  aes(x = body_mass_g)
-) + 
+  aes(x = body_mass_g)) + 
   geom_histogram(
     color = 'navy',
     fill = 'lightblue'
   )
 ```
 
-:::
-
-::: {.column}
-```{r}
-#| echo: false
-
-# Call ggplot
-ggplot(
-  data = penguins,
-  aes(x = flipper_length_mm)) + 
-  geom_density(
-    color = 'black',
-    fill = 'white',
-    linetype = 'dashed',
-    linewidth = 3
-  )
-```
-:::
-
-::::
-
-::: {style="font-size:0.7em;"}
-
-**Hints**
+### Hints
 
 * This is a _density_ plot
 * Enter `?geom_density()` at the console to open the R Documentation. Scroll down to the section on **Aesthetics** to read about other modifiable aesthetics.
 
 :::
-
 :::
+::::
+
 
 
 # Adding aesthetic mappings
@@ -284,8 +272,7 @@ ggplot(
 ggplot(
   data = penguins,
   aes(x = flipper_length_mm, 
-      y = bill_length_mm)
-) + 
+      y = bill_length_mm)) + 
   geom_point()
 ```
 
@@ -300,8 +287,7 @@ ggplot(
 ggplot(
   data = penguins,
   aes(x = island, 
-      y = body_mass_g)
-) + 
+      y = body_mass_g)) + 
   geom_boxplot()
 ```
 
@@ -331,8 +317,7 @@ Map variables to visual elements
 ggplot(
   data = penguins,
   aes(x = flipper_length_mm, 
-      y = bill_length_mm)
-) + 
+      y = bill_length_mm)) + 
   geom_point()
 ```
 
@@ -349,8 +334,7 @@ ggplot(
   aes(
     x = flipper_length_mm, 
     y = bill_length_mm,
-    color = flipper_length_mm)
-) + 
+    color = flipper_length_mm)) + 
   geom_point()
 ```
 
@@ -366,8 +350,7 @@ ggplot(
   aes(
     x = flipper_length_mm, 
     y = bill_length_mm,
-    size = flipper_length_mm)
-) + 
+    size = flipper_length_mm)) + 
   geom_point()
 ```
 
@@ -383,8 +366,7 @@ ggplot(
   aes(
     x = flipper_length_mm, 
     y = bill_length_mm,
-    color = species)
-) + 
+    color = species)) + 
   geom_point()
 ```
 
@@ -402,17 +384,12 @@ ggplot(
     x = flipper_length_mm, 
     y = bill_length_mm,
     color = species,
-    shape = species)
-) + 
+    shape = species)) + 
   geom_point()
 ```
 
 
-## 
-
-::: {.callout-tip icon=false}
-
-## {{< fa rocket >}} Mini Exercise
+## Mini-Exercise {.smaller}
 
 ::: {.clock}
 
@@ -420,32 +397,21 @@ ggplot(
 
 :::
 
-#### Practice with ggplot2!
-
-Modify the code on the left to produce the figure on the right!
-<br>
+### Modify the starter code to produce the figure!
 
 :::: {.columns}
 
-::: {.column}
+::: {.column width=34%}
 
-```{r}
-#| echo: true
-#| eval: false
-
-# Plot
-ggplot(
-  data = penguins,
-  aes(x = island, 
-      y = body_mass_g)
-) + 
-  geom_boxplot()
-```
-
-
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=5&sec=0" frameborder="0"></iframe>
+  
 :::
 
-::: {.column}
+::: {.column width=66%}
+
+::: {.panel-tabset}
+
+### Figure
 
 ```{r}
 #| echo: false
@@ -462,19 +428,26 @@ ggplot(
     alpha = 0.2)
 ```
 
+### Starter code
+
+```{r}
+#| echo: true
+#| eval: false
+
+# Plot
+ggplot(
+  data = penguins,
+  aes(x = island, 
+      y = body_mass_g)) + 
+  geom_boxplot()
+```
+
+:::
+
 :::
 
 ::::
 
-::: {style="font-size:0.7em;"}
-
-**Hints**
-
-* 
-
-:::
-
-:::
 
 
 # Building more complex plots
@@ -871,30 +844,55 @@ library(RColorBrewer)
 display.brewer.all()
 ```
 
-## 
-
-::::: {.callout-tip icon=false}
-
-## {{< fa rocket >}} Mini Exercise
+## Mini-Exercise {.smaller}
 
 ::: {.clock}
 
-{{< fa clock >}} 20 minutes
+{{< fa clock >}} 15 minutes
 
 :::
 
-#### Practice with ggplot2!
-
+### Use `ggplot2` and the `penguins` data to produce the figure
 
 :::: {.columns}
 
-::: {.column}
+::: {.column width=34%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=15&sec=0" frameborder="0"></iframe>
+  
+:::
+
+::: {.column width=66%}
 
 ::: {.panel-tabset}
 
-### Goal
+### Figure
 
-Can you use `ggplot2` and the `penguins` data to produce the figure on the right? 
+```{r}
+#| echo: false
+
+ggplot(
+  data = penguins,
+  aes(x = species,
+      y = body_mass_g,
+      fill = species)
+) +
+  geom_jitter(shape=21) +
+  geom_boxplot(
+    alpha = 0.5) + 
+  scale_y_continuous(
+    "Body Mass (g)",
+    limits = c(2000, 6000)) + 
+  scale_x_discrete(NULL) + 
+  scale_fill_manual(
+    NULL,
+    values = c('grey80',
+               'grey80',
+               'deeppink')
+  )
+
+
+```
 
 ### Hints
 
@@ -933,45 +931,6 @@ ggplot(
 ```
 
 :::
-
 :::
-
-::: {.column}
-
-```{r}
-#| echo: false
-
-ggplot(
-  data = penguins,
-  aes(x = species,
-      y = body_mass_g,
-      fill = species)
-) +
-  geom_jitter(shape=21) +
-  geom_boxplot(
-    alpha = 0.5) + 
-  scale_y_continuous(
-    "Body Mass (g)",
-    limits = c(2000, 6000)) + 
-  scale_x_discrete(NULL) + 
-  scale_fill_manual(
-    NULL,
-    values = c('grey80',
-               'grey80',
-               'deeppink')
-  )
-
-
-```
-
-:::
-
 ::::
-
-:::::
-
-
-
-
-
 

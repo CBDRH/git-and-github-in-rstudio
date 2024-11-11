@@ -3,7 +3,8 @@ format:
   revealjs:
     theme: [night, ../custom.scss]
     highlight-style: monokai
-footer: '<a href="/lectures/overview.qmd">All Lectures</a>'
+footer: '<a href="/lectures/overview.qmd">{{< fa house >}}</a>'
+slide-number: c/t
 ---
 
 # Literate programming with `Rmarkdown` {.title-slide}
@@ -11,7 +12,7 @@ footer: '<a href="/lectures/overview.qmd">All Lectures</a>'
 
 <img src="../images/rmarkdown.png"></img>
 
-##
+## {.center-slide}
 
 ![[Artwork by @allison_horst](https://twitter.com/allison_horst)](../images/horst/rmarkdown-band.png)
 
@@ -77,6 +78,12 @@ See [rmarkdown.rstudio.com/gallery](https://rmarkdown.rstudio.com/gallery.html)
 
 
 ## Mini-Exercise {.smaller}
+
+::: {.clock}
+
+{{< fa clock >}} 3 minutes
+
+:::
 
 ### Create and run a new Rmarkdown file
 
@@ -305,6 +312,12 @@ subscript~2~
 
 ## Mini-Exercise {.smaller}
 
+::: {.clock}
+
+{{< fa clock >}} 5 minutes
+
+:::
+
 ### Practice text formatting
 
 Edit the file `exercises/5-rmarkdown/poem-exercise.Rmd` to generate the output on the right
@@ -388,6 +401,23 @@ Edit the file `exercises/5-rmarkdown/poem-exercise.Rmd` to generate the output o
 :::
 
 ::::
+
+
+## Inline R code
+
+* Insert values of R objects inline in text
+* Useful for quick calculations
+
+```{markdown}
+#| echo: true
+#| eval: false
+
+    Average speed was `r mean(cars$speed)`mph.
+```
+
+Average speed was `r mean(cars$speed)`mph.
+
+
 
 ## Code chunks {.smaller}
 
@@ -526,20 +556,6 @@ Figure height in inches
 
 ::::
 
-## Inline R code
-
-* Insert values of R objects inline in text
-* Useful for quick calculations
-
-```{markdown}
-#| echo: true
-#| eval: false
-
-    Average speed was `r mean(cars$speed)`mph.
-```
-
-Average speed was `r mean(cars$speed)`mph.
-
 ## Global options
 
 Use `knitr::opts_chunk$set()` to set global options
@@ -637,6 +653,12 @@ Use `knitr::opts_chunk$set()` to set global options
 
 
 ## Mini-Exercise {.smaller}
+
+::: {.clock}
+
+{{< fa clock >}} 15 minutes
+
+:::
 
 ### Update a parameterised R Markdown Powerpoint slide deck
 

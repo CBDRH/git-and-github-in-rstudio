@@ -1,14 +1,17 @@
 ---
-title: "Cleaning data with `dplyr` and friends"
-author: "Mark Hanly"
 format: 
   revealjs:
     theme: [night, ../custom.scss]
     highlight-style: monokai
-footer: '<a href="/lectures/lectures.qmd">Back</a>'
+footer: '<a href="/lectures/overview.qmd">{{< fa house >}}</a>'
+slide-number: c/t
 ---
 
-## 
+## Data cleaning with `dplyr` {.title-slide}
+
+<img src="../images/dplyr.png"></img>
+
+## {.center-slide}
 
 ![](../images/horst/tidy-data-friends.jpg)
 
@@ -17,7 +20,7 @@ Illustrations from the [Openscapes](https://www.openscapes.org/) blog [Tidy Data
 :::
 
 
-## 
+## {.center-slide}
 
 ![](../images/horst/tidy-data-structure.jpg)
 
@@ -492,11 +495,8 @@ cars|>mutate(time=dist-speed)|>arrange(-time)|>slice(1)
 
 ```
 
-##
 
-::: {.callout-tip icon=false}
-
-## {{< fa rocket >}} Mini Exercise
+## Mini-Exercise
 
 ::: {.clock}
 
@@ -504,11 +504,21 @@ cars|>mutate(time=dist-speed)|>arrange(-time)|>slice(1)
 
 :::
 
-#### Practice with dplyr!
+### Practice with dplyr!
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=10&sec=0" frameborder="0"></iframe>
+  
+:::
+
+::: {.column width=66%}
 
 1. In the RStudio menu navigate to `Tools > Global Options > Code` and tick the box to use the native pipe operator
 
-2. We will use the `penguins` dataset shipped in the `palmerpenguins` library. Determine the longest bill length among the top 5 lightest female penguins from the Gentoo species.
+2. We will use the `penguins` dataset shipped in the `palmerpenguins` library. Determine the longest bill length among the five lightest female penguins from the Gentoo species.
 
 ```{r}
 #| echo: true
@@ -523,6 +533,11 @@ penguins |>
 ```
 
 :::
+
+::::
+
+#### 
+
 
 
 ## Factors in R {.smaller}

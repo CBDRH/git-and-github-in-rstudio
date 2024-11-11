@@ -2,7 +2,7 @@
 title: "Lectures"
 ---
 
-# Version control with Git and GitHub with `dplyr`
+# Version control with `Git` and `GitHub`
 
 ```{=html}
 <iframe src="lecture-git-github.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
@@ -37,7 +37,7 @@ title: "Lectures"
 <a href='lecture-storytelling.html' target="_blank">View slides in full screen</a>
 
 
-# Literate programming with `knitr` 
+# Literate programming with `rmarkdown`
 
 ```{=html}
 <iframe src="lecture-literate-programming.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>

@@ -12,6 +12,22 @@ $presentation-h3-font-size: 1em;
   padding-left: 1.5em;
 }
 
+.reveal h2 {
+    margin-bottom: 1em; 
+}
+
+.reveal .slides section p {
+    font-size: 20pt; /* Paragraph font size */
+}
+
+.reveal .slides section ul li {
+    font-size: 20pt; /* Paragraph font size */
+}
+
+.reveal .slides section ol li {
+    font-size: 20pt; /* Paragraph font size */
+}
+
 .white-slide {
   background-color: "aquamarine";
   color: $light-bg-text-color;
@@ -33,7 +49,8 @@ $presentation-h3-font-size: 1em;
 
 .clock {
   font-size: 0.7em;
-  color: #b1cfc3 !important;
+  color: #ca8a04 !important;
+  margin-top: -50px;
   margin-bottom: 1.2em;
 }
 
@@ -84,11 +101,23 @@ $presentation-h3-font-size: 1em;
   color: #FFAE42;
 }
 
+.center-slide {
+  text-align: center;  
+}
 
 .title-slide {
   text-align: center;  
 }
 
 .title-slide img {
-  opacity: 50%;
+  opacity: 60%;
+}
+
+.section-header {
+  display: inline-block;
+  background: rgba(0,0,0, 0.2);
+  font-size: 1.5em;
+  color: whitesmoke;
+  text-align: center;
+  margin: 50px auto;
 }
