@@ -20,7 +20,7 @@ website:
         icon: code-slash
 
   sidebar:
-      style: "floating"
+      style: "docked"
       collape-level: 1
       contents:
         - section: "Housekeeping"
@@ -66,10 +66,7 @@ website:
                   - exercises/exercise4-2.qmd            
 format:
   html:
-    theme:
-      light: litera
-      dark: cyborg
-    css: ../custom.scss
+    theme: [litera, custom.scss]
     toc: true
     toc-depth: 1
     code-copy: true
