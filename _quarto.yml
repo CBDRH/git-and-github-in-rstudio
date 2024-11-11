@@ -3,12 +3,13 @@ project:
   output-dir: docs
 website:
   title: Data Viz with R
+  site-url: https://cbdrh.github.io/data-viz-workshop/home/
   page-navigation: true
   favicon: images/favicon.ico
   navbar: 
     search: true
     left:
-      - text: "Home"
+      - text: "Housekeeping"
         href: home/index.qmd
         icon: house-fill
       - text: "Lectures"
@@ -22,7 +23,7 @@ website:
       style: "floating"
       collape-level: 1
       contents:
-        - section: "Home"
+        - section: "Housekeeping"
           contents:
           - text: "Schedule"
             href: home/index.qmd
@@ -68,8 +69,9 @@ format:
     theme:
       light: litera
       dark: cyborg
-    css: custom.scss
+    css: ../custom.scss
     toc: true
+    toc-depth: 1
     code-copy: true
 filters:
   - line-highlight

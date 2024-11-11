@@ -1,11 +1,9 @@
 ---
-pagetitle: "Welcome to the course"
+title: "Schedule"
 toc: false
 ---
 
 :::{r}
-
-# Course schedule
 
 ```{r}
 #| echo: false
