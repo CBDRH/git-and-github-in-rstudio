@@ -108,12 +108,15 @@ myURL <- "https://www.abs.gov.au/statistics/health/health-conditions-and-risks/n
 ```{r}
 # Download the file locally
 download.file(url = myURL,
-              destfile = 'exercises/2-raw-data/national-health-survey-2022-table-2.xlsx')
+              destfile = 'exercises/2-raw-data/national-health-survey-2022-table-2.xlsx',
+              mode = 'wb')
 ```
 
 ::: {.aside}
 
 The `destfile` argument indicates the file path where the downloaded file is to be saved. Note that it is a relative file path, because you are working in an R project environment.
+
+The `mode = 'wb'` argument is important because the file being downloaded is a non-text `.xlsx` file. **wb** stands for "write binary". 
 
 :::
 

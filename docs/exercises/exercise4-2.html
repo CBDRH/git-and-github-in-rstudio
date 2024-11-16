@@ -125,9 +125,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../home/index.html" aria-current="page"> <i class="bi bi-house-fill" role="img">
+    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-house-fill" role="img">
 </i> 
-<span class="menu-text">Housekeeping</span></a>
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../lectures/overview.html"> <i class="bi bi-easel3-fill" role="img">
@@ -173,7 +173,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../home/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
@@ -216,6 +216,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../exercises/overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 1. GitHub</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
@@ -489,10 +495,13 @@ Figure&nbsp;1: The goal for Exercise 4
 </div>
 </div>
 </div>
-<p>Can you add highlight colours for the two upward trending conditions?</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Remember that <code>aes(color=, fill=)</code> refers to different things: <strong>color</strong> refers to the outline colour of a shape, while <strong>fill</strong> refers to the inside colour of the shape. Some shapes, like the lines and solid points here, only have a color property and fill can’t be defined.</p>
+</div></div><p>Can you add highlight colours for the two upward trending conditions?</p>
 <p>To do this:</p>
 <ol type="1">
-<li>Use <code>case_when()</code> to add a new variable to the dataset that codes Mental health as <strong>a</strong>, Allergies as <strong>b</strong> and everything else as <strong>c</strong>.</li>
+<li>Use <code>case_when()</code> to add a new variable to the dataset that codes Mental health as <strong>a</strong>, Allergies as <strong>b</strong> and everything else as <strong>c</strong>. Enter <code>?case_when()</code> at the console if you are having trouble remembering the syntax.</li>
 <li>Map this new variable to color in <code>aes()</code>.</li>
 <li>Define your color scale in <code>scale_color_manual()</code></li>
 </ol>
@@ -588,7 +597,7 @@ Figure&nbsp;1: The goal for Exercise 4
 <div id="hint-scale-date" class="quarto-float">
 <figure class="quarto-float quarto-float-hint figure">
 <div aria-describedby="hint-scale-date-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<p>Because <code>date</code> is a date variable, the appropriate scale is <code>scale_date_manual()</code>.</p>
+<p>Because <code>date</code> is a date variable, the appropriate scale is <code>scale_x_date()</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_x_date</span>(<span class="at">name =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -612,25 +621,26 @@ Figure&nbsp;1: The goal for Exercise 4
 </div>
 </div>
 </div>
-<p>Give the plot some breathing room by expanding the range of the x and y axes. You can do this by setting <code>limits = c(min, max)</code> in <code>scale_x_date()</code> and <code>scale_y_continuous()</code>. Set the x axis to run from 2000 to 2003 and set the y axis to run from 0 to 30.</p>
+<p>Give the plot some breathing room by expanding the range of the x and y axes. You can do this by setting <code>limits = c(min, max)</code> in <code>scale_x_date()</code> and <code>scale_y_continuous()</code>. Set the x axis to run from 2000 to 2023 and set the y axis to run from 0 to 30.</p>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p><a href="#hint-scale-break" class="quarto-xref">☠ Hint&nbsp;5</a></p>
+<p><a href="#hint-scale-break" class="quarto-xref">☠ Hint&nbsp;4</a></p>
 </div></div><div style="display: none;">
 <div id="hint-scale-break" class="quarto-float">
 <figure class="quarto-float quarto-float-hint figure">
 <div aria-describedby="hint-scale-break-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<p>The x-axis is a date variable so we need to specify the max and min of the range as a date. We can do this using <code>as.Date()</code> for example, the January 1 2000 would be <code>as.Date('2000-01-01')</code>. We can also set the date_labels and breaks arguments.</p>
+<p>The x-axis is a date variable so we need to specify the max and min of the range as a date. We can do this using the <code>as.Date()</code> function, which converts strings representations of dates to Date objects. For example, the date January 1 2000 would be <code>as.Date('2000-01-01')</code>. We can also set the <code>date_labels</code> and <code>breaks</code> arguments.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_x_date</span>(<span class="cn">NULL</span>, </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">limits =</span> <span class="fu">c</span>(<span class="fu">as.Date</span>(<span class="st">'2000-01-01'</span>), <span class="fu">as.Date</span>(<span class="st">'2023-01-01'</span>)),</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">date_labels =</span> <span class="st">'%Y'</span>,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">breaks =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">'2000-01-01'</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'2005-01-01'</span>,</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'2010-01-01'</span>,</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'2015-01-01'</span>,</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'2020-01-01'</span>,</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'2023-01-01'</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">limits =</span> <span class="fu">c</span>(<span class="fu">as.Date</span>(<span class="st">'2000-01-01'</span>),</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                          <span class="fu">as.Date</span>(<span class="st">'2023-01-01'</span>)),</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">date_labels =</span> <span class="st">'%Y'</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">breaks =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">'2000-01-01'</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'2005-01-01'</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'2010-01-01'</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'2015-01-01'</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'2020-01-01'</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'2023-01-01'</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint quarto-uncaptioned" id="hint-scale-break-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -669,11 +679,11 @@ Figure&nbsp;1: The goal for Exercise 4
 <p>Add text labels using using <code>geom_text()</code>, setting the <code>y</code> aesthetic to percent and the <code>x</code> aesthetic to <strong>2023-01-01</strong>.</p>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p><a href="#hint-scale-break" class="quarto-xref">☠ Hint&nbsp;5</a></p>
+<p><a href="#hint-text-label" class="quarto-xref">☠ Hint&nbsp;5</a></p>
 </div></div><div style="display: none;">
-<div id="hint-scale-break" class="quarto-float">
+<div id="hint-text-label" class="quarto-float">
 <figure class="quarto-float quarto-float-hint figure">
-<div aria-describedby="hint-scale-break-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="hint-text-label-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <p>We only want the label for the last data point—to achieve this we can group the dataset by condition and then subset to the last observation within each condition using <code>slice_tail()</code>. This can be done on the fly within <code>geom_text()</code>, as below.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
@@ -683,11 +693,10 @@ Figure&nbsp;1: The goal for Exercise 4
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="fu">as.Date</span>(<span class="st">'2023-01-01'</span>),</span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> percent,</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">label =</span> condition</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">label =</span> condition))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint quarto-uncaptioned" id="hint-scale-break-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-hint quarto-uncaptioned" id="hint-text-label-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 ☠ Hint&nbsp;5
 </figcaption>
 </figure>

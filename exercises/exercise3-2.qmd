@@ -294,8 +294,7 @@ ggplot(
   aes(x = percent, 
       y = fct_reorder(state, totalHealthy), 
       fill=status)) + 
-  geom_col(position = position_stack(reverse = TRUE),
-           color = "white") +
+  geom_col(position = position_stack(reverse = TRUE)) +
   scale_fill_manual(name = NULL,
                     values = barCols) +
   scale_y_discrete(NULL) +
@@ -306,6 +305,7 @@ ggplot(
     caption = 'Source: National Health Survey, 2022') +
   theme(
     plot.title.position = 'plot',
+    panel.background = element_blank(),
     axis.ticks.y = element_blank()
   )
 ```

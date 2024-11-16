@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -31,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../home/approach.html" rel="next">
-<link href="../home/index.html" rel="prev">
+<link href="../index.html" rel="prev">
 <link href="../images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -92,9 +126,9 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../home/index.html" aria-current="page"> <i class="bi bi-house-fill" role="img">
+    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-house-fill" role="img">
 </i> 
-<span class="menu-text">Housekeeping</span></a>
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../lectures/overview.html"> <i class="bi bi-easel3-fill" role="img">
@@ -117,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../home/index.html">Housekeeping</a></li><li class="breadcrumb-item"><a href="../home/prerequisites.html">Prerequisites</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">Housekeeping</a></li><li class="breadcrumb-item"><a href="../home/prerequisites.html">Prerequisites</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -140,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../home/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
@@ -183,6 +217,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../exercises/overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 1. GitHub</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
@@ -341,7 +381,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../home/index.html">Housekeeping</a></li><li class="breadcrumb-item"><a href="../home/prerequisites.html">Prerequisites</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">Housekeeping</a></li><li class="breadcrumb-item"><a href="../home/prerequisites.html">Prerequisites</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Prerequisites</h1>
 </div>
@@ -360,14 +400,29 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Configuring Git, GitHub and RStudio
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Configuring Git, GitHub and RStudio to work together is half the battle when it comes to using Git in RStudio.</p>
+<p>Luckily there is an excellent online reference for this: <a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a> by Jennifer Bryan. The chapters linked below refer to key sections in this book.</p>
+<p>We won’t have time to configure everybody’s laptop at the workshop so please work through these steps in advance!</p>
+</div>
+</div>
 <p>You will need:</p>
 <ul>
-<li>A laptop (and charger!)</li>
-<li>Ideally at least a basic working knowledge of R and RStudio. If you are a beginner, check out the one-hour webinar <a href="https://posit.co/resources/videos/a-gentle-introduction-to-tidy-statistics-in-r/" target="_blank">A gengle introduction to tidy statistics in R</a>)</li>
-<li>A free GitHub <a href="https://happygitwithr.com/github-acct" target="_blank">user account</a></li>
-<li>A recent version of R (at least v4.3.0) and RStudio (at least a 2024 version) <a href="https://happygitwithr.com/install-r-rstudio" target="_blank">installed</a></li>
-<li>git <a href="https://happygitwithr.com/install-git" target="_blank">installed</a></li>
-<li><a href="https://happygitwithr.com/https-pat">Configure</a> Git, GitHub and RStudio</li>
+<li><p>A laptop (and a charger!) <input type="checkbox"></p></li>
+<li><p>At least a basic working knowledge of R and RStudio. If you are a beginner, check out the one-hour webinar <a href="https://posit.co/resources/videos/a-gentle-introduction-to-tidy-statistics-in-r/" target="_blank">A gengle introduction to tidy statistics in R</a>) <input type="checkbox"></p></li>
+<li><p>A free GitHub user account. See <a href="https://happygitwithr.com/github-acct#github-acct">Ch 4. Register a GitHub account</a> <input type="checkbox"></p></li>
+<li><p>A recent version of R (at least v4.3.0) and RStudio (at least a 2024 version) installed on your laptop. See <a href="https://happygitwithr.com/install-r-rstudio" target="_blank">Ch 5. Install or upgrade R and RStudio</a> <input type="checkbox"></p></li>
+<li><p>Git installed on your laptop. See <a href="https://happygitwithr.com/install-git" target="_blank">Ch 6. Install Git</a> <input type="checkbox"></p></li>
+<li><p>Configure Git, GitHub and RStudio. See <a href="https://happygitwithr.com/https-pat">9. Personal access token for HTTPS</a> <input type="checkbox"></p></li>
 </ul>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -375,21 +430,25 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Connect Git, GitHub and RStudio
+Git Credentials
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Configuring Git, GitHub and RStudio to work together is half the battle when it comes to using Git in RStudio.</p>
-<p>Luckily there is an excellent online reference for this: <a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a> by Jennnifer Byran.</p>
-<p>To get up and running, I recommend the following sections from this online book:</p>
-<ol start="4" type="1">
-<li>Register a GitHub account</li>
-<li>Install or upgrade R and RStudio</li>
-<li>Install Git</li>
-<li>Introduce yourself to Git</li>
-<li>Personal access token for HTTPS (especially 9.1 TL;DR)</li>
-</ol>
-<p>We won’t have time to configure everybody’s laptop at the workshop so please try to do this in advance!</p>
+<p>Follow <a href="https://happygitwithr.com/https-pat#tldr">Section 9.1 TL;DR</a> from Happy Git and GitHub for the useR to set up your Git Credentials.</p>
+<p>Note these steps can be completed in RStudio by calling the following commands</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To run these commands you may need to install the <code>usethis</code> and <code>gitcreds</code> packages if they are not installed already. Copy and paste the following commands into the RStudio console:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"gitcreds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 
@@ -807,7 +866,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../home/index.html" class="pagination-link" aria-label="Schedule">
+      <a href="../index.html" class="pagination-link" aria-label="Schedule">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Schedule</span>
       </a>          
   </div>

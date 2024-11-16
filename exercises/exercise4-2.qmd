@@ -117,11 +117,17 @@ ggplot(
 
 ```
 
+::: {.aside}
+
+Remember that `aes(color=, fill=)` refers to different things: **color** refers to the outline colour of a shape, while **fill** refers to the inside colour of the shape. Some shapes, like the lines and solid points here, only have a color property and fill can't be defined.
+
+:::
+
 Can you add highlight colours for the two upward trending conditions?
 
 To do this:
 
-1. Use `case_when()` to add a new variable to the dataset that codes Mental health as **a**, Allergies as **b** and everything else as **c**. 
+1. Use `case_when()` to add a new variable to the dataset that codes Mental health as **a**, Allergies as **b** and everything else as **c**. Enter `?case_when()` at the console if you are having trouble remembering the syntax. 
 2. Map this new variable to color in `aes()`.
 3. Define your color scale in `scale_color_manual()`
 
@@ -259,7 +265,7 @@ One way to do this is to add the `scale_*` functions setting `name = NULL`.
 ::: {style="display: none;"}
 ::: {#hint-scale-date}
 
-Because `date` is a date variable, the appropriate scale is `scale_date_manual()`.
+Because `date` is a date variable, the appropriate scale is `scale_x_date()`.
 
 ```{r}
 #| echo: true
@@ -303,7 +309,7 @@ ggplot(
   )
 ```
 
-Give the plot some breathing room by expanding the range of the x and y axes. You can do this by setting `limits = c(min, max)` in `scale_x_date()` and `scale_y_continuous()`. Set the x axis to run from 2000 to 2003 and set the y axis to run from 0 to 30. 
+Give the plot some breathing room by expanding the range of the x and y axes. You can do this by setting `limits = c(min, max)` in `scale_x_date()` and `scale_y_continuous()`. Set the x axis to run from 2000 to 2023 and set the y axis to run from 0 to 30. 
 
 ::: aside
 @hint-scale-break
@@ -312,14 +318,15 @@ Give the plot some breathing room by expanding the range of the x and y axes. Yo
 ::: {style="display: none;"}
 ::: {#hint-scale-break}
 
-The x-axis is a date variable so we need to specify the max and min of the range as a date. We can do this using `as.Date()` for example, the January 1 2000 would be `as.Date('2000-01-01')`. We can also set the date_labels and breaks arguments.
+The x-axis is a date variable so we need to specify the max and min of the range as a date. We can do this using the `as.Date()` function, which converts strings representations of dates to Date objects. For example, the date January 1 2000 would be `as.Date('2000-01-01')`. We can also set the `date_labels` and `breaks` arguments.
 
 ```{r}
 #| echo: true
 #| eval: false
 
 scale_x_date(NULL, 
-               limits = c(as.Date('2000-01-01'), as.Date('2023-01-01')),
+               limits = c(as.Date('2000-01-01'),
+                          as.Date('2023-01-01')),
                date_labels = '%Y',
                breaks = as.Date(c('2000-01-01',
                                   '2005-01-01',
@@ -423,11 +430,11 @@ ggplot(
 Add text labels using using `geom_text()`, setting the `y` aesthetic to percent and the `x` aesthetic to **2023-01-01**. 
 
 ::: aside
-@hint-scale-break
+@hint-text-label
 :::
 
 ::: {style="display: none;"}
-::: {#hint-scale-break}
+::: {#hint-text-label}
 
 We only want the label for the last data point---to achieve this we can group the dataset by condition and then subset to the last observation within each condition using `slice_tail()`. This can be done on the fly within `geom_text()`, as below. 
 
@@ -442,8 +449,7 @@ We only want the label for the last data point---to achieve this we can group th
     aes(
       x = as.Date('2023-01-01'),
       y = percent,
-      label = condition
-    ))
+      label = condition))
   
 ```
 

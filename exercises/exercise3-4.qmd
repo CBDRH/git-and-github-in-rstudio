@@ -165,7 +165,7 @@ Note that the when we set `element_text(size=14)` the size argument is defined i
 ```{r}
 #| code-fold: true
 #| class-source: "numberLines"
-#| source-line-numbers: "28-30"
+#| source-line-numbers: "26-27"
  
 # Adjust text hierarchy
 ggplot(

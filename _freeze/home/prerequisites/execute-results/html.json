@@ -1,0 +1,15 @@
+{
+  "hash": "0b0df52c752b8509be99d770ee6acd36",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Prerequisites\"\n---\n\n\n::: {.callout-tip}\n\n## Configuring Git, GitHub and RStudio\n\nConfiguring Git, GitHub and RStudio to work together is half the battle when it comes to using Git in RStudio. \n\nLuckily there is an excellent online reference for this: \n[Happy Git and GitHub for the useR](https://happygitwithr.com/) by Jennifer Bryan. The chapters linked below refer to key sections in this book.\n\nWe won't have time to configure everybody's laptop at the workshop so please work through these steps in advance! \n\n:::\n\n\nYou will need:\n\n* A laptop (and a charger!) <input type=\"checkbox\"/>\n\n* At least a basic working knowledge of R and RStudio. If you are a beginner, check out the one-hour webinar [A gengle introduction to tidy statistics in R](https://posit.co/resources/videos/a-gentle-introduction-to-tidy-statistics-in-r/){target=\"_blank\"}) <input type=\"checkbox\"/>\n\n* A free GitHub user account. See [Ch 4. Register a GitHub account](https://happygitwithr.com/github-acct#github-acct) <input type=\"checkbox\"/>\n\n* A recent version of R (at least v4.3.0) and RStudio (at least a 2024 version) installed on your laptop. See [Ch 5. Install or upgrade R and RStudio](https://happygitwithr.com/install-r-rstudio){target=\"_blank\"} <input type=\"checkbox\"/>\n\n* Git installed on your laptop. See [Ch 6. Install Git](https://happygitwithr.com/install-git){target=\"_blank\"} <input type=\"checkbox\"/>\n\n* Configure Git, GitHub and RStudio. See [9. Personal access token for HTTPS](https://happygitwithr.com/https-pat) <input type=\"checkbox\"/>\n\n\n::: {.callout-warning}\n\n## Git Credentials\n\nFollow [Section 9.1 TL;DR](https://happygitwithr.com/https-pat#tldr) from Happy Git and GitHub for the useR to set up your Git Credentials. \n\nNote these steps can be completed in RStudio by calling the following commands\n\n\n::: {.cell}\n\n```{.r .cell-code}\nusethis::create_github_token()\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ngitcreds::gitcreds_set()\n```\n:::\n\n\nTo run these commands you may need to install the `usethis` and `gitcreds` packages if they are not installed already. Copy and paste the following commands into the RStudio console:\n\n\n::: {.cell}\n\n```{.r .cell-code}\ninstall.packages(\"usethis\")\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ninstall.packages(\"gitcreds\")\n```\n:::\n\n\n\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

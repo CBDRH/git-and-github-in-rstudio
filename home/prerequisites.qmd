@@ -2,35 +2,65 @@
 title: "Prerequisites"
 ---
 
-You will need:
+::: {.callout-tip}
 
-* A laptop (and charger!)
-* Ideally at least a basic working knowledge of R and RStudio. If you are a beginner, check out the one-hour webinar [A gengle introduction to tidy statistics in R](https://posit.co/resources/videos/a-gentle-introduction-to-tidy-statistics-in-r/){target="_blank"})
-* A free GitHub [user account](https://happygitwithr.com/github-acct){target="_blank"}
-* A recent version of R (at least v4.3.0) and RStudio (at least a 2024 version) [installed](https://happygitwithr.com/install-r-rstudio){target="_blank"}
-* git [installed](https://happygitwithr.com/install-git){target="_blank"}
-* [Configure](https://happygitwithr.com/https-pat) Git, GitHub and RStudio  
-
-
-::: {.callout-warning}
-
-## Connect Git, GitHub and RStudio
+## Configuring Git, GitHub and RStudio
 
 Configuring Git, GitHub and RStudio to work together is half the battle when it comes to using Git in RStudio. 
 
 Luckily there is an excellent online reference for this: 
-[Happy Git and GitHub for the useR](https://happygitwithr.com/) by Jennnifer Byran.
+[Happy Git and GitHub for the useR](https://happygitwithr.com/) by Jennifer Bryan. The chapters linked below refer to key sections in this book.
 
-To get up and running, I recommend the following sections from this online book: 
-
-4. Register a GitHub account
-5. Install or upgrade R and RStudio
-6. Install Git
-7. Introduce yourself to Git
-9. Personal access token for HTTPS (especially 9.1 TL;DR)
-
-We won't have time to configure everybody's laptop at the workshop so please try to do this in advance! 
+We won't have time to configure everybody's laptop at the workshop so please work through these steps in advance! 
 
 :::
 
+
+You will need:
+
+* A laptop (and a charger!) <input type="checkbox"/>
+
+* At least a basic working knowledge of R and RStudio. If you are a beginner, check out the one-hour webinar [A gengle introduction to tidy statistics in R](https://posit.co/resources/videos/a-gentle-introduction-to-tidy-statistics-in-r/){target="_blank"}) <input type="checkbox"/>
+
+* A free GitHub user account. See [Ch 4. Register a GitHub account](https://happygitwithr.com/github-acct#github-acct) <input type="checkbox"/>
+
+* A recent version of R (at least v4.3.0) and RStudio (at least a 2024 version) installed on your laptop. See [Ch 5. Install or upgrade R and RStudio](https://happygitwithr.com/install-r-rstudio){target="_blank"} <input type="checkbox"/>
+
+* Git installed on your laptop. See [Ch 6. Install Git](https://happygitwithr.com/install-git){target="_blank"} <input type="checkbox"/>
+
+* Configure Git, GitHub and RStudio. See [9. Personal access token for HTTPS](https://happygitwithr.com/https-pat) <input type="checkbox"/>
+
+
+::: {.callout-warning}
+
+## Git Credentials
+
+Follow [Section 9.1 TL;DR](https://happygitwithr.com/https-pat#tldr) from Happy Git and GitHub for the useR to set up your Git Credentials. 
+
+Note these steps can be completed in RStudio by calling the following commands
+
+```{r}
+#| eval: false
+usethis::create_github_token()
+```
+
+```{r}
+#| eval: false
+gitcreds::gitcreds_set()
+```
+
+To run these commands you may need to install the `usethis` and `gitcreds` packages if they are not installed already. Copy and paste the following commands into the RStudio console:
+
+```{r}
+#| eval: false
+install.packages("usethis")
+```
+
+```{r}
+#| eval: false
+install.packages("gitcreds")
+```
+
+
+:::
 

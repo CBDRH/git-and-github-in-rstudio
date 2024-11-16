@@ -9,8 +9,8 @@ website:
   navbar: 
     search: true
     left:
-      - text: "Housekeeping"
-        href: home/index.qmd
+      - text: "Home"
+        href: index.qmd
         icon: house-fill
       - text: "Lectures"
         href: lectures/overview.qmd
@@ -26,7 +26,7 @@ website:
         - section: "Housekeeping"
           contents:
           - text: "Schedule"
-            href: home/index.qmd
+            href: index.qmd
           - text: "Prerequisites"
             href: home/prerequisites.qmd
           - text: "Approach"
