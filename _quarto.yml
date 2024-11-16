@@ -39,6 +39,8 @@ website:
           contents:
             - text: Overview
               href: exercises/overview.qmd
+            - text: Day 1. GitHub
+              href: exercises/github.qmd
             - section: "Day 1. Data cleaning"
               contents:
               - section: "Exercise 1 (Beginner)"

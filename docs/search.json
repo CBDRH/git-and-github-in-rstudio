@@ -282,65 +282,65 @@
   {
     "objectID": "lectures/lecture-git-github.html#the-challenge",
     "href": "lectures/lecture-git-github.html#the-challenge",
-    "title": "Data Viz with R",
-    "section": "The challenge",
-    "text": "The challenge\nAs data analysts, we produce a lot of files\n\ncode\nfigures\ntables\nreports\n\nOrganising these files is an important, albeit often unglamorous, part of our job."
+    "title": "Interfacing with Git",
+    "section": "The Challenge",
+    "text": "The Challenge\nAs data analysts, we produce a lot of files\n\ncode\nfigures\ntables\nreports\n\nOrganising these files is an important, albeit often unglamorous, part of our job."
   },
   {
     "objectID": "lectures/lecture-git-github.html#the-challenge-1",
     "href": "lectures/lecture-git-github.html#the-challenge-1",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "The Challenge",
-    "text": "The Challenge\nManaging versions What do you do with old code?\nEnsuring reproducibility Can others reproduce your results? What about your future self?\nFacilitating collaboration Can other team members easily contribute?"
+    "text": "The Challenge\n\nManaging versions What do you do with old code?\nEnsuring reproducibility Can others reproduce your results? What about your future self?\nFacilitating collaboration Can other team members easily contribute?"
   },
   {
     "objectID": "lectures/lecture-git-github.html#the-old-school-solution",
     "href": "lectures/lecture-git-github.html#the-old-school-solution",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "The old school solution 🛵",
     "text": "The old school solution 🛵\nThe old school solution combines many practical strategies:\n\n\nUsing file naming conventions to track different file versions\n\nanalysis-16jun2024.do\nanalysis-19jun2024-mh.do\nanalysis-final.do\nanalysis-final-final.do\n\nNote changes directly in code comments or separate documentation\nUse shared folders, google drive etc\nShare code and code snippets over email, slack etc"
   },
   {
     "objectID": "lectures/lecture-git-github.html#the-old-school-solution-1",
     "href": "lectures/lecture-git-github.html#the-old-school-solution-1",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "The old school solution 🛵",
     "text": "The old school solution 🛵\n\nThis is ok(ish) for one person working on a small project. But if the project is large, involves many people or goes on for a long time this approach very quickly breaks down"
   },
   {
     "objectID": "lectures/lecture-git-github.html#the-new-school-solution",
     "href": "lectures/lecture-git-github.html#the-new-school-solution",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "The new school solution 🚀",
     "text": "The new school solution 🚀\nThe new school solution is to use dedicated version control software.\nThere are a few options out there but by far the most popular choice is the combination of git + GitHub"
   },
   {
     "objectID": "lectures/lecture-git-github.html#section",
     "href": "lectures/lecture-git-github.html#section",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "",
     "text": "Via git-scm.com\n\n\nGit is software for tracking different versions of code files you are working on locally.\n\n\n\nVia logos-world.net\n\n\nGitHub is a cloud-based platform for sharing and collaborating on projects managed with Git"
   },
   {
     "objectID": "lectures/lecture-git-github.html#how-does-it-work",
     "href": "lectures/lecture-git-github.html#how-does-it-work",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "How does it work?",
-    "text": "How does it work?\nCommitting, branching and merging with Git"
+    "text": "How does it work?\n\nCommitting, branching and merging with Git"
   },
   {
     "objectID": "lectures/lecture-git-github.html#how-does-it-work-1",
     "href": "lectures/lecture-git-github.html#how-does-it-work-1",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "How does it work?",
-    "text": "How does it work?\nCommitting, branching and merging with Git"
+    "text": "How does it work?\n\nCommitting, branching and merging with Git"
   },
   {
     "objectID": "lectures/lecture-git-github.html#how-does-it-work-2",
     "href": "lectures/lecture-git-github.html#how-does-it-work-2",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "How does it work?",
-    "text": "How does it work?\nSharing versions with GitHub"
+    "text": "How does it work?\n\nSharing versions with GitHub"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#storytelling-with-data",
@@ -1040,156 +1040,156 @@
   {
     "objectID": "lectures/lecture-literate-programming.html#section",
     "href": "lectures/lecture-literate-programming.html#section",
-    "title": "Data Viz with R",
+    "title": "Literate programming with Rmarkdown",
     "section": "",
     "text": "Artwork by @allison_horst"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#examples",
     "href": "lectures/lecture-literate-programming.html#examples",
-    "title": "Data Viz with R",
-    "section": "Examples",
-    "text": "Examples\nSee rmarkdown.rstudio.com/gallery"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "See rmarkdown.rstudio.com/gallery"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#rmarkdown-.rmd-file",
     "href": "lectures/lecture-literate-programming.html#rmarkdown-.rmd-file",
-    "title": "Data Viz with R",
-    "section": "Rmarkdown .Rmd file",
-    "text": "Rmarkdown .Rmd file\n\n\n\n    ---\n    title: \"Cars analysis\"\n    output: html_document\n    date: \"2024-11-10\"\n    ---\n      \n    ## Introduction\n    Here are the first few lines of the `cars` dataset:\n\n    ```{r cars}\n    summary(cars)\n    ```\n\n    There are `r nrow(cars)` in total. You can also embed plots, for example:\n\n\n    ```{r scatterplot, echo=FALSE}\n    plot(cars)\n    ```\n\n\n\nContents\n\nYAML header\nR code chunks\nFormatted text"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "---\n    title: \"Cars analysis\"\n    output: html_document\n    date: \"2024-11-10\"\n    ---\n      \n    ## Introduction\n    Here are the first few lines of the `cars` dataset:\n\n    ```{r cars}\n    summary(cars)\n    ```\n\n    There are `r nrow(cars)` in total. You can also embed plots, for example:\n\n\n    ```{r scatterplot, echo=FALSE}\n    plot(cars)\n    ```\n\n\n\n\n\n\nYAML header\nR code chunks\nFormatted text"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#output",
     "href": "lectures/lecture-literate-programming.html#output",
-    "title": "Data Viz with R",
-    "section": "Output",
-    "text": "Output\n\ncars-analysis.html"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "cars-analysis.html"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#mini-exercise",
     "href": "lectures/lecture-literate-programming.html#mini-exercise",
-    "title": "Data Viz with R",
-    "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 3 minutes\n\nCreate and run a new Rmarkdown file\n\n\n\n\n\n\nIn RStudio, open a new file by clicking \nSelect  R Markdown…\nEnter a Title and Author then click OK\nClick  to knit the file (you will be prompted to save the file—save it in your Exercises folder)\nExamine the rendered output"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "3 minutes\n\n\n\n\n\n\n\n\n\nIn RStudio, open a new file by clicking \nSelect  R Markdown…\nEnter a Title and Author then click OK\nClick  to knit the file (you will be prompted to save the file—save it in your Exercises folder)\nExamine the rendered output"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#under-the-hood",
     "href": "lectures/lecture-literate-programming.html#under-the-hood",
-    "title": "Data Viz with R",
-    "section": "Under the hood",
-    "text": "Under the hood\n\nRmarkdown Cookbook"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "Rmarkdown Cookbook"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#output-1",
     "href": "lectures/lecture-literate-programming.html#output-1",
-    "title": "Data Viz with R",
-    "section": "Output",
-    "text": "Output\n\ncars-analysis.docx"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "cars-analysis.docx"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#output-2",
     "href": "lectures/lecture-literate-programming.html#output-2",
-    "title": "Data Viz with R",
-    "section": "Output",
-    "text": "Output\n\ncars-analysis.pdf"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "cars-analysis.pdf"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#text-formatting",
     "href": "lectures/lecture-literate-programming.html#text-formatting",
-    "title": "Data Viz with R",
-    "section": "Text formatting",
-    "text": "Text formatting\n\n\nRmarkdown syntax\n\nOutput\n\n\n\n\n\n*italic* or _italic_\n\nitalic\n\n\n\n\n\n\n**bold** or __bold__\n\nbold\n\n\n\n\n\n\nsuperscript^2^\n\nsuperscript2\n\n\n\n\n\n\nsubscript~2~\n\nsubscript2\n\n\n\n\n\n\n# Level 1 header\n\nLevel 1 header\n\n\n\n\n\n\n## Level 2 header\n\nLevel 2 header\n\n\n\n\n\n\n### Level 3 header\n\nLevel 3 header\n\n\n\n\n\n\n&gt;Stand out quote\n\n\nStand out quote"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": ". . .\n\n\n*italic* or _italic_\n\nitalic\n\n\n. . .\n\n\n**bold** or __bold__\n\nbold\n\n\n. . .\n\n\nsuperscript^2^\n\nsuperscript2\n\n\n. . .\n\n\nsubscript~2~\n\nsubscript2\n\n\n. . .\n\n\n# Level 1 header\n\nLevel 1 header\n\n\n. . .\n\n\n## Level 2 header\n\nLevel 2 header\n\n\n. . .\n\n\n### Level 3 header\n\nLevel 3 header\n\n\n. . .\n\n\n&gt;Stand out quote\n\n\nStand out quote"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#lists",
     "href": "lectures/lecture-literate-programming.html#lists",
-    "title": "Data Viz with R",
-    "section": "Lists",
-    "text": "Lists\n\n\nRmarkdown syntax\n\nOutput\n\n\n\n\n\n* Bullet\n* Point\n* list\n\n\nBullet\nPoint\nlist\n\n\n\n\n\n\n\n\n1. Numbered\n1. List\n1. Items\n\n\nNumbered\nList\nItems"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": ". . .\n\n\n* Bullet\n* Point\n* list\n\n\nBullet\nPoint\nlist\n\n\n\n. . .\n\n\n\n1. Numbered\n1. List\n1. Items\n\n\nNumbered\nList\nItems"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#links-and-images",
     "href": "lectures/lecture-literate-programming.html#links-and-images",
-    "title": "Data Viz with R",
-    "section": "Links and images",
-    "text": "Links and images\n\n\nRmarkdown syntax\n\nOutput\n\n\n\n\n\n[click here](http://google.com)\n\nclick here\n\n\n\n\n\n\n\n![cars-analysis.html](../images/cars-analysis-html.png)\n\n\n\n\ncars-analysis.html"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": ". . .\n\n\n[click here](http://google.com)\n\nclick here\n\n\n. . .\n\n\n\n![cars-analysis.html](../images/cars-analysis-html.png)\n\n\n\n\ncars-analysis.html"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#mini-exercise-1",
     "href": "lectures/lecture-literate-programming.html#mini-exercise-1",
-    "title": "Data Viz with R",
-    "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 5 minutes\n\nPractice text formatting\nEdit the file exercises/5-rmarkdown/poem-exercise.Rmd to generate the output on the right"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "5 minutes\n\n\n\nEdit the file exercises/5-rmarkdown/poem-exercise.Rmd to generate the output on the right"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#yaml-header",
     "href": "lectures/lecture-literate-programming.html#yaml-header",
-    "title": "Data Viz with R",
-    "section": "YAML Header",
-    "text": "YAML Header\nYet Another Markdown Language\n\n    ---\n    title: \"Cars analysis\"\n    output: html_document\n    date: \"2024-11-10\"\n    ---\n\n\n\n\nControls whole-document settings\nkey-value pairs\noutput: html_document\noutput: word_document\noutput: pdf_document"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "---\n    title: \"Cars analysis\"\n    output: html_document\n    date: \"2024-11-10\"\n    ---\n\n\n\n\nControls whole-document settings\nkey-value pairs\noutput: html_document\noutput: word_document\noutput: pdf_document"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#yaml-nested-keys",
     "href": "lectures/lecture-literate-programming.html#yaml-nested-keys",
-    "title": "Data Viz with R",
-    "section": "YAML Nested Keys",
-    "text": "YAML Nested Keys\n\n\n\n    output: \n      html_document:\n        toc: true\n        toc_float: true\n        code_folding: hide\n        theme: united"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "output: \n      html_document:\n        toc: true\n        toc_float: true\n        code_folding: hide\n        theme: united"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#inline-r-code",
     "href": "lectures/lecture-literate-programming.html#inline-r-code",
-    "title": "Data Viz with R",
-    "section": "Inline R code",
-    "text": "Inline R code\n\nInsert values of R objects inline in text\nUseful for quick calculations\n\n\n    Average speed was `r mean(cars$speed)`mph.\n\nAverage speed was 15.4mph."
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "Insert values of R objects inline in text\nUseful for quick calculations\n\n\n    Average speed was `r mean(cars$speed)`mph.\n\nAverage speed was 15.4mph."
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#code-chunks",
     "href": "lectures/lecture-literate-programming.html#code-chunks",
-    "title": "Data Viz with R",
-    "section": "Code chunks",
-    "text": "Code chunks\n\n    ```{r scatterplot, echo=FALSE}\n    \n    plot(cars)\n    \n    ```\n\n\n\n\nClick  to add\nStarts and ends with triple backticks ```\n{r} indicates the language is R\n{r scatterplot} indicates the chuck name is scatterplot (not essential by useful for readability and troubleshooting)\necho=FALSE a chunk option meaning don’t print the code to the output"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "```{r scatterplot, echo=FALSE}\n    \n    plot(cars)\n    \n    ```\n\n\n\n\nClick  to add\nStarts and ends with triple backticks ```\n{r} indicates the language is R\n{r scatterplot} indicates the chuck name is scatterplot (not essential by useful for readability and troubleshooting)\necho=FALSE a chunk option meaning don’t print the code to the output"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#chunk-options",
     "href": "lectures/lecture-literate-programming.html#chunk-options",
-    "title": "Data Viz with R",
-    "section": "Chunk options",
-    "text": "Chunk options\n\n\nOption\n\nMeaning\n\n\n\n\n\necho=FALSE\n\nShow code in output document (TRUE/FALSE)\n\n\n\n\n\n\neval=FALSE\n\nRun code in the chunk (TRUE/FALSE)\n\n\n\n\n\n\ninclude=FALSE\n\nInclude code in the chunk (TRUE/FALSE)\n\n\n\n\n\n\nmessage=FALSE\n\nDisplay code messages in document (TRUE/FALSE)\n\n\n\n\n\n\nwarning=FALSE\n\nDisplay code warnings in document (TRUE/FALSE)\n\n\n\n\n\n\nfig.width=7\n\nFigure width in inches\n\n\n\n\n\n\nfig.height=7\n\nFigure height in inches"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": ". . .\n\n\necho=FALSE\n\nShow code in output document (TRUE/FALSE)\n\n\n. . .\n\n\neval=FALSE\n\nRun code in the chunk (TRUE/FALSE)\n\n\n. . .\n\n\ninclude=FALSE\n\nInclude code in the chunk (TRUE/FALSE)\n\n\n. . .\n\n\nmessage=FALSE\n\nDisplay code messages in document (TRUE/FALSE)\n\n\n. . .\n\n\nwarning=FALSE\n\nDisplay code warnings in document (TRUE/FALSE)\n\n\n. . .\n\n\nfig.width=7\n\nFigure width in inches\n\n\n. . .\n\n\nfig.height=7\n\nFigure height in inches"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#global-options",
     "href": "lectures/lecture-literate-programming.html#global-options",
-    "title": "Data Viz with R",
-    "section": "Global options",
-    "text": "Global options\nUse knitr::opts_chunk$set() to set global options\n\n    ```{r, setup, include=FALSE}\n    knitr::opts_chunk$set(\n      echo = FALSE, fig.width = 5, fig.height = 7\n    )\n    ```\n\n\n\n\n\nHas to go inside an R code chunk\nIndividual code chunks can have different settings"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "Use knitr::opts_chunk$set() to set global options\n\n    ```{r, setup, include=FALSE}\n    knitr::opts_chunk$set(\n      echo = FALSE, fig.width = 5, fig.height = 7\n    )\n    ```\n\n. . .\n\n\n\nHas to go inside an R code chunk\nIndividual code chunks can have different settings"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#parameters",
     "href": "lectures/lecture-literate-programming.html#parameters",
-    "title": "Data Viz with R",
-    "section": "Parameters",
-    "text": "Parameters\n\nParameterised reports allow you to reuse a report template across multiple similar scenarios\n\n\n\nGenerate reports for a specific time period\nGenerate the same report for different Local Health Districts\nRepeat your whole analysis using a different definition of your exposure variable"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "Parameterised reports allow you to reuse a report template across multiple similar scenarios\n\n\n\nGenerate reports for a specific time period\nGenerate the same report for different Local Health Districts\nRepeat your whole analysis using a different definition of your exposure variable"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#parameters-example",
     "href": "lectures/lecture-literate-programming.html#parameters-example",
-    "title": "Data Viz with R",
-    "section": "Parameters example",
-    "text": "Parameters example\n\n\n\n    ---\n    title: \"Parameters Example\"\n    output: html_document\n    params: \n      date: \"November 22nd 2024\"\n      dataset: !r cars\n    ---\n\n    The date is `r params$date`\n\n    ```{r}\n    head(params$dataset)\n    ```\n\n\n\n\n\n\n\nNote dataset: !r cars defines the parameter ‘dataset’ to be an R object, rather than the string “cars”"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "---\n    title: \"Parameters Example\"\n    output: html_document\n    params: \n      date: \"November 22nd 2024\"\n      dataset: !r cars\n    ---\n\n    The date is `r params$date`\n\n    ```{r}\n    head(params$dataset)\n    ```\n\n\n\n\n\n. . .\n\nNote dataset: !r cars defines the parameter ‘dataset’ to be an R object, rather than the string “cars”"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#workflow-and-tips",
     "href": "lectures/lecture-literate-programming.html#workflow-and-tips",
-    "title": "Data Viz with R",
-    "section": "Workflow and tips",
-    "text": "Workflow and tips\n\n\nWrite in your .Rmd file but regularly click  knit and preview your file\nUse global code chunk options to suppress code and warnings that you don’t want the reader to see (echo=FALSE, warning=FALSE etc)\nSeparate code to generate figures into separate .R files then read into .Rmd using ![](my-chart.png) syntax"
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "Write in your .Rmd file but regularly click  knit and preview your file\nUse global code chunk options to suppress code and warnings that you don’t want the reader to see (echo=FALSE, warning=FALSE etc)\nSeparate code to generate figures into separate .R files then read into .Rmd using ![](my-chart.png) syntax"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#mini-exercise-2",
     "href": "lectures/lecture-literate-programming.html#mini-exercise-2",
-    "title": "Data Viz with R",
-    "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 15 minutes\n\nUpdate a parameterised R Markdown Powerpoint slide deck\n\n\n\n\n\n\nOpen the file my-presentation.Rmd in the folder Exercises/5-rmarkdown\nEdit the YAML header to generate a powerpoint output instead of HTML (see here for a list of output format names)\nAdd an additional slide showing the figure on self assessed health\nUpdate the date parameter to print the latest set of figures."
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "15 minutes\n\n\n\n\n\n\n\n\n\nOpen the file my-presentation.Rmd in the folder Exercises/5-rmarkdown\nEdit the YAML header to generate a powerpoint output instead of HTML (see here for a list of output format names)\nAdd an additional slide showing the figure on self assessed health\nUpdate the date parameter to print the latest set of figures."
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#data-cleaning-with-dplyr",
@@ -1379,5 +1379,355 @@
     "title": "Data Viz with R",
     "section": "Moving from wide to long data",
     "text": "Moving from wide to long data\nConsider the following dataset:"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#section-1",
+    "href": "lectures/lecture-git-github.html#section-1",
+    "title": "Interfacing with Git",
+    "section": "",
+    "text": "Illustrations from the Openscapes blog GitHub for supporting, contributing, and failing safely by Allison Horst and Julia Lowndes."
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#how-does-it-work-3",
+    "href": "lectures/lecture-git-github.html#how-does-it-work-3",
+    "title": "Interfacing with Git",
+    "section": "How does it work?",
+    "text": "How does it work?\n\nSharing versions with GitHub"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#how-does-it-work-4",
+    "href": "lectures/lecture-git-github.html#how-does-it-work-4",
+    "title": "Interfacing with Git",
+    "section": "How does it work?",
+    "text": "How does it work?\n\nSharing versions with GitHub"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#it-seems-a-bit-complicated",
+    "href": "lectures/lecture-git-github.html#it-seems-a-bit-complicated",
+    "title": "Interfacing with Git",
+    "section": "It seems a bit complicated",
+    "text": "It seems a bit complicated\n\nVia GIPHY\nIs it worth it?"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#yes-it-is-definitely-worth-it",
+    "href": "lectures/lecture-git-github.html#yes-it-is-definitely-worth-it",
+    "title": "Interfacing with Git",
+    "section": "Yes!! It is definitely worth it!",
+    "text": "Yes!! It is definitely worth it!\n\n\nVersion control | Essential for reproducibility\nCollaboration | OpenSAFELY, OHDSI, R package development\nOrganisation | e.g. Code, data & outputs all stored together\nEasy web presence | e.g. any public GitHub repo; these slides!\nGreat for teaching\nPowerful search\nIssue tracking | Hyperlink the bug, discussion about the bug & the solution!\nIt is all free*\n\n\n. . .\n\n*Well, mostly. The free products will cover most academic/research use cases."
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#lets-check-out-an-example",
+    "href": "lectures/lecture-git-github.html#lets-check-out-an-example",
+    "title": "Interfacing with Git",
+    "section": "Let’s Check out an example",
+    "text": "Let’s Check out an example\n\ngithub.com/CBDRH/vaccineQueueNetworks\n\n\n\nIf reading this at home explore the repo for:\nCommit history\nBranches\nVersion comparison"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#lets-check-out-an-example-1",
+    "href": "lectures/lecture-git-github.html#lets-check-out-an-example-1",
+    "title": "Interfacing with Git",
+    "section": "Let’s check out an example",
+    "text": "Let’s check out an example\nYou can even compare difference versions of images!\n\n\nYou can try this example here"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#working-locally-git-client",
+    "href": "lectures/lecture-git-github.html#working-locally-git-client",
+    "title": "Interfacing with Git",
+    "section": "Working locally: Git client",
+    "text": "Working locally: Git client\nTo use Git on your computer you need a Git Client. There are heaps of git clients available, with different pros and cons. Here are a few examples:\n. . .\n\n\n\n1. Command line\n\nTerminal (Mac)\nGit bash (Windows)\nPowerShell (Windows)"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#working-locally-git-client-1",
+    "href": "lectures/lecture-git-github.html#working-locally-git-client-1",
+    "title": "Interfacing with Git",
+    "section": "Working locally: Git client",
+    "text": "Working locally: Git client\nTo use Git on your computer you need a Git Client. There are heaps of git clients available, with different pros and cons. Here are a few examples:\n\n\n\n2. RStudio interface\n\nThis is what we will use!\nCheck out happygitwithr.com"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#working-locally-git-client-2",
+    "href": "lectures/lecture-git-github.html#working-locally-git-client-2",
+    "title": "Interfacing with Git",
+    "section": "Working locally: Git client",
+    "text": "Working locally: Git client\nTo use Git on your computer you need a Git Client. There are heaps of git clients available, with different pros and cons. Here are a few examples:\n\n\n\n3. SAS Enterprise Guide 8 interface\n\nFor SAS users!\nUnderstanding Git Integration in SAS Enterprise Guide"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#collaboration-git-hosting-service",
+    "href": "lectures/lecture-git-github.html#collaboration-git-hosting-service",
+    "title": "Interfacing with Git",
+    "section": "Collaboration: Git hosting service",
+    "text": "Collaboration: Git hosting service\nTo enable collaboration you need a Git Hosting service. There are heaps of options with different pros and cons, but the core functionality is usually the same.\n. . .\n\n\n\nGitHub\n\nWidely used\nLots of resources"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#collaboration-git-hosting-service-1",
+    "href": "lectures/lecture-git-github.html#collaboration-git-hosting-service-1",
+    "title": "Interfacing with Git",
+    "section": "Collaboration: Git hosting service",
+    "text": "Collaboration: Git hosting service\nTo enable collaboration you need a Git Hosting service. There are heaps of options with different pros and cons, but the core functionality is usually the same.\n\n\n\nGitea\n\nA light-weight easy to install option.\nImplemented in SURE and ERICA."
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#collaboration-git-hosting-service-2",
+    "href": "lectures/lecture-git-github.html#collaboration-git-hosting-service-2",
+    "title": "Interfacing with Git",
+    "section": "Collaboration: Git hosting service",
+    "text": "Collaboration: Git hosting service\nTo enable collaboration you need a Git Hosting service. There are heaps of options with different pros and cons, but the core functionality is usually the same.\n\n\n\nGitLab\n\nCan be hosted on a private server so ideal for sensitive projects."
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#key-concept-repository",
+    "href": "lectures/lecture-git-github.html#key-concept-repository",
+    "title": "Interfacing with Git",
+    "section": "Key concept: Repository",
+    "text": "Key concept: Repository\n\n\n\n\n\nA repository is where the magic happens \n\nReferred to as a repo* \n1 git project = 1 repo\nDatabase of changes to your code (aka diffs)\nHidden folder on your system named .git"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#key-concept-commit",
+    "href": "lectures/lecture-git-github.html#key-concept-commit",
+    "title": "Interfacing with Git",
+    "section": "Key concept: Commit",
+    "text": "Key concept: Commit\n\n\n\n\n\nCommit\n\nA Commit is like clicking save in a MS Word document\nIt saves a snapshot of the code at that point in time\nWhy you commit you must write a message explaining what changed\nCommitting is a two stage process - more on this later"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#key-concept-diff",
+    "href": "lectures/lecture-git-github.html#key-concept-diff",
+    "title": "Interfacing with Git",
+    "section": "Key concept: Diff",
+    "text": "Key concept: Diff\n\n\n\n\n\nDiff\n\nA diff is the set of changes between two versions of a file\nWhen you commit, it is the diff that gets recorded, not the whole version\nThe screenshot highlights a single diff: deletion of the word “clinic”"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#workflow-1",
+    "href": "lectures/lecture-git-github.html#workflow-1",
+    "title": "Interfacing with Git",
+    "section": "Workflow",
+    "text": "Workflow"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#workflow-2",
+    "href": "lectures/lecture-git-github.html#workflow-2",
+    "title": "Interfacing with Git",
+    "section": "Workflow",
+    "text": "Workflow"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#workflow-3",
+    "href": "lectures/lecture-git-github.html#workflow-3",
+    "title": "Interfacing with Git",
+    "section": "Workflow",
+    "text": "Workflow\nHow you actual perform these commands depends on the git client you are using…\n. . .\nWe will use the RStudio Interface"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#what-files-can-i-track",
+    "href": "lectures/lecture-git-github.html#what-files-can-i-track",
+    "title": "Interfacing with Git",
+    "section": "What files can I track?",
+    "text": "What files can I track?\n. . .\nThis all works best for non-binary or text files e.g. your typical code files (.sas, .do, .R, .Rmd, .py) but also .png, .csv etc\nYou can include non-binary files (.pdf, .docx, .xlsx etc) in a git repo but the diff features won’t work. It can still be useful if using the repo as a central organisation point (e.g. if you save your published manuscript with the analysis code)."
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#how-often-should-i-commit",
+    "href": "lectures/lecture-git-github.html#how-often-should-i-commit",
+    "title": "Interfacing with Git",
+    "section": "How often should I commit?",
+    "text": "How often should I commit?\n. . .\nWell, it depends.\nJust like when you start writing a word document you might not click save very often as you spew out lots of ideas, but at the end of your thesis you will carefully save every change!\nIt is best practice to keep commits fairly small and related, especially for mature projects."
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#whats-with-the-staging-area",
+    "href": "lectures/lecture-git-github.html#whats-with-the-staging-area",
+    "title": "Interfacing with Git",
+    "section": "What’s with the staging area?",
+    "text": "What’s with the staging area?\n. . .\nThere are advantages of breaking up the commit into two steps\n\nYou can split a big edit into bite-sized pieces\nEasier to review\nIf you make a mistake you can unstage. You can’t un-commit!"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#what-about-my-sensitive-datacode",
+    "href": "lectures/lecture-git-github.html#what-about-my-sensitive-datacode",
+    "title": "Interfacing with Git",
+    "section": "What about my sensitive data/code?",
+    "text": "What about my sensitive data/code?\nIf your data are sensitive be very careful not to track with Git (more tips on this later).\nPrivate repos are available if you don’t want the public to see your code (you can change to public later if desired.)\nGit Hosting Services like Gitea are available in secure analysis environments (SURE/ERICA etc)"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#how-does-my-repo-align-with-my-project-folder",
+    "href": "lectures/lecture-git-github.html#how-does-my-repo-align-with-my-project-folder",
+    "title": "Interfacing with Git",
+    "section": "How does my repo align with my project folder?",
+    "text": "How does my repo align with my project folder?\n. . .\n\nYou need to actively think about this!\nOption: Root folder of the project\nOption: Specific folder (e.g. just Code/)\nGit ignores files and folders listed in the special .gitignore file"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#mini-exercise",
+    "href": "lectures/lecture-git-github.html#mini-exercise",
+    "title": "Interfacing with Git",
+    "section": "Mini-Exercise",
+    "text": "Mini-Exercise\n\n 15 minutes\n\n\nFork the exercise repo\n\n\n\n\n\n\nClick here and follow the directions to create a personal fork of the Exercises repo on GitHub\n\nClone this repo as a new project in RStudio\n\nClick on the Code icon and copy the HTTPS url to your clipboard\nIn RStudio, create a new project using this url:\n\nNew Project &gt; Version Control &gt; Git\nPaste the copied url into the Repository URL field\nCarefully choose where you want to store these files on your computer"
+  },
+  {
+    "objectID": "lectures/lecture-literate-programming.html",
+    "href": "lectures/lecture-literate-programming.html",
+    "title": "Literate programming with Rmarkdown",
+    "section": "",
+    "text": "Artwork by @allison_horst\n\n\n\n\n\nSee rmarkdown.rstudio.com/gallery\n\n\n\n\n\n\n\n\n\n    ---\n    title: \"Cars analysis\"\n    output: html_document\n    date: \"2024-11-10\"\n    ---\n      \n    ## Introduction\n    Here are the first few lines of the `cars` dataset:\n\n    ```{r cars}\n    summary(cars)\n    ```\n\n    There are `r nrow(cars)` in total. You can also embed plots, for example:\n\n\n    ```{r scatterplot, echo=FALSE}\n    plot(cars)\n    ```\n\n\n\n\n\n\nYAML header\nR code chunks\nFormatted text\n\n\n\n\n\n\n\n\n\n\ncars-analysis.html\n\n\n\n\n\n\n 3 minutes\n\n\n\n\n\n\n\n\n\nIn RStudio, open a new file by clicking \nSelect  R Markdown…\nEnter a Title and Author then click OK\nClick  to knit the file (you will be prompted to save the file—save it in your Exercises folder)\nExamine the rendered output\n\n\n\n\n\n\n\n\n\n\nRmarkdown Cookbook\n\n\n\n\n\n\n\n\ncars-analysis.docx\n\n\n\n\n\n\n\n\ncars-analysis.pdf\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n. . .\n\n\n*italic* or _italic_\n\nitalic\n\n\n. . .\n\n\n**bold** or __bold__\n\nbold\n\n\n. . .\n\n\nsuperscript^2^\n\nsuperscript2\n\n\n. . .\n\n\nsubscript~2~\n\nsubscript2\n\n\n. . .\n\n\n# Level 1 header\n\nLevel 1 header\n\n\n. . .\n\n\n## Level 2 header\n\nLevel 2 header\n\n\n. . .\n\n\n### Level 3 header\n\nLevel 3 header\n\n\n. . .\n\n\n&gt;Stand out quote\n\n\nStand out quote\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n. . .\n\n\n* Bullet\n* Point\n* list\n\n\nBullet\nPoint\nlist\n\n\n\n. . .\n\n\n\n1. Numbered\n1. List\n1. Items\n\n\nNumbered\nList\nItems\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n. . .\n\n\n[click here](http://google.com)\n\nclick here\n\n\n. . .\n\n\n\n![cars-analysis.html](../images/cars-analysis-html.png)\n\n\n\n\ncars-analysis.html\n\n\n\n\n\n\n\n\n 5 minutes\n\n\n\nEdit the file exercises/5-rmarkdown/poem-exercise.Rmd to generate the output on the right\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    ---\n    title: \"Cars analysis\"\n    output: html_document\n    date: \"2024-11-10\"\n    ---\n\n\n\n\nControls whole-document settings\nkey-value pairs\noutput: html_document\noutput: word_document\noutput: pdf_document\n\n\n\n\n\n\n\n\n\n\n    output: \n      html_document:\n        toc: true\n        toc_float: true\n        code_folding: hide\n        theme: united\n\n\n\n\n\n\n\n\n\nInsert values of R objects inline in text\nUseful for quick calculations\n\n\n    Average speed was `r mean(cars$speed)`mph.\n\nAverage speed was 15.4mph.\n\n\n\n\n    ```{r scatterplot, echo=FALSE}\n    \n    plot(cars)\n    \n    ```\n\n\n\n\nClick  to add\nStarts and ends with triple backticks ```\n{r} indicates the language is R\n{r scatterplot} indicates the chuck name is scatterplot (not essential by useful for readability and troubleshooting)\necho=FALSE a chunk option meaning don’t print the code to the output\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n. . .\n\n\necho=FALSE\n\nShow code in output document (TRUE/FALSE)\n\n\n. . .\n\n\neval=FALSE\n\nRun code in the chunk (TRUE/FALSE)\n\n\n. . .\n\n\ninclude=FALSE\n\nInclude code in the chunk (TRUE/FALSE)\n\n\n. . .\n\n\nmessage=FALSE\n\nDisplay code messages in document (TRUE/FALSE)\n\n\n. . .\n\n\nwarning=FALSE\n\nDisplay code warnings in document (TRUE/FALSE)\n\n\n. . .\n\n\nfig.width=7\n\nFigure width in inches\n\n\n. . .\n\n\nfig.height=7\n\nFigure height in inches\n\n\n\n\n\nUse knitr::opts_chunk$set() to set global options\n\n    ```{r, setup, include=FALSE}\n    knitr::opts_chunk$set(\n      echo = FALSE, fig.width = 5, fig.height = 7\n    )\n    ```\n\n. . .\n\n\n\nHas to go inside an R code chunk\nIndividual code chunks can have different settings\n\n\n\n\n\n\nParameterised reports allow you to reuse a report template across multiple similar scenarios\n\n\n\nGenerate reports for a specific time period\nGenerate the same report for different Local Health Districts\nRepeat your whole analysis using a different definition of your exposure variable\n\n\n\n\n\n\n\n\n    ---\n    title: \"Parameters Example\"\n    output: html_document\n    params: \n      date: \"November 22nd 2024\"\n      dataset: !r cars\n    ---\n\n    The date is `r params$date`\n\n    ```{r}\n    head(params$dataset)\n    ```\n\n\n\n\n\n. . .\n\nNote dataset: !r cars defines the parameter ‘dataset’ to be an R object, rather than the string “cars”\n\n\n\n\n\n\nWrite in your .Rmd file but regularly click  knit and preview your file\nUse global code chunk options to suppress code and warnings that you don’t want the reader to see (echo=FALSE, warning=FALSE etc)\nSeparate code to generate figures into separate .R files then read into .Rmd using ![](my-chart.png) syntax\n\n\n\n\n\n\n 15 minutes\n\n\n\n\n\n\n\n\n\nOpen the file my-presentation.Rmd in the folder Exercises/5-rmarkdown\nEdit the YAML header to generate a powerpoint output instead of HTML (see here for a list of output format names)\nAdd an additional slide showing the figure on self assessed health\nUpdate the date parameter to print the latest set of figures."
+  },
+  {
+    "objectID": "exercises/github.html",
+    "href": "exercises/github.html",
+    "title": "Getting started with git and GitHub",
+    "section": "",
+    "text": "In this exercise you will:",
+    "crumbs": [
+      "Housekeeping",
+      "Exercises",
+      "Day 1. GitHub"
+    ]
+  },
+  {
+    "objectID": "exercises/github.html#using-the-rstudio-files-pane-navigate-to-the-folder-exercises1-code-and-open-the-file-0-practice-git-workflow.txt",
+    "href": "exercises/github.html#using-the-rstudio-files-pane-navigate-to-the-folder-exercises1-code-and-open-the-file-0-practice-git-workflow.txt",
+    "title": "Getting started with git and GitHub",
+    "section": "2.1 Using the RStudio Files Pane, navigate to the folder exercises/1-code and open the file 0-practice-git-workflow.txt",
+    "text": "2.1 Using the RStudio Files Pane, navigate to the folder exercises/1-code and open the file 0-practice-git-workflow.txt\n\n\n\n\n0-practice-git-workflow.txt\n\n# My favourite snack\n\n\n# Ingredients\n\n\n# Instructions\n\n\n\n\n\n0-practice-git-workflow.txt\n\n# My favourite snack\nGambas Pil Pil (Garlic and Chilli Prawns)\n\n# Ingredients\n\n\n# Instructions\n\n\n\n\n\n‘Pil pil’ is a word used in Spanish and Basque cuisines that describes a sauce made with garlic and chilli infused in hot olive oil. Some say ‘pil pil’ is the sound of popping garlic as it cooks in the hot oil.\nflawlessfood.co.uk/gambas-pil-pil/\n\n\n\n0-practice-git-workflow.txt\n\n# My favourite snack\nGambas Pil Pil (Garlic and Chilli Prawns)\n\n# Ingredients\n- Prawns \n- Garlic\n- Chilli\n- Oil\n- Bread\n\n# Instructions\n\n\n\n\n\n0-practice-git-workflow.txt\n\n# My favourite snack\nGambas Pil Pil (Garlic and Chilli Prawns)\n\n# Ingredients\n- Prawns \n- Garlic\n- Chilli\n- Oil\n- Parsley\n- Bread\n\n# Instructions\n\n- Heat the oil with the garlic and chilli\n- Add the prawns\n- Garnish with parsley\n- Serve with bread",
+    "crumbs": [
+      "Housekeeping",
+      "Exercises",
+      "Day 1. GitHub"
+    ]
+  },
+  {
+    "objectID": "exercises/github.html#open-the-practice-file",
+    "href": "exercises/github.html#open-the-practice-file",
+    "title": "Getting started with git and GitHub",
+    "section": "2.1 Open the practice file",
+    "text": "2.1 Open the practice file\nUsing the RStudio Files Pane, navigate to the folder exercises/1-code and open the file 0-practice-git-workflow.txt\n\n\n\nNavigate to exercises/1-code/0-practice-git-workflow.txt and open the file\n\n\nThe file should look like this. We are going to use this template to practice the git workflow.\n\n\n\n0-practice-git-workflow.txt\n\n# My favourite snack\n\n\n# Ingredients\n\n\n# Instructions",
+    "crumbs": [
+      "Housekeeping",
+      "Exercises",
+      "Day 1. GitHub"
+    ]
+  },
+  {
+    "objectID": "exercises/github.html#edit-the-file",
+    "href": "exercises/github.html#edit-the-file",
+    "title": "Getting started with git and GitHub",
+    "section": "2.2 Edit the file",
+    "text": "2.2 Edit the file\n\nWrite in the name of your snack in the appropriate section.\nThe example is showing Gambas Pil Pil but you should choose your favourite!\nDon’t worry about Ingredients or Instructions for now\nMake sure to save the file when you are done.\n\n\n\n\n‘Pil pil’ is a word used in Spanish and Basque cuisines that describes a sauce made with garlic and chilli infused in hot olive oil. Some say ‘pil pil’ is the sound of popping garlic as it cooks in the hot oil.\nflawlessfood.co.uk/gambas-pil-pil/\n\n\n\n0-practice-git-workflow.txt\n\n# My favourite snack\nGambas Pil Pil (Garlic and Chilli Prawns)\n\n# Ingredients\n\n\n# Instructions",
+    "crumbs": [
+      "Housekeeping",
+      "Exercises",
+      "Day 1. GitHub"
+    ]
+  },
+  {
+    "objectID": "exercises/github.html#git-add-the-file",
+    "href": "exercises/github.html#git-add-the-file",
+    "title": "Getting started with git and GitHub",
+    "section": "2.3 git add the file",
+    "text": "2.3 git add the file\nIn the RStudio Git Pane, tick the box next to the 0-practice-git-workflow.txt. This adds your edited file to the staging area.\n\n\n\nClick the box next to file to add the file to the staging area",
+    "crumbs": [
+      "Housekeeping",
+      "Exercises",
+      "Day 1. GitHub"
+    ]
+  },
+  {
+    "objectID": "exercises/github.html#git-commit-the-file",
+    "href": "exercises/github.html#git-commit-the-file",
+    "title": "Getting started with git and GitHub",
+    "section": "2.4 git commit the file",
+    "text": "2.4 git commit the file\n\nClick on the Commit button to commit the file\nThis will launch a dialogue box\nAdd a commit message\nClick commit\n\n\n\n\nAdd a commit messge then click commit",
+    "crumbs": [
+      "Housekeeping",
+      "Exercises",
+      "Day 1. GitHub"
+    ]
+  },
+  {
+    "objectID": "exercises/github.html#git-push-the-file",
+    "href": "exercises/github.html#git-push-the-file",
+    "title": "Getting started with git and GitHub",
+    "section": "2.5 git push the file",
+    "text": "2.5 git push the file\n\nClick on the Push button to push the file\nIf it runs successfully you should get a dialogue box that looks something like this (which you can then close).\n\n\n\n\nA successful push to the remote repo\n\n\n\nPay attention to the messages that pop up here: if something goes wrong you may see an error\nIf you see the message “Everything up-to-date” make sure you fully completed the commit step by clicking Commit after adding your commit message in the previous box\n\n\n\n\n\n\n\n\n\nCheckpoint\n\n\n\nIf this has all worked smoothly you should see your recent commit message when you view your repo on GitHub\n\n\n\nYour changes will be in the exercises folder",
+    "crumbs": [
+      "Housekeeping",
+      "Exercises",
+      "Day 1. GitHub"
+    ]
+  },
+  {
+    "objectID": "exercises/github.html#confirm-you-can-see-your-changes-on-github",
+    "href": "exercises/github.html#confirm-you-can-see-your-changes-on-github",
+    "title": "Getting started with git and GitHub",
+    "section": "2.6 Confirm you can see your changes on GitHub",
+    "text": "2.6 Confirm you can see your changes on GitHub\n\nNavigate to your remote repo on GitHub\nExamine the list of files on the front page: you should see your recent commit message\n\n\n\n\nYour changes will be in the exercises folder",
+    "crumbs": [
+      "Housekeeping",
+      "Exercises",
+      "Day 1. GitHub"
+    ]
+  },
+  {
+    "objectID": "exercises/github.html#add-your-ingredients",
+    "href": "exercises/github.html#add-your-ingredients",
+    "title": "Getting started with git and GitHub",
+    "section": "2.6 Add your ingredients",
+    "text": "2.6 Add your ingredients\n\n\n\n0-practice-git-workflow.txt\n\n# My favourite snack\nGambas Pil Pil (Garlic and Chilli Prawns)\n\n# Ingredients\n- Prawns \n- Garlic\n- Chilli\n- Oil\n- Bread\n\n# Instructions\n\n\n\nEdit the file to include the ingredients for your snack\nSave the file\nRepeat the steps above to git add, commit and push the file to GitHub\nConfirm you can see your changes on GitHub\n\n\n\n\nConfirm you can see your changes on GitHub",
+    "crumbs": [
+      "Housekeeping",
+      "Exercises",
+      "Day 1. GitHub"
+    ]
+  },
+  {
+    "objectID": "exercises/github.html#add-your-instructions",
+    "href": "exercises/github.html#add-your-instructions",
+    "title": "Getting started with git and GitHub",
+    "section": "2.7 Add your instructions",
+    "text": "2.7 Add your instructions\n\n\n\n0-practice-git-workflow.txt\n\n# My favourite snack\nGambas Pil Pil (Garlic and Chilli Prawns)\n\n# Ingredients\n- Prawns \n- Garlic\n- Chilli\n- Oil\n- Parsley\n- Bread\n\n# Instructions\n\n- Heat the oil with the garlic and chilli\n- Add the prawns\n- Garnish with parsley\n- Serve with bread\n\n\n\nEdit the file to include the instructions to prepare your snack\nSave the file\nRepeat the steps above to git add, commit and push the file to GitHub\nConfirm you can see your changes on GitHub\n\n\n\n\nConfirm you can see your changes on GitHub\n\n\n\n\nMade it this far? Nailed it!\n\n\n\nvia GIPHY",
+    "crumbs": [
+      "Housekeeping",
+      "Exercises",
+      "Day 1. GitHub"
+    ]
+  },
+  {
+    "objectID": "exercises/github.html#fork-the-repo",
+    "href": "exercises/github.html#fork-the-repo",
+    "title": "Getting started with git and GitHub",
+    "section": "1.1 Fork the repo",
+    "text": "1.1 Fork the repo\n\nClick here and follow the instructions to create a personal fork of the workshop materials repo on Github.\nYou should see a message like the one below, except your repo will be tagged with your GitHub username https://github.com/data-viz-workshop/materials-&lt;username&gt;\n\n\n\nThis message indicates you’ve successfully forked the Materials repo\n\n\nOpen this link on a browser and you will be taken to the repo on GitHub. There are a lot of files and folders here, the main files you will use are in the exercises and solutions folders.",
+    "crumbs": [
+      "Housekeeping",
+      "Exercises",
+      "Day 1. GitHub"
+    ]
+  },
+  {
+    "objectID": "exercises/github.html#clone-the-repo-from-github-to-your-laptop",
+    "href": "exercises/github.html#clone-the-repo-from-github-to-your-laptop",
+    "title": "Getting started with git and GitHub",
+    "section": "1.2 Clone the repo from GitHub to your laptop",
+    "text": "1.2 Clone the repo from GitHub to your laptop\n Code",
+    "crumbs": [
+      "Housekeeping",
+      "Exercises",
+      "Day 1. GitHub"
+    ]
+  },
+  {
+    "objectID": "exercises/github.html#copy-the-repo-url",
+    "href": "exercises/github.html#copy-the-repo-url",
+    "title": "Getting started with git and GitHub",
+    "section": "1.2 Copy the repo url",
+    "text": "1.2 Copy the repo url\n\nClick on the  Code button and copy-paste the HTTPS url to your clipboard.",
+    "crumbs": [
+      "Housekeeping",
+      "Exercises",
+      "Day 1. GitHub"
+    ]
+  },
+  {
+    "objectID": "exercises/github.html#use-the-repo-url-to-create-a-new-project-in-rstudio",
+    "href": "exercises/github.html#use-the-repo-url-to-create-a-new-project-in-rstudio",
+    "title": "Getting started with git and GitHub",
+    "section": "1.3 Use the repo url to create a new project in RStudio",
+    "text": "1.3 Use the repo url to create a new project in RStudio\n\nIn RStudio, create a new project by clicking in the top-right hand corner and selecting New Project…\n\nSelect Version Control then Git.\n\n\n\n\n\n\n\n\n\n\nChoose Version Control\n\n\n\n\n\n\n\nThen choose Git\n\n\n\n\n\n\nPaste your repo url in the Repository URL field.\n\nThe Project directory name will be the name of the folder on your laptop so choose something sensible, e.g. Materials.\nFinally, select the field Create project as subdirectory of. This is where the Materials folder will be stored on your laptop. If you move the folder later it will break the link with GitHub, that can be fixed but it is easier to just choose somewhere sensible now.\n\n\n\n\n\n\n\n\n\nCheckpoint\n\n\n\nIf you have successfully completed this step you should see the name of your project in RStudio",
+    "crumbs": [
+      "Housekeeping",
+      "Exercises",
+      "Day 1. GitHub"
+    ]
   }
 ]

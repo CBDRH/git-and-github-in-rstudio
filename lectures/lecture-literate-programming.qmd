@@ -91,7 +91,7 @@ See [rmarkdown.rstudio.com/gallery](https://rmarkdown.rstudio.com/gallery.html)
 
 ::: {.column width=34%}
 
-<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=orange&hrs=0&min=3&sec=0" frameborder="0"></iframe>
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=3&sec=0" frameborder="0"></iframe>
 
 :::
 
@@ -326,7 +326,7 @@ Edit the file `exercises/5-rmarkdown/poem-exercise.Rmd` to generate the output o
 
 ::: {.column width=34%}
 
-<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=orange&hrs=0&min=5&sec=0" frameborder="0"></iframe>
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=5&sec=0" frameborder="0"></iframe>
 
 :::
 
@@ -666,7 +666,7 @@ Use `knitr::opts_chunk$set()` to set global options
 
 ::: {.column width=34%}
 
-<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=orange&hrs=0&min=15&sec=0" frameborder="0"></iframe>
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=15&sec=0" frameborder="0"></iframe>
 
 :::
 

@@ -11,7 +11,7 @@ slide-number: c/t
 
 <img src="../images/github-mark-white.png"></img>
 
-## The challenge
+## The Challenge
 
 As data analysts, we produce a lot of files
 
@@ -22,8 +22,9 @@ As data analysts, we produce a lot of files
 
 Organising these files is an important, albeit often unglamorous, part of our job.  
 
-
 ## The Challenge
+
+::: {.incremental}
 
 **Managing versions** What do you do with old code? 
 
@@ -31,7 +32,7 @@ Organising these files is an important, albeit often unglamorous, part of our jo
 
 **Facilitating collaboration** Can other team members easily contribute?
 
-
+:::
 ## The old school solution 🛵 {.smaller}
 
 The old school solution combines many practical strategies:
@@ -109,9 +110,472 @@ GitHub is a **cloud-based** platform for sharing and collaborating on projects m
 
 ![](../images/commit-gif-end.png)
 
-
 ## How does it work?
 
 ### Sharing versions with GitHub
 
 ![](../images/commit-gif-end.png)
+
+## {.center-slide}
+
+![](../images/horst/git-commit.png)
+
+::: {.figLab}
+
+Illustrations from the [Openscapes](https://www.openscapes.org/) blog [GitHub for supporting, contributing, and failing safely](https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/) by Allison Horst and Julia Lowndes.
+
+:::
+
+
+## How does it work?
+
+### Sharing versions with GitHub
+
+![](../images/push.gif)
+
+
+## How does it work?
+
+### Sharing versions with GitHub
+
+![](../images/push-gif-end.png)
+
+
+## It seems a bit complicated {.center-slide}
+
+![](https://media.giphy.com/media/kaq6GnxDlJaBq/giphy.gif)
+
+<a class = figLab href="https://giphy.com/gifs/chloe-concerned-kaq6GnxDlJaBq/">Via GIPHY</a>
+
+_Is it worth it?_
+
+
+## Yes!! It is definitely worth it! 
+
+::: {.incremental}
+
+1. **Version control** | Essential for reproducibility
+
+1. **Collaboration** | [OpenSAFELY](https://github.com/opensafely), [OHDSI](https://github.com/OHDSI/Atlas), [R package development](https://github.com/tidyverse/tidyverse)
+
+1. **Organisation** | e.g. Code, data & outputs all stored together
+
+1. **Easy web presence** | e.g. any public GitHub repo; these slides! 
+
+1. **Great for teaching** 
+
+1. **Powerful search** 
+
+1. **Issue tracking** | Hyperlink the bug, discussion about the bug & the solution!
+
+1. **It is all _free_\***  
+
+:::
+
+. . . 
+
+::: {.figLab} 
+*Well, mostly. The free products will cover most academic/research use cases. 
+:::
+
+
+## Let's Check out an example
+
+::: {.figLab}
+
+[github.com/CBDRH/vaccineQueueNetworks](https://github.com/CBDRH/vaccineQueueNetworks)
+
+:::
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+If reading this at home explore the repo for: 
+
+[Commit history](https://github.com/CBDRH/vaccineQueueNetworks/commits/main)
+
+[Branches](https://github.com/CBDRH/vaccineQueueNetworks/network)
+
+[Version comparison](https://github.com/CBDRH/vaccineQueueNetworks/commit/c0c56a376555b127279e5e0d9786b93b073f9dc7)
+
+:::
+
+::: {.column width=66%}
+
+[![](../images/vax-homepage.png)](https://github.com/CBDRH/vaccineQueueNetworks)
+
+:::
+
+::::
+
+## Let's check out an example
+
+You can even compare difference versions of images! 
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+You can try this example [here](https://github.com/MarkHanly/getting-started-with-git-and-github/commit/6a071a9c63ee211e63417efba10a24042d0b0db3)
+
+:::
+
+::: {.column  width=66%}
+
+![](../images/image-comparison.gif)
+
+:::
+
+::::
+
+
+# Interfacing with Git
+
+![](../images/github-mark-white.png)
+
+
+## Working locally: **Git client**
+
+To use Git on your computer you need a _Git Client_. There are [heaps](https://git-scm.com/downloads/guis) of git clients available, with different pros and cons. Here are a few examples:
+
+. . . 
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+### 1. Command line 
+
+* Terminal (Mac) 
+* Git bash (Windows) 
+* PowerShell (Windows)
+
+:::
+
+::: {.column width=66%}
+
+![](../images/git-bash.png)
+
+:::
+
+::::
+
+
+
+## Working locally: **Git client**
+
+To use Git on your computer you need a _Git Client_. There are [heaps](https://git-scm.com/downloads/guis) of git clients available, with different pros and cons. Here are a few examples:
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+### 2. RStudio interface
+
+* This is what we will use!
+* Check out [happygitwithr.com](https://happygitwithr.com/)
+
+:::
+
+::: {.column width=66%}
+
+![](../images/rstudio-pane.png)
+
+:::
+
+::::
+
+## Working locally: **Git client**
+
+To use Git on your computer you need a _Git Client_. There are [heaps](https://git-scm.com/downloads/guis) of git clients available, with different pros and cons. Here are a few examples:
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+### 3. SAS Enterprise Guide 8 interface
+
+* For SAS users! 
+* [Understanding Git Integration in SAS Enterprise Guide](https://documentation.sas.com/doc/en/egcdc/8.2/egdoccdc/egug/p1ov5qodzk4ur2n1r200wdr5jz75.htm)
+
+:::
+
+::: {.column width=66%}
+
+![](../images/sas-interface.png)
+
+:::
+
+::::
+
+
+## Collaboration: **Git hosting service**
+
+To enable collaboration you need a _Git Hosting service_. There are heaps of [options](https://git.wiki.kernel.org/index.php/GitHosting) with different pros and cons, but the core functionality is usually the same.  
+
+. . . 
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+### GitHub
+
+* Widely used
+
+* Lots of resources
+
+:::
+
+::: {.column width=66%}
+
+![](../images/github-mark-white.png)
+
+:::
+
+::::
+
+
+## Collaboration: **Git hosting service**
+
+To enable collaboration you need a _Git Hosting service_. There are heaps of [options](https://git.wiki.kernel.org/index.php/GitHosting) with different pros and cons, but the core functionality is usually the same.  
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+### Gitea
+
+* A light-weight easy to install option.
+
+* Implemented in SURE and ERICA. 
+
+:::
+
+::: {.column width=66%}
+
+![](../images/gitea-logo.png)
+
+:::
+
+::::
+
+
+## Collaboration: **Git hosting service**
+
+To enable collaboration you need a _Git Hosting service_. There are heaps of [options](https://git.wiki.kernel.org/index.php/GitHosting) with different pros and cons, but the core functionality is usually the same.  
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+### GitLab
+
+* Can be hosted on a private server so ideal for sensitive projects.
+
+:::
+
+::: {.column width=66%}
+
+![](../images/gitlab-logo-400.png)
+
+:::
+
+::::
+
+# Key concepts
+
+## Key concept: Repository 
+
+:::: {.columns}
+
+::: {.column}
+
+![](../images/repo-example.png)
+
+:::
+
+::: {.column}
+
+### A repository is where the magic happens {{<fa wand-magic-sparkles >}}
+
+* Referred to as a **repo* **
+* 1 git project = 1 repo
+* Database of changes to your code (aka _diffs_)
+* Hidden folder on your system named **.git**
+
+:::
+
+::::
+
+
+## Key concept: Commit 
+
+:::: {.columns}
+
+::: {.column}
+
+![](../images/commit-diagram.png)
+
+:::
+
+::: {.column}
+
+### Commit
+
+* A Commit is like clicking save in a MS Word document 
+
+* It saves a snapshot of the code at that point in time 
+
+* Why you commit you must write a message explaining what changed
+
+* Committing is a two stage process - more on this later
+
+:::
+
+::::
+
+## Key concept: Diff 
+
+:::: {.columns}
+
+::: {.column}
+
+![](../images/commit-example.png)
+
+:::
+
+::: {.column}
+
+### Diff
+
+* A diff is the set of changes between two versions of a file 
+
+* When you commit, it is the _diff_ that gets recorded, not the whole version
+
+* The screenshot highlights a single diff: deletion of the word "clinic" 
+
+:::
+
+::::
+
+
+# Workflow
+
+## Workflow
+
+![](../images/workflow.gif)
+
+## Workflow
+
+![](../images/workflow-gif-end.png)
+
+
+## Workflow
+
+How you actual perform these commands depends on the git client you are using...
+
+. . . 
+
+We will use the RStudio Interface
+
+![](../images/rstudio-pane.png)
+
+
+# Frequently asked questions 
+
+## What files can I track?  
+
+. . . 
+
+This all works best for non-binary or text files e.g. your typical code files (.sas, .do, .R, .Rmd, .py) but also .png, .csv etc
+
+You can include non-binary files (.pdf, .docx, .xlsx etc) in a git repo but the diff features won't work. It can still be useful if using the repo as a central organisation point (e.g. if you save your published manuscript with the analysis code). 
+
+
+## How often should I commit? 
+
+. . . 
+
+Well, it depends.
+
+Just like when you start writing a word document you might not click save very often as you spew out lots of ideas, but at the end of your thesis you will carefully save every change! 
+
+It is best practice to keep commits fairly small and related, especially for mature projects. 
+
+
+## What's with the staging area? 
+
+. . .
+
+There are advantages of breaking up the commit into two steps 
+
+* You can split a big edit into bite-sized pieces 
+
+* Easier to review
+
+* If you make a mistake you can _unstage_. You can't un-commit!
+
+
+## What about my sensitive data/code? 
+
+If your data are sensitive be very careful not to track with Git (more tips on this later). 
+
+Private repos are available if you don't want the public to see your code (you can change to public later if desired.)
+
+Git Hosting Services like Gitea are available in secure analysis environments (SURE/ERICA etc)
+
+
+
+## How does my repo align with my project folder?
+
+. . . 
+
+* You need to actively think about this!
+
+* Option: Root folder of the project
+
+* Option: Specific folder (e.g. just `Code/`)
+
+* Git ignores files and folders listed in the special `.gitignore` file
+
+# Any other questions? 
+
+# Demo
+
+## Mini-Exercise {.smaller}
+
+::: {.clock}
+
+{{< fa clock >}} 15 minutes
+
+:::
+
+### Fork the exercise repo
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=15&sec=0" frameborder="0"></iframe>
+
+:::
+
+::: {.column width=66%}
+
+1. Click here and follow the directions to create a personal fork of the **Exercises** repo on GitHub
+
+Clone this repo as a new project in RStudio
+
+1. Click on the Code icon and copy the **HTTPS** url to your clipboard
+
+1. In RStudio, create a new project using this url:
+    - New Project > Version Control > Git 
+    - Paste the copied url into the Repository URL field
+    - Carefully choose where you want to store these files on your computer
+
+:::
+
+::::
+

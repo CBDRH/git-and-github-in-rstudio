@@ -1,0 +1,268 @@
+---
+title: "Getting started with git and GitHub"
+format:
+  html:
+    css: ../custom.scss
+    toc: true
+    toc-depth: 2
+    execute:
+      echo: true
+      eval: false 
+number-sections: true 
+---
+
+In this exercise you will:
+
+1. **Create a personal copy of the Materials Repo** and clone this locally so that you have all the course materials stored on your laptop
+
+1. **Practice the git add-commit-push workflow** so that you get a feel for working with git. 
+
+![](../images/horst/git-commit.png)
+
+::: {.figLab}
+
+Illustrations from the [Openscapes](https://www.openscapes.org/) blog [GitHub for supporting, contributing, and failing safely](https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/) by Allison Horst and Julia Lowndes.
+
+:::
+
+
+# Create a personal copy of the Materials Repo
+
+## Fork the repo 
+
+* Click [here](https://classroom.github.com/a/MHSgEems) and follow the instructions to create a personal fork of the workshop materials repo on Github. 
+
+* You should see a message like the one below, except your repo will be tagged with your GitHub username `https://github.com/data-viz-workshop/materials-<username>`
+
+    ![This message indicates you've successfully forked the Materials repo](../images/git-exercise-fork-success.png)
+
+* Open this link on a browser and you will be taken to the repo on GitHub. There are a lot of files and folders here, the main files you will use are in the **exercises** and **solutions** folders. 
+
+    ![](../images/git-exercise-homescreen.png)
+
+## Copy the repo url
+
+* Click on the <span style="background-color:#238636; color:white; padding: 5px; border-radius: 5px">{{<fa code>}} Code</span> button and copy-paste the **HTTPS** url to your clipboard.
+
+    ![](../images/git-exercise-clone.png)
+
+## Use the repo url to create a new project in RStudio
+
+* In RStudio, create a new project by clicking in the top-right hand corner and selecting **New Project...**
+
+    ![](../images/git-exercise-new-project.png)
+
+* Select **Version Control** then **Git**. 
+
+
+::: {layout-ncol=2}
+
+![Choose Version Control](../images/git-exercise-version-control.png)
+
+![Then choose Git](../images/git-exercise-git.png)
+:::
+
+* Paste your repo url in the **Repository URL** field.
+
+    ![](../images/git-exercise-paste-url.png)
+
+* The **Project directory name** will be the name of the folder on your laptop so choose something sensible, e.g. **Materials**.
+
+* Finally, select the field **Create project as subdirectory of**. This is where the Materials folder will be stored on your laptop. If you move the folder later it will break the link with GitHub, that can be fixed but it is easier to just choose somewhere sensible now. 
+
+<hr>
+<br>
+
+::: {.callout-caution}
+
+## Checkpoint
+
+If you have successfully completed this step you should see the name of your project in RStudio
+
+![](../images/git-exercise-project-name.png)
+
+:::
+
+<br>
+<hr>
+
+
+# Practice the git add-commit-push workflow
+
+To complete this exercise you will write a short "code" file that summarises your favourite snack. There are three necessary bits of information to include in this file: 
+
+1. The name of the snack
+2. The ingredients
+3. The preparation instructions
+
+After you add each bit of information you will run through the complete git add-commit-push cycle, and confirm that you can see the changes to your File pushed to GitHub. 
+
+
+::: {.aside}
+
+Our analytic code files are essentially lists of instructions, just like a recipe! 
+
+:::
+
+## Open the practice file
+
+Using the RStudio **Files** Pane, navigate to the folder **exercises/1-code** and open the file `0-practice-git-workflow.txt`
+
+![Navigate to exercises/1-code/0-practice-git-workflow.txt and open the file](../images/git-exercise-file-open.png)
+
+The file should look like this. We are going to use this template to practice the git workflow. 
+
+```{r}
+#| filename: 0-practice-git-workflow.txt
+
+# My favourite snack
+
+
+# Ingredients
+
+
+# Instructions
+
+```
+
+
+## Edit the file 
+
+* Write in the name of your snack in the appropriate section.
+* The example is showing Gambas Pil Pil but you should choose your favourite!
+* Don't worry about Ingredients or Instructions for now
+* Make sure to save the file when you are done. 
+
+::: {.aside} 
+
+![](../images/Gambas-Pil-Pil-Chilli-and-Garlic-Prawns-186-of-194-Flawless.jpg)
+
+'Pil pil' is a word used in Spanish and Basque cuisines that describes a sauce made with garlic and chilli infused in hot olive oil. Some say 'pil pil' is the sound of popping garlic as it cooks in the hot oil.
+
+[flawlessfood.co.uk/gambas-pil-pil/](https://flawlessfood.co.uk/gambas-pil-pil/)
+
+:::
+
+```{r}
+#| filename: 0-practice-git-workflow.txt
+
+# My favourite snack
+Gambas Pil Pil (Garlic and Chilli Prawns)
+
+# Ingredients
+
+
+# Instructions
+
+```
+
+
+## git add the file
+
+In the RStudio Git Pane, tick the box next to the `0-practice-git-workflow.txt`. This adds your edited file to the staging area. 
+
+
+![Click the box next to file to add the file to the staging area ](../images/git-exercise-add.png)
+
+## git commit the file
+
+* Click on the **Commit** button to commit the file
+* This will launch a dialogue box
+* Add a commit message
+* Click commit
+
+![Add a commit messge then click **commit**](../images/git-exercise-commit.png)
+
+## git push the file
+
+* Click on the **Push** button to push the file
+* If it runs successfully you should get a dialogue box that looks something like this (which you can then close).
+
+![A successful push to the remote repo](../images/git-exercise-push.png)
+
+* Pay attention to the messages that pop up here: if something goes wrong you may see an error
+* If you see the message "Everything up-to-date" make sure you fully completed the commit step by clicking **Commit** after adding your commit message in the previous box
+
+<hr>
+<br>
+
+::: {.callout-caution}
+
+## Checkpoint
+
+If this has all worked smoothly you should see your recent commit message when you view your repo on GitHub
+
+![Your changes will be in the exercises folder](../images/git-exercise-changes.png)
+
+:::
+
+<br>
+<hr>
+
+## Add your ingredients
+
+```{r}
+#| filename: 0-practice-git-workflow.txt
+
+# My favourite snack
+Gambas Pil Pil (Garlic and Chilli Prawns)
+
+# Ingredients
+- Prawns 
+- Garlic
+- Chilli
+- Oil
+- Bread
+
+# Instructions
+
+```
+
+* Edit the file to include the ingredients for your snack
+* Save the file
+* Repeat the steps above to git add, commit and push the file to GitHub
+* Confirm you can see your changes on GitHub
+
+![Confirm  you can see your changes on GitHub](../images/git-exercise-push-success2.png)
+
+
+## Add your instructions
+
+```{r}
+#| filename: 0-practice-git-workflow.txt
+
+# My favourite snack
+Gambas Pil Pil (Garlic and Chilli Prawns)
+
+# Ingredients
+- Prawns 
+- Garlic
+- Chilli
+- Oil
+- Parsley
+- Bread
+
+# Instructions
+
+- Heat the oil with the garlic and chilli
+- Add the prawns
+- Garnish with parsley
+- Serve with bread
+
+```
+
+* Edit the file to include the instructions to prepare your snack
+* Save the file
+* Repeat the steps above to git add, commit and push the file to GitHub
+* Confirm you can see your changes on GitHub
+
+![Confirm you can see your changes on GitHub](../images/git-exercise-push-success3.png)
+
+<br>
+
+<hr> 
+
+Made it this far? Nailed it!    
+
+<iframe src="https://giphy.com/embed/l2Sqir5ZxfoS27EvS" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/loop-blue-celebration-l2Sqir5ZxfoS27EvS">via GIPHY</a></p>
+
