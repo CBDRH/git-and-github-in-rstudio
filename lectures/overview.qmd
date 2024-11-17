@@ -2,6 +2,12 @@
 title: "Lectures"
 ---
 
+![](../images/horst/behold.png)
+
+::: {.figLab}
+[Artwork by @allison_horst](https://twitter.com/allison_horst)
+:::
+
 # Version control with `Git` and `GitHub`
 
 ```{=html}

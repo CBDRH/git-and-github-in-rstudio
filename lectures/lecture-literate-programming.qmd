@@ -7,7 +7,7 @@ footer: '<a href="/lectures/overview.qmd">{{< fa house >}}</a>'
 slide-number: c/t
 ---
 
-# Literate programming with `Rmarkdown` {.title-slide}
+## Literate programming with `Rmarkdown` {.title-slide}
 
 
 <img src="../images/rmarkdown.png"></img>

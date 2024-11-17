@@ -3,6 +3,7 @@ format:
   revealjs:
     theme: [night, ../custom.scss]
     highlight-style: monokai
+    code-overflow: wrap
 footer: '<a href="/lectures/overview.qmd">{{< fa house >}}</a>'
 slide-number: c/t
 ---
@@ -10,6 +11,76 @@ slide-number: c/t
 ## Data cleaning with `dplyr` {.title-slide}
 
 <img src="../images/dplyr.png"></img>
+
+
+## R Projects
+
+>We use R projects to keep all our code and files organised in a single space
+
+![[Artwork by @allison_horst](https://twitter.com/allison_horst)](../images/horst/rproject-skater.png){align='center'}
+
+
+## Absolute paths 
+
+```{r}
+#| echo: true
+#| eval: false
+
+setwd("/Users/z3509778/Library/CloudStorage/OneDrive-UNSW/Data Vis Workshop/CourseSite")
+
+```
+
+. . . 
+
+<br>
+
+> If the first line of your R script is
+>
+> `setwd("C:\Users\jenny\path\that\only\I\have")`
+>
+> I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.
+
+::: {.figLab}
+
+---Jenny Bryan in [Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)
+
+:::
+
+
+## Relative paths with `here::here()`
+
+![[Artwork by @allison_horst](https://twitter.com/allison_horst)](../images/horst/here-here.png){align='center'}
+
+
+## Mini-Exercise
+
+::: {.clock-cr}
+
+{{< fa clock >}} 3 minutes
+
+:::
+
+### Make yourself at home
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=3&sec=0" frameborder="0"></iframe>
+  
+:::
+
+::: {.column width=66%}
+
+1. Enter `here::here()` at the console to see your current working directory. This should be where you saved your project!
+
+2. Enter `here::here("exercises")` at the console. What happens?
+
+3. Enter `list.files(here::here("exercises"))` at the console. Note that you don't need the full path! 
+
+:::
+::::
+
 
 ## {.center-slide}
 
@@ -199,22 +270,6 @@ cars |>
 ```
 
 
-. . . 
-
-<br>
-
-
-Note the syntax:
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-#| eval: false
-
-data |> 
-  rename(`new-name` = `old-name`)
-
-```
 
 ## Create new variables with `mutate()`
 

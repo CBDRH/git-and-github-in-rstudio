@@ -1,6 +1,23 @@
 ---
-title: "Prerequisites"
+title: ""
 ---
+
+![](../images/horst/git-hug.png)
+
+::: {.figLab}
+[Artwork by @allison_horst](https://twitter.com/allison_horst)
+:::
+
+Thank you for enrolling in the <span style="display: inline-flex; align-items: center;">
+  <img src="../images/hot-air-balloon.png" style="height: 1em; vertical-align: middle;">
+</span> **Reproducible Data Visualisation with R workshop** <span style="display: inline-flex; align-items: center;">
+  <img src="../images/hot-air-balloon.png" style="height: 1em; vertical-align: middle;">
+</span> 
+
+To get the most out of the workshop, please run through the checklist below and make sure you have all the necessary software installed. If you are already working with git in RStudio you may be ready to go. If you are just getting started, keep in mind that these configuration steps can be half the battle. Don't worry if you get stuck, we are here to help. 
+
+<hr>
+<br>
 
 ::: {.callout-tip}
 
@@ -15,8 +32,10 @@ We won't have time to configure everybody's laptop at the workshop so please wor
 
 :::
 
+<br>
+<hr>
 
-You will need:
+**Checklist:**
 
 * A laptop (and a charger!) <input type="checkbox"/>
 
@@ -28,8 +47,10 @@ You will need:
 
 * Git installed on your laptop. See [Ch 6. Install Git](https://happygitwithr.com/install-git){target="_blank"} <input type="checkbox"/>
 
-* Configure Git, GitHub and RStudio. See [9. Personal access token for HTTPS](https://happygitwithr.com/https-pat) <input type="checkbox"/>
+* Configure Git, GitHub and RStudio. See [Ch 9. Personal access token for HTTPS](https://happygitwithr.com/https-pat) and especially [Section 9.1 TL;DR](https://happygitwithr.com/https-pat#tldr) <input type="checkbox"/>
 
+<hr>
+<br>
 
 ::: {.callout-warning}
 
@@ -61,6 +82,6 @@ install.packages("usethis")
 install.packages("gitcreds")
 ```
 
-
 :::
 
+<br>

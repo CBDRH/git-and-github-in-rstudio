@@ -6,6 +6,12 @@ format:
 ---
 
 
-Now it's your turn to really get hands-on with the data! Work through the guided exercises below. If you get stuck, refer to the notes or to the examples in the lecture slides. If you can't get unstuck just raise your hand and someone will be there to help!
+![](../images/horst/we-believe-in-you.png)
+
+::: {.figLab}
+[Artwork by @allison_horst](https://twitter.com/allison_horst)
+:::
+
+Now it's your turn to really get hands-on with the data! Work through the guided exercises. If you get stuck, refer to the notes or to the examples in the lecture slides. If you can't get unstuck just raise your hand and someone will be there to help!
 
 

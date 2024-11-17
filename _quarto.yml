@@ -5,8 +5,12 @@ website:
   title: Data Viz with R
   site-url: https://cbdrh.github.io/data-viz-workshop/home/
   page-navigation: true
-  favicon: images/favicon.ico
+  page-footer:
+    center:
+    - text: © UNSW 2024
+  favicon: images/hot-air-balloon.png
   navbar: 
+    logo: images/hot-air-balloon.png
     search: true
     left:
       - text: "Home"
@@ -29,8 +33,10 @@ website:
             href: index.qmd
           - text: "Prerequisites"
             href: home/prerequisites.qmd
-          - text: "Approach"
-            href: home/approach.qmd
+          - text: "Introductions"  
+            href: home/poll.qmd
+          - text: "Overview"
+            href: home/introduction.qmd
           - text: "Orientation"
             href: home/orientation.qmd
         - text: "Lectures"

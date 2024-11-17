@@ -1,95 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/lectures/lecture-data-vis.html</loc>
-    <lastmod>2024-11-11T11:43:46.937Z</lastmod>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/cars-analysis.html</loc>
+    <lastmod>2024-11-10T02:49:37.000Z</lastmod>
   </url>
   <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/lectures/lecture-git-github.html</loc>
-    <lastmod>2024-11-15T03:39:36.408Z</lastmod>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/lectures/lecture-data-cleaning.html</loc>
+    <lastmod>2024-11-17T05:51:27.534Z</lastmod>
   </url>
   <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/lectures/lecture-storytelling.html</loc>
-    <lastmod>2024-11-11T11:32:02.752Z</lastmod>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/lectures/lecture-literate-programming.html</loc>
+    <lastmod>2024-11-17T01:06:34.909Z</lastmod>
   </url>
   <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise4-2.html</loc>
-    <lastmod>2024-11-16T11:10:40.990Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise2-2.html</loc>
-    <lastmod>2024-10-28T01:35:50.494Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise3-5.html</loc>
-    <lastmod>2024-10-31T03:37:06.825Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise1-2.html</loc>
-    <lastmod>2024-11-16T10:36:31.634Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise3-3.html</loc>
-    <lastmod>2024-11-01T05:36:31.724Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/overview.html</loc>
-    <lastmod>2024-10-25T01:16:24.821Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise3-2.html</loc>
-    <lastmod>2024-11-16T10:40:32.272Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/home/orientation.html</loc>
-    <lastmod>2024-11-01T05:18:03.929Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/home/approach.html</loc>
-    <lastmod>2024-11-01T05:51:02.099Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/home/prerequisites.html</loc>
-    <lastmod>2024-11-16T10:27:58.101Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/index.html</loc>
-    <lastmod>2024-11-11T13:36:54.835Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise1-1.html</loc>
-    <lastmod>2024-10-28T00:45:48.003Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/github.html</loc>
-    <lastmod>2024-11-16T09:02:34.156Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise3-1.html</loc>
-    <lastmod>2024-10-28T01:15:51.382Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise3-4.html</loc>
-    <lastmod>2024-11-16T10:43:11.952Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise2-1.html</loc>
-    <lastmod>2024-10-28T01:01:22.180Z</lastmod>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/lectures/overview.html</loc>
+    <lastmod>2024-11-17T00:54:24.781Z</lastmod>
   </url>
   <url>
     <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise4-1.html</loc>
     <lastmod>2024-10-31T04:41:48.096Z</lastmod>
   </url>
   <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/lectures/overview.html</loc>
-    <lastmod>2024-11-11T13:08:21.723Z</lastmod>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise2-1.html</loc>
+    <lastmod>2024-10-28T01:01:22.180Z</lastmod>
   </url>
   <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/lectures/lecture-literate-programming.html</loc>
-    <lastmod>2024-11-15T02:36:40.846Z</lastmod>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise3-4.html</loc>
+    <lastmod>2024-11-16T10:43:11.952Z</lastmod>
   </url>
   <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/lectures/lecture-data-cleaning.html</loc>
-    <lastmod>2024-11-11T11:43:37.445Z</lastmod>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise3-1.html</loc>
+    <lastmod>2024-10-28T01:15:51.382Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/github.html</loc>
+    <lastmod>2024-11-16T09:02:34.156Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise1-1.html</loc>
+    <lastmod>2024-10-28T00:45:48.003Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/index.html</loc>
+    <lastmod>2024-11-17T01:16:26.168Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/home/poll.html</loc>
+    <lastmod>2024-11-17T05:05:11.108Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/home/prerequisites.html</loc>
+    <lastmod>2024-11-17T01:52:23.677Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/home/opening-remarks.html</loc>
+    <lastmod>2024-11-17T04:57:20.034Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/home/introduction.html</loc>
+    <lastmod>2024-11-17T04:32:57.535Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/home/orientation.html</loc>
+    <lastmod>2024-11-17T05:45:07.431Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise3-2.html</loc>
+    <lastmod>2024-11-16T10:40:32.272Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/overview.html</loc>
+    <lastmod>2024-11-17T00:52:35.431Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise3-3.html</loc>
+    <lastmod>2024-11-01T05:36:31.724Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise1-2.html</loc>
+    <lastmod>2024-11-16T10:36:31.634Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise3-5.html</loc>
+    <lastmod>2024-10-31T03:37:06.825Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise2-2.html</loc>
+    <lastmod>2024-10-28T01:35:50.494Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/exercises/exercise4-2.html</loc>
+    <lastmod>2024-11-16T11:10:40.990Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/lectures/lecture-storytelling.html</loc>
+    <lastmod>2024-11-11T11:32:02.752Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/lectures/lecture-git-github.html</loc>
+    <lastmod>2024-11-17T01:11:49.738Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/lectures/lecture-data-vis.html</loc>
+    <lastmod>2024-11-11T11:43:46.937Z</lastmod>
   </url>
 </urlset>

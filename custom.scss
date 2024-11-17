@@ -54,6 +54,12 @@ $presentation-h3-font-size: 1em;
   margin-bottom: 1.2em;
 }
 
+.clock-cr {
+  font-size: 0.7em;
+  color: #ca8a04 !important;
+  margin-bottom: 1.2em;
+}
+
 .smaller {
   font-size: 0.7em;
 }
@@ -87,6 +93,15 @@ $presentation-h3-font-size: 1em;
   justify-content: center;
   align-items: center;
 }
+
+.center-image {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;  /* Optional for centering any text below the image */
+  font-size: 0.7em;
+}
+
 
 .code-font {
   font-size: 0.875em;
@@ -125,3 +140,8 @@ $presentation-h3-font-size: 1em;
   input[type="checkbox"] {
     accent-color: #e9f8f3; /* Changes the checkbox and tick color */
   }
+  
+.small-video {
+  max-width: 50%;    /* Set the max-width of the video */
+  height: auto;      /* Maintain aspect ratio */
+}  

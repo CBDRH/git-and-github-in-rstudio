@@ -2,7 +2,8 @@
 title: Orientation to RStudio
 format: 
   closeread-html:
-    css: ../custom.scss
+    sidebar: false
+    theme: [litera, ../custom.scss]
     code-overflow: wrap
 ---
 
@@ -57,69 +58,33 @@ Finally, note this icon in the top right-hand corner. This tells us we are worki
 
 ::::
 
-::: {.callout-tip icon=false}
 
-## {{< fa rocket >}} Mini Exercise
+<br><br>
 
-::: {.clock}
+## Mini-Exercise
+
+::: {.clock-cr}
 
 {{< fa clock >}} 5 minutes
 
 :::
 
-#### Make yourself at home!
+### Make yourself at home
 
-1. Enter `getwd()` at the console to see your current working directory. Make a note of this location.
+:::: {.columns}
+
+::: {.column width=34%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=5&sec=0" frameborder="0"></iframe>
+  
+:::
+
+::: {.column width=66%}
+
+1. Enter `getwd()` at the console to see your current working directory. Make a note of this location! 
 
 2. In the RStudio menu navigate to `Tools > Global Options > Appearance` and choose an editor theme that you like!
 
 
 :::
-
-
-
-## R Projects
-
->Use R projects to keep all your code organised in a single space
-
-![](../images/horst/rproject-skater.png)
-
-::: {.figLab}
-
-[Artwork by @allison_horst](https://twitter.com/allison_horst)
-
-:::
-
-
-## Relative paths 
-
-> If the first line of your R script is
->
-> `setwd("C:\Users\jenny\path\that\only\I\have")`
->
-> I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.
-
-::: {.figLab}
-
----Jenny Bryan in [Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)
-
-:::
-
-A huge advantage of working in project environments is that we can use _relative_ paths instead of **absolute** paths.
-
-::: {.callout-tip }
-
-It is bad practice to include absolute paths like `C:\Users\jenny\path\that\only\I\have` in your code
-
-::: 
-
-
-```{r}
-#| echo: true
-
-getwd()
-
-```
-
-
-
+::::

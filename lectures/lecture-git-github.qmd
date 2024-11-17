@@ -7,7 +7,7 @@ footer: '<a href="/lectures/overview.qmd">{{< fa house >}}</a>'
 slide-number: c/t
 ---
 
-## Version control with `Git` and `GitHub` {.title-slide}
+## Reproducible research with `Git` and `GitHub` {.title-slide}
 
 <img src="../images/github-mark-white.png"></img>
 

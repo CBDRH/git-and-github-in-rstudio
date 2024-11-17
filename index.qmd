@@ -50,22 +50,22 @@ time <- c(
  )
 
 links <- c(
-  "<a href='../lectures/lecture-rstudio.html'>🔗</a>",
-  "<a href='../lectures/overview.html#version-control-with-git-and-github-with-dplyr'>🔗</a>",
+  "",
+  "<a href='lectures/overview.html#version-control-with-git-and-github-with-dplyr'>🔗</a>",
+  "",
+  "<a href='exercises/github.html'>🔗</a>",
+  "<a href='lectures/overview.html#data-cleaning-with-dplyr'>🔗</a>",
   "",
   "",
-  "<a href='../lectures/overview.html#data-cleaning-with-dplyr'>🔗</a>",
+  "<a href='exercises/exercise1-1.html'>🔗</a>",
+  "<a href='lectures/overview.html#data-visualisation-with-ggplot2'>🔗</a>",
+  "<a href='lectures/overview.html#storytelling-with-data'>🔗</a>",
   "",
   "",
-  "<a href='../exercises/exercise1-1.html'>🔗</a>",
-  "<a href='../lectures/overview.html#data-visualisation-with-ggplot2'>🔗</a>",
-  "<a href='../lectures/overview.html#storytelling-with-data'>🔗</a>",
+  "<a href='lectures/overview.html#literate-programming-with-knitr'>🔗</a>",
   "",
   "",
-  "<a href='../lectures/overview.html#literate-programming-with-knitr'>🔗</a>",
-  "",
-  "",
-  "<a href='../exercises/exercise3-1.html'>🔗</a>"
+  "<a href='exercises/exercise3-1.html'>🔗</a>"
   )
 
 # Combine into dataframe
@@ -98,7 +98,7 @@ kbl(df,
 
 **Day 1** Data Cleaning
 
-![](../images/horst/tidy-data-friends.jpg)
+![](images/horst/tidy-data-friends.jpg)
 
 ::: {.figLab}
 Illustrations from the [Openscapes](https://www.openscapes.org/) blog [Tidy Data for reproducibility, efficiency, and collaboration](https://www.openscapes.org/blog/2020/10/12/tidy-data/) by Julia Lowndes and Allison Horst.
@@ -108,7 +108,7 @@ Illustrations from the [Openscapes](https://www.openscapes.org/) blog [Tidy Data
 
 **Day 2** Data Visualisation
 
-![](../images/horst/ggplot2-data-masterpiece.png)
+![](images/horst/ggplot2-data-masterpiece.png)
 
 ::: {.figLab}
 [Artwork by @allison_horst](https://twitter.com/allison_horst)
