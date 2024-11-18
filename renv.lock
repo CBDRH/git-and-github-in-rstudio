@@ -89,6 +89,27 @@
       ],
       "Hash": "f27411eb6d9c3dada5edd444b8416675"
     },
+    "astsa": {
+      "Package": "astsa",
+      "Version": "2.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "c8f1497fb1283233c4f357ebf3f8024a"
+    },
+    "babynames": {
+      "Package": "babynames",
+      "Version": "1.0.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "tibble"
+      ],
+      "Hash": "dc44c2887b6d6531d0a20de2fb4bfc08"
+    },
     "base64enc": {
       "Package": "base64enc",
       "Version": "0.1-3",
@@ -949,10 +970,10 @@
     },
     "rstudioapi": {
       "Package": "rstudioapi",
-      "Version": "0.16.0",
+      "Version": "0.15.0",
       "Source": "Repository",
       "Repository": "RSPM",
-      "Hash": "96710351d642b70e8f02ddeb237c46a7"
+      "Hash": "5564500e25cffad9e22244ced1379887"
     },
     "sass": {
       "Package": "sass",

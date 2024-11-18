@@ -33,10 +33,10 @@ website:
             href: index.qmd
           - text: "Prerequisites"
             href: home/prerequisites.qmd
-          - text: "Introductions"  
-            href: home/poll.qmd
           - text: "Overview"
             href: home/introduction.qmd
+          - text: "Introductions"  
+            href: home/poll.qmd
           - text: "Orientation"
             href: home/orientation.qmd
         - text: "Lectures"

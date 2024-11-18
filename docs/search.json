@@ -46,7 +46,7 @@
     "href": "lectures/lecture-data-cleaning.html#mini-exercise",
     "title": "Data Viz with R",
     "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 3 minutes\n\nMake yourself at home\n\n\n\n\n\n\nEnter here::here() at the console to see your current working directory. This should be where you saved your project!\nEnter here::here(\"exercises\") at the console. What happens?\nEnter list.files(here::here(\"exercises\")) at the console. Note that you don’t need the full path!"
+    "text": "Mini-Exercise\n\n 3 minutes\n\nAre you here yet?\n\n\n\n\n\n\nEnter here::here() at the console to see your current working directory. This should be where you saved your project!\nEnter here::here(\"exercises\") at the console. What happens?\nEnter list.files(here::here(\"exercises\")) at the console. Note that you don’t need the full path!"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#section",
@@ -63,8 +63,29 @@
     "text": "Illustrations from the Openscapes blog Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst”"
   },
   {
-    "objectID": "lectures/lecture-data-cleaning.html#section-2",
-    "href": "lectures/lecture-data-cleaning.html#section-2",
+    "objectID": "lectures/lecture-data-cleaning.html#an-example-untidy-data",
+    "href": "lectures/lecture-data-cleaning.html#an-example-untidy-data",
+    "title": "Data Viz with R",
+    "section": "An example: untidy data",
+    "text": "An example: untidy data\nPenguin species and island of habitation\n\n\n# A tibble: 3 × 4\n# Groups:   species [3]\n  species   Biscoe Dream Torgersen\n  &lt;fct&gt;      &lt;int&gt; &lt;int&gt;     &lt;int&gt;\n1 Adelie        44    56        52\n2 Chinstrap     NA    68        NA\n3 Gentoo       124    NA        NA"
+  },
+  {
+    "objectID": "lectures/lecture-data-cleaning.html#an-example-tidy-data",
+    "href": "lectures/lecture-data-cleaning.html#an-example-tidy-data",
+    "title": "Data Viz with R",
+    "section": "An example: tidy data",
+    "text": "An example: tidy data\nPenguin species and island of habitation\n\n\n# A tibble: 5 × 3\n# Groups:   species [3]\n  species   island        n\n  &lt;fct&gt;     &lt;fct&gt;     &lt;int&gt;\n1 Adelie    Biscoe       44\n2 Adelie    Dream        56\n3 Adelie    Torgersen    52\n4 Chinstrap Dream        68\n5 Gentoo    Biscoe      124"
+  },
+  {
+    "objectID": "lectures/lecture-data-cleaning.html#section-3",
+    "href": "lectures/lecture-data-cleaning.html#section-3",
+    "title": "Data Viz with R",
+    "section": "",
+    "text": "By Daniel Väisänen"
+  },
+  {
+    "objectID": "lectures/lecture-data-cleaning.html#section-4",
+    "href": "lectures/lecture-data-cleaning.html#section-4",
     "title": "Data Viz with R",
     "section": "",
     "text": "dplyr is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges\n\n\ndplyr.tidyverse.org/"
@@ -168,8 +189,8 @@
     "text": "The pipe operator |&gt;\n\n\n# Data prep\ncars |&gt; \n  mutate(time = dist / speed) |&gt; \n  arrange(-time) |&gt; \n  slice(1)\n\n\n  speed dist     time\n1    14   80 5.714286\n\n\n\n\n\nOften we will save the output of such a chain using the assignment operator &lt;-\n\n\n# Data prep\nlongestTime &lt;- cars |&gt;\n  mutate(time = dist / speed) |&gt; \n  arrange(-time) |&gt; \n  slice(1)\n\nlongestTime\n\n\n  speed dist     time\n1    14   80 5.714286"
   },
   {
-    "objectID": "lectures/lecture-data-cleaning.html#section-3",
-    "href": "lectures/lecture-data-cleaning.html#section-3",
+    "objectID": "lectures/lecture-data-cleaning.html#section-5",
+    "href": "lectures/lecture-data-cleaning.html#section-5",
     "title": "Data Viz with R",
     "section": "",
     "text": "Created by Arthur Welle"
@@ -228,7 +249,28 @@
     "href": "lectures/lecture-data-cleaning.html#moving-from-wide-to-long-data",
     "title": "Data Viz with R",
     "section": "Moving from wide to long data",
-    "text": "Moving from wide to long data\nConsider the following dataset:"
+    "text": "Moving from wide to long data\nConsider the untidy dataset we encountered earlier:\n\n\n# A tibble: 3 × 4\n# Groups:   species [3]\n  species   Biscoe Dream Torgersen\n  &lt;fct&gt;      &lt;int&gt; &lt;int&gt;     &lt;int&gt;\n1 Adelie        44    56        52\n2 Chinstrap     NA    68        NA\n3 Gentoo       124    NA        NA"
+  },
+  {
+    "objectID": "lectures/lecture-data-cleaning.html#moving-from-wide-to-long-data-1",
+    "href": "lectures/lecture-data-cleaning.html#moving-from-wide-to-long-data-1",
+    "title": "Data Viz with R",
+    "section": "Moving from wide to long data",
+    "text": "Moving from wide to long data\nWe can move from wide format to long long format using pivot_longer() from the tidyr package.\n\n\nlibrary(tidyr)\n\npenguins_wide |&gt; \n  pivot_longer(c(Biscoe, \n                 Dream, \n                 Torgersen))\n\n\n# A tibble: 9 × 3\n# Groups:   species [3]\n  species   name      value\n  &lt;fct&gt;     &lt;chr&gt;     &lt;int&gt;\n1 Adelie    Biscoe       44\n2 Adelie    Dream        56\n3 Adelie    Torgersen    52\n4 Chinstrap Biscoe       NA\n5 Chinstrap Dream        68\n6 Chinstrap Torgersen    NA\n7 Gentoo    Biscoe      124\n8 Gentoo    Dream        NA\n9 Gentoo    Torgersen    NA"
+  },
+  {
+    "objectID": "lectures/lecture-data-cleaning.html#moving-from-wide-to-long-data-2",
+    "href": "lectures/lecture-data-cleaning.html#moving-from-wide-to-long-data-2",
+    "title": "Data Viz with R",
+    "section": "Moving from wide to long data",
+    "text": "Moving from wide to long data\nWe can move from wide format to long long format using pivot_longer() from the tidyr package.\n\n\nlibrary(tidyr)\n\npenguins_wide |&gt; \n  pivot_longer(c(Biscoe, \n                 Dream, \n                 Torgersen),\n  names_to = \"island\",\n  values_to = \"count\")\n\n\n# A tibble: 9 × 3\n# Groups:   species [3]\n  species   island    count\n  &lt;fct&gt;     &lt;chr&gt;     &lt;int&gt;\n1 Adelie    Biscoe       44\n2 Adelie    Dream        56\n3 Adelie    Torgersen    52\n4 Chinstrap Biscoe       NA\n5 Chinstrap Dream        68\n6 Chinstrap Torgersen    NA\n7 Gentoo    Biscoe      124\n8 Gentoo    Dream        NA\n9 Gentoo    Torgersen    NA"
+  },
+  {
+    "objectID": "lectures/lecture-data-cleaning.html#mini-exercise-2",
+    "href": "lectures/lecture-data-cleaning.html#mini-exercise-2",
+    "title": "Data Viz with R",
+    "section": "Mini-Exercise",
+    "text": "Mini-Exercise\n\n 10 minutes\n\nPractice pivot wider\n\n\n\n\n\n\nTaskStarter code\n\n\n\nUse the Starter Code to read in the file exercises/2-raw-data/pivot_longer_exercise.xlsx as an R dataframe\nPivot the data to long format, creating new variables sex and count\nMake the variable sex a factor variable with levels ‘female’ and ‘male’\n\n\n\n\n# Load library\nlibrary(readxl)\n\n# Set the location of the data\ndataLocation &lt;- here::here('exercises/2-raw-data/pivot_longer_exercise.xlsx')\n\n# Read in the data\ndf &lt;- read_excel(\n        path = dataLocation,\n        sheet = 'Sheet1')"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#literate-programming-with-rmarkdown",
@@ -622,7 +664,7 @@
     "href": "home/prerequisites.html",
     "title": "Data Viz with R",
     "section": "",
-    "text": "Artwork by @allison_horst\n\nThank you for enrolling in the    Reproducible Data Visualisation with R workshop   \nTo get the most out of the workshop, please run through the checklist below and make sure you have all the necessary software installed. If you are already working with git in RStudio you may be ready to go. If you are just getting started, keep in mind that these configuration steps can be half the battle. Don’t worry if you get stuck, we are here to help.\n\n\n\n\n\n\n\n\nConfiguring Git, GitHub and RStudio\n\n\n\nConfiguring Git, GitHub and RStudio to work together is half the battle when it comes to using Git in RStudio.\nLuckily there is an excellent online reference for this: Happy Git and GitHub for the useR by Jennifer Bryan. The chapters linked below refer to key sections in this book.\nWe won’t have time to configure everybody’s laptop at the workshop so please work through these steps in advance!\n\n\n\n\nChecklist:\n\nA laptop (and a charger!) \nAt least a basic working knowledge of R and RStudio. If you are a beginner, check out the one-hour webinar A gengle introduction to tidy statistics in R) \nA free GitHub user account. See Ch 4. Register a GitHub account \nA recent version of R (at least v4.3.0) and RStudio (at least a 2024 version) installed on your laptop. See Ch 5. Install or upgrade R and RStudio \nGit installed on your laptop. See Ch 6. Install Git \nConfigure Git, GitHub and RStudio. See Ch 9. Personal access token for HTTPS and especially Section 9.1 TL;DR \n\n\n\n\n\n\n\n\n\nGit Credentials\n\n\n\nFollow Section 9.1 TL;DR from Happy Git and GitHub for the useR to set up your Git Credentials.\nNote these steps can be completed in RStudio by calling the following commands\n\nusethis::create_github_token()\n\n\ngitcreds::gitcreds_set()\n\nTo run these commands you may need to install the usethis and gitcreds packages if they are not installed already. Copy and paste the following commands into the RStudio console:\n\ninstall.packages(\"usethis\")\n\n\ninstall.packages(\"gitcreds\")",
+    "text": "Artwork by @allison_horst\n\nThank you for enrolling in the    Reproducible Data Visualisation with R workshop   \nTo get the most out of the workshop, please run through the checklist below and make sure you have all the necessary software installed in advance. If you are already working with git in RStudio you may be ready to go already. If you are just getting started, keep in mind that these configuration steps can be half the battle. Don’t worry if you get stuck, we are here to help.\n\n\n\n\n\n\n\n\nA note on the key reference\n\n\n\nConfiguring Git, GitHub and RStudio to work together is half the battle when it comes to using Git in RStudio.\nLuckily there is an excellent online reference for this: Happy Git and GitHub for the useR by Jennifer Bryan. The chapters linked below refer to key sections in this book.\nWe won’t have time to configure everybody’s laptop at the workshop so please try to work through these steps in advance! The best strategy is to carefully read the recommended sections in order and follow the directions diligently. But there is a lot of detail to work through so don’t worry if you get stuck—reach out for help!\n\n\n\n\nChecklist:\nCan you tick every item below?\n\nA laptop (and a charger!) \nAt least a basic working knowledge of R and RStudio. If you are a beginner or want a refresh, check out the one-hour webinar A gengle introduction to tidy statistics in R) \nA free GitHub user account. See Ch 4. Register a GitHub account \nA recent version of R (at least v4.3.0) and RStudio (at least a 2024 version) installed on your laptop. See Ch 5. Install or upgrade R and RStudio \nGit installed on your laptop. See Ch 6. Install Git \nSet up a Personal Access Token (PAT) to allow RStudio to communicate with GitHub. See Ch 9. Personal access token for HTTPS and in particular Section 9.1 TL;DR \n\n\n\n\n\n\n\n\n\nSetting up a Personal Access Token\n\n\n\nFollow Section 9.1 TL;DR from Happy Git and GitHub for the useR to set up your Personal Access Token. The easiest way to do this is to run the suggested commands from R. To run these commands you may need to install the usethis and gitcreds packages if they are not installed already. If you get an error message indicating that you don’t have the packages installed you can install them by entering the commands below at the console.\n\ninstall.packages(\"usethis\")\n\n\ninstall.packages(\"gitcreds\")\n\nAs per Section 9.1 TL;DR, the following R commands can be used to set up a Personal Access Token from RStudio.\n\nusethis::create_github_token()\n\n\nEntering a note to describe the tokens use case is useful for identifying and managing tokens. Choose a note that describes your use case, e.g. RStudio projects.\nSet the expiration to 30 days. You can always extend this.\nThe GitHub PAT scope is like a set of permissions that define what actions the token can perform on your behalf on GitHub. You can use the default scopes of workflow, gist, and user.\n\n\ngitcreds::gitcreds_set()",
     "crumbs": [
       "Home",
       "Housekeeping",
@@ -630,11 +672,18 @@
     ]
   },
   {
+    "objectID": "home/opening-remarks.html#section-2",
+    "href": "home/opening-remarks.html#section-2",
+    "title": "Data Viz with R",
+    "section": "",
+    "text": "Artwork by @allison_horst"
+  },
+  {
     "objectID": "home/opening-remarks.html#the-pareto-principle",
     "href": "home/opening-remarks.html#the-pareto-principle",
     "title": "Data Viz with R",
     "section": "The Pareto Principle",
-    "text": "The Pareto Principle\nAKA The 80/20 rule\n\n\n80% of Italy’s land was owned by 20% of the population  —Vilfredo Pareto 1848–1983"
+    "text": "The Pareto Principle\nAKA The 80/20 rule\n\n\n80% of Italy’s land was owned by 20% of the population  —Vilfredo Pareto 1848–1923"
   },
   {
     "objectID": "home/opening-remarks.html#the-pareto-principle-1",
@@ -648,7 +697,7 @@
     "href": "home/opening-remarks.html#the-pareto-principle-2",
     "title": "Data Viz with R",
     "section": "The Pareto Principle",
-    "text": "The Pareto Principle\nAKA The 80/20 rule\n\n80% of parenting is just repeating 20% of the phrases: ‘Don’t touch that,’ ‘Put that down,’ and ’Because I said so"
+    "text": "The Pareto Principle\nAKA The 80/20 rule\n\n80% of parenting is just repeating 20% of the phrases: Don’t touch that, Put that down, and Because I said so"
   },
   {
     "objectID": "home/opening-remarks.html#the-pareto-principle-3",
@@ -893,39 +942,32 @@
     "text": "Instead of the swamps, there was a great bay, and where the Kai’eemah had met the sea there was high mountains of sand. The two rivers now no longer joined together, but ran into the sea separately.\n\n\nThis story, quoted in Nunn and Reid (2016), was related by Frances Bodkin, a Dharawal woman, who heard it from her mother."
   },
   {
-    "objectID": "lectures/lecture-storytelling.html#center-image",
-    "href": "lectures/lecture-storytelling.html#center-image",
-    "title": "Data Viz with R",
-    "section": "{center-image}",
-    "text": "{center-image}\n\n\nThe compact disc (CD) co-developed by Philips and Sony in 1982 Wikipedia"
-  },
-  {
     "objectID": "lectures/lecture-storytelling.html#section-6",
     "href": "lectures/lecture-storytelling.html#section-6",
     "title": "Data Viz with R",
     "section": "",
-    "text": "8-inch, 5¼-inch, and 3½-inch floppy disks. Invented in 1971 by IBM. From Wikipedia"
+    "text": "The compact disc (CD) co-developed by Philips and Sony in 1982 Wikipedia"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-7",
     "href": "lectures/lecture-storytelling.html#section-7",
     "title": "Data Viz with R",
     "section": "",
-    "text": "Ogham Stone. 400AD-1000AD mallonireland.com"
+    "text": "8-inch, 5¼-inch, and 3½-inch floppy disks. Invented in 1971 by IBM. From Wikipedia"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-8",
     "href": "lectures/lecture-storytelling.html#section-8",
     "title": "Data Viz with R",
     "section": "",
-    "text": "Quipu in the Museo Machu Picchu, Casa Concha, Cusco. Andead South America 2600 BC – c.1600 AD Wikipedia"
+    "text": "Ogham Stone. 400AD-1000AD mallonireland.com"
   },
   {
-    "objectID": "lectures/lecture-storytelling.html#section-10",
-    "href": "lectures/lecture-storytelling.html#section-10",
+    "objectID": "lectures/lecture-storytelling.html#section-9",
+    "href": "lectures/lecture-storytelling.html#section-9",
     "title": "Data Viz with R",
     "section": "",
-    "text": "How storytelling can improve data visualisation"
+    "text": "Quipu in the Museo Machu Picchu, Casa Concha, Cusco. Andead South America 2600 BC – c.1600 AD Wikipedia"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#how-storytelling-can-improve-data-visualisation-1",
@@ -1010,6 +1052,20 @@
     "title": "Data Viz with R",
     "section": "",
     "text": "Nikkei Stock Average (Nikkei 225). See indexes.nikkei.co.jp"
+  },
+  {
+    "objectID": "lectures/lecture-storytelling.html#colours-in-r",
+    "href": "lectures/lecture-storytelling.html#colours-in-r",
+    "title": "Data Viz with R",
+    "section": "Colours in R",
+    "text": "Colours in R\n\nlibrary(RColorBrewer)\ndisplay.brewer.all()"
+  },
+  {
+    "objectID": "lectures/lecture-storytelling.html#online-palette-generators",
+    "href": "lectures/lecture-storytelling.html#online-palette-generators",
+    "title": "Data Viz with R",
+    "section": "Online palette generators",
+    "text": "Online palette generators\n\ncoolors.co\nColorBrewer 2.0\n136 Shades of Grey"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#aesthetics-in-data-visualisation-2",
@@ -1240,14 +1296,14 @@
     "href": "lectures/lecture-storytelling.html#emotion-in-data-visualisation-1",
     "title": "Data Viz with R",
     "section": "Emotion in data visualisation",
-    "text": "Emotion in data visualisation\n\n\nEmpathy\nDelight\nFear"
+    "text": "Emotion in data visualisation\n\n\nSurprise\nDelight\nConcern"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#emotion-in-data-visualisation-2",
     "href": "lectures/lecture-storytelling.html#emotion-in-data-visualisation-2",
     "title": "Data Viz with R",
     "section": "Emotion in data visualisation",
-    "text": "Emotion in data visualisation\n\n\nEmpathy\n\n\nDelight\n\n\nFear"
+    "text": "Emotion in data visualisation\n\n\nSurprise\n\n\nDelight\n\n\nConcern"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-39",
@@ -1261,7 +1317,7 @@
     "href": "lectures/lecture-storytelling.html#emotion-in-data-visualisation-3",
     "title": "Data Viz with R",
     "section": "Emotion in data visualisation",
-    "text": "Emotion in data visualisation\n\n\nEmpathy\n\n\nDelight\n\n\nFear"
+    "text": "Emotion in data visualisation\n\n\nSurprise\n\n\nDelight\n\n\nConcern"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-40",
@@ -1275,7 +1331,7 @@
     "href": "lectures/lecture-storytelling.html#emotion-in-data-visualisation-4",
     "title": "Data Viz with R",
     "section": "Emotion in data visualisation",
-    "text": "Emotion in data visualisation\n\n\nEmpathy\n\n\nDelight\n\n\nFear"
+    "text": "Emotion in data visualisation\n\n\nSurprise\n\n\nDelight\n\n\nConcern"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-41",
@@ -1283,6 +1339,13 @@
     "title": "Data Viz with R",
     "section": "",
     "text": "little picture: sea level trend. See climate.esa.int/en/littlepicturescompetition"
+  },
+  {
+    "objectID": "lectures/lecture-storytelling.html#mini-exercise",
+    "href": "lectures/lecture-storytelling.html#mini-exercise",
+    "title": "Data Viz with R",
+    "section": "Mini-Exercise",
+    "text": "Mini-Exercise\n\n 15 minutes\n\nPractive storytelling with data\n\n\n\n\n\n\nGoalPlotStarter code\n\n\nUse storytelling tricks to enhance the starter plot examining popular baby names over time. Choose any names you like!\n\nColour (try coolors.co)\nTitle and subtitle\nText hierarchy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(babynames)\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(ggtext)\n\nbabynames |&gt; \n  filter(name %in% c(\"Olivia\", \"Mia\", \"Luna\") & sex=='F') |&gt; \n  ggplot(aes(x = year, y = n, color = name)) +\n  geom_line(linewidth = 2) +\n  labs(\n    title = \"XYZ\",\n    subtitle = \"ABC\"\n  ) +\n  theme(\n    plot.title.position = \"plot\",\n    plot.title = element_text(size = 8),\n    plot.subtitle = element_text(size = 8)\n  )"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#academic-references",
@@ -1558,11 +1621,11 @@
     "text": "ggplot2\n\n\n\nA grammar of graphics\nConsistent syntax\nFlexible\nCustomisable\nggplot2.tidyverse.org\nexts.ggplot2.tidyverse.org/gallery"
   },
   {
-    "objectID": "lectures/lecture-data-vis.html#components-of-a-ggplot",
-    "href": "lectures/lecture-data-vis.html#components-of-a-ggplot",
+    "objectID": "lectures/lecture-data-vis.html#components-of-ggplot-function",
+    "href": "lectures/lecture-data-vis.html#components-of-ggplot-function",
     "title": "Data Viz with R",
-    "section": "Components of a ggplot",
-    "text": "Components of a ggplot\n\n\nData (data =)\nCoordinate system (x and y)\nAesthetics (aes())\nGeometries (geom_*)"
+    "section": "Components of ggplot() function",
+    "text": "Components of ggplot() function\n\n\nData (data =)\nCoordinate system (x and y)\nAesthetics (aes())\nGeometries (geom_*)"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#ggplot2-components-data",
@@ -1583,35 +1646,28 @@
     "href": "lectures/lecture-data-vis.html#ggplot2-components-geom",
     "title": "Data Viz with R",
     "section": "ggplot2 components: Geom",
-    "text": "ggplot2 components: Geom\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)\n) + \n  geom_histogram()"
+    "text": "ggplot2 components: Geom\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)) + \n  geom_histogram()"
   },
   {
-    "objectID": "lectures/lecture-data-vis.html#ggplot2-components-aesthetics",
-    "href": "lectures/lecture-data-vis.html#ggplot2-components-aesthetics",
+    "objectID": "lectures/lecture-data-vis.html#ggplot2-components-static-aesthetics",
+    "href": "lectures/lecture-data-vis.html#ggplot2-components-static-aesthetics",
     "title": "Data Viz with R",
-    "section": "ggplot2 components: Aesthetics",
-    "text": "ggplot2 components: Aesthetics\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)\n) + \n  geom_histogram(\n    color = 'navy',\n    fill = 'lightblue'\n  )"
+    "section": "ggplot2 components: Static Aesthetics",
+    "text": "ggplot2 components: Static Aesthetics\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)) + \n  geom_histogram(\n    color = 'navy',\n    fill = 'lightblue'\n  )"
   },
   {
-    "objectID": "lectures/lecture-data-vis.html#ggplot2-a-note-on-style",
-    "href": "lectures/lecture-data-vis.html#ggplot2-a-note-on-style",
+    "objectID": "lectures/lecture-data-vis.html#ggplot2-components-mapped-aesthetics",
+    "href": "lectures/lecture-data-vis.html#ggplot2-components-mapped-aesthetics",
     "title": "Data Viz with R",
-    "section": "ggplot2 A note on style",
-    "text": "ggplot2 A note on style\n\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)) + \n  geom_histogram(\n    color = 'navy',\n    fill = 'lightblue'\n  )\n\n\n\nlibrary() calls on top\nPlenty of # Comments\nSpacing x = body_mass_g\nIndentation\ndata = and (aes()) on separate lines\nGeoms on new lines\ncolor and fill on new lines\n\n\n\n\n\n\nggplot(data=penguins,aes(x=body_mass_g))+geom_histogram(color='navy',fill='lightblue')\n\nDoes the same but harder to read and debug!"
+    "section": "ggplot2 components: Mapped Aesthetics",
+    "text": "ggplot2 components: Mapped Aesthetics\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g, fill = ..x..)) + \n  geom_histogram() +\n  scale_fill_gradient(low = 'lightblue', \n                      high = 'navy')"
   },
   {
-    "objectID": "lectures/lecture-data-vis.html#mini-exercise",
-    "href": "lectures/lecture-data-vis.html#mini-exercise",
+    "objectID": "lectures/lecture-data-vis.html#two-numeric-variables",
+    "href": "lectures/lecture-data-vis.html#two-numeric-variables",
     "title": "Data Viz with R",
-    "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 5 minutes\n\nModify the starter code to produce the figure\n\n\n\n\n\n\nFigureStarter codeHints\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)) + \n  geom_histogram(\n    color = 'navy',\n    fill = 'lightblue'\n  )\n\n\n\n\nThis is a density plot\nEnter ?geom_density() at the console to open the R Documentation. Scroll down to the section on Aesthetics to read about other modifiable aesthetics."
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#two-numeric",
-    "href": "lectures/lecture-data-vis.html#two-numeric",
-    "title": "Data Viz with R",
-    "section": "Two numeric",
-    "text": "Two numeric\nScatterplot\n\n\n# Plot\nggplot(\n  data = penguins,\n  aes(x = flipper_length_mm, \n      y = bill_length_mm)) + \n  geom_point()"
+    "section": "Two numeric variables",
+    "text": "Two numeric variables\n\n\n# Plot\nggplot(\n  data = penguins,\n  aes(x = flipper_length_mm, \n      y = bill_length_mm)) + \n  geom_point()"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#one-numeric-one-categorical",
@@ -1621,6 +1677,27 @@
     "text": "One numeric, One categorical\n\n\n# Plot\nggplot(\n  data = penguins,\n  aes(x = island, \n      y = body_mass_g)) + \n  geom_boxplot()"
   },
   {
+    "objectID": "lectures/lecture-data-vis.html#more-elaborate-combinations",
+    "href": "lectures/lecture-data-vis.html#more-elaborate-combinations",
+    "title": "Data Viz with R",
+    "section": "More elaborate combinations",
+    "text": "More elaborate combinations\n\n\nCode\nlibrary(palmerpenguins)\nlibrary(ggplot2)\nlibrary(RColorBrewer)\nlibrary(colorspace)\nlibrary(ggtext)\n\nmyCols &lt;- brewer.pal(3, 'Set2')\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point(shape = 21, size = 3) +\n  geom_smooth(method=\"lm\", size=3) +\n  scale_color_manual(\"\", values = myCols) +\n  scale_fill_manual(\"\", values = lighten(myCols, 0.5)) +\n  scale_x_continuous(labels = scales::comma) +\n  labs(y = \"Flipper length (mm)\",\n       x = \"Body mass (g)\",\n       title = \"&lt;span style='color: #8DA0CB'&gt;**Gentoo**&lt;/span&gt; penguins are larger and heavier than \n       &lt;span style='color: #66C2A5'&gt;**Adelie**&lt;/span&gt; or\n       &lt;span style='color: #FC8D62'&gt;**Chinstrap**&lt;/span&gt;\",\n       subtitle = \"**Penguin body mass (g) versus flipper length (mm) by species**\",\n       caption = \"**Data** from the Palmer Penguins dataset\") +\n  theme_minimal() +\n  theme(\n    plot.title.position = \"plot\",\n    plot.title = element_markdown(color='grey10', size=24),\n    plot.subtitle = element_markdown(color='grey60', size=16,\n                                 margin = margin(5,0,10,0)),\n    plot.caption = element_markdown(color = \"grey60\",\n                                size=10, hjust=0),\n    axis.title = element_text(color='grey10', size=16),\n    axis.text = element_text(color='grey10', size=14)\n  )"
+  },
+  {
+    "objectID": "lectures/lecture-data-vis.html#ggplot2-a-note-on-style",
+    "href": "lectures/lecture-data-vis.html#ggplot2-a-note-on-style",
+    "title": "Data Viz with R",
+    "section": "ggplot2 A note on style",
+    "text": "ggplot2 A note on style\n\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)) + \n  geom_histogram(\n    color = 'navy',\n    fill = 'lightblue')\n\n\n\nlibrary() calls on top\nPlenty of # Comments\nSpacing x = body_mass_g\nIndentation\ndata = and (aes()) on separate lines\nGeoms on new lines\ncolor and fill on new lines\n\n\n\n\n\n\nggplot(data=penguins,aes(x=body_mass_g))+geom_histogram(color='navy',fill='lightblue')\n\nDoes the same but harder to read and debug!"
+  },
+  {
+    "objectID": "lectures/lecture-data-vis.html#mini-exercise",
+    "href": "lectures/lecture-data-vis.html#mini-exercise",
+    "title": "Data Viz with R",
+    "section": "Mini-Exercise",
+    "text": "Mini-Exercise\n\n 5 minutes\n\nModify the starter code to produce the figure\n\n\n\n\n\n\nFigureStarter codeHints\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)) + \n  geom_histogram(\n    color = 'navy',\n    fill = 'lightblue'\n  )\n\n\n\n\nThis is a density plot\nEnter ?geom_density() at the console to open the R Documentation. Scroll down to the section on Aesthetics to read about other modifiable aesthetics."
+  },
+  {
     "objectID": "lectures/lecture-data-vis.html#aesthetic-mappings",
     "href": "lectures/lecture-data-vis.html#aesthetic-mappings",
     "title": "Data Viz with R",
@@ -1628,39 +1705,32 @@
     "text": "Aesthetic mappings\nMap variables to visual elements\n\n\nColour\nFill\nShape\nSize\nLine type"
   },
   {
-    "objectID": "lectures/lecture-data-vis.html#map-flipper-length-to-x-position-and-bill-length-to-y-position",
-    "href": "lectures/lecture-data-vis.html#map-flipper-length-to-x-position-and-bill-length-to-y-position",
+    "objectID": "lectures/lecture-data-vis.html#map-colour-to-body-mass",
+    "href": "lectures/lecture-data-vis.html#map-colour-to-body-mass",
     "title": "Data Viz with R",
-    "section": "Map flipper length to x position and bill length to y position",
-    "text": "Map flipper length to x position and bill length to y position\n\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(x = flipper_length_mm, \n      y = bill_length_mm)) + \n  geom_point()"
+    "section": "Map colour to body mass",
+    "text": "Map colour to body mass\n\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = body_mass_g, \n    y = flipper_length_mm,\n    color = body_mass_g)) + \n  geom_point()"
   },
   {
-    "objectID": "lectures/lecture-data-vis.html#map-flipper-length-to-colour",
-    "href": "lectures/lecture-data-vis.html#map-flipper-length-to-colour",
+    "objectID": "lectures/lecture-data-vis.html#map-size-to-body-mass",
+    "href": "lectures/lecture-data-vis.html#map-size-to-body-mass",
     "title": "Data Viz with R",
-    "section": "Map flipper length to colour",
-    "text": "Map flipper length to colour\n\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = flipper_length_mm, \n    y = bill_length_mm,\n    color = flipper_length_mm)) + \n  geom_point()"
+    "section": "Map size to body mass",
+    "text": "Map size to body mass\n\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = body_mass_g, \n    y = flipper_length_mm,\n    size = body_mass_g)) + \n  geom_point()"
   },
   {
-    "objectID": "lectures/lecture-data-vis.html#map-flipper-length-to-size",
-    "href": "lectures/lecture-data-vis.html#map-flipper-length-to-size",
+    "objectID": "lectures/lecture-data-vis.html#map-colour-to-species",
+    "href": "lectures/lecture-data-vis.html#map-colour-to-species",
     "title": "Data Viz with R",
-    "section": "Map flipper length to size",
-    "text": "Map flipper length to size\n\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = flipper_length_mm, \n    y = bill_length_mm,\n    size = flipper_length_mm)) + \n  geom_point()"
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#map-species-to-colour",
-    "href": "lectures/lecture-data-vis.html#map-species-to-colour",
-    "title": "Data Viz with R",
-    "section": "Map species to colour",
-    "text": "Map species to colour\n\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = flipper_length_mm, \n    y = bill_length_mm,\n    color = species)) + \n  geom_point()"
+    "section": "Map colour to species",
+    "text": "Map colour to species\n\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = body_mass_g, \n    y = flipper_length_mm,\n    color = species)) + \n  geom_point()"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#map-species-to-colour-and-shape",
     "href": "lectures/lecture-data-vis.html#map-species-to-colour-and-shape",
     "title": "Data Viz with R",
     "section": "Map species to colour and shape",
-    "text": "Map species to colour and shape\n\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = flipper_length_mm, \n    y = bill_length_mm,\n    color = species,\n    shape = species)) + \n  geom_point()"
+    "text": "Map species to colour and shape\n\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = body_mass_g, \n    y = flipper_length_mm,\n    color = species,\n    shape = species)) + \n  geom_point()"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#mini-exercise-1",
@@ -1670,137 +1740,46 @@
     "text": "Mini-Exercise\n\n 5 minutes\n\nModify the starter code to produce the figure!\n\n\n\n\n\n\nFigureStarter code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Plot\nggplot(\n  data = penguins,\n  aes(x = island, \n      y = body_mass_g)) + \n  geom_boxplot()"
   },
   {
-    "objectID": "lectures/lecture-data-vis.html#data-prep",
-    "href": "lectures/lecture-data-vis.html#data-prep",
+    "objectID": "lectures/lecture-data-vis.html#base-plot",
+    "href": "lectures/lecture-data-vis.html#base-plot",
     "title": "Data Viz with R",
-    "section": "Data prep",
-    "text": "Data prep\n\nlibrary(dplyr)\n\npenguins |&gt; \n  group_by(year, species) |&gt; \n  summarise(count = n()) \n\n\n\n# A tibble: 9 × 3\n# Groups:   year [3]\n   year species   count\n  &lt;int&gt; &lt;fct&gt;     &lt;int&gt;\n1  2007 Adelie       50\n2  2007 Chinstrap    26\n3  2007 Gentoo       34\n4  2008 Adelie       50\n5  2008 Chinstrap    18\n6  2008 Gentoo       46\n7  2009 Adelie       52\n8  2009 Chinstrap    24\n9  2009 Gentoo       44"
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#plot-as-a-scatterplot",
-    "href": "lectures/lecture-data-vis.html#plot-as-a-scatterplot",
-    "title": "Data Viz with R",
-    "section": "Plot as a scatterplot",
-    "text": "Plot as a scatterplot\n\n\npenguins |&gt; \n  group_by(year, species) |&gt; \n  summarise(count = n()) |&gt; \n  ggplot(\n    aes(x = year, \n        y = count)\n  ) +\n  geom_point()"
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#adding-another-layer",
-    "href": "lectures/lecture-data-vis.html#adding-another-layer",
-    "title": "Data Viz with R",
-    "section": "Adding another layer",
-    "text": "Adding another layer\n\n\npenguins |&gt; \n  group_by(year, species) |&gt; \n  summarise(count = n()) |&gt; \n  ggplot(\n    aes(x = year, \n        y = count)\n  ) +\n  geom_point() + \n  geom_line()"
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#adding-group",
-    "href": "lectures/lecture-data-vis.html#adding-group",
-    "title": "Data Viz with R",
-    "section": "Adding group",
-    "text": "Adding group\n\n\npenguins |&gt; \n  group_by(year, species) |&gt; \n  summarise(count = n()) |&gt; \n  ggplot(\n    aes(x = year, \n        y = count,\n        group = species)\n  ) +\n  geom_point() + \n  geom_line()"
+    "section": "Base plot",
+    "text": "Base plot\n\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point()"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#layering-geoms",
     "href": "lectures/lecture-data-vis.html#layering-geoms",
     "title": "Data Viz with R",
     "section": "Layering geoms",
-    "text": "Layering geoms\n\n\npenguins |&gt; \n  group_by(year, species) |&gt; \n  summarise(count = n()) |&gt; \n  ggplot(\n    aes(x = year, \n        y = count,\n        group = species,\n        label = count)\n  ) +\n  geom_point() + \n  geom_line() + \n  geom_text()"
+    "text": "Layering geoms\n\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point() +\n  geom_smooth(method = 'lm')"
   },
   {
-    "objectID": "lectures/lecture-data-vis.html#layering-geoms-1",
-    "href": "lectures/lecture-data-vis.html#layering-geoms-1",
+    "objectID": "lectures/lecture-data-vis.html#add-color-scale",
+    "href": "lectures/lecture-data-vis.html#add-color-scale",
     "title": "Data Viz with R",
-    "section": "Layering geoms",
-    "text": "Layering geoms\n\n\npenguins |&gt; \n  group_by(year, species) |&gt; \n  summarise(count = n()) |&gt; \n  ggplot(\n    aes(x = year, \n        y = count,\n        group = species,\n        label = count)\n  ) +\n  geom_point() + \n  geom_line() + \n  geom_text(nudge_y = 2)"
+    "section": "Add color scale",
+    "text": "Add color scale\n\n\nmyCols &lt;- c(\"skyblue\", \"orange\", \"forestgreen\")\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point() +\n  geom_smooth(method = 'lm') + \n  scale_color_manual(values = myCols)"
   },
   {
-    "objectID": "lectures/lecture-data-vis.html#global-mapping-vs-local-mapping",
-    "href": "lectures/lecture-data-vis.html#global-mapping-vs-local-mapping",
+    "objectID": "lectures/lecture-data-vis.html#add-fill-scale",
+    "href": "lectures/lecture-data-vis.html#add-fill-scale",
     "title": "Data Viz with R",
-    "section": "Global mapping Vs local mapping",
-    "text": "Global mapping Vs local mapping\n\n\npenguins |&gt; \n  group_by(year, species) |&gt; \n  summarise(count = n()) |&gt; \n  ggplot(\n    aes(x = year, \n        y = count,\n        group = species,\n        label = count,\n        color = species)\n  ) +\n  geom_point() + \n  geom_line() + \n  geom_text(nudge_y = 2)"
+    "section": "Add fill scale",
+    "text": "Add fill scale\n\n\nmyCols &lt;- c(\"skyblue\", \"orange\", \"forestgreen\")\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point() +\n  geom_smooth(method = 'lm') + \n  scale_color_manual(values = myCols) +\n  scale_fill_manual(values = myCols)"
   },
   {
-    "objectID": "lectures/lecture-data-vis.html#global-mapping-vs-local-mapping-1",
-    "href": "lectures/lecture-data-vis.html#global-mapping-vs-local-mapping-1",
+    "objectID": "lectures/lecture-data-vis.html#vary-static-aesthetics",
+    "href": "lectures/lecture-data-vis.html#vary-static-aesthetics",
     "title": "Data Viz with R",
-    "section": "Global mapping Vs local mapping",
-    "text": "Global mapping Vs local mapping\n\n\npenguins |&gt; \n  group_by(year, species) |&gt; \n  summarise(count = n()) |&gt; \n  ggplot(\n    aes(x = year, \n        y = count,\n        group = species,\n        label = count)\n  ) +\n  geom_point() + \n  geom_line(\n    aes(color = species)\n  ) + \n  geom_text(nudge_y = 2)"
+    "section": "Vary static aesthetics",
+    "text": "Vary static aesthetics\n\n\nmyCols &lt;- c(\"skyblue\", \"orange\", \"forestgreen\")\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point(size = 2) +\n  geom_smooth(method = 'lm', size = 2) + \n  scale_color_manual(values = myCols) +\n  scale_fill_manual(values = myCols)"
   },
   {
-    "objectID": "lectures/lecture-data-vis.html#geom-specific-properties",
-    "href": "lectures/lecture-data-vis.html#geom-specific-properties",
+    "objectID": "lectures/lecture-data-vis.html#add-x-and-y-scales",
+    "href": "lectures/lecture-data-vis.html#add-x-and-y-scales",
     "title": "Data Viz with R",
-    "section": "Geom-specific properties",
-    "text": "Geom-specific properties\n\n\npenguins |&gt; \n  group_by(year, species) |&gt; \n  summarise(count = n()) |&gt; \n  ggplot(\n    aes(x = year, \n        y = count,\n        group = species,\n        label = count)\n  ) +\n  geom_point(\n    size = 3\n  ) + \n  geom_line(\n    aes(color = species)\n  ) + \n  geom_text(\n    nudge_y = 2,\n    color = \"grey40\")"
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#scales",
-    "href": "lectures/lecture-data-vis.html#scales",
-    "title": "Data Viz with R",
-    "section": "Scales",
-    "text": "Scales\n\n\np &lt;- penguins |&gt; \n  group_by(year, species) |&gt; \n  summarise(count = n()) |&gt; \n  ggplot(\n    aes(x = year, \n        y = count,\n        group = species,\n        label = count)\n  ) +\n  geom_point(\n    size = 3\n  ) + \n  geom_line(\n    aes(color = species)\n  ) + \n  geom_text(\n    nudge_y = 2,\n    color = \"grey40\")\n\np"
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#scales-1",
-    "href": "lectures/lecture-data-vis.html#scales-1",
-    "title": "Data Viz with R",
-    "section": "Scales",
-    "text": "Scales\n\n\np"
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#scales-x-axis",
-    "href": "lectures/lecture-data-vis.html#scales-x-axis",
-    "title": "Data Viz with R",
-    "section": "Scales: x-axis",
-    "text": "Scales: x-axis\n\n\np + \n  scale_x_continuous(\n    \"Year\",\n    breaks = 2007:2009)\n\n\n\n\n\n\n\n\n\n\n\n\nTry entering 2007:2009 at the console!"
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#scales-y-axis",
-    "href": "lectures/lecture-data-vis.html#scales-y-axis",
-    "title": "Data Viz with R",
-    "section": "Scales: y-axis",
-    "text": "Scales: y-axis\n\n\np + \n  scale_x_continuous(\n    \"Year\",\n    breaks = 2007:2009)  + \n  scale_y_continuous(\n    \"Count\",\n    limits = c(0,75))"
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#scales-y-axis-1",
-    "href": "lectures/lecture-data-vis.html#scales-y-axis-1",
-    "title": "Data Viz with R",
-    "section": "Scales: y-axis",
-    "text": "Scales: y-axis\n\n\np + \n  scale_x_continuous(\n    \"Year\",\n    breaks = 2007:2009)  + \n  scale_y_continuous(\n    \"Count\",\n    limits = c(0,75),\n    breaks = seq(0, 75, 25))\n\n\n\n\n\n\n\n\n\n\n\n\nTry entering seq(0, 75, 25) at the console!"
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#axis-scales",
-    "href": "lectures/lecture-data-vis.html#axis-scales",
-    "title": "Data Viz with R",
-    "section": "Axis scales",
-    "text": "Axis scales\nWe chose scale_x_continuous() and scale_y_continuous() because these are the natural scales for year and count which are numeric variables.\n\nThere are many other axis scales available for plotting different types of variables.\n\n\nscale_*_continuous()\nscale_*discrete()\nscale_*_binned()\nscale_*_log10()\nscale_*_date()\nscale_*_datetime()"
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#scales-colour",
-    "href": "lectures/lecture-data-vis.html#scales-colour",
-    "title": "Data Viz with R",
-    "section": "Scales: Colour",
-    "text": "Scales: Colour\n\n\np + \n  scale_x_continuous(\n    \"Year\",\n    breaks = 2007:2009)  + \n  scale_y_continuous(\n    \"Count\",\n    limits = c(0,75),\n    breaks = seq(0, 75, 25)) + \n  scale_color_manual(\n    NULL,\n    values = c('red',\n               'orange',\n               'blue')\n  )"
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#scales-colour-1",
-    "href": "lectures/lecture-data-vis.html#scales-colour-1",
-    "title": "Data Viz with R",
-    "section": "Scales: Colour",
-    "text": "Scales: Colour\n\n\np + \n  scale_x_continuous(\n    \"Year\",\n    breaks = 2007:2009)  + \n  scale_y_continuous(\n    \"Count\",\n    limits = c(0,75),\n    breaks = seq(0, 75, 25)) + \n  scale_color_manual(\n    NULL,\n    values = c('red',\n               'orange',\n               'blue'),\n    label = c(\n      'Gentoo' = 'Fast Swimmer',\n      'Adelie' = 'Ice Dweller',\n      'Chinstrap' = 'Rock Climber')\n    )"
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#scales-colour-2",
-    "href": "lectures/lecture-data-vis.html#scales-colour-2",
-    "title": "Data Viz with R",
-    "section": "Scales: Colour",
-    "text": "Scales: Colour\n\n\np + \n  scale_x_continuous(\n    \"Year\",\n    breaks = 2007:2009)  + \n  scale_y_continuous(\n    \"Count\",\n    limits = c(0,75),\n    breaks = seq(0, 75, 25)) + \n  scale_color_brewer(\n    type = \"qual\",\n    palette = \"set1\")"
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#scales-colour-3",
-    "href": "lectures/lecture-data-vis.html#scales-colour-3",
-    "title": "Data Viz with R",
-    "section": "Scales: Colour",
-    "text": "Scales: Colour\n\nlibrary(RColorBrewer)\ndisplay.brewer.all()"
+    "section": "Add x and y scales",
+    "text": "Add x and y scales\n\n\nmyCols &lt;- c(\"skyblue\", \"orange\", \"forestgreen\")\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point(size = 2) +\n  geom_smooth(method = 'lm', size = 2) + \n  scale_color_manual(values = myCols) +\n  scale_fill_manual(values = myCols) +\n  scale_x_continuous(\"Body mass (g)\") +\n  scale_y_continuous(\"Flipper length (mm)\")"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#mini-exercise-2",

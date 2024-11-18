@@ -8,6 +8,17 @@ footer: '<a href="/lectures/overview.qmd">{{< fa house >}}</a>'
 slide-number: c/t
 ---
 
+```{r, setup}
+#| echo: false
+
+library(tidyr)
+library(dplyr)
+library(palmerpenguins)
+
+```
+
+
+
 ## Data cleaning with `dplyr` {.title-slide}
 
 <img src="../images/dplyr.png"></img>
@@ -54,13 +65,13 @@ setwd("/Users/z3509778/Library/CloudStorage/OneDrive-UNSW/Data Vis Workshop/Cour
 
 ## Mini-Exercise
 
-::: {.clock-cr}
+::: {.clock}
 
 {{< fa clock >}} 3 minutes
 
 :::
 
-### Make yourself at home
+### Are you `here` yet?
 
 :::: {.columns}
 
@@ -98,6 +109,47 @@ Illustrations from the [Openscapes](https://www.openscapes.org/) blog [Tidy Data
 ::: {.figLab}
 Illustrations from the [Openscapes](https://www.openscapes.org/) blog [Tidy Data for reproducibility, efficiency, and collaboration](https://www.openscapes.org/blog/2020/10/12/tidy-data/) by Julia Lowndes and Allison Horst"
 :::
+
+## An example: untidy data
+
+### Penguin species and island of habitation
+
+```{r}
+#| echo: false
+
+penguins_wide <- penguins |> 
+  select(species, island) |> 
+  group_by(species, island) |> 
+  summarise(n = n()) |> 
+  pivot_wider(id_cols = species,
+              names_from = island,
+              values_from = n)
+
+penguins_wide
+```
+
+## An example: tidy data
+
+### Penguin species and island of habitation
+
+```{r}
+#| echo: false
+
+penguins |> 
+  select(species, island) |> 
+  group_by(species, island) |> 
+  summarise(n = n()) 
+
+```
+
+## {.center-slide}
+
+![](../images/Adelie-Chinstrap-and-gentoo-penguin-species.jpg)
+
+
+## {.center-slide}
+
+![By [Daniel Väisänen](https://github.com/dvaiman/TidyTuesday_Git/tree/master/2020/week_31)](../images/palmer-penguins.png)
 
 ## 
 
@@ -710,13 +762,106 @@ Now the ordering is by speed class, not alphabetically!
 
 ## Moving from wide to long data
 
-Consider the following dataset:
+Consider the untidy dataset we encountered earlier:
 
 ```{r}
 #| echo: false
 
-df <- data.frame(
-  a = 1
-)
+penguins_wide
+
 ```
 
+## Moving from wide to long data
+
+We can move from wide format to long long format using `pivot_longer()` from the `tidyr` package.
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-6|4-6"
+
+library(tidyr)
+
+penguins_wide |> 
+  pivot_longer(c(Biscoe, 
+                 Dream, 
+                 Torgersen))
+  
+```
+
+## Moving from wide to long data
+
+We can move from wide format to long long format using `pivot_longer()` from the `tidyr` package.
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| code-line-numbers: "1-8|7|8"
+
+library(tidyr)
+
+penguins_wide |> 
+  pivot_longer(c(Biscoe, 
+                 Dream, 
+                 Torgersen),
+  names_to = "island",
+  values_to = "count")
+  
+```
+
+
+## Mini-Exercise
+
+::: {.clock}
+
+{{< fa clock >}} 10 minutes
+
+:::
+
+### Practice pivot wider
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=10&sec=0" frameborder="0"></iframe>
+  
+:::
+
+::: {.column width=66%}
+
+::: {.panel-tabset}
+
+### Task
+
+1. Use the Starter Code to read in the file **exercises/2-raw-data/pivot_longer_exercise.xlsx** as an R dataframe
+
+1. Pivot the data to long format, creating new variables **sex** and **count**
+
+1. Make the variable **sex** a factor variable with levels 'female' and 'male'
+
+### Starter code
+
+```{r}
+#| echo: true
+#| eval: false 
+
+# Load library
+library(readxl)
+
+# Set the location of the data
+dataLocation <- here::here('exercises/2-raw-data/pivot_longer_exercise.xlsx')
+
+# Read in the data
+df <- read_excel(
+        path = dataLocation,
+        sheet = 'Sheet1')
+
+
+```
+
+
+:::
+
+:::
+::::

@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../home/poll.html" rel="next">
+<link href="../home/introduction.html" rel="next">
 <link href="../index.html" rel="prev">
 <link href="../images/hot-air-balloon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -189,14 +189,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../home/poll.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introductions</span></a>
+  <a href="../home/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../home/introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Overview</span></a>
+  <a href="../home/poll.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introductions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -398,7 +398,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><a href="https://twitter.com/allison_horst">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></p>
 </div>
 <p>Thank you for enrolling in the <span style="display: inline-flex; align-items: center;"> <img src="../images/hot-air-balloon.png" style="height: 1em; vertical-align: middle;"> </span> <strong>Reproducible Data Visualisation with R workshop</strong> <span style="display: inline-flex; align-items: center;"> <img src="../images/hot-air-balloon.png" style="height: 1em; vertical-align: middle;"> </span></p>
-<p>To get the most out of the workshop, please run through the checklist below and make sure you have all the necessary software installed. If you are already working with git in RStudio you may be ready to go. If you are just getting started, keep in mind that these configuration steps can be half the battle. Don’t worry if you get stuck, we are here to help.</p>
+<p>To get the most out of the workshop, please run through the checklist below and make sure you have all the necessary software installed in advance. If you are already working with git in RStudio you may be ready to go already. If you are just getting started, keep in mind that these configuration steps can be half the battle. Don’t worry if you get stuck, we are here to help.</p>
 <hr>
 <p><br></p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -407,25 +407,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Configuring Git, GitHub and RStudio
+A note on the key reference
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>Configuring Git, GitHub and RStudio to work together is half the battle when it comes to using Git in RStudio.</p>
-<p>Luckily there is an excellent online reference for this: <a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a> by Jennifer Bryan. The chapters linked below refer to key sections in this book.</p>
-<p>We won’t have time to configure everybody’s laptop at the workshop so please work through these steps in advance!</p>
+<p>Luckily there is an excellent online reference for this: <strong>Happy Git and GitHub for the useR</strong> by Jennifer Bryan. The chapters linked below refer to key sections in this book.</p>
+<p>We won’t have time to configure everybody’s laptop at the workshop so please try to work through these steps in advance! The best strategy is to carefully read the recommended sections in order and follow the directions diligently. But there is a lot of detail to work through so don’t worry if you get stuck—reach out for help!</p>
 </div>
 </div>
 <br>
 <hr>
 <p><strong>Checklist:</strong></p>
+<p><em>Can you tick every item below?</em></p>
 <ul>
 <li><p>A laptop (and a charger!) <input type="checkbox"></p></li>
-<li><p>At least a basic working knowledge of R and RStudio. If you are a beginner, check out the one-hour webinar <a href="https://posit.co/resources/videos/a-gentle-introduction-to-tidy-statistics-in-r/" target="_blank">A gengle introduction to tidy statistics in R</a>) <input type="checkbox"></p></li>
+<li><p>At least a basic working knowledge of R and RStudio. If you are a beginner or want a refresh, check out the one-hour webinar <a href="https://posit.co/resources/videos/a-gentle-introduction-to-tidy-statistics-in-r/" target="_blank">A gengle introduction to tidy statistics in R</a>) <input type="checkbox"></p></li>
 <li><p>A free GitHub user account. See <a href="https://happygitwithr.com/github-acct#github-acct">Ch 4. Register a GitHub account</a> <input type="checkbox"></p></li>
 <li><p>A recent version of R (at least v4.3.0) and RStudio (at least a 2024 version) installed on your laptop. See <a href="https://happygitwithr.com/install-r-rstudio" target="_blank">Ch 5. Install or upgrade R and RStudio</a> <input type="checkbox"></p></li>
 <li><p>Git installed on your laptop. See <a href="https://happygitwithr.com/install-git" target="_blank">Ch 6. Install Git</a> <input type="checkbox"></p></li>
-<li><p>Configure Git, GitHub and RStudio. See <a href="https://happygitwithr.com/https-pat">Ch 9. Personal access token for HTTPS</a> and especially <a href="https://happygitwithr.com/https-pat#tldr">Section 9.1 TL;DR</a> <input type="checkbox"></p></li>
+<li><p>Set up a Personal Access Token (PAT) to allow RStudio to communicate with GitHub. See <strong>Ch 9. Personal access token for HTTPS</strong> and in particular <a href="https://happygitwithr.com/https-pat#tldr">Section 9.1 TL;DR</a> <input type="checkbox"></p></li>
 </ul>
 <hr>
 <p><br></p>
@@ -435,24 +436,28 @@ Configuring Git, GitHub and RStudio
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Git Credentials
+Setting up a Personal Access Token
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Follow <a href="https://happygitwithr.com/https-pat#tldr">Section 9.1 TL;DR</a> from Happy Git and GitHub for the useR to set up your Git Credentials.</p>
-<p>Note these steps can be completed in RStudio by calling the following commands</p>
+<p>Follow <a href="https://happygitwithr.com/https-pat#tldr">Section 9.1 TL;DR</a> from Happy Git and GitHub for the useR to set up your Personal Access Token. The easiest way to do this is to run the suggested commands from R. To run these commands you may need to install the <code>usethis</code> and <code>gitcreds</code> packages if they are not installed already. If you get an error message indicating that you don’t have the packages installed you can install them by entering the commands below at the console.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"gitcreds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>To run these commands you may need to install the <code>usethis</code> and <code>gitcreds</code> packages if they are not installed already. Copy and paste the following commands into the RStudio console:</p>
+<p>As per <strong>Section 9.1 TL;DR</strong>, the following R commands can be used to set up a Personal Access Token from RStudio.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<ul>
+<li><p>Entering a note to describe the tokens use case is useful for identifying and managing tokens. Choose a note that describes your use case, e.g.&nbsp;<strong>RStudio projects</strong>.</p></li>
+<li><p>Set the expiration to 30 days. You can always extend this.</p></li>
+<li><p>The GitHub PAT scope is like a set of permissions that define what actions the token can perform on your behalf on GitHub. You can use the default scopes of <strong>workflow</strong>, <strong>gist</strong>, and <strong>user</strong>.</p></li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"gitcreds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -877,8 +882,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../home/poll.html" class="pagination-link" aria-label="Introductions">
-        <span class="nav-page-text">Introductions</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../home/introduction.html" class="pagination-link" aria-label="Overview">
+        <span class="nav-page-text">Overview</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

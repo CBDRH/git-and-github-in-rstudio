@@ -6,9 +6,12 @@ format:
 
 ## {background-image="../images/hot-air-balloon.png" background-size="contain"}
 
+## {background-image="../images/the-bfg.webp" background-size="contain"}
 
+## {.center-slide}
 
-## {background-video="../images/slippers.M4V" background-size="contain"}
+![[Artwork by @allison_horst](https://twitter.com/allison_horst)
+](../images/horst/r-at-first-i-was-like.png)
 
 ## The Pareto Principle
 
@@ -18,7 +21,7 @@ AKA The 80/20 rule
 
 >80% of Italy's land was owned by 20% of the population 
 ><br>
->_---Vilfredo Pareto 1848--1983_
+>_---Vilfredo Pareto 1848--1923_
 
 
 ## The Pareto Principle
@@ -31,7 +34,7 @@ AKA The 80/20 rule
 
 AKA The 80/20 rule
 
->80% of parenting is just repeating 20% of the phrases: 'Don’t touch that,' 'Put that down,' and 'Because I said so
+>80% of parenting is just repeating 20% of the phrases: _Don’t touch that_, _Put that down_, and _Because I said so_
 
 
 ## The Pareto Principle
@@ -39,6 +42,9 @@ AKA The 80/20 rule
 The 80/20 rule in Data Visualisation
 
 >80% of the work is getting the data in the right shape
+
+
+## {background-video="../images/slippers.M4V" background-size="contain"}
 
 
 ## Day 1: The RStudio environment

@@ -67,7 +67,7 @@ This story, quoted in @nunn2016aboriginal, was related by [Frances Bodkin, a Dha
 
 # Storytelling is the oldest data storage format
 
-## {center-image}
+## {.center-slide}
 
 ![](../images/Audio_Compact_Disc.png){width="80%"}
 
@@ -104,9 +104,7 @@ Quipu in the Museo Machu Picchu, Casa Concha, Cusco. Andead South America 2600 B
 ![](../images/story-image.jpg)
 
 <!-- Storytelling for data visualisation -->
-## {background-image="images/section-image.jpg"}
-
-### How storytelling can improve data visualisation {.section-header}
+# How storytelling can improve data visualisation
 
 ## How storytelling can improve data visualisation
 
@@ -220,6 +218,26 @@ Nikkei Stock Average (Nikkei 225). See [indexes.nikkei.co.jp](https://indexes.ni
 ::: {.figLab}
 Nikkei Stock Average (Nikkei 225). See [indexes.nikkei.co.jp](https://indexes.nikkei.co.jp/)
 :::
+
+## Colours in R
+
+```{r}
+#| echo: true
+#| fig-height: 6
+#| fig-width: 10
+
+library(RColorBrewer)
+display.brewer.all()
+```
+
+## Online palette generators
+
+* [coolors.co](https://coolors.co/)
+
+* [ColorBrewer 2.0](https://colorbrewer2.org/)
+
+* [136 Shades of Grey](https://www.color-meanings.com/shades-of-gray-color-names-html-hex-rgb-codes/)
+
 
 <!-- Font -->
 ## Aesthetics in data visualisation
@@ -522,18 +540,18 @@ What if? by Owen Cho. See [healthpolicy.github.io/nhs_whatif](https://healthpoli
 ## Emotion in data visualisation
 
 ::: {.incremental}
-1. Empathy
+1. Surprise
 1. Delight
-1. Fear
+1. Concern
 :::
 
-<!-- Empathy -->
+<!-- Surprise -->
 ## Emotion in data visualisation
 
 <ol>
-<li style="color: #e7ad52;">Empathy</li>
+<li style="color: #e7ad52;">Surprise</li>
 <li style="color: #7fa2a6;">Delight</li>
-<li style="color: #7fa2a6;">Fear</li>
+<li style="color: #7fa2a6;">Concern</li>
 </ol>
 
 
@@ -552,37 +570,125 @@ By [Mona Chalabi](https://monachalabi.com/) via [instagram](https://www.instagra
 ## Emotion in data visualisation
 
 <ol>
-<li style="color: #7fa2a6;">Empathy</li>
+<li style="color: #7fa2a6;">Surprise</li>
 <li style="color: #d5a04c;">Delight</li>
-<li style="color: #7fa2a6;">Fear</li>
+<li style="color: #7fa2a6;">Concern</li>
 </ol>
 
 
 ## {.center-slide}
 
-![](../images/1381-usa-wind-power.svg){width=80%}
+![](../images/486-clean-cook-fuel.svg)
 
 ::: {.figLab}
-Beautiful news daily from [Information is beautiful](https://informationisbeautiful.net/beautifulnews/1381-usa-wind-power/)
+Beautiful news daily from [Information is beautiful](https://informationisbeautiful.net/beautifulnews/486-clean-cook-fuel/)
 :::
 
-<!-- Fear -->
+<!-- Concern -->
 ## Emotion in data visualisation
 
 <ol>
-<li style="color: #7fa2a6;">Empathy</li>
+<li style="color: #7fa2a6;">Surprise</li>
 <li style="color: #7fa2a6;">Delight</li>
-<li style="color: #e7ad52;">Fear</li>
+<li style="color: #e7ad52;">Concern</li>
 </ol>
 
 ## 
 
-![](../images/global-mean-sea-level.max-2000x2000.png){width=60%}
+![little picture: sea level trend. See [climate.esa.int/en/littlepicturescompetition](https://climate.esa.int/en/littlepicturescompetition/)](../images/global-mean-sea-level.max-2000x2000.png){width=60% align=center}
 
-::: {.figLab}
-little picture: sea level trend. See [climate.esa.int/en/littlepicturescompetition](https://climate.esa.int/en/littlepicturescompetition/)
+
+
+## Mini-Exercise {.smaller}
+
+::: {.clock}
+
+{{< fa clock >}} 15 minutes
+
 :::
 
+### Practive storytelling with data
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=15&sec=0" frameborder="0"></iframe>
+
+:::
+
+::: {.column width=66%}
+
+::: {.panel-tabset}
+
+### Goal
+
+Use storytelling tricks to enhance the starter plot examining popular baby names over time. **Choose any names you like!** 
+
+* Colour (try [coolors.co](https://coolors.co/))
+* Title and subtitle
+* Text hierarchy
+
+### Plot
+
+```{r}
+#| echo: false
+#| eval: true
+
+library(babynames)
+library(ggplot2)
+library(dplyr)
+library(ggtext)
+
+babynames |> 
+  filter(name %in% c("Olivia", "Mia", "Luna") & sex=='F') |> 
+  ggplot(aes(x = year, y = n, color = name)) +
+  geom_line(linewidth = 2) +
+  labs(
+    title = "XYZ",
+    subtitle = "ABC"
+  ) +
+  theme(
+    plot.title.position = "plot",
+    plot.title = element_text(size = 8),
+    plot.subtitle = element_text(size = 8)
+  )
+
+```
+
+### Starter code 
+
+```{r}
+#| echo: true
+#| eval: false
+
+library(babynames)
+library(ggplot2)
+library(dplyr)
+library(ggtext)
+
+babynames |> 
+  filter(name %in% c("Olivia", "Mia", "Luna") & sex=='F') |> 
+  ggplot(aes(x = year, y = n, color = name)) +
+  geom_line(linewidth = 2) +
+  labs(
+    title = "XYZ",
+    subtitle = "ABC"
+  ) +
+  theme(
+    plot.title.position = "plot",
+    plot.title = element_text(size = 8),
+    plot.subtitle = element_text(size = 8)
+  )
+
+```
+
+
+:::
+
+:::
+
+::::
 
 
 ## Academic References

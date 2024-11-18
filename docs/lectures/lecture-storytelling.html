@@ -470,42 +470,43 @@
 <h1>Storytelling is the oldest data storage format</h1>
 
 </section>
-<section id="center-image" class="slide level2">
-<h2>{center-image}</h2>
+<section id="section-6" class="slide level2 center-slide">
+<h2></h2>
 
 <img data-src="../images/Audio_Compact_Disc.png" style="width:80.0%" class="r-stretch"><div class="figLab">
 <p>The compact disc (CD) co-developed by Philips and Sony in 1982 <a href="https://simple.wikipedia.org/wiki/Compact_disc">Wikipedia</a></p>
 </div>
 </section>
-<section id="section-6" class="slide level2">
+<section id="section-7" class="slide level2">
 <h2></h2>
 
 <img data-src="../images/floppy-disk.jpg" class="r-stretch"><div class="figLab">
 <p>8-inch, 5¼-inch, and 3½-inch floppy disks. Invented in 1971 by IBM. From <a href="https://en.wikipedia.org/wiki/Floppy_disk">Wikipedia</a></p>
 </div>
 </section>
-<section id="section-7" class="slide level2 center-slide">
+<section id="section-8" class="slide level2 center-slide">
 <h2></h2>
 
 <img data-src="../images/ogham.jpg" class="r-stretch"><div class="figLab">
 <p>Ogham Stone. 400AD-1000AD <a href="https://mallonireland.com/blogs/news/ogham-script">mallonireland.com</a></p>
 </div>
 </section>
-<section id="section-8" class="slide level2 center-slide">
+<section id="section-9" class="slide level2 center-slide">
 <h2></h2>
 
 <img data-src="../images/quipo.jpg" class="r-stretch"><div class="figLab">
 <p>Quipu in the Museo Machu Picchu, Casa Concha, Cusco. Andead South America 2600 BC – c.1600 AD <a href="https://en.wikipedia.org/wiki/Quipu">Wikipedia</a></p>
 </div>
 </section>
-<section id="section-9" class="slide level2 center-slide">
+<section id="section-10" class="slide level2 center-slide">
 <h2></h2>
 
 <!-- Storytelling for data visualisation -->
-<img data-src="../images/story-image.jpg" class="r-stretch"></section>
-<section id="section-10" class="slide level2" data-background-image="images/section-image.jpg">
-<h2></h2>
-<h3 class="section-header" id="how-storytelling-can-improve-data-visualisation">How storytelling can improve data visualisation</h3>
+<img data-src="../images/story-image.jpg" class="r-stretch"></section></section>
+<section>
+<section id="how-storytelling-can-improve-data-visualisation" class="title-slide slide level1 center">
+<h1>How storytelling can improve data visualisation</h1>
+
 </section>
 <section id="how-storytelling-can-improve-data-visualisation-1" class="slide level2">
 <h2>How storytelling can improve data visualisation</h2>
@@ -648,6 +649,22 @@ Text hierarchy
 <img data-src="../images/stock-prices-japanese.png" class="r-stretch"><div class="figLab">
 <p>Nikkei Stock Average (Nikkei 225). See <a href="https://indexes.nikkei.co.jp/">indexes.nikkei.co.jp</a></p>
 </div>
+</section>
+<section id="colours-in-r" class="slide level2">
+<h2>Colours in R</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(RColorBrewer)</span>
+<span id="cb1-2"><a></a><span class="fu">display.brewer.all</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="lecture-storytelling_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<section id="online-palette-generators" class="slide level2">
+<h2>Online palette generators</h2>
+<ul>
+<li><p><a href="https://coolors.co/">coolors.co</a></p></li>
+<li><p><a href="https://colorbrewer2.org/">ColorBrewer 2.0</a></p></li>
+<li><p><a href="https://www.color-meanings.com/shades-of-gray-color-names-html-hex-rgb-codes/">136 Shades of Grey</a></p></li>
+</ul>
 <!-- Font -->
 </section>
 <section id="aesthetics-in-data-visualisation-2" class="slide level2">
@@ -711,21 +728,21 @@ Text hierarchy
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb1-3"><a></a>  <span class="at">data=</span>ToothGrowth, </span>
-<span id="cb1-4"><a></a>  <span class="fu">aes</span>(<span class="at">x=</span>dose, <span class="at">y=</span>len, <span class="at">fill=</span>supp)) <span class="sc">+</span> </span>
-<span id="cb1-5"><a></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">'dodge'</span>) <span class="sc">+</span></span>
-<span id="cb1-6"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-7"><a></a>    <span class="at">title =</span> <span class="st">"The Effect of Vitamin C on Tooth Growth"</span>,</span>
-<span id="cb1-8"><a></a>    <span class="at">x =</span> <span class="st">"Dose"</span>,</span>
-<span id="cb1-9"><a></a>    <span class="at">y =</span> <span class="st">"Tooth growth"</span></span>
-<span id="cb1-10"><a></a>       ) <span class="sc">+</span></span>
-<span id="cb1-11"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="st">"Supplement"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="st">'lightblue'</span>, <span class="st">'maroon'</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'Orange juice'</span>, <span class="st">'Vitamin C'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-2"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb2-3"><a></a>  <span class="at">data=</span>ToothGrowth, </span>
+<span id="cb2-4"><a></a>  <span class="fu">aes</span>(<span class="at">x=</span>dose, <span class="at">y=</span>len, <span class="at">fill=</span>supp)) <span class="sc">+</span> </span>
+<span id="cb2-5"><a></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">'dodge'</span>) <span class="sc">+</span></span>
+<span id="cb2-6"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb2-7"><a></a>    <span class="at">title =</span> <span class="st">"The Effect of Vitamin C on Tooth Growth"</span>,</span>
+<span id="cb2-8"><a></a>    <span class="at">x =</span> <span class="st">"Dose"</span>,</span>
+<span id="cb2-9"><a></a>    <span class="at">y =</span> <span class="st">"Tooth growth"</span></span>
+<span id="cb2-10"><a></a>       ) <span class="sc">+</span></span>
+<span id="cb2-11"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="st">"Supplement"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="st">'lightblue'</span>, <span class="st">'maroon'</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'Orange juice'</span>, <span class="st">'Vitamin C'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
-<img data-src="lecture-storytelling_files/figure-html/unnamed-chunk-1-1.png" width="672" class="r-stretch"></section>
+<img data-src="lecture-storytelling_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
 <section id="section-22" class="slide level2 center-slide">
 <h2></h2>
 
@@ -787,10 +804,10 @@ Interactivity
 <section id="section-26" class="slide level2 center-slide">
 <h2></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">plot</span>(astsa<span class="sc">::</span>birth)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">plot</span>(astsa<span class="sc">::</span>birth)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="lecture-storytelling_files/figure-html/unnamed-chunk-2-1.png" width="672" class="r-stretch"></section>
+<img data-src="lecture-storytelling_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
 <section id="section-27" class="slide level2 center-slide">
 <h2></h2>
 
@@ -953,24 +970,24 @@ Interactivity
 <h2>Emotion in data visualisation</h2>
 <div>
 <ol type="1">
-<li class="fragment">Empathy</li>
+<li class="fragment">Surprise</li>
 <li class="fragment">Delight</li>
-<li class="fragment">Fear</li>
+<li class="fragment">Concern</li>
 </ol>
 </div>
-<!-- Empathy -->
+<!-- Surprise -->
 </section>
 <section id="emotion-in-data-visualisation-2" class="slide level2">
 <h2>Emotion in data visualisation</h2>
 <ol>
 <li style="color: #e7ad52;">
-Empathy
+Surprise
 </li>
 <li style="color: #7fa2a6;">
 Delight
 </li>
 <li style="color: #7fa2a6;">
-Fear
+Concern
 </li>
 </ol>
 </section>
@@ -986,43 +1003,100 @@ Fear
 <h2>Emotion in data visualisation</h2>
 <ol>
 <li style="color: #7fa2a6;">
-Empathy
+Surprise
 </li>
 <li style="color: #d5a04c;">
 Delight
 </li>
 <li style="color: #7fa2a6;">
-Fear
+Concern
 </li>
 </ol>
 </section>
 <section id="section-40" class="slide level2 center-slide">
 <h2></h2>
 
-<img data-src="../images/1381-usa-wind-power.svg" style="width:80.0%" class="r-stretch"><div class="figLab">
-<p>Beautiful news daily from <a href="https://informationisbeautiful.net/beautifulnews/1381-usa-wind-power/">Information is beautiful</a></p>
+<img data-src="../images/486-clean-cook-fuel.svg" class="r-stretch"><div class="figLab">
+<p>Beautiful news daily from <a href="https://informationisbeautiful.net/beautifulnews/486-clean-cook-fuel/">Information is beautiful</a></p>
 </div>
-<!-- Fear -->
+<!-- Concern -->
 </section>
 <section id="emotion-in-data-visualisation-4" class="slide level2">
 <h2>Emotion in data visualisation</h2>
 <ol>
 <li style="color: #7fa2a6;">
-Empathy
+Surprise
 </li>
 <li style="color: #7fa2a6;">
 Delight
 </li>
 <li style="color: #e7ad52;">
-Fear
+Concern
 </li>
 </ol>
 </section>
 <section id="section-41" class="slide level2">
 <h2></h2>
 
-<img data-src="../images/global-mean-sea-level.max-2000x2000.png" style="width:60.0%" class="r-stretch"><div class="figLab">
-<p>little picture: sea level trend. See <a href="https://climate.esa.int/en/littlepicturescompetition/">climate.esa.int/en/littlepicturescompetition</a></p>
+<img data-src="../images/global-mean-sea-level.max-2000x2000.png" style="width:60.0%" data-align="center" class="r-stretch quarto-figure-center"><p class="caption">little picture: sea level trend. See <a href="https://climate.esa.int/en/littlepicturescompetition/">climate.esa.int/en/littlepicturescompetition</a></p></section>
+<section id="mini-exercise" class="slide level2 smaller">
+<h2>Mini-Exercise</h2>
+<div class="clock">
+<p><i class="fa-solid fa-clock" aria-label="clock"></i> 15 minutes</p>
+</div>
+<h3 id="practive-storytelling-with-data">Practive storytelling with data</h3>
+<div class="columns">
+<div class="column" style="width:34%;">
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&amp;color=yellow&amp;hrs=0&amp;min=15&amp;sec=0" frameborder="0">
+</iframe>
+</div><div class="column" style="width:66%;">
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Goal</a></li><li><a href="#tabset-1-2">Plot</a></li><li><a href="#tabset-1-3">Starter code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<p>Use storytelling tricks to enhance the starter plot examining popular baby names over time. <strong>Choose any names you like!</strong></p>
+<ul>
+<li>Colour (try <a href="https://coolors.co/">coolors.co</a>)</li>
+<li>Title and subtitle</li>
+<li>Text hierarchy</li>
+</ul>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="lecture-storytelling_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(babynames)</span>
+<span id="cb4-2"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-3"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb4-4"><a></a><span class="fu">library</span>(ggtext)</span>
+<span id="cb4-5"><a></a></span>
+<span id="cb4-6"><a></a>babynames <span class="sc">|&gt;</span> </span>
+<span id="cb4-7"><a></a>  <span class="fu">filter</span>(name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Olivia"</span>, <span class="st">"Mia"</span>, <span class="st">"Luna"</span>) <span class="sc">&amp;</span> sex<span class="sc">==</span><span class="st">'F'</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-8"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> n, <span class="at">color =</span> name)) <span class="sc">+</span></span>
+<span id="cb4-9"><a></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb4-10"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-11"><a></a>    <span class="at">title =</span> <span class="st">"XYZ"</span>,</span>
+<span id="cb4-12"><a></a>    <span class="at">subtitle =</span> <span class="st">"ABC"</span></span>
+<span id="cb4-13"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb4-14"><a></a>  <span class="fu">theme</span>(</span>
+<span id="cb4-15"><a></a>    <span class="at">plot.title.position =</span> <span class="st">"plot"</span>,</span>
+<span id="cb4-16"><a></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb4-17"><a></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>)</span>
+<span id="cb4-18"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section>
 <section id="academic-references" class="slide level2 smaller scrollable">
@@ -1249,6 +1323,44 @@ Nunn, Patrick D, and Nicholas J Reid. 2016. <span>“Aboriginal Memories of Inun
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
