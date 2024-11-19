@@ -76,6 +76,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
+<script src="../site_libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
+<script src="../site_libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
 <link href="../site_libs/quarto-contrib/line-highlight-1.0.0/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
@@ -106,9 +109,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<meta cr-debug-mode="false">
+<meta cr-remove-header-space="false">
 
 
-<link rel="stylesheet" href="../custom.scss">
+<link rel="stylesheet" href="../site_libs/quarto-contrib/quarto-project/qmd-lab/closeread/closeread.css">
 <meta property="og:title" content="Reproducible data visualisation with R">
 <meta property="og:description" content="A two-day workshop building core skills for data visualisation in R.">
 <meta property="og:image" content="https://cbdrh.github.io/data-viz-workshop/exercises/images/hot-air-balloon.png">
@@ -172,7 +177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
@@ -396,31 +401,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul class="collapse">
-  <li><a href="#create-a-personal-copy-of-the-materials-repo" id="toc-create-a-personal-copy-of-the-materials-repo" class="nav-link active" data-scroll-target="#create-a-personal-copy-of-the-materials-repo"><span class="header-section-number">1</span> Create a personal copy of the Materials Repo</a>
-  <ul class="collapse">
-  <li><a href="#fork-the-repo" id="toc-fork-the-repo" class="nav-link" data-scroll-target="#fork-the-repo"><span class="header-section-number">1.1</span> Fork the repo</a></li>
-  <li><a href="#copy-the-repo-url" id="toc-copy-the-repo-url" class="nav-link" data-scroll-target="#copy-the-repo-url"><span class="header-section-number">1.2</span> Copy the repo url</a></li>
-  <li><a href="#use-the-repo-url-to-create-a-new-project-in-rstudio" id="toc-use-the-repo-url-to-create-a-new-project-in-rstudio" class="nav-link" data-scroll-target="#use-the-repo-url-to-create-a-new-project-in-rstudio"><span class="header-section-number">1.3</span> Use the repo url to create a new project in RStudio</a></li>
-  </ul></li>
-  <li><a href="#practice-the-git-add-commit-push-workflow" id="toc-practice-the-git-add-commit-push-workflow" class="nav-link" data-scroll-target="#practice-the-git-add-commit-push-workflow"><span class="header-section-number">2</span> Practice the git add-commit-push workflow</a>
-  <ul class="collapse">
-  <li><a href="#open-the-practice-file" id="toc-open-the-practice-file" class="nav-link" data-scroll-target="#open-the-practice-file"><span class="header-section-number">2.1</span> Open the practice file</a></li>
-  <li><a href="#edit-the-file" id="toc-edit-the-file" class="nav-link" data-scroll-target="#edit-the-file"><span class="header-section-number">2.2</span> Edit the file</a></li>
-  <li><a href="#git-add-the-file" id="toc-git-add-the-file" class="nav-link" data-scroll-target="#git-add-the-file"><span class="header-section-number">2.3</span> git add the file</a></li>
-  <li><a href="#git-commit-the-file" id="toc-git-commit-the-file" class="nav-link" data-scroll-target="#git-commit-the-file"><span class="header-section-number">2.4</span> git commit the file</a></li>
-  <li><a href="#git-push-the-file" id="toc-git-push-the-file" class="nav-link" data-scroll-target="#git-push-the-file"><span class="header-section-number">2.5</span> git push the file</a></li>
-  <li><a href="#add-your-ingredients" id="toc-add-your-ingredients" class="nav-link" data-scroll-target="#add-your-ingredients"><span class="header-section-number">2.6</span> Add your ingredients</a></li>
-  <li><a href="#add-your-instructions" id="toc-add-your-instructions" class="nav-link" data-scroll-target="#add-your-instructions"><span class="header-section-number">2.7</span> Add your instructions</a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content page-columns page-full column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/overview.html">Exercises</a></li><li class="breadcrumb-item"><a href="../exercises/github.html">Day 1. GitHub</a></li></ol></nav>
 <div class="quarto-title">
@@ -429,7 +413,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -1154,7 +1138,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
+<nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
       <a href="../exercises/overview.html" class="pagination-link" aria-label="Overview">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Overview</span>

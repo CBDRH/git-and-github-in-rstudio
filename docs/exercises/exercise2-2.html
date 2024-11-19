@@ -76,6 +76,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
+<script src="../site_libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
+<script src="../site_libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
 <link href="../site_libs/quarto-contrib/line-highlight-1.0.0/line-highlight.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -104,6 +107,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<meta cr-debug-mode="false">
+<meta cr-remove-header-space="false">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -135,6 +140,7 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="../site_libs/quarto-contrib/quarto-project/qmd-lab/closeread/closeread.css">
 <meta property="og:title" content="Reproducible data visualisation with R">
 <meta property="og:description" content="A two-day workshop building core skills for data visualisation in R.">
 <meta property="og:image" content="https://cbdrh.github.io/data-viz-workshop/exercises/images/hot-air-balloon.png">
@@ -198,7 +204,7 @@ window.Quarto = {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
@@ -422,28 +428,10 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#set-up-your-code-file-meta-data" id="toc-set-up-your-code-file-meta-data" class="nav-link active" data-scroll-target="#set-up-your-code-file-meta-data"><span class="header-section-number">1</span> Set up your code file meta data</a></li>
-  <li><a href="#load-libraries" id="toc-load-libraries" class="nav-link" data-scroll-target="#load-libraries"><span class="header-section-number">2</span> Load libraries</a></li>
-  <li><a href="#commit-your-changes" id="toc-commit-your-changes" class="nav-link" data-scroll-target="#commit-your-changes"><span class="header-section-number">3</span> Commit your changes</a></li>
-  <li><a href="#download-the-data-locally" id="toc-download-the-data-locally" class="nav-link" data-scroll-target="#download-the-data-locally"><span class="header-section-number">4</span> Download the data locally</a></li>
-  <li><a href="#read-in-the-data-to-r" id="toc-read-in-the-data-to-r" class="nav-link" data-scroll-target="#read-in-the-data-to-r"><span class="header-section-number">5</span> Read in the data to R</a></li>
-  <li><a href="#subset-to-the-12-rows-with-data-on-chronic-conditions" id="toc-subset-to-the-12-rows-with-data-on-chronic-conditions" class="nav-link" data-scroll-target="#subset-to-the-12-rows-with-data-on-chronic-conditions"><span class="header-section-number">6</span> Subset to the 12 rows with data on chronic conditions</a></li>
-  <li><a href="#select-the-columns-of-interest" id="toc-select-the-columns-of-interest" class="nav-link" data-scroll-target="#select-the-columns-of-interest"><span class="header-section-number">7</span> Select the columns of interest</a></li>
-  <li><a href="#pivot-from-wide-format-to-long-format" id="toc-pivot-from-wide-format-to-long-format" class="nav-link" data-scroll-target="#pivot-from-wide-format-to-long-format"><span class="header-section-number">8</span> Pivot from wide format to long format</a></li>
-  <li><a href="#rename-the-variable-x" id="toc-rename-the-variable-x" class="nav-link" data-scroll-target="#rename-the-variable-x"><span class="header-section-number">9</span> Rename the variable <code>X</code></a></li>
-  <li><a href="#tidy-up-the-period-variable" id="toc-tidy-up-the-period-variable" class="nav-link" data-scroll-target="#tidy-up-the-period-variable"><span class="header-section-number">10</span> Tidy up the <code>period</code> variable</a></li>
-  <li><a href="#tidy-up-the-condition-variable" id="toc-tidy-up-the-condition-variable" class="nav-link" data-scroll-target="#tidy-up-the-condition-variable"><span class="header-section-number">11</span> Tidy up the <code>condition</code> variable</a></li>
-  <li><a href="#drop-the-old-variable-period" id="toc-drop-the-old-variable-period" class="nav-link" data-scroll-target="#drop-the-old-variable-period"><span class="header-section-number">12</span> Drop the old variable <code>period</code></a></li>
-  <li><a href="#save-the-clean-dataset" id="toc-save-the-clean-dataset" class="nav-link" data-scroll-target="#save-the-clean-dataset"><span class="header-section-number">13</span> Save the clean dataset</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content page-columns page-full column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/overview.html">Exercises</a></li><li class="breadcrumb-item">Day 1. Data cleaning</li><li class="breadcrumb-item"><a href="../exercises/exercise2-1.html">Exercise 2 (Advanced)</a></li><li class="breadcrumb-item"><a href="../exercises/exercise2-2.html">Step-by-step guide</a></li></ol></nav>
 <div class="quarto-title">
@@ -452,7 +440,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -1405,7 +1393,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
+<nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
       <a href="../exercises/exercise2-1.html" class="pagination-link" aria-label="Getting started">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Getting started</span>

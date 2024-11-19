@@ -1,5 +1,17 @@
 [
   {
+    "objectID": "home/orientation.html",
+    "href": "home/orientation.html",
+    "title": "Orientation to RStudio",
+    "section": "",
+    "text": "We’re going to spend two days working on R code so let’s take a moment to open up RStudio to orientate ourselves.\n\n\n\n\nHere is a snapshot of the RStudio environment.\n\n\n\n\nThere’s a lot going on!\n\n\n\n\nLet’s break it down.\n\n\n\n\nThis is an R script file (.R extension). Here you can write R code to clean, analyse, and visualise data\n\n\n\n\nNotice that this file is saved with a proper file name analysis.R so we can open and close the file and come back to the code as needed.\n\n\n\n\nThis area has several tabs. The Environment tab plays a key role in managing and visualizing the objects that exist in the current R session.\n\n\n\n\nVarious types of objects can exist in your environment, for example vectors, dataframes and lists.\n\n\n\n\nCurrently we can see the cars dataset and the meanSpeed value stored in the environment.\n\n\n\n\nNotice the Git tab is also in this area. We’ll use that later.\n\n\n\n\nThere are several important tabs in the bottom right-hand corner\n\n\n\n\nThe Files tab shows us all the file in our project. Spot analsis.R!\n\n\n\n\nFrom here we can open files or navigate to different folders.\n\n\n\n\nOther important tabs in this area includes the Plots tab, where are plots will appear, and the Packages tab that has a list of all the installed packages.\n\n\n\n\nHere we have the console.\n\n\n\n\nThe console allows you to run R commands interactively. You can type a command directly into the console and press Enter to execute it and view the results straight away.\n\n\n\n\nThe console keeps track of previously executed commands. You can use the  up and  down arrow keys to scroll through past commands, making it easy to re-run commands or modify and execute them again.\n\n\n\n\nWorking in the console is convenient for quick, interactive commands, but it doesn’t save a persistent record of your entered commands so important code should always be saved in a script.\n\n\n\n\nFinally, note this icon in the top right-hand corner. This tells us we are working in an R Project named cars-study.",
+    "crumbs": [
+      "Home",
+      "Housekeeping",
+      "Orientation"
+    ]
+  },
+  {
     "objectID": "cars-analysis.html",
     "href": "cars-analysis.html",
     "title": "Cars analysis",
@@ -14,39 +26,32 @@
     "text": "Here are the first few lines of the cars dataset:\n\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00  \n\n\nThere are 50 rows in total. You can also embed plots, for example:"
   },
   {
-    "objectID": "lectures/lecture-data-cleaning.html#data-cleaning-with-dplyr",
-    "href": "lectures/lecture-data-cleaning.html#data-cleaning-with-dplyr",
-    "title": "Data Viz with R",
-    "section": "Data cleaning with dplyr",
-    "text": "Data cleaning with dplyr"
-  },
-  {
     "objectID": "lectures/lecture-data-cleaning.html#r-projects",
     "href": "lectures/lecture-data-cleaning.html#r-projects",
     "title": "Data Viz with R",
     "section": "R Projects",
-    "text": "R Projects\n\nWe use R projects to keep all our code and files organised in a single space\n\n\nArtwork by @allison_horst"
+    "text": "R Projects\n\nWe use R projects to keep all our code and files organised in a single space\n\n\n\n\nArtwork by @allison_horst"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#absolute-paths",
     "href": "lectures/lecture-data-cleaning.html#absolute-paths",
     "title": "Data Viz with R",
     "section": "Absolute paths",
-    "text": "Absolute paths\n\nsetwd(\"/Users/z3509778/Library/CloudStorage/OneDrive-UNSW/Data Vis Workshop/CourseSite\")\n\n\n\n\nIf the first line of your R script is\nsetwd(\"C:\\Users\\jenny\\path\\that\\only\\I\\have\")\nI will come into your office and SET YOUR COMPUTER ON FIRE 🔥.\n\n\n—Jenny Bryan in Project-oriented workflow"
+    "text": "Absolute paths\n\nsetwd(\"/Users/z3509778/Library/CloudStorage/OneDrive-UNSW/Data Vis Workshop/CourseSite\")\n\n. . .\n\n\nIf the first line of your R script is\nsetwd(\"C:\\Users\\jenny\\path\\that\\only\\I\\have\")\nI will come into your office and SET YOUR COMPUTER ON FIRE 🔥.\n\n\n—Jenny Bryan in Project-oriented workflow"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#relative-paths-with-herehere",
     "href": "lectures/lecture-data-cleaning.html#relative-paths-with-herehere",
     "title": "Data Viz with R",
     "section": "Relative paths with here::here()",
-    "text": "Relative paths with here::here()\n\nArtwork by @allison_horst"
+    "text": "Relative paths with here::here()\n\n\n\nArtwork by @allison_horst"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#mini-exercise",
     "href": "lectures/lecture-data-cleaning.html#mini-exercise",
     "title": "Data Viz with R",
     "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 3 minutes\n\nAre you here yet?\n\n\n\n\n\n\nEnter here::here() at the console to see your current working directory. This should be where you saved your project!\nEnter here::here(\"exercises\") at the console. What happens?\nEnter list.files(here::here(\"exercises\")) at the console. Note that you don’t need the full path!"
+    "text": "Mini-Exercise\n\n 3 minutes\n\n\nAre you here yet?\n\n\n\n\n\n\nEnter here::here() at the console to see your current working directory. This should be where you saved your project!\nEnter here::here(\"exercises\") at the console. What happens?\nEnter list.files(here::here(\"exercises\")) at the console. Note that you don’t need the full path!"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#section",
@@ -67,14 +72,14 @@
     "href": "lectures/lecture-data-cleaning.html#an-example-untidy-data",
     "title": "Data Viz with R",
     "section": "An example: untidy data",
-    "text": "An example: untidy data\nPenguin species and island of habitation\n\n\n# A tibble: 3 × 4\n# Groups:   species [3]\n  species   Biscoe Dream Torgersen\n  &lt;fct&gt;      &lt;int&gt; &lt;int&gt;     &lt;int&gt;\n1 Adelie        44    56        52\n2 Chinstrap     NA    68        NA\n3 Gentoo       124    NA        NA"
+    "text": "An example: untidy data\n\nPenguin species and island of habitation\n\n\n# A tibble: 3 × 4\n# Groups:   species [3]\n  species   Biscoe Dream Torgersen\n  &lt;fct&gt;      &lt;int&gt; &lt;int&gt;     &lt;int&gt;\n1 Adelie        44    56        52\n2 Chinstrap     NA    68        NA\n3 Gentoo       124    NA        NA"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#an-example-tidy-data",
     "href": "lectures/lecture-data-cleaning.html#an-example-tidy-data",
     "title": "Data Viz with R",
     "section": "An example: tidy data",
-    "text": "An example: tidy data\nPenguin species and island of habitation\n\n\n# A tibble: 5 × 3\n# Groups:   species [3]\n  species   island        n\n  &lt;fct&gt;     &lt;fct&gt;     &lt;int&gt;\n1 Adelie    Biscoe       44\n2 Adelie    Dream        56\n3 Adelie    Torgersen    52\n4 Chinstrap Dream        68\n5 Gentoo    Biscoe      124"
+    "text": "An example: tidy data\n\nPenguin species and island of habitation\n\n\n# A tibble: 5 × 3\n# Groups:   species [3]\n  species   island        n\n  &lt;fct&gt;     &lt;fct&gt;     &lt;int&gt;\n1 Adelie    Biscoe       44\n2 Adelie    Dream        56\n3 Adelie    Torgersen    52\n4 Chinstrap Dream        68\n5 Gentoo    Biscoe      124"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#section-3",
@@ -102,91 +107,91 @@
     "href": "lectures/lecture-data-cleaning.html#keep-rows-that-match-a-condition-with-filter",
     "title": "Data Viz with R",
     "section": "Keep rows that match a condition with filter()",
-    "text": "Keep rows that match a condition with filter()\n\n\n# Load dplyr library\nlibrary(dplyr)\n\n# Load cars dataset\ndata(cars)\n\n# Filter rows\ncars |&gt; \n  filter(speed == 10)\n\n\n  speed dist\n1    10   18\n2    10   26\n3    10   34\n\n\n\n\n\n\n\n# Filter rows\ncars |&gt; \n  filter(speed &gt;= 10 & dist &lt;= 20)\n\n\n  speed dist\n1    10   18\n2    11   17\n3    12   14\n4    12   20\n5    15   20"
+    "text": "Keep rows that match a condition with filter()\n\n# Load dplyr library\nlibrary(dplyr)\n\n# Load cars dataset\ndata(cars)\n\n# Filter rows\ncars |&gt; \n  filter(speed == 10)\n\n  speed dist\n1    10   18\n2    10   26\n3    10   34\n\n\n. . .\n\n\n# Filter rows\ncars |&gt; \n  filter(speed &gt;= 10 & dist &lt;= 20)\n\n  speed dist\n1    10   18\n2    11   17\n3    12   14\n4    12   20\n5    15   20"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#keep-rows-by-position-with-slice",
     "href": "lectures/lecture-data-cleaning.html#keep-rows-by-position-with-slice",
     "title": "Data Viz with R",
     "section": "Keep rows by position with slice()",
-    "text": "Keep rows by position with slice()\n\n\n# Slice rows 1 to 3\ncars |&gt; \n  slice(1:3)\n\n\n  speed dist\n1     4    2\n2     4   10\n3     7    4\n\n\n\n\n\n\n\n# Slice last 3 rows\ncars |&gt; \n  slice_tail(n=3)\n\n\n  speed dist\n1    24   93\n2    24  120\n3    25   85\n\n\n\n\n\n\n\n\n# Slice speediest 3 rows\ncars |&gt; \n  slice_max(speed, n=3)\n\n\n  speed dist\n1    25   85\n2    24   70\n3    24   92\n4    24   93\n5    24  120"
+    "text": "Keep rows by position with slice()\n\n# Slice rows 1 to 3\ncars |&gt; \n  slice(1:3)\n\n  speed dist\n1     4    2\n2     4   10\n3     7    4\n\n\n. . .\n\n\n# Slice last 3 rows\ncars |&gt; \n  slice_tail(n=3)\n\n  speed dist\n1    24   93\n2    24  120\n3    25   85\n\n\n. . .\n\n\n# Slice speediest 3 rows\ncars |&gt; \n  slice_max(speed, n=3)\n\n  speed dist\n1    25   85\n2    24   70\n3    24   92\n4    24   93\n5    24  120"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#keep-or-drop-columns-with-select",
     "href": "lectures/lecture-data-cleaning.html#keep-or-drop-columns-with-select",
     "title": "Data Viz with R",
     "section": "Keep or drop columns with select()",
-    "text": "Keep or drop columns with select()\n\n\n# Filter rows\ncars |&gt; \n  select(speed)\n\n\n   speed\n1      4\n2      4\n3      7\n4      7\n5      8\n6      9\n7     10\n8     10\n9     10\n10    11\n11    11\n12    12\n13    12\n14    12\n15    12\n16    13\n17    13\n18    13\n19    13\n20    14\n21    14\n22    14\n23    14\n24    15\n25    15\n26    15\n27    16\n28    16\n29    17\n30    17\n31    17\n32    18\n33    18\n34    18\n35    18\n36    19\n37    19\n38    19\n39    20\n40    20\n41    20\n42    20\n43    20\n44    22\n45    23\n46    24\n47    24\n48    24\n49    24\n50    25"
+    "text": "Keep or drop columns with select()\n\n# Filter rows\ncars |&gt; \n  select(speed)\n\n   speed\n1      4\n2      4\n3      7\n4      7\n5      8\n6      9\n7     10\n8     10\n9     10\n10    11\n11    11\n12    12\n13    12\n14    12\n15    12\n16    13\n17    13\n18    13\n19    13\n20    14\n21    14\n22    14\n23    14\n24    15\n25    15\n26    15\n27    16\n28    16\n29    17\n30    17\n31    17\n32    18\n33    18\n34    18\n35    18\n36    19\n37    19\n38    19\n39    20\n40    20\n41    20\n42    20\n43    20\n44    22\n45    23\n46    24\n47    24\n48    24\n49    24\n50    25"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#select-columns-with-select",
     "href": "lectures/lecture-data-cleaning.html#select-columns-with-select",
     "title": "Data Viz with R",
     "section": "Select columns with select()",
-    "text": "Select columns with select()\n\n\n# Filter rows\ncars |&gt; \n  select(starts_with(\"d\"))\n\n\n   dist\n1     2\n2    10\n3     4\n4    22\n5    16\n6    10\n7    18\n8    26\n9    34\n10   17\n11   28\n12   14\n13   20\n14   24\n15   28\n16   26\n17   34\n18   34\n19   46\n20   26\n21   36\n22   60\n23   80\n24   20\n25   26\n26   54\n27   32\n28   40\n29   32\n30   40\n31   50\n32   42\n33   56\n34   76\n35   84\n36   36\n37   46\n38   68\n39   32\n40   48\n41   52\n42   56\n43   64\n44   66\n45   54\n46   70\n47   92\n48   93\n49  120\n50   85"
+    "text": "Select columns with select()\n\n# Filter rows\ncars |&gt; \n  select(starts_with(\"d\"))\n\n   dist\n1     2\n2    10\n3     4\n4    22\n5    16\n6    10\n7    18\n8    26\n9    34\n10   17\n11   28\n12   14\n13   20\n14   24\n15   28\n16   26\n17   34\n18   34\n19   46\n20   26\n21   36\n22   60\n23   80\n24   20\n25   26\n26   54\n27   32\n28   40\n29   32\n30   40\n31   50\n32   42\n33   56\n34   76\n35   84\n36   36\n37   46\n38   68\n39   32\n40   48\n41   52\n42   56\n43   64\n44   66\n45   54\n46   70\n47   92\n48   93\n49  120\n50   85"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#rename-a-variable-with-rename",
     "href": "lectures/lecture-data-cleaning.html#rename-a-variable-with-rename",
     "title": "Data Viz with R",
     "section": "Rename a variable with rename()",
-    "text": "Rename a variable with rename()\n\n\n# rename variable\ncars |&gt; \n  rename(distance = dist)\n\n\n   speed distance\n1      4        2\n2      4       10\n3      7        4\n4      7       22\n5      8       16\n6      9       10\n7     10       18\n8     10       26\n9     10       34\n10    11       17\n11    11       28\n12    12       14\n13    12       20\n14    12       24\n15    12       28\n16    13       26\n17    13       34\n18    13       34\n19    13       46\n20    14       26\n21    14       36\n22    14       60\n23    14       80\n24    15       20\n25    15       26\n26    15       54\n27    16       32\n28    16       40\n29    17       32\n30    17       40\n31    17       50\n32    18       42\n33    18       56\n34    18       76\n35    18       84\n36    19       36\n37    19       46\n38    19       68\n39    20       32\n40    20       48\n41    20       52\n42    20       56\n43    20       64\n44    22       66\n45    23       54\n46    24       70\n47    24       92\n48    24       93\n49    24      120\n50    25       85"
+    "text": "Rename a variable with rename()\n\n# rename variable\ncars |&gt; \n  rename(distance = dist)\n\n   speed distance\n1      4        2\n2      4       10\n3      7        4\n4      7       22\n5      8       16\n6      9       10\n7     10       18\n8     10       26\n9     10       34\n10    11       17\n11    11       28\n12    12       14\n13    12       20\n14    12       24\n15    12       28\n16    13       26\n17    13       34\n18    13       34\n19    13       46\n20    14       26\n21    14       36\n22    14       60\n23    14       80\n24    15       20\n25    15       26\n26    15       54\n27    16       32\n28    16       40\n29    17       32\n30    17       40\n31    17       50\n32    18       42\n33    18       56\n34    18       76\n35    18       84\n36    19       36\n37    19       46\n38    19       68\n39    20       32\n40    20       48\n41    20       52\n42    20       56\n43    20       64\n44    22       66\n45    23       54\n46    24       70\n47    24       92\n48    24       93\n49    24      120\n50    25       85"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#create-new-variables-with-mutate",
     "href": "lectures/lecture-data-cleaning.html#create-new-variables-with-mutate",
     "title": "Data Viz with R",
     "section": "Create new variables with mutate()",
-    "text": "Create new variables with mutate()\n\n\n# Filter rows\ncars |&gt; \n  mutate(\n    time = dist / speed\n  )\n\n\n   speed dist      time\n1      4    2 0.5000000\n2      4   10 2.5000000\n3      7    4 0.5714286\n4      7   22 3.1428571\n5      8   16 2.0000000\n6      9   10 1.1111111\n7     10   18 1.8000000\n8     10   26 2.6000000\n9     10   34 3.4000000\n10    11   17 1.5454545\n11    11   28 2.5454545\n12    12   14 1.1666667\n13    12   20 1.6666667\n14    12   24 2.0000000\n15    12   28 2.3333333\n16    13   26 2.0000000\n17    13   34 2.6153846\n18    13   34 2.6153846\n19    13   46 3.5384615\n20    14   26 1.8571429\n21    14   36 2.5714286\n22    14   60 4.2857143\n23    14   80 5.7142857\n24    15   20 1.3333333\n25    15   26 1.7333333\n26    15   54 3.6000000\n27    16   32 2.0000000\n28    16   40 2.5000000\n29    17   32 1.8823529\n30    17   40 2.3529412\n31    17   50 2.9411765\n32    18   42 2.3333333\n33    18   56 3.1111111\n34    18   76 4.2222222\n35    18   84 4.6666667\n36    19   36 1.8947368\n37    19   46 2.4210526\n38    19   68 3.5789474\n39    20   32 1.6000000\n40    20   48 2.4000000\n41    20   52 2.6000000\n42    20   56 2.8000000\n43    20   64 3.2000000\n44    22   66 3.0000000\n45    23   54 2.3478261\n46    24   70 2.9166667\n47    24   92 3.8333333\n48    24   93 3.8750000\n49    24  120 5.0000000\n50    25   85 3.4000000"
+    "text": "Create new variables with mutate()\n\n# Filter rows\ncars |&gt; \n  mutate(\n    time = dist / speed\n  )\n\n   speed dist      time\n1      4    2 0.5000000\n2      4   10 2.5000000\n3      7    4 0.5714286\n4      7   22 3.1428571\n5      8   16 2.0000000\n6      9   10 1.1111111\n7     10   18 1.8000000\n8     10   26 2.6000000\n9     10   34 3.4000000\n10    11   17 1.5454545\n11    11   28 2.5454545\n12    12   14 1.1666667\n13    12   20 1.6666667\n14    12   24 2.0000000\n15    12   28 2.3333333\n16    13   26 2.0000000\n17    13   34 2.6153846\n18    13   34 2.6153846\n19    13   46 3.5384615\n20    14   26 1.8571429\n21    14   36 2.5714286\n22    14   60 4.2857143\n23    14   80 5.7142857\n24    15   20 1.3333333\n25    15   26 1.7333333\n26    15   54 3.6000000\n27    16   32 2.0000000\n28    16   40 2.5000000\n29    17   32 1.8823529\n30    17   40 2.3529412\n31    17   50 2.9411765\n32    18   42 2.3333333\n33    18   56 3.1111111\n34    18   76 4.2222222\n35    18   84 4.6666667\n36    19   36 1.8947368\n37    19   46 2.4210526\n38    19   68 3.5789474\n39    20   32 1.6000000\n40    20   48 2.4000000\n41    20   52 2.6000000\n42    20   56 2.8000000\n43    20   64 3.2000000\n44    22   66 3.0000000\n45    23   54 2.3478261\n46    24   70 2.9166667\n47    24   92 3.8333333\n48    24   93 3.8750000\n49    24  120 5.0000000\n50    25   85 3.4000000"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#create-new-variables-with-mutate-1",
     "href": "lectures/lecture-data-cleaning.html#create-new-variables-with-mutate-1",
     "title": "Data Viz with R",
     "section": "Create new variables with mutate()",
-    "text": "Create new variables with mutate()\n\n\n# Filter rows\ncars |&gt; \n  mutate(\n    class = ifelse(speed &gt;= 10, \n                   \"fast\",\n                   \"slow\")\n  )\n\n\n   speed dist class\n1      4    2  slow\n2      4   10  slow\n3      7    4  slow\n4      7   22  slow\n5      8   16  slow\n6      9   10  slow\n7     10   18  fast\n8     10   26  fast\n9     10   34  fast\n10    11   17  fast\n11    11   28  fast\n12    12   14  fast\n13    12   20  fast\n14    12   24  fast\n15    12   28  fast\n16    13   26  fast\n17    13   34  fast\n18    13   34  fast\n19    13   46  fast\n20    14   26  fast\n21    14   36  fast\n22    14   60  fast\n23    14   80  fast\n24    15   20  fast\n25    15   26  fast\n26    15   54  fast\n27    16   32  fast\n28    16   40  fast\n29    17   32  fast\n30    17   40  fast\n31    17   50  fast\n32    18   42  fast\n33    18   56  fast\n34    18   76  fast\n35    18   84  fast\n36    19   36  fast\n37    19   46  fast\n38    19   68  fast\n39    20   32  fast\n40    20   48  fast\n41    20   52  fast\n42    20   56  fast\n43    20   64  fast\n44    22   66  fast\n45    23   54  fast\n46    24   70  fast\n47    24   92  fast\n48    24   93  fast\n49    24  120  fast\n50    25   85  fast"
+    "text": "Create new variables with mutate()\n\n# Filter rows\ncars |&gt; \n  mutate(\n    class = ifelse(speed &gt;= 10, \n                   \"fast\",\n                   \"slow\")\n  )\n\n   speed dist class\n1      4    2  slow\n2      4   10  slow\n3      7    4  slow\n4      7   22  slow\n5      8   16  slow\n6      9   10  slow\n7     10   18  fast\n8     10   26  fast\n9     10   34  fast\n10    11   17  fast\n11    11   28  fast\n12    12   14  fast\n13    12   20  fast\n14    12   24  fast\n15    12   28  fast\n16    13   26  fast\n17    13   34  fast\n18    13   34  fast\n19    13   46  fast\n20    14   26  fast\n21    14   36  fast\n22    14   60  fast\n23    14   80  fast\n24    15   20  fast\n25    15   26  fast\n26    15   54  fast\n27    16   32  fast\n28    16   40  fast\n29    17   32  fast\n30    17   40  fast\n31    17   50  fast\n32    18   42  fast\n33    18   56  fast\n34    18   76  fast\n35    18   84  fast\n36    19   36  fast\n37    19   46  fast\n38    19   68  fast\n39    20   32  fast\n40    20   48  fast\n41    20   52  fast\n42    20   56  fast\n43    20   64  fast\n44    22   66  fast\n45    23   54  fast\n46    24   70  fast\n47    24   92  fast\n48    24   93  fast\n49    24  120  fast\n50    25   85  fast"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#create-new-variables-with-mutate-2",
     "href": "lectures/lecture-data-cleaning.html#create-new-variables-with-mutate-2",
     "title": "Data Viz with R",
     "section": "Create new variables with mutate()",
-    "text": "Create new variables with mutate()\n\n\n# Filter rows\ncars |&gt; \n  mutate(\n    time = dist / speed,\n    class = ifelse(speed &gt;= 10, \n                   \"fast\",\n                   \"slow\")\n  )\n\n\n   speed dist      time class\n1      4    2 0.5000000  slow\n2      4   10 2.5000000  slow\n3      7    4 0.5714286  slow\n4      7   22 3.1428571  slow\n5      8   16 2.0000000  slow\n6      9   10 1.1111111  slow\n7     10   18 1.8000000  fast\n8     10   26 2.6000000  fast\n9     10   34 3.4000000  fast\n10    11   17 1.5454545  fast\n11    11   28 2.5454545  fast\n12    12   14 1.1666667  fast\n13    12   20 1.6666667  fast\n14    12   24 2.0000000  fast\n15    12   28 2.3333333  fast\n16    13   26 2.0000000  fast\n17    13   34 2.6153846  fast\n18    13   34 2.6153846  fast\n19    13   46 3.5384615  fast\n20    14   26 1.8571429  fast\n21    14   36 2.5714286  fast\n22    14   60 4.2857143  fast\n23    14   80 5.7142857  fast\n24    15   20 1.3333333  fast\n25    15   26 1.7333333  fast\n26    15   54 3.6000000  fast\n27    16   32 2.0000000  fast\n28    16   40 2.5000000  fast\n29    17   32 1.8823529  fast\n30    17   40 2.3529412  fast\n31    17   50 2.9411765  fast\n32    18   42 2.3333333  fast\n33    18   56 3.1111111  fast\n34    18   76 4.2222222  fast\n35    18   84 4.6666667  fast\n36    19   36 1.8947368  fast\n37    19   46 2.4210526  fast\n38    19   68 3.5789474  fast\n39    20   32 1.6000000  fast\n40    20   48 2.4000000  fast\n41    20   52 2.6000000  fast\n42    20   56 2.8000000  fast\n43    20   64 3.2000000  fast\n44    22   66 3.0000000  fast\n45    23   54 2.3478261  fast\n46    24   70 2.9166667  fast\n47    24   92 3.8333333  fast\n48    24   93 3.8750000  fast\n49    24  120 5.0000000  fast\n50    25   85 3.4000000  fast"
+    "text": "Create new variables with mutate()\n\n# Filter rows\ncars |&gt; \n  mutate(\n    time = dist / speed,\n    class = ifelse(speed &gt;= 10, \n                   \"fast\",\n                   \"slow\")\n  )\n\n   speed dist      time class\n1      4    2 0.5000000  slow\n2      4   10 2.5000000  slow\n3      7    4 0.5714286  slow\n4      7   22 3.1428571  slow\n5      8   16 2.0000000  slow\n6      9   10 1.1111111  slow\n7     10   18 1.8000000  fast\n8     10   26 2.6000000  fast\n9     10   34 3.4000000  fast\n10    11   17 1.5454545  fast\n11    11   28 2.5454545  fast\n12    12   14 1.1666667  fast\n13    12   20 1.6666667  fast\n14    12   24 2.0000000  fast\n15    12   28 2.3333333  fast\n16    13   26 2.0000000  fast\n17    13   34 2.6153846  fast\n18    13   34 2.6153846  fast\n19    13   46 3.5384615  fast\n20    14   26 1.8571429  fast\n21    14   36 2.5714286  fast\n22    14   60 4.2857143  fast\n23    14   80 5.7142857  fast\n24    15   20 1.3333333  fast\n25    15   26 1.7333333  fast\n26    15   54 3.6000000  fast\n27    16   32 2.0000000  fast\n28    16   40 2.5000000  fast\n29    17   32 1.8823529  fast\n30    17   40 2.3529412  fast\n31    17   50 2.9411765  fast\n32    18   42 2.3333333  fast\n33    18   56 3.1111111  fast\n34    18   76 4.2222222  fast\n35    18   84 4.6666667  fast\n36    19   36 1.8947368  fast\n37    19   46 2.4210526  fast\n38    19   68 3.5789474  fast\n39    20   32 1.6000000  fast\n40    20   48 2.4000000  fast\n41    20   52 2.6000000  fast\n42    20   56 2.8000000  fast\n43    20   64 3.2000000  fast\n44    22   66 3.0000000  fast\n45    23   54 2.3478261  fast\n46    24   70 2.9166667  fast\n47    24   92 3.8333333  fast\n48    24   93 3.8750000  fast\n49    24  120 5.0000000  fast\n50    25   85 3.4000000  fast"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#create-more-complex-variables-with-case_when",
     "href": "lectures/lecture-data-cleaning.html#create-more-complex-variables-with-case_when",
     "title": "Data Viz with R",
     "section": "Create more complex variables with case_when()",
-    "text": "Create more complex variables with case_when()\n\n\n# Create a new variable\ncars |&gt; \n  mutate(\n    class = case_when(\n      speed &lt;= 4 ~ \"slow\", \n      speed &lt;= 10 ~ \"average\", \n      .default = \"fast\"\n    )\n  )\n\n\n   speed dist   class\n1      4    2    slow\n2      4   10    slow\n3      7    4 average\n4      7   22 average\n5      8   16 average\n6      9   10 average\n7     10   18 average\n8     10   26 average\n9     10   34 average\n10    11   17    fast\n11    11   28    fast\n12    12   14    fast\n13    12   20    fast\n14    12   24    fast\n15    12   28    fast\n16    13   26    fast\n17    13   34    fast\n18    13   34    fast\n19    13   46    fast\n20    14   26    fast\n21    14   36    fast\n22    14   60    fast\n23    14   80    fast\n24    15   20    fast\n25    15   26    fast\n26    15   54    fast\n27    16   32    fast\n28    16   40    fast\n29    17   32    fast\n30    17   40    fast\n31    17   50    fast\n32    18   42    fast\n33    18   56    fast\n34    18   76    fast\n35    18   84    fast\n36    19   36    fast\n37    19   46    fast\n38    19   68    fast\n39    20   32    fast\n40    20   48    fast\n41    20   52    fast\n42    20   56    fast\n43    20   64    fast\n44    22   66    fast\n45    23   54    fast\n46    24   70    fast\n47    24   92    fast\n48    24   93    fast\n49    24  120    fast\n50    25   85    fast"
+    "text": "Create more complex variables with case_when()\n\n# Create a new variable\ncars |&gt; \n  mutate(\n    class = case_when(\n      speed &lt;= 4 ~ \"slow\", \n      speed &lt;= 10 ~ \"average\", \n      .default = \"fast\"\n    )\n  )\n\n   speed dist   class\n1      4    2    slow\n2      4   10    slow\n3      7    4 average\n4      7   22 average\n5      8   16 average\n6      9   10 average\n7     10   18 average\n8     10   26 average\n9     10   34 average\n10    11   17    fast\n11    11   28    fast\n12    12   14    fast\n13    12   20    fast\n14    12   24    fast\n15    12   28    fast\n16    13   26    fast\n17    13   34    fast\n18    13   34    fast\n19    13   46    fast\n20    14   26    fast\n21    14   36    fast\n22    14   60    fast\n23    14   80    fast\n24    15   20    fast\n25    15   26    fast\n26    15   54    fast\n27    16   32    fast\n28    16   40    fast\n29    17   32    fast\n30    17   40    fast\n31    17   50    fast\n32    18   42    fast\n33    18   56    fast\n34    18   76    fast\n35    18   84    fast\n36    19   36    fast\n37    19   46    fast\n38    19   68    fast\n39    20   32    fast\n40    20   48    fast\n41    20   52    fast\n42    20   56    fast\n43    20   64    fast\n44    22   66    fast\n45    23   54    fast\n46    24   70    fast\n47    24   92    fast\n48    24   93    fast\n49    24  120    fast\n50    25   85    fast"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#sort-variables-with-arrange",
     "href": "lectures/lecture-data-cleaning.html#sort-variables-with-arrange",
     "title": "Data Viz with R",
     "section": "Sort variables with arrange()",
-    "text": "Sort variables with arrange()\n\n\n# Sort by speed\ncars |&gt; \n  arrange(speed)\n\n\n   speed dist\n1      4    2\n2      4   10\n3      7    4\n4      7   22\n5      8   16\n6      9   10\n7     10   18\n8     10   26\n9     10   34\n10    11   17\n11    11   28\n12    12   14\n13    12   20\n14    12   24\n15    12   28\n16    13   26\n17    13   34\n18    13   34\n19    13   46\n20    14   26\n21    14   36\n22    14   60\n23    14   80\n24    15   20\n25    15   26\n26    15   54\n27    16   32\n28    16   40\n29    17   32\n30    17   40\n31    17   50\n32    18   42\n33    18   56\n34    18   76\n35    18   84\n36    19   36\n37    19   46\n38    19   68\n39    20   32\n40    20   48\n41    20   52\n42    20   56\n43    20   64\n44    22   66\n45    23   54\n46    24   70\n47    24   92\n48    24   93\n49    24  120\n50    25   85"
+    "text": "Sort variables with arrange()\n\n# Sort by speed\ncars |&gt; \n  arrange(speed)\n\n   speed dist\n1      4    2\n2      4   10\n3      7    4\n4      7   22\n5      8   16\n6      9   10\n7     10   18\n8     10   26\n9     10   34\n10    11   17\n11    11   28\n12    12   14\n13    12   20\n14    12   24\n15    12   28\n16    13   26\n17    13   34\n18    13   34\n19    13   46\n20    14   26\n21    14   36\n22    14   60\n23    14   80\n24    15   20\n25    15   26\n26    15   54\n27    16   32\n28    16   40\n29    17   32\n30    17   40\n31    17   50\n32    18   42\n33    18   56\n34    18   76\n35    18   84\n36    19   36\n37    19   46\n38    19   68\n39    20   32\n40    20   48\n41    20   52\n42    20   56\n43    20   64\n44    22   66\n45    23   54\n46    24   70\n47    24   92\n48    24   93\n49    24  120\n50    25   85"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#sort-variables-with-arrange-1",
     "href": "lectures/lecture-data-cleaning.html#sort-variables-with-arrange-1",
     "title": "Data Viz with R",
     "section": "Sort variables with arrange()",
-    "text": "Sort variables with arrange()\n\n\n# Sort by speed\ncars |&gt; \n  arrange(-speed, dist)\n\n\n   speed dist\n1     25   85\n2     24   70\n3     24   92\n4     24   93\n5     24  120\n6     23   54\n7     22   66\n8     20   32\n9     20   48\n10    20   52\n11    20   56\n12    20   64\n13    19   36\n14    19   46\n15    19   68\n16    18   42\n17    18   56\n18    18   76\n19    18   84\n20    17   32\n21    17   40\n22    17   50\n23    16   32\n24    16   40\n25    15   20\n26    15   26\n27    15   54\n28    14   26\n29    14   36\n30    14   60\n31    14   80\n32    13   26\n33    13   34\n34    13   34\n35    13   46\n36    12   14\n37    12   20\n38    12   24\n39    12   28\n40    11   17\n41    11   28\n42    10   18\n43    10   26\n44    10   34\n45     9   10\n46     8   16\n47     7    4\n48     7   22\n49     4    2\n50     4   10"
+    "text": "Sort variables with arrange()\n\n# Sort by speed\ncars |&gt; \n  arrange(-speed, dist)\n\n   speed dist\n1     25   85\n2     24   70\n3     24   92\n4     24   93\n5     24  120\n6     23   54\n7     22   66\n8     20   32\n9     20   48\n10    20   52\n11    20   56\n12    20   64\n13    19   36\n14    19   46\n15    19   68\n16    18   42\n17    18   56\n18    18   76\n19    18   84\n20    17   32\n21    17   40\n22    17   50\n23    16   32\n24    16   40\n25    15   20\n26    15   26\n27    15   54\n28    14   26\n29    14   36\n30    14   60\n31    14   80\n32    13   26\n33    13   34\n34    13   34\n35    13   46\n36    12   14\n37    12   20\n38    12   24\n39    12   28\n40    11   17\n41    11   28\n42    10   18\n43    10   26\n44    10   34\n45     9   10\n46     8   16\n47     7    4\n48     7   22\n49     4    2\n50     4   10"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#the-pipe-operator",
     "href": "lectures/lecture-data-cleaning.html#the-pipe-operator",
     "title": "Data Viz with R",
     "section": "The pipe operator |>",
-    "text": "The pipe operator |&gt;\n\n# Sort by speed\ncars |&gt; arrange(speed)\n\n\n\n\n|&gt; is called the pipe operator\nIt takes the object on the left and passes it to the first argument of the function on the right\n\n\n\n\n\n# Equivalent to above code snippet\narrange(cars, speed)\n\n\n\n\nWe can use |&gt; to chain multiple dplyr verbs\nkeyboard shortcut is Ctrl/Cmd + Shift + M"
+    "text": "The pipe operator |&gt;\n\n# Sort by speed\ncars |&gt; arrange(speed)\n\n\n\n\n|&gt; is called the pipe operator\nIt takes the object on the left and passes it to the first argument of the function on the right\n\n\n. . .\n\n\n# Equivalent to above code snippet\narrange(cars, speed)\n\n\n\n\nWe can use |&gt; to chain multiple dplyr verbs\nkeyboard shortcut is Ctrl/Cmd + Shift + M"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#the-pipe-operator-1",
     "href": "lectures/lecture-data-cleaning.html#the-pipe-operator-1",
     "title": "Data Viz with R",
     "section": "The pipe operator |>",
-    "text": "The pipe operator |&gt;\n\n\n# Data prep\ncars |&gt; \n  mutate(time = dist / speed) |&gt; \n  arrange(-time) |&gt; \n  slice(1)\n\n\n  speed dist     time\n1    14   80 5.714286\n\n\n\n\n\nOften we will save the output of such a chain using the assignment operator &lt;-\n\n\n# Data prep\nlongestTime &lt;- cars |&gt;\n  mutate(time = dist / speed) |&gt; \n  arrange(-time) |&gt; \n  slice(1)\n\nlongestTime\n\n\n  speed dist     time\n1    14   80 5.714286"
+    "text": "The pipe operator |&gt;\n\n# Data prep\ncars |&gt; \n  mutate(time = dist / speed) |&gt; \n  arrange(-time) |&gt; \n  slice(1)\n\n  speed dist     time\n1    14   80 5.714286\n\n\n. . .\n\nOften we will save the output of such a chain using the assignment operator &lt;-\n\n# Data prep\nlongestTime &lt;- cars |&gt;\n  mutate(time = dist / speed) |&gt; \n  arrange(-time) |&gt; \n  slice(1)\n\nlongestTime\n\n  speed dist     time\n1    14   80 5.714286"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#section-5",
@@ -200,49 +205,49 @@
     "href": "lectures/lecture-data-cleaning.html#the-old-pipe-operator",
     "title": "Data Viz with R",
     "section": "The old pipe operator %>%",
-    "text": "The old pipe operator %&gt;%\nIf you’ve been using R for a while you may be familiar with the %&gt;% pipe operator shipped with the magrittr package.\n\n\n\n\n\n# Exactly the same thing!\ncars |&gt; \n  mutate(time = dist / speed)  |&gt; \n  arrange(-time)  |&gt;  \n  slice(1)\n\n\n\n# Exactly the same thing!\ncars %&gt;% \n  mutate(time = dist / speed) %&gt;%\n  arrange(-time) %&gt;% \n  slice(1)\n\n\n\n\n\n\nFor simple cases, |&gt; and %&gt;% behave the same\n|&gt; is simpler\n|&gt; is implemented in base R"
+    "text": "The old pipe operator %&gt;%\nIf you’ve been using R for a while you may be familiar with the %&gt;% pipe operator shipped with the magrittr package.\n. . .\n\n\n\n\n# Exactly the same thing!\ncars |&gt; \n  mutate(time = dist / speed)  |&gt; \n  arrange(-time)  |&gt;  \n  slice(1)\n\n\n\n# Exactly the same thing!\ncars %&gt;% \n  mutate(time = dist / speed) %&gt;%\n  arrange(-time) %&gt;% \n  slice(1)\n\n\n\n\n\n\nFor simple cases, |&gt; and %&gt;% behave the same\n|&gt; is simpler\n|&gt; is implemented in base R"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#a-note-on-style",
     "href": "lectures/lecture-data-cleaning.html#a-note-on-style",
     "title": "Data Viz with R",
     "section": "A note on style",
-    "text": "A note on style\n\n\n\n# Data prep\ncars |&gt; \n  mutate(time = dist / speed) |&gt; \n  arrange(-time) |&gt; \n  slice(1)\n\n\n\nNeat and easy to read!\nEach verb on a new line\n|&gt; at end of line\nIndentation\nUse of spacing\n\n\n\n\nAvoid this!\n\n# Data prep\ncars|&gt;mutate(time=dist-speed)|&gt;arrange(-time)|&gt;slice(1)"
+    "text": "A note on style\n\n\n\n# Data prep\ncars |&gt; \n  mutate(time = dist / speed) |&gt; \n  arrange(-time) |&gt; \n  slice(1)\n\n\n\nNeat and easy to read!\nEach verb on a new line\n|&gt; at end of line\nIndentation\nUse of spacing\n\n\n\n. . .\nAvoid this!\n\n# Data prep\ncars|&gt;mutate(time=dist-speed)|&gt;arrange(-time)|&gt;slice(1)"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#mini-exercise-1",
     "href": "lectures/lecture-data-cleaning.html#mini-exercise-1",
     "title": "Data Viz with R",
     "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 10 minutes\n\nPractice with dplyr!\n\n\n\n\n\n\nIn the RStudio menu navigate to Tools &gt; Global Options &gt; Code and tick the box to use the native pipe operator\nWe will use the penguins dataset shipped in the palmerpenguins library. Determine the longest bill length among the five lightest female penguins from the Gentoo species.\n\n\n# Code to get you started\nlibrary(palmerpenguins) \n\npenguins |&gt; \n  filter(species == )"
+    "text": "Mini-Exercise\n\n 10 minutes\n\n\nPractice with dplyr!\n\n\n\n\n\n\nIn the RStudio menu navigate to Tools &gt; Global Options &gt; Code and tick the box to use the native pipe operator\nWe will use the penguins dataset shipped in the palmerpenguins library. Determine the longest bill length among the five lightest female penguins from the Gentoo species.\n\n\n# Code to get you started\nlibrary(palmerpenguins) \n\npenguins |&gt; \n  filter(species == )"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#factors-in-r",
     "href": "lectures/lecture-data-cleaning.html#factors-in-r",
     "title": "Data Viz with R",
     "section": "Factors in R",
-    "text": "Factors in R\nEarlier we used case_when() to create a categorical variable with three categories: fast, average, and slow.\n\n\n# Create a new variable\ncars |&gt; \n  mutate(\n    class = case_when(\n      speed &lt;= 4 ~ \"slow\", \n      speed &lt;= 10 ~ \"average\", \n      .default = \"fast\"\n    )) \n\n\n   speed dist   class\n1      4    2    slow\n2      4   10    slow\n3      7    4 average\n4      7   22 average\n5      8   16 average\n6      9   10 average\n7     10   18 average\n8     10   26 average\n9     10   34 average\n10    11   17    fast\n11    11   28    fast\n12    12   14    fast\n13    12   20    fast\n14    12   24    fast\n15    12   28    fast\n16    13   26    fast\n17    13   34    fast\n18    13   34    fast\n19    13   46    fast\n20    14   26    fast\n21    14   36    fast\n22    14   60    fast\n23    14   80    fast\n24    15   20    fast\n25    15   26    fast\n26    15   54    fast\n27    16   32    fast\n28    16   40    fast\n29    17   32    fast\n30    17   40    fast\n31    17   50    fast\n32    18   42    fast\n33    18   56    fast\n34    18   76    fast\n35    18   84    fast\n36    19   36    fast\n37    19   46    fast\n38    19   68    fast\n39    20   32    fast\n40    20   48    fast\n41    20   52    fast\n42    20   56    fast\n43    20   64    fast\n44    22   66    fast\n45    23   54    fast\n46    24   70    fast\n47    24   92    fast\n48    24   93    fast\n49    24  120    fast\n50    25   85    fast"
+    "text": "Factors in R\nEarlier we used case_when() to create a categorical variable with three categories: fast, average, and slow.\n\n# Create a new variable\ncars |&gt; \n  mutate(\n    class = case_when(\n      speed &lt;= 4 ~ \"slow\", \n      speed &lt;= 10 ~ \"average\", \n      .default = \"fast\"\n    )) \n\n   speed dist   class\n1      4    2    slow\n2      4   10    slow\n3      7    4 average\n4      7   22 average\n5      8   16 average\n6      9   10 average\n7     10   18 average\n8     10   26 average\n9     10   34 average\n10    11   17    fast\n11    11   28    fast\n12    12   14    fast\n13    12   20    fast\n14    12   24    fast\n15    12   28    fast\n16    13   26    fast\n17    13   34    fast\n18    13   34    fast\n19    13   46    fast\n20    14   26    fast\n21    14   36    fast\n22    14   60    fast\n23    14   80    fast\n24    15   20    fast\n25    15   26    fast\n26    15   54    fast\n27    16   32    fast\n28    16   40    fast\n29    17   32    fast\n30    17   40    fast\n31    17   50    fast\n32    18   42    fast\n33    18   56    fast\n34    18   76    fast\n35    18   84    fast\n36    19   36    fast\n37    19   46    fast\n38    19   68    fast\n39    20   32    fast\n40    20   48    fast\n41    20   52    fast\n42    20   56    fast\n43    20   64    fast\n44    22   66    fast\n45    23   54    fast\n46    24   70    fast\n47    24   92    fast\n48    24   93    fast\n49    24  120    fast\n50    25   85    fast"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#factors-in-r-1",
     "href": "lectures/lecture-data-cleaning.html#factors-in-r-1",
     "title": "Data Viz with R",
     "section": "Factors in R",
-    "text": "Factors in R\nWe can group_by() this new variable, then use summarise() to calculate the average speed for each group.\n\n\n# Create a new variable\ncars |&gt; \n  mutate(\n    class = case_when(\n      speed &lt;= 4 ~ \"slow\", \n      speed &lt;= 10 ~ \"average\", \n      .default = \"fast\"\n    )) |&gt; \n  group_by(class) |&gt;  \n  summarise(\n    mean = mean(speed)\n  ) \n\n\n# A tibble: 3 × 2\n  class    mean\n  &lt;chr&gt;   &lt;dbl&gt;\n1 average  8.71\n2 fast    17.1 \n3 slow     4   \n\n\n\n\nNotice the ordering of the output! This is because the new class variable is a character vector."
+    "text": "Factors in R\nWe can group_by() this new variable, then use summarise() to calculate the average speed for each group.\n\n# Create a new variable\ncars |&gt; \n  mutate(\n    class = case_when(\n      speed &lt;= 4 ~ \"slow\", \n      speed &lt;= 10 ~ \"average\", \n      .default = \"fast\"\n    )) |&gt; \n  group_by(class) |&gt;  \n  summarise(\n    mean = mean(speed)\n  ) \n\n# A tibble: 3 × 2\n  class    mean\n  &lt;chr&gt;   &lt;dbl&gt;\n1 average  8.71\n2 fast    17.1 \n3 slow     4   \n\n\n. . .\nNotice the ordering of the output! This is because the new class variable is a character vector."
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#factors-in-r-2",
     "href": "lectures/lecture-data-cleaning.html#factors-in-r-2",
     "title": "Data Viz with R",
     "section": "Factors in R",
-    "text": "Factors in R\nFactors are useful for handling categorical variables.\n\n\nCategory names\nOrdering categories\nMapping colors to categories (later!)\n\n\n\nTo create a factor you must start by creating a list of the valid levels:\n\n\n# Vector of valid levels\nclassLevels &lt;- c('slow', \n                 'average', \n                 'fast')\n\n# Create factor variable\nfactor(c('fast', 'slow'), \n       levels = classLevels) \n\n\n[1] fast slow\nLevels: slow average fast"
+    "text": "Factors in R\nFactors are useful for handling categorical variables.\n\n\nCategory names\nOrdering categories\nMapping colors to categories (later!)\n\n\n. . .\nTo create a factor you must start by creating a list of the valid levels:\n\n# Vector of valid levels\nclassLevels &lt;- c('slow', \n                 'average', \n                 'fast')\n\n# Create factor variable\nfactor(c('fast', 'slow'), \n       levels = classLevels) \n\n[1] fast slow\nLevels: slow average fast"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#factors-in-r-3",
     "href": "lectures/lecture-data-cleaning.html#factors-in-r-3",
     "title": "Data Viz with R",
     "section": "Factors in R",
-    "text": "Factors in R\nLet’s put it all together!\n\n\n# Create a new variable\ncars |&gt; \n  mutate(\n    class = \n      factor(\n        case_when(\n          speed &lt;= 4 ~ \"slow\", \n          speed &lt;= 10 ~ \"average\", \n          .default = \"fast\"),\n        levels = classLevels)) |&gt; \n  group_by(class) |&gt;  \n  summarise(\n    mean = mean(speed)\n  ) \n\n\n# A tibble: 3 × 2\n  class    mean\n  &lt;fct&gt;   &lt;dbl&gt;\n1 slow     4   \n2 average  8.71\n3 fast    17.1 \n\n\n\n\n\nNow the ordering is by speed class, not alphabetically!"
+    "text": "Factors in R\nLet’s put it all together!\n\n# Create a new variable\ncars |&gt; \n  mutate(\n    class = \n      factor(\n        case_when(\n          speed &lt;= 4 ~ \"slow\", \n          speed &lt;= 10 ~ \"average\", \n          .default = \"fast\"),\n        levels = classLevels)) |&gt; \n  group_by(class) |&gt;  \n  summarise(\n    mean = mean(speed)\n  ) \n\n# A tibble: 3 × 2\n  class    mean\n  &lt;fct&gt;   &lt;dbl&gt;\n1 slow     4   \n2 average  8.71\n3 fast    17.1 \n\n\n. . .\n\nNow the ordering is by speed class, not alphabetically!"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#moving-from-wide-to-long-data",
@@ -256,28 +261,21 @@
     "href": "lectures/lecture-data-cleaning.html#moving-from-wide-to-long-data-1",
     "title": "Data Viz with R",
     "section": "Moving from wide to long data",
-    "text": "Moving from wide to long data\nWe can move from wide format to long long format using pivot_longer() from the tidyr package.\n\n\nlibrary(tidyr)\n\npenguins_wide |&gt; \n  pivot_longer(c(Biscoe, \n                 Dream, \n                 Torgersen))\n\n\n# A tibble: 9 × 3\n# Groups:   species [3]\n  species   name      value\n  &lt;fct&gt;     &lt;chr&gt;     &lt;int&gt;\n1 Adelie    Biscoe       44\n2 Adelie    Dream        56\n3 Adelie    Torgersen    52\n4 Chinstrap Biscoe       NA\n5 Chinstrap Dream        68\n6 Chinstrap Torgersen    NA\n7 Gentoo    Biscoe      124\n8 Gentoo    Dream        NA\n9 Gentoo    Torgersen    NA"
+    "text": "Moving from wide to long data\nWe can move from wide format to long long format using pivot_longer() from the tidyr package.\n\nlibrary(tidyr)\n\npenguins_wide |&gt; \n  pivot_longer(c(Biscoe, \n                 Dream, \n                 Torgersen))\n\n# A tibble: 9 × 3\n# Groups:   species [3]\n  species   name      value\n  &lt;fct&gt;     &lt;chr&gt;     &lt;int&gt;\n1 Adelie    Biscoe       44\n2 Adelie    Dream        56\n3 Adelie    Torgersen    52\n4 Chinstrap Biscoe       NA\n5 Chinstrap Dream        68\n6 Chinstrap Torgersen    NA\n7 Gentoo    Biscoe      124\n8 Gentoo    Dream        NA\n9 Gentoo    Torgersen    NA"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#moving-from-wide-to-long-data-2",
     "href": "lectures/lecture-data-cleaning.html#moving-from-wide-to-long-data-2",
     "title": "Data Viz with R",
     "section": "Moving from wide to long data",
-    "text": "Moving from wide to long data\nWe can move from wide format to long long format using pivot_longer() from the tidyr package.\n\n\nlibrary(tidyr)\n\npenguins_wide |&gt; \n  pivot_longer(c(Biscoe, \n                 Dream, \n                 Torgersen),\n  names_to = \"island\",\n  values_to = \"count\")\n\n\n# A tibble: 9 × 3\n# Groups:   species [3]\n  species   island    count\n  &lt;fct&gt;     &lt;chr&gt;     &lt;int&gt;\n1 Adelie    Biscoe       44\n2 Adelie    Dream        56\n3 Adelie    Torgersen    52\n4 Chinstrap Biscoe       NA\n5 Chinstrap Dream        68\n6 Chinstrap Torgersen    NA\n7 Gentoo    Biscoe      124\n8 Gentoo    Dream        NA\n9 Gentoo    Torgersen    NA"
+    "text": "Moving from wide to long data\nWe can move from wide format to long long format using pivot_longer() from the tidyr package.\n\nlibrary(tidyr)\n\npenguins_wide |&gt; \n  pivot_longer(c(Biscoe, \n                 Dream, \n                 Torgersen),\n  names_to = \"island\",\n  values_to = \"count\")\n\n# A tibble: 9 × 3\n# Groups:   species [3]\n  species   island    count\n  &lt;fct&gt;     &lt;chr&gt;     &lt;int&gt;\n1 Adelie    Biscoe       44\n2 Adelie    Dream        56\n3 Adelie    Torgersen    52\n4 Chinstrap Biscoe       NA\n5 Chinstrap Dream        68\n6 Chinstrap Torgersen    NA\n7 Gentoo    Biscoe      124\n8 Gentoo    Dream        NA\n9 Gentoo    Torgersen    NA"
   },
   {
     "objectID": "lectures/lecture-data-cleaning.html#mini-exercise-2",
     "href": "lectures/lecture-data-cleaning.html#mini-exercise-2",
     "title": "Data Viz with R",
     "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 10 minutes\n\nPractice pivot wider\n\n\n\n\n\n\nTaskStarter code\n\n\n\nUse the Starter Code to read in the file exercises/2-raw-data/pivot_longer_exercise.xlsx as an R dataframe\nPivot the data to long format, creating new variables sex and count\nMake the variable sex a factor variable with levels ‘female’ and ‘male’\n\n\n\n\n# Load library\nlibrary(readxl)\n\n# Set the location of the data\ndataLocation &lt;- here::here('exercises/2-raw-data/pivot_longer_exercise.xlsx')\n\n# Read in the data\ndf &lt;- read_excel(\n        path = dataLocation,\n        sheet = 'Sheet1')"
-  },
-  {
-    "objectID": "lectures/lecture-literate-programming.html#literate-programming-with-rmarkdown",
-    "href": "lectures/lecture-literate-programming.html#literate-programming-with-rmarkdown",
-    "title": "Data Viz with R",
-    "section": "Literate programming with Rmarkdown",
-    "text": "Literate programming with Rmarkdown"
+    "text": "Mini-Exercise\n\n 10 minutes\n\n\nPractice pivot wider\n\n\n\n\n\n\nTaskStarter code\n\n\n\nUse the Starter Code to read in the file exercises/2-raw-data/pivot_longer_exercise.xlsx as an R dataframe\nPivot the data to long format, creating new variables sex and count\nMake the variable sex a factor variable with levels ‘female’ and ‘male’\n\n\n\n\n# Load library\nlibrary(readxl)\n\n# Set the location of the data\ndataLocation &lt;- here::here('exercises/2-raw-data/pivot_longer_exercise.xlsx')\n\n# Read in the data\ndf &lt;- read_excel(\n        path = dataLocation,\n        sheet = 'Sheet1')"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#section",
@@ -298,77 +296,77 @@
     "href": "lectures/lecture-literate-programming.html#rmarkdown-.rmd-file",
     "title": "Data Viz with R",
     "section": "Rmarkdown .Rmd file",
-    "text": "Rmarkdown .Rmd file\n\n\n\n    ---\n    title: \"Cars analysis\"\n    output: html_document\n    date: \"2024-11-10\"\n    ---\n      \n    ## Introduction\n    Here are the first few lines of the `cars` dataset:\n\n    ```{r cars}\n    summary(cars)\n    ```\n\n    There are `r nrow(cars)` in total. You can also embed plots, for example:\n\n\n    ```{r scatterplot, echo=FALSE}\n    plot(cars)\n    ```\n\n\n\nContents\n\nYAML header\nR code chunks\nFormatted text"
+    "text": "Rmarkdown .Rmd file\n\n\n\n    ---\n    title: \"Cars analysis\"\n    output: html_document\n    date: \"2024-11-10\"\n    ---\n      \n    ## Introduction\n    Here are the first few lines of the `cars` dataset:\n\n    ```{r cars}\n    summary(cars)\n    ```\n\n    There are `r nrow(cars)` in total. You can also embed plots, for example:\n\n\n    ```{r scatterplot, echo=FALSE}\n    plot(cars)\n    ```\n\n\n\n\nContents\n\nYAML header\nR code chunks\nFormatted text"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#output",
     "href": "lectures/lecture-literate-programming.html#output",
     "title": "Data Viz with R",
     "section": "Output",
-    "text": "Output\n\ncars-analysis.html"
+    "text": "Output\n\n\n\ncars-analysis.html"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#mini-exercise",
     "href": "lectures/lecture-literate-programming.html#mini-exercise",
     "title": "Data Viz with R",
     "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 3 minutes\n\nCreate and run a new Rmarkdown file\n\n\n\n\n\n\nIn RStudio, open a new file by clicking \nSelect  R Markdown…\nEnter a Title and Author then click OK\nClick  to knit the file (you will be prompted to save the file—save it in your Exercises folder)\nExamine the rendered output"
+    "text": "Mini-Exercise\n\n 3 minutes\n\n\nCreate and run a new Rmarkdown file\n\n\n\n\n\n\nIn RStudio, open a new file by clicking \nSelect  R Markdown…\nEnter a Title and Author then click OK\nClick  to knit the file (you will be prompted to save the file—save it in your Exercises folder)\nExamine the rendered output"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#under-the-hood",
     "href": "lectures/lecture-literate-programming.html#under-the-hood",
     "title": "Data Viz with R",
     "section": "Under the hood",
-    "text": "Under the hood\n\nRmarkdown Cookbook"
+    "text": "Under the hood\n\n\n\nRmarkdown Cookbook"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#output-1",
     "href": "lectures/lecture-literate-programming.html#output-1",
     "title": "Data Viz with R",
     "section": "Output",
-    "text": "Output\n\ncars-analysis.docx"
+    "text": "Output\n\n\n\ncars-analysis.docx"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#output-2",
     "href": "lectures/lecture-literate-programming.html#output-2",
     "title": "Data Viz with R",
     "section": "Output",
-    "text": "Output\n\ncars-analysis.pdf"
+    "text": "Output\n\n\n\ncars-analysis.pdf"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#text-formatting",
     "href": "lectures/lecture-literate-programming.html#text-formatting",
     "title": "Data Viz with R",
     "section": "Text formatting",
-    "text": "Text formatting\n\n\nRmarkdown syntax\n\nOutput\n\n\n\n\n\n*italic* or _italic_\n\nitalic\n\n\n\n\n\n\n**bold** or __bold__\n\nbold\n\n\n\n\n\n\nsuperscript^2^\n\nsuperscript2\n\n\n\n\n\n\nsubscript~2~\n\nsubscript2\n\n\n\n\n\n\n# Level 1 header\n\nLevel 1 header\n\n\n\n\n\n\n## Level 2 header\n\nLevel 2 header\n\n\n\n\n\n\n### Level 3 header\n\nLevel 3 header\n\n\n\n\n\n\n&gt;Stand out quote\n\n\nStand out quote"
+    "text": "Text formatting\n\n\n\nRmarkdown syntax\n\n\n\nOutput\n\n\n\n. . .\n\n\n*italic* or _italic_\n\nitalic\n\n\n. . .\n\n\n**bold** or __bold__\n\nbold\n\n\n. . .\n\n\nsuperscript^2^\n\nsuperscript2\n\n\n. . .\n\n\nsubscript~2~\n\nsubscript2\n\n\n. . .\n\n\n# Level 1 header\n\nLevel 1 header\n\n\n. . .\n\n\n## Level 2 header\n\nLevel 2 header\n\n\n. . .\n\n\n### Level 3 header\n\nLevel 3 header\n\n\n. . .\n\n\n&gt;Stand out quote\n\n\nStand out quote"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#lists",
     "href": "lectures/lecture-literate-programming.html#lists",
     "title": "Data Viz with R",
     "section": "Lists",
-    "text": "Lists\n\n\nRmarkdown syntax\n\nOutput\n\n\n\n\n\n* Bullet\n* Point\n* list\n\n\nBullet\nPoint\nlist\n\n\n\n\n\n\n\n\n1. Numbered\n1. List\n1. Items\n\n\nNumbered\nList\nItems"
+    "text": "Lists\n\n\n\nRmarkdown syntax\n\n\n\nOutput\n\n\n\n. . .\n\n\n* Bullet\n* Point\n* list\n\n\nBullet\nPoint\nlist\n\n\n\n. . .\n\n\n\n1. Numbered\n1. List\n1. Items\n\n\nNumbered\nList\nItems"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#links-and-images",
     "href": "lectures/lecture-literate-programming.html#links-and-images",
     "title": "Data Viz with R",
     "section": "Links and images",
-    "text": "Links and images\n\n\nRmarkdown syntax\n\nOutput\n\n\n\n\n\n[click here](http://google.com)\n\nclick here\n\n\n\n\n\n\n\n![cars-analysis.html](../images/cars-analysis-html.png)\n\n\n\n\ncars-analysis.html"
+    "text": "Links and images\n\n\n\nRmarkdown syntax\n\n\n\nOutput\n\n\n\n. . .\n\n\n[click here](http://google.com)\n\nclick here\n\n\n. . .\n\n\n\n![cars-analysis.html](../images/cars-analysis-html.png)\n\n\n\n\ncars-analysis.html"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#mini-exercise-1",
     "href": "lectures/lecture-literate-programming.html#mini-exercise-1",
     "title": "Data Viz with R",
     "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 5 minutes\n\nPractice text formatting\nEdit the file exercises/5-rmarkdown/poem-exercise.Rmd to generate the output on the right"
+    "text": "Mini-Exercise\n\n 5 minutes\n\n\nPractice text formatting\nEdit the file exercises/5-rmarkdown/poem-exercise.Rmd to generate the output on the right"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#yaml-header",
     "href": "lectures/lecture-literate-programming.html#yaml-header",
     "title": "Data Viz with R",
     "section": "YAML Header",
-    "text": "YAML Header\nYet Another Markdown Language\n\n    ---\n    title: \"Cars analysis\"\n    output: html_document\n    date: \"2024-11-10\"\n    ---\n\n\n\n\nControls whole-document settings\nkey-value pairs\noutput: html_document\noutput: word_document\noutput: pdf_document"
+    "text": "YAML Header\n\nYet Another Markdown Language\n\n    ---\n    title: \"Cars analysis\"\n    output: html_document\n    date: \"2024-11-10\"\n    ---\n\n\n\n\nControls whole-document settings\nkey-value pairs\noutput: html_document\noutput: word_document\noutput: pdf_document"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#yaml-nested-keys",
@@ -396,14 +394,14 @@
     "href": "lectures/lecture-literate-programming.html#chunk-options",
     "title": "Data Viz with R",
     "section": "Chunk options",
-    "text": "Chunk options\n\n\nOption\n\nMeaning\n\n\n\n\n\necho=FALSE\n\nShow code in output document (TRUE/FALSE)\n\n\n\n\n\n\neval=FALSE\n\nRun code in the chunk (TRUE/FALSE)\n\n\n\n\n\n\ninclude=FALSE\n\nInclude code in the chunk (TRUE/FALSE)\n\n\n\n\n\n\nmessage=FALSE\n\nDisplay code messages in document (TRUE/FALSE)\n\n\n\n\n\n\nwarning=FALSE\n\nDisplay code warnings in document (TRUE/FALSE)\n\n\n\n\n\n\nfig.width=7\n\nFigure width in inches\n\n\n\n\n\n\nfig.height=7\n\nFigure height in inches"
+    "text": "Chunk options\n\n\n\nOption\n\n\n\nMeaning\n\n\n\n. . .\n\n\necho=FALSE\n\nShow code in output document (TRUE/FALSE)\n\n\n. . .\n\n\neval=FALSE\n\nRun code in the chunk (TRUE/FALSE)\n\n\n. . .\n\n\ninclude=FALSE\n\nInclude code in the chunk (TRUE/FALSE)\n\n\n. . .\n\n\nmessage=FALSE\n\nDisplay code messages in document (TRUE/FALSE)\n\n\n. . .\n\n\nwarning=FALSE\n\nDisplay code warnings in document (TRUE/FALSE)\n\n\n. . .\n\n\nfig.width=7\n\nFigure width in inches\n\n\n. . .\n\n\nfig.height=7\n\nFigure height in inches"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#global-options",
     "href": "lectures/lecture-literate-programming.html#global-options",
     "title": "Data Viz with R",
     "section": "Global options",
-    "text": "Global options\nUse knitr::opts_chunk$set() to set global options\n\n    ```{r, setup, include=FALSE}\n    knitr::opts_chunk$set(\n      echo = FALSE, fig.width = 5, fig.height = 7\n    )\n    ```\n\n\n\n\n\nHas to go inside an R code chunk\nIndividual code chunks can have different settings"
+    "text": "Global options\nUse knitr::opts_chunk$set() to set global options\n\n    ```{r, setup, include=FALSE}\n    knitr::opts_chunk$set(\n      echo = FALSE, fig.width = 5, fig.height = 7\n    )\n    ```\n\n. . .\n\n\n\nHas to go inside an R code chunk\nIndividual code chunks can have different settings"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#parameters",
@@ -417,7 +415,7 @@
     "href": "lectures/lecture-literate-programming.html#parameters-example",
     "title": "Data Viz with R",
     "section": "Parameters example",
-    "text": "Parameters example\n\n\n\n    ---\n    title: \"Parameters Example\"\n    output: html_document\n    params: \n      date: \"November 22nd 2024\"\n      dataset: !r cars\n    ---\n\n    The date is `r params$date`\n\n    ```{r}\n    head(params$dataset)\n    ```\n\n\n\n\n\n\n\nNote dataset: !r cars defines the parameter ‘dataset’ to be an R object, rather than the string “cars”"
+    "text": "Parameters example\n\n\n\n    ---\n    title: \"Parameters Example\"\n    output: html_document\n    params: \n      date: \"November 22nd 2024\"\n      dataset: !r cars\n    ---\n\n    The date is `r params$date`\n\n    ```{r}\n    head(params$dataset)\n    ```\n\n\n\n\n\n. . .\n\nNote dataset: !r cars defines the parameter ‘dataset’ to be an R object, rather than the string “cars”"
   },
   {
     "objectID": "lectures/lecture-literate-programming.html#workflow-and-tips",
@@ -431,7 +429,7 @@
     "href": "lectures/lecture-literate-programming.html#mini-exercise-2",
     "title": "Data Viz with R",
     "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 15 minutes\n\nUpdate a parameterised R Markdown Powerpoint slide deck\n\n\n\n\n\n\nOpen the file my-presentation.Rmd in the folder Exercises/5-rmarkdown\nEdit the YAML header to generate a powerpoint output instead of HTML (see here for a list of output format names)\nAdd an additional slide showing the figure on self assessed health\nUpdate the date parameter to print the latest set of figures."
+    "text": "Mini-Exercise\n\n 15 minutes\n\n\nUpdate a parameterised R Markdown Powerpoint slide deck\n\n\n\n\n\n\nOpen the file my-presentation.Rmd in the folder Exercises/5-rmarkdown\nEdit the YAML header to generate a powerpoint output instead of HTML (see here for a list of output format names)\nAdd an additional slide showing the figure on self assessed health\nUpdate the date parameter to print the latest set of figures."
   },
   {
     "objectID": "lectures/overview.html",
@@ -634,41 +632,18 @@
     ]
   },
   {
-    "objectID": "exercises/exercise1-1.html",
-    "href": "exercises/exercise1-1.html",
-    "title": "Getting started",
+    "objectID": "exercises/exercise3-2.html",
+    "href": "exercises/exercise3-2.html",
+    "title": "Part 1. The base plot",
     "section": "",
-    "text": "The End Goal\nLet’s start with the goal in mind! Here it is—a 100% stacked bar chart showing the breakdown of self-rated health status for 8 states and territories.\n\nThe simple chart format is enhanced using techniques covered in this workshop.\n\nOrdering The states and territories on the y-axis are ordered from top to bottom by the proportion of respondents describing their health status as Very good or Excellent.\nColour The chart uses a familiar traffic-light colour scheme, to distinguish between Poor and Excellent self-assessed health.\nText hierarchy The main chart title is an informative title highlighting the key message. A descriptive subtitle explains in more detail what is plotted in the chart while the data source is provided in the footnote.\nAnnotation Text annotations indicate the percentage response for each category. Note that the colour for these labels has been carefully chosen to contrast against the background colour and the labels have been suppressed for the ‘Poor’ category, to avoid overflow.\nStory telling As well as having an informative chart title, the keywords Excellent and Very Good are emphasised with bold font and appropriate colours to help connect the title to the data and reinforce the message.\n\n\n\nThe data\nThe data for this plot come from the National Health Survey (NHS) 2022, a face-to-face interview survey conducted by the Australian Bureau of Statistics (ABS) and designed to collect information on health behaviours, conditions prevalence, and risk factors in Australia. You can read more about the survey on the ABS website here.\nThese data are openly available for download in .xlsx format from the ABS website and a copy is also included in the workshop repo in the file national-health-survey-2022-table-2.xlsx.\n\n\nAims\nIn this exercise you will use dplyr and other tools to read-in and clean the self-assessed health data from the National Health Survey. The raw data is the .xlsx file downloaded from the ABS data. The final output will be a tidy data file in .csv and .Rda format. Essentially, we will use code to go…\n\n\n\n\n\n\n\nFrom this messy excel sheet\n\n\nTo this tidy dataframe!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTidy data\n\n\n\nRemember, in a tidy dataset:\n\nEach variable is a column; each column is a variable.\nEach observation is a row; each row is an observation.\nEach value is a cell; each cell is a single value.\n\nIf you examine the output above you will see this is true for the clean data: there are three columns, and each column is a variable: status, state, and percent. Each row is an observation, telling us the per cent for every state and status combination. Finally, each cell is a single value—there are no merged cells.\nNone of these rules of tidy datasets hold for the original .xlsx file!\nR for Data Science (2nd Edition)\n\n\n\n\nHow to complete this exercise\nThis first exercise is fully guided—just follow the data cleaning steps and copy-paste the code snippets into your own code file to build up a working data cleaning pipeline.\nNote that some steps are incremental, for example Step 6 provides code to filter data.\n\n# Filter to these rows\ndf1Clean &lt;- df1Raw |&gt;\n  filter(X %in% healthStatus)\n\nIn the next step, Step 7, you are given code to select certain variables.\n\n# Append this line to the previous code using |&gt;\nselect(c(X, ends_with(\".1\"), -'Australia.1'))\n\nBut note the comment:\n\nAppend this line to the previous code using |&gt;\n\nThis means that you should append the code in Step 7 to the previous code in Step 6 using the |&gt; operator to connect the two. So after you complete Step 7 the code in your file will look like this:\n\n# Filter to these rows\ndf1Clean &lt;- df1Raw |&gt;\n  filter(X %in% healthStatus) |&gt; \n  select(c(X, ends_with(\".1\"), -'Australia.1'))\n\n\n\n\n\n Back to top",
+    "text": "Figure 1: The goal for Exercise 3\n\n\n\n\n1 Set up your code file meta data\nAs before, start by setting up your code file meta information.\n\nIn RStudio, open the file exercsies/1-code/3-plot-self-assessed-health.R\nUpdate the details in the title box.\n\n\n\n\n2 Load libraries\nRemember to load all your libraries in one place at the top of the script all the libraries you need in a script in one place at the top of the file.\nStart with the libraries below. We’ll need to load more libraries as we go so remember to add them to this section of code.\n\n## Load libraries\nlibrary(dplyr) \nlibrary(ggplot2)\n\n\n\n3 Load your data\nThe data might already be loaded into your R environment, but we should make this step an explicit part of the code.\n\n# Load cleaned data\nload('exercises/3-clean-data/vis1.Rda')\n\n\n\n\n4 Start plotting\nLooking back at Figure 1, we can quickly surmise the main aesthetic mappings in the chart:\n\nx is mapped to percent\ny is mapped to state\nfill is mapped to status\n\nThis is all we need to get a passable plot!\n\n\nCode\nggplot(\n  data=df1Clean,\n  aes(x = percent, y = state, fill=status)) + \n  geom_col()\n\n\n\n\n\n\n\n\n\nThis is a good start for just a few lines of code, but there are a lot of things to fix!\n\n\n\n5 Order the states from most healthy to least healthy\nThe final plot orders the states on the y-axis from most healthy to least healthy. In order to sort the states in this way, we need to create a new variable equal to the sum of the proportions in the categories Excellent and Very good. We can do this using some dplyr code.\n\n# Create variable indicating % very good or excellent health\ndf1Plot &lt;- df1Clean |&gt;\n  group_by(state) |&gt;\n  slice(4:5) |&gt;\n  summarise(totalHealthy = sum(percent)) |&gt;\n  left_join(df1Clean, by = 'state')\n\nThis basically creates the following summary table, and then merges it back to the original dataset, assigning the result to a new dataframe df1Plot.\n\n\n# A tibble: 8 × 2\n  state                        totalHealthy\n  &lt;fct&gt;                               &lt;dbl&gt;\n1 Australian Capital Territory         61.1\n2 New South Wales                      56.6\n3 Northern Territory                   55.5\n4 Queensland                           55.5\n5 South Australia                      55.9\n6 Tasmania                             53.1\n7 Victoria                             61.5\n8 Western Australia                    56.6\n\n\nNow that we have the right variable to sort on, we can use the fct_reorder() function from the forcats package to sort the states directly in the ggplot code. Don’t forget to add library(forcats) to your list of loaded libraries at the top of your script!\n\n\nCode\nlibrary(forcats)\n\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n  fill=status)) + \n  geom_col()\n\n\n\n\n\n\n\n\n\n\n\n\n6 Reverse the order of the health-assessment categories\nNotice that the health categories are currently ordered from Excellent to Poor. we’d like to reverse this so that Poor is on the left and Excellent is on the right. We can do this by setting reverse=TRUE in the position_stack() argument in geom_col().\n\n\nCode\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE))\n\n\n\n\n\n\n\n\n\n\n\n\n7 Customise the colour scheme\nWe’ve done a lot already! Next we will really improve the plot by updating the colour scheme. The default coloring is categorical and the colours don’t carry any meaning. The target plot uses a familiar traffic light colour scheme that also carries meaning (red generally has negative connotations and green generally has positive connotations, in the Anglosphere at least).\n\n\nThe psychological and cultural associations of colors varies across place and time. In 1700s Europe men wore pink as a sign of their wealth and power; today it is almost exclusively a colour associate with girls, so much so that Mattel—the Corporation behind Barbie—have trademark rights to Barbie Pink (Pantone 219C).Here we use green to connote a positive outcome but green is also associated with jealousy (“green with envy”), sickness 🤢, and inexperience (“a greenhorn”). Meanwhile red is the colour of danger, but also of love ❤️ and (in China) an auspicious colour associated with prosperity 🧧.\nWhile we could define our colours manually, the RColorBrewer package provides several colour palettes for R. We will use the brewer.pal() function to access the diverging red-yellow-green (RdYlGn) palette below. Here are the colour hex codes:\n\n# Add the library call to the top of your script!\nlibrary(RColorBrewer)\n\nbrewer.pal(name='RdYlGn', n=5)\n\n[1] \"#D7191C\" \"#FDAE61\" \"#FFFFBF\" \"#A6D96A\" \"#1A9641\"\n\n\nWe can use the function display.brewer.pal to see the actual colours.\n\ndisplay.brewer.pal(name='RdYlGn', n=5)\n\n\n\n\n\n\n\n\nFinally, make sure to save the five colours in an R vector as below.\n\n# Custom bar colours\nbarCols &lt;- RColorBrewer::brewer.pal(5, 'RdYlGn')\n\nNow that we have our five colours stored as a vector we can map these to the health categories using scale_fill_manual(). The legend name doesn’t add much here so we can remove it entirely by setting name = NULL.\n\n\nCode\n# Customise colours\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE)) +\n  scale_fill_manual(name = NULL,\n                    values = barCols)\n\n\n\n\n\n\n\n\n\nAmazing!!\n\n\n\n8 Get rid of the axis labels\nLooking back at Figure 1, notice that the axis labels are deleted entirely. I think that is safe here because the states and territories are obvious, and when we add titles it will be clear that the numbers are percentages.\nA simple way to do this is with the labs() function, but here I will use scale_x_ and scale_y_ functions. This is from habit—often we need to customise aspects of the axes that can only be controlled via the scale_* functions.\n\n\nCode\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE)) +\n  scale_fill_manual(name = NULL,\n                    values = barCols) +\n  scale_y_discrete(NULL) +\n  scale_x_continuous(NULL)\n\n\n\n\n\n\n\n\n\n\n\n9 Add a title, subtitle and caption\nAdd a title, subtitle and caption using the labs() function. The final figure colours in some of the words but we will come to that later.\n\n\nCode\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE)) +\n  scale_fill_manual(name = NULL,\n                    values = barCols) +\n  scale_y_discrete(NULL) +\n  scale_x_continuous(NULL) +\n  labs(\n    title = 'Victorians most likely to rate their health as Excellent or Very Good',\n    subtitle = 'Self-assessed health status by states and territories',\n    caption = 'Source: National Health Survey, 2022')\n\n\n\n\n\n\n\n\n\n\n\n\n10 Shift the titles to the right\nNotice that the titles are aligned with the panel area by default, but these can often look better if they are shifted over to the right of the plot. That is easy to do by setting the plot.title.position = 'plot' argument in the theme() function.\n\n\nCode\n# Shift the titles to the right and remove the grey background box\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE)) +\n  scale_fill_manual(name = NULL,\n                    values = barCols) +\n  scale_y_discrete(NULL) +\n  scale_x_continuous(NULL) +\n  labs(\n    title = 'Victorians most likely to rate their health as Excellent or Very Good',\n    subtitle = 'Self-assessed health status by states and territories',\n    caption = 'Source: National Health Survey, 2022') +\n  theme(\n    plot.title.position = 'plot'\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n11 Remove the default grey panel background\nTo remove the grey panel background, add the option panel.background = element_blank() to the theme function.\n\n\nCode\n# Remove the grey background\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE)) +\n  scale_fill_manual(name = NULL,\n                    values = barCols) +\n  scale_y_discrete(NULL) +\n  scale_x_continuous(NULL) +\n  labs(\n    title = 'Victorians most likely to rate their health as Excellent or Very Good',\n    subtitle = 'Self-assessed health status by states and territories',\n    caption = 'Source: National Health Survey, 2022') +\n  theme(\n    plot.title.position = 'plot',\n    panel.background = element_blank()\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n12 Remove the y-axis ticks\nHaving removed the panel background we are left with unsightly y-axis ticks. We can pluck these out like unwanted nostril hairs by including the argument axis.ticks.y = element_blank() in the theme() function.\n\n\nCode\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE)) +\n  scale_fill_manual(name = NULL,\n                    values = barCols) +\n  scale_y_discrete(NULL) +\n  scale_x_continuous(NULL) +\n  labs(\n    title = 'Victorians most likely to rate their health as Excellent or Very Good',\n    subtitle = 'Self-assessed health status by states and territories',\n    caption = 'Source: National Health Survey, 2022') +\n  theme(\n    plot.title.position = 'plot',\n    panel.background = element_blank(),\n    axis.ticks.y = element_blank()\n  )\n\n\n\n\n\n\n\n\n\nMuch better!\n\n\n13 Add white spacing betweeen the colours\nLooking back at Figure 1, notice that there is thin white line between the colours of the health status categories. The effect is subtle but pleasing. We can control this by setting colour = \"white\" in our call to geom_col().\n\n\nCode\n# White spacing between colours\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE),\n           color = \"white\") +\n  scale_fill_manual(name = NULL,\n                    values = barCols) +\n  scale_y_discrete(NULL) +\n  scale_x_continuous(NULL) +\n  labs(\n    title = 'Victorians most likely to rate their health as Excellent or Very Good',\n    subtitle = 'Self-assessed health status by states and territories',\n    caption = 'Source: National Health Survey, 2022') +\n  theme(\n    plot.title.position = 'plot',\n    panel.background = element_blank(),\n    axis.ticks.y = element_blank()\n  )\n\n\n\n\n\n\n\n\n\nThis is looking pretty good! If it was Friday evening you could probably call it a day and leave it at that. But if you’re still full of vim, let’s see if we can text labels to our chart.\n\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Home",
       "Exercises",
-      "Day 1. Data cleaning",
-      "Exercise 1 (Beginner)",
-      "Getting started"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "Time\nActivity\n\n\n\n\n\nDay 1\n\n\n9:00 - 9:40\nWelcome, housekeeping and orientation to RStudio\n\n\n\n9:40 - 10:20\nReproducible research with git and GitHub\n🔗\n\n\n10:20 - 10:40\nMorning tea\n\n\n\n10:40 - 11:00\nMini-exercise: Working with git\n🔗\n\n\n11:00 - 12:00\nData preparation with dplyr\n🔗\n\n\n12:00 - 12:20\nMini-exercise: Working with dplyr\n\n\n\n12:20 - 13:00\nLunch\n\n\n\n13:00 - 15:00\nHands-on workshop exercises\n🔗\n\n\nDay 2\n\n\n9:00 - 9:40\nData visualisation with ggplot2\n🔗\n\n\n9:40 - 10:20\nStorytelling with data\n🔗\n\n\n10:20 - 10:40\nMorning tea\n\n\n\n10:40 - 11:00\nMini-exercise: Working with ggplot2\n\n\n\n11:00 - 12:00\nLiterate programming with rmarkdown\n🔗\n\n\n12:00 - 12:20\nMini-exercise: Working with rmarkdown\n\n\n\n12:20 - 13:00\nLunch\n\n\n\n13:00 - 15:00\nHands-on workshop exercises\n🔗\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1 Data Cleaning\n\n\nIllustrations from the Openscapes blog Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst.\n\n\nDay 2 Data Visualisation\n\n\nArtwork by @allison_horst\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "Housekeeping",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "home/poll.html",
-    "href": "home/poll.html",
-    "title": "Introduce yourself",
-    "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Home",
-      "Housekeeping",
-      "Introductions"
+      "Day 2. Visualisation",
+      "Exercise 3 (Beginner)",
+      "Step-by-step guide",
+      "Part 1. The base plot"
     ]
   },
   {
@@ -686,100 +661,100 @@
   {
     "objectID": "home/opening-remarks.html#section-2",
     "href": "home/opening-remarks.html#section-2",
-    "title": "Data Viz with R",
+    "title": "We get there one step at a time",
     "section": "",
     "text": "Artwork by @allison_horst"
   },
   {
     "objectID": "home/opening-remarks.html#the-pareto-principle",
     "href": "home/opening-remarks.html#the-pareto-principle",
-    "title": "Data Viz with R",
+    "title": "We get there one step at a time",
     "section": "The Pareto Principle",
-    "text": "The Pareto Principle\nAKA The 80/20 rule\n\n\n80% of Italy’s land was owned by 20% of the population  —Vilfredo Pareto 1848–1923"
+    "text": "The Pareto Principle\nAKA The 80/20 rule\n. . .\n\n80% of Italy’s land was owned by 20% of the population  —Vilfredo Pareto 1848–1923"
   },
   {
     "objectID": "home/opening-remarks.html#the-pareto-principle-1",
     "href": "home/opening-remarks.html#the-pareto-principle-1",
-    "title": "Data Viz with R",
+    "title": "We get there one step at a time",
     "section": "The Pareto Principle",
     "text": "The Pareto Principle\nAKA The 80/20 rule\n\n20% of your clothes are worn 80% of the time, while the other 80% just hang there judging you"
   },
   {
     "objectID": "home/opening-remarks.html#the-pareto-principle-2",
     "href": "home/opening-remarks.html#the-pareto-principle-2",
-    "title": "Data Viz with R",
+    "title": "We get there one step at a time",
     "section": "The Pareto Principle",
     "text": "The Pareto Principle\nAKA The 80/20 rule\n\n80% of parenting is just repeating 20% of the phrases: Don’t touch that, Put that down, and Because I said so"
   },
   {
     "objectID": "home/opening-remarks.html#the-pareto-principle-3",
     "href": "home/opening-remarks.html#the-pareto-principle-3",
-    "title": "Data Viz with R",
+    "title": "We get there one step at a time",
     "section": "The Pareto Principle",
     "text": "The Pareto Principle\nThe 80/20 rule in Data Visualisation\n\n80% of the work is getting the data in the right shape"
   },
   {
     "objectID": "home/opening-remarks.html#day-1-the-rstudio-environment",
     "href": "home/opening-remarks.html#day-1-the-rstudio-environment",
-    "title": "Data Viz with R",
+    "title": "We get there one step at a time",
     "section": "Day 1: The RStudio environment",
     "text": "Day 1: The RStudio environment\n\n\nArtwork by @allison_horst"
   },
   {
     "objectID": "home/opening-remarks.html#day-1-reproducible-research-with-git-and-github",
     "href": "home/opening-remarks.html#day-1-reproducible-research-with-git-and-github",
-    "title": "Data Viz with R",
+    "title": "We get there one step at a time",
     "section": "Day 1: Reproducible research with Git and GitHub",
     "text": "Day 1: Reproducible research with Git and GitHub\n\n\nArtwork by @allison_horst"
   },
   {
     "objectID": "home/opening-remarks.html#day-1-data-preparation-with-dplyr",
     "href": "home/opening-remarks.html#day-1-data-preparation-with-dplyr",
-    "title": "Data Viz with R",
+    "title": "We get there one step at a time",
     "section": "Day 1: Data preparation with dplyr",
     "text": "Day 1: Data preparation with dplyr\n\n\nIllustrations from the Openscapes blog Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst."
   },
   {
     "objectID": "home/opening-remarks.html#day-2-data-visualisation-with-ggplot2",
     "href": "home/opening-remarks.html#day-2-data-visualisation-with-ggplot2",
-    "title": "Data Viz with R",
+    "title": "We get there one step at a time",
     "section": "Day 2: Data visualisation with ggplot2",
     "text": "Day 2: Data visualisation with ggplot2\n\n\nArtwork by @allison_horst"
   },
   {
     "objectID": "home/opening-remarks.html#day-2-story-telling-with-data",
     "href": "home/opening-remarks.html#day-2-story-telling-with-data",
-    "title": "Data Viz with R",
+    "title": "We get there one step at a time",
     "section": "Day 2: Story telling with data",
     "text": "Day 2: Story telling with data"
   },
   {
     "objectID": "home/opening-remarks.html#day-2-literate-programming-with-rmarkdown",
     "href": "home/opening-remarks.html#day-2-literate-programming-with-rmarkdown",
-    "title": "Data Viz with R",
+    "title": "We get there one step at a time",
     "section": "Day 2: Literate programming with rmarkdown",
     "text": "Day 2: Literate programming with rmarkdown\n\n\nArtwork by @allison_horst"
   },
   {
     "objectID": "home/opening-remarks.html#end-goal",
     "href": "home/opening-remarks.html#end-goal",
-    "title": "Data Viz with R",
+    "title": "We get there one step at a time",
     "section": "End goal",
-    "text": "End goal\n\nFigure 1"
+    "text": "End goal\n\n\n\nFigure 1"
   },
   {
     "objectID": "home/opening-remarks.html#end-goal-1",
     "href": "home/opening-remarks.html#end-goal-1",
-    "title": "Data Viz with R",
+    "title": "We get there one step at a time",
     "section": "End goal",
-    "text": "End goal\n\nFigure 2"
+    "text": "End goal\n\n\n\nFigure 2"
   },
   {
     "objectID": "home/opening-remarks.html#how-do-we-get-there",
     "href": "home/opening-remarks.html#how-do-we-get-there",
-    "title": "Data Viz with R",
+    "title": "We get there one step at a time",
     "section": "How do we get there?",
-    "text": "How do we get there?\n\n\n\n\n\n\n\nThis took 4 lines of code\n\n\n\n\n\n\n\nHow many lines of code did this take?"
+    "text": "How do we get there?\n\n\n\n\n\n\n\n\n\n\nThis took 4 lines of code\n\n\n\n\n\n\n\nHow many lines of code did this take?"
   },
   {
     "objectID": "home/introduction.html",
@@ -794,42 +769,17 @@
     ]
   },
   {
-    "objectID": "home/orientation.html",
-    "href": "home/orientation.html",
-    "title": "Orientation to RStudio",
+    "objectID": "exercises/exercise1-1.html",
+    "href": "exercises/exercise1-1.html",
+    "title": "Getting started",
     "section": "",
-    "text": "We’re going to spend two days working on R code so let’s take a moment to open up RStudio to orientate ourselves.\n\n\n\n\nHere is a snapshot of the RStudio environment.\n\n\n\n\nThere’s a lot going on!\n\n\n\n\nLet’s break it down.\n\n\n\n\nThis is an R script file (.R extension). Here you can write R code to clean, analyse, and visualise data\n\n\n\n\nNotice that this file is saved with a proper file name analysis.R so we can open and close the file and come back to the code as needed.\n\n\n\n\nThis area has several tabs. The Environment tab plays a key role in managing and visualizing the objects that exist in the current R session.\n\n\n\n\nVarious types of objects can exist in your environment, for example vectors, dataframes and lists.\n\n\n\n\nCurrently we can see the cars dataset and the meanSpeed value stored in the environment.\n\n\n\n\nNotice the Git tab is also in this area. We’ll use that later.\n\n\n\n\nThere are several important tabs in the bottom right-hand corner\n\n\n\n\nThe Files tab shows us all the file in our project. Spot analsis.R!\n\n\n\n\nFrom here we can open files or navigate to different folders.\n\n\n\n\nOther important tabs in this area includes the Plots tab, where are plots will appear, and the Packages tab that has a list of all the installed packages.\n\n\n\n\nHere we have the console.\n\n\n\n\nThe console allows you to run R commands interactively. You can type a command directly into the console and press Enter to execute it and view the results straight away.\n\n\n\n\nThe console keeps track of previously executed commands. You can use the  up and  down arrow keys to scroll through past commands, making it easy to re-run commands or modify and execute them again.\n\n\n\n\nWorking in the console is convenient for quick, interactive commands, but it doesn’t save a persistent record of your entered commands so important code should always be saved in a script.\n\n\n\n\nFinally, note this icon in the top right-hand corner. This tells us we are working in an R Project named cars-study.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "Housekeeping",
-      "Orientation"
-    ]
-  },
-  {
-    "objectID": "exercises/exercise3-2.html",
-    "href": "exercises/exercise3-2.html",
-    "title": "Part 1. The base plot",
-    "section": "",
-    "text": "Figure 1: The goal for Exercise 3\n\n\n\n\n1 Set up your code file meta data\nAs before, start by setting up your code file meta information.\n\nIn RStudio, open the file exercsies/1-code/3-plot-self-assessed-health.R\nUpdate the details in the title box.\n\n\n\n\n2 Load libraries\nRemember to load all your libraries in one place at the top of the script all the libraries you need in a script in one place at the top of the file.\nStart with the libraries below. We’ll need to load more libraries as we go so remember to add them to this section of code.\n\n## Load libraries\nlibrary(dplyr) \nlibrary(ggplot2)\n\n\n\n3 Load your data\nThe data might already be loaded into your R environment, but we should make this step an explicit part of the code.\n\n# Load cleaned data\nload('exercises/3-clean-data/vis1.Rda')\n\n\n\n\n4 Start plotting\nLooking back at Figure 1, we can quickly surmise the main aesthetic mappings in the chart:\n\nx is mapped to percent\ny is mapped to state\nfill is mapped to status\n\nThis is all we need to get a passable plot!\n\n\nCode\nggplot(\n  data=df1Clean,\n  aes(x = percent, y = state, fill=status)) + \n  geom_col()\n\n\n\n\n\n\n\n\n\nThis is a good start for just a few lines of code, but there are a lot of things to fix!\n\n\n\n5 Order the states from most healthy to least healthy\nThe final plot orders the states on the y-axis from most healthy to least healthy. In order to sort the states in this way, we need to create a new variable equal to the sum of the proportions in the categories Excellent and Very good. We can do this using some dplyr code.\n\n# Create variable indicating % very good or excellent health\ndf1Plot &lt;- df1Clean |&gt;\n  group_by(state) |&gt;\n  slice(4:5) |&gt;\n  summarise(totalHealthy = sum(percent)) |&gt;\n  left_join(df1Clean, by = 'state')\n\nThis basically creates the following summary table, and then merges it back to the original dataset, assigning the result to a new dataframe df1Plot.\n\n\n# A tibble: 8 × 2\n  state                        totalHealthy\n  &lt;fct&gt;                               &lt;dbl&gt;\n1 Australian Capital Territory         61.1\n2 New South Wales                      56.6\n3 Northern Territory                   55.5\n4 Queensland                           55.5\n5 South Australia                      55.9\n6 Tasmania                             53.1\n7 Victoria                             61.5\n8 Western Australia                    56.6\n\n\nNow that we have the right variable to sort on, we can use the fct_reorder() function from the forcats package to sort the states directly in the ggplot code. Don’t forget to add library(forcats) to your list of loaded libraries at the top of your script!\n\n\nCode\nlibrary(forcats)\n\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n  fill=status)) + \n  geom_col()\n\n\n\n\n\n\n\n\n\n\n\n\n6 Reverse the order of the health-assessment categories\nNotice that the health categories are currently ordered from Excellent to Poor. we’d like to reverse this so that Poor is on the left and Excellent is on the right. We can do this by setting reverse=TRUE in the position_stack() argument in geom_col().\n\n\nCode\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE))\n\n\n\n\n\n\n\n\n\n\n\n\n7 Customise the colour scheme\nWe’ve done a lot already! Next we will really improve the plot by updating the colour scheme. The default coloring is categorical and the colours don’t carry any meaning. The target plot uses a familiar traffic light colour scheme that also carries meaning (red generally has negative connotations and green generally has positive connotations, in the Anglosphere at least).\n\n\nThe psychological and cultural associations of colors varies across place and time. In 1700s Europe men wore pink as a sign of their wealth and power; today it is almost exclusively a colour associate with girls, so much so that Mattel—the Corporation behind Barbie—have trademark rights to Barbie Pink (Pantone 219C).Here we use green to connote a positive outcome but green is also associated with jealousy (“green with envy”), sickness 🤢, and inexperience (“a greenhorn”). Meanwhile red is the colour of danger, but also of love ❤️ and (in China) an auspicious colour associated with prosperity 🧧.\nWhile we could define our colours manually, the RColorBrewer package provides several colour palettes for R. We will use the brewer.pal() function to access the diverging red-yellow-green (RdYlGn) palette below. Here are the colour hex codes:\n\n# Add the library call to the top of your script!\nlibrary(RColorBrewer)\n\nbrewer.pal(name='RdYlGn', n=5)\n\n[1] \"#D7191C\" \"#FDAE61\" \"#FFFFBF\" \"#A6D96A\" \"#1A9641\"\n\n\nWe can use the function display.brewer.pal to see the actual colours.\n\ndisplay.brewer.pal(name='RdYlGn', n=5)\n\n\n\n\n\n\n\n\nFinally, make sure to save the five colours in an R vector as below.\n\n# Custom bar colours\nbarCols &lt;- RColorBrewer::brewer.pal(5, 'RdYlGn')\n\nNow that we have our five colours stored as a vector we can map these to the health categories using scale_fill_manual(). The legend name doesn’t add much here so we can remove it entirely by setting name = NULL.\n\n\nCode\n# Customise colours\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE)) +\n  scale_fill_manual(name = NULL,\n                    values = barCols)\n\n\n\n\n\n\n\n\n\nAmazing!!\n\n\n\n8 Get rid of the axis labels\nLooking back at Figure 1, notice that the axis labels are deleted entirely. I think that is safe here because the states and territories are obvious, and when we add titles it will be clear that the numbers are percentages.\nA simple way to do this is with the labs() function, but here I will use scale_x_ and scale_y_ functions. This is from habit—often we need to customise aspects of the axes that can only be controlled via the scale_* functions.\n\n\nCode\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE)) +\n  scale_fill_manual(name = NULL,\n                    values = barCols) +\n  scale_y_discrete(NULL) +\n  scale_x_continuous(NULL)\n\n\n\n\n\n\n\n\n\n\n\n9 Add a title, subtitle and caption\nAdd a title, subtitle and caption using the labs() function. The final figure colours in some of the words but we will come to that later.\n\n\nCode\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE)) +\n  scale_fill_manual(name = NULL,\n                    values = barCols) +\n  scale_y_discrete(NULL) +\n  scale_x_continuous(NULL) +\n  labs(\n    title = 'Victorians most likely to rate their health as Excellent or Very Good',\n    subtitle = 'Self-assessed health status by states and territories',\n    caption = 'Source: National Health Survey, 2022')\n\n\n\n\n\n\n\n\n\n\n\n\n10 Shift the titles to the right\nNotice that the titles are aligned with the panel area by default, but these can often look better if they are shifted over to the right of the plot. That is easy to do by setting the plot.title.position = 'plot' argument in the theme() function.\n\n\nCode\n# Shift the titles to the right and remove the grey background box\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE)) +\n  scale_fill_manual(name = NULL,\n                    values = barCols) +\n  scale_y_discrete(NULL) +\n  scale_x_continuous(NULL) +\n  labs(\n    title = 'Victorians most likely to rate their health as Excellent or Very Good',\n    subtitle = 'Self-assessed health status by states and territories',\n    caption = 'Source: National Health Survey, 2022') +\n  theme(\n    plot.title.position = 'plot'\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n11 Remove the default grey panel background\nTo remove the grey panel background, add the option panel.background = element_blank() to the theme function.\n\n\nCode\n# Remove the grey background\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE)) +\n  scale_fill_manual(name = NULL,\n                    values = barCols) +\n  scale_y_discrete(NULL) +\n  scale_x_continuous(NULL) +\n  labs(\n    title = 'Victorians most likely to rate their health as Excellent or Very Good',\n    subtitle = 'Self-assessed health status by states and territories',\n    caption = 'Source: National Health Survey, 2022') +\n  theme(\n    plot.title.position = 'plot',\n    panel.background = element_blank()\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n12 Remove the y-axis ticks\nHaving removed the panel background we are left with unsightly y-axis ticks. We can pluck these out like unwanted nostril hairs by including the argument axis.ticks.y = element_blank() in the theme() function.\n\n\nCode\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE)) +\n  scale_fill_manual(name = NULL,\n                    values = barCols) +\n  scale_y_discrete(NULL) +\n  scale_x_continuous(NULL) +\n  labs(\n    title = 'Victorians most likely to rate their health as Excellent or Very Good',\n    subtitle = 'Self-assessed health status by states and territories',\n    caption = 'Source: National Health Survey, 2022') +\n  theme(\n    plot.title.position = 'plot',\n    panel.background = element_blank(),\n    axis.ticks.y = element_blank()\n  )\n\n\n\n\n\n\n\n\n\nMuch better!\n\n\n13 Add white spacing betweeen the colours\nLooking back at Figure 1, notice that there is thin white line between the colours of the health status categories. The effect is subtle but pleasing. We can control this by setting colour = \"white\" in our call to geom_col().\n\n\nCode\n# White spacing between colours\nggplot(\n  data=df1Plot,\n  aes(x = percent, \n      y = fct_reorder(state, totalHealthy), \n      fill=status)) + \n  geom_col(position = position_stack(reverse = TRUE),\n           color = \"white\") +\n  scale_fill_manual(name = NULL,\n                    values = barCols) +\n  scale_y_discrete(NULL) +\n  scale_x_continuous(NULL) +\n  labs(\n    title = 'Victorians most likely to rate their health as Excellent or Very Good',\n    subtitle = 'Self-assessed health status by states and territories',\n    caption = 'Source: National Health Survey, 2022') +\n  theme(\n    plot.title.position = 'plot',\n    panel.background = element_blank(),\n    axis.ticks.y = element_blank()\n  )\n\n\n\n\n\n\n\n\n\nThis is looking pretty good! If it was Friday evening you could probably call it a day and leave it at that. But if you’re still full of vim, let’s see if we can text labels to our chart.\n\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top",
+    "text": "The End Goal\nLet’s start with the goal in mind! Here it is—a 100% stacked bar chart showing the breakdown of self-rated health status for 8 states and territories.\n\nThe simple chart format is enhanced using techniques covered in this workshop.\n\nOrdering The states and territories on the y-axis are ordered from top to bottom by the proportion of respondents describing their health status as Very good or Excellent.\nColour The chart uses a familiar traffic-light colour scheme, to distinguish between Poor and Excellent self-assessed health.\nText hierarchy The main chart title is an informative title highlighting the key message. A descriptive subtitle explains in more detail what is plotted in the chart while the data source is provided in the footnote.\nAnnotation Text annotations indicate the percentage response for each category. Note that the colour for these labels has been carefully chosen to contrast against the background colour and the labels have been suppressed for the ‘Poor’ category, to avoid overflow.\nStory telling As well as having an informative chart title, the keywords Excellent and Very Good are emphasised with bold font and appropriate colours to help connect the title to the data and reinforce the message.\n\n\n\nThe data\nThe data for this plot come from the National Health Survey (NHS) 2022, a face-to-face interview survey conducted by the Australian Bureau of Statistics (ABS) and designed to collect information on health behaviours, conditions prevalence, and risk factors in Australia. You can read more about the survey on the ABS website here.\nThese data are openly available for download in .xlsx format from the ABS website and a copy is also included in the workshop repo in the file national-health-survey-2022-table-2.xlsx.\n\n\nAims\nIn this exercise you will use dplyr and other tools to read-in and clean the self-assessed health data from the National Health Survey. The raw data is the .xlsx file downloaded from the ABS data. The final output will be a tidy data file in .csv and .Rda format. Essentially, we will use code to go…\n\n\n\n\n\n\n\nFrom this messy excel sheet\n\n\nTo this tidy dataframe!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTidy data\n\n\n\nRemember, in a tidy dataset:\n\nEach variable is a column; each column is a variable.\nEach observation is a row; each row is an observation.\nEach value is a cell; each cell is a single value.\n\nIf you examine the output above you will see this is true for the clean data: there are three columns, and each column is a variable: status, state, and percent. Each row is an observation, telling us the per cent for every state and status combination. Finally, each cell is a single value—there are no merged cells.\nNone of these rules of tidy datasets hold for the original .xlsx file!\nR for Data Science (2nd Edition)\n\n\n\n\nHow to complete this exercise\nThis first exercise is fully guided—just follow the data cleaning steps and copy-paste the code snippets into your own code file to build up a working data cleaning pipeline.\nNote that some steps are incremental, for example Step 6 provides code to filter data.\n\n# Filter to these rows\ndf1Clean &lt;- df1Raw |&gt;\n  filter(X %in% healthStatus)\n\nIn the next step, Step 7, you are given code to select certain variables.\n\n# Append this line to the previous code using |&gt;\nselect(c(X, ends_with(\".1\"), -'Australia.1'))\n\nBut note the comment:\n\nAppend this line to the previous code using |&gt;\n\nThis means that you should append the code in Step 7 to the previous code in Step 6 using the |&gt; operator to connect the two. So after you complete Step 7 the code in your file will look like this:\n\n# Filter to these rows\ndf1Clean &lt;- df1Raw |&gt;\n  filter(X %in% healthStatus) |&gt; \n  select(c(X, ends_with(\".1\"), -'Australia.1'))\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Home",
       "Exercises",
-      "Day 2. Visualisation",
-      "Exercise 3 (Beginner)",
-      "Step-by-step guide",
-      "Part 1. The base plot"
-    ]
-  },
-  {
-    "objectID": "exercises/overview.html",
-    "href": "exercises/overview.html",
-    "title": "Guided exercises",
-    "section": "",
-    "text": "Artwork by @allison_horst\n\nNow it’s your turn to really get hands-on with the data! Work through the guided exercises. If you get stuck, refer to the notes or to the examples in the lecture slides. If you can’t get unstuck just raise your hand and someone will be there to help!\n\n\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "Exercises",
-      "Overview"
+      "Day 1. Data cleaning",
+      "Exercise 1 (Beginner)",
+      "Getting started"
     ]
   },
   {
@@ -905,899 +855,878 @@
     ]
   },
   {
-    "objectID": "lectures/lecture-storytelling.html#storytelling-with-data",
-    "href": "lectures/lecture-storytelling.html#storytelling-with-data",
-    "title": "Data Viz with R",
-    "section": "Storytelling with data",
-    "text": "Storytelling with data"
-  },
-  {
     "objectID": "lectures/lecture-storytelling.html#section",
     "href": "lectures/lecture-storytelling.html#section",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Beach erosion at Collaroy in the aftermath of the 2016 ‘superstorm’ that struck Australia’s east coast. Photo: UNSW Sydney"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-1",
     "href": "lectures/lecture-storytelling.html#section-1",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "From enviroscienceinc.com"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-2",
     "href": "lectures/lecture-storytelling.html#section-2",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
-    "text": "Map of Australia showing the 21 coastal locations from which Aboriginal stories about coastal inundation are described. From Nunn and Reid (2016)"
+    "text": "Map of Australia showing the 21 coastal locations from which Aboriginal stories about coastal inundation are described. From @nunn2016aboriginal"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-3",
     "href": "lectures/lecture-storytelling.html#section-3",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
-    "text": "The river now known as the Georges River, but then known as Kai’eemah, joined with the Goolay’yari, or Cooks River and flowed through one of the swamps that once were Botany Bay.\n\n\nThis story, quoted in Nunn and Reid (2016), was related by Frances Bodkin, a Dharawal woman, who heard it from her mother."
+    "text": "The river now known as the Georges River, but then known as Kai’eemah, joined with the Goolay’yari, or Cooks River and flowed through one of the swamps that once were Botany Bay.\n\n\nThis story, quoted in @nunn2016aboriginal, was related by Frances Bodkin, a Dharawal woman, who heard it from her mother."
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-4",
     "href": "lectures/lecture-storytelling.html#section-4",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
-    "text": "A great storm came up, and huge waves washed into the Kai’eemah destroying much of the swampland used for food gathering. The waves crashed into the shore so fiercely that they washed over the land\n\n\nThis story, quoted in Nunn and Reid (2016), was related by Frances Bodkin, a Dharawal woman, who heard it from her mother."
+    "text": "A great storm came up, and huge waves washed into the Kai’eemah destroying much of the swampland used for food gathering. The waves crashed into the shore so fiercely that they washed over the land\n\n\nThis story, quoted in @nunn2016aboriginal, was related by Frances Bodkin, a Dharawal woman, who heard it from her mother."
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-5",
     "href": "lectures/lecture-storytelling.html#section-5",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
-    "text": "Instead of the swamps, there was a great bay, and where the Kai’eemah had met the sea there was high mountains of sand. The two rivers now no longer joined together, but ran into the sea separately.\n\n\nThis story, quoted in Nunn and Reid (2016), was related by Frances Bodkin, a Dharawal woman, who heard it from her mother."
+    "text": "Instead of the swamps, there was a great bay, and where the Kai’eemah had met the sea there was high mountains of sand. The two rivers now no longer joined together, but ran into the sea separately.\n\n\nThis story, quoted in @nunn2016aboriginal, was related by Frances Bodkin, a Dharawal woman, who heard it from her mother."
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-6",
     "href": "lectures/lecture-storytelling.html#section-6",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "The compact disc (CD) co-developed by Philips and Sony in 1982 Wikipedia"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-7",
     "href": "lectures/lecture-storytelling.html#section-7",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "8-inch, 5¼-inch, and 3½-inch floppy disks. Invented in 1971 by IBM. From Wikipedia"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-8",
     "href": "lectures/lecture-storytelling.html#section-8",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Ogham Stone. 400AD-1000AD mallonireland.com"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-9",
     "href": "lectures/lecture-storytelling.html#section-9",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Quipu in the Museo Machu Picchu, Casa Concha, Cusco. Andead South America 2600 BC – c.1600 AD Wikipedia"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#how-storytelling-can-improve-data-visualisation-1",
     "href": "lectures/lecture-storytelling.html#how-storytelling-can-improve-data-visualisation-1",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "How storytelling can improve data visualisation",
     "text": "How storytelling can improve data visualisation\n\nAesthetics\nNarrative\nEmotion"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-11",
     "href": "lectures/lecture-storytelling.html#section-11",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Aesthetics"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#aesthetics-in-storytelling",
     "href": "lectures/lecture-storytelling.html#aesthetics-in-storytelling",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Aesthetics in storytelling",
-    "text": "Aesthetics in storytelling\n\n\n\n\n\n\nRomeo and Juliet (1996)\n\n\n\n\n\n\n\nGnomeo and Juliet (2011)\n\n\n\n\n\n\n\n\n\nWest Side Story (1961)\n\n\n\n\n\n\n\nRomeo and Juliet (1968)\n\n\n\n\n\n\n“Romeo + Juliet” (1996): Aesthetic: Modern, Urban\n“West Side Story” (1961): Aesthetic: 1950s New York City, Musical\n“Gnomeo & Juliet” (2011): Aesthetic: Animated, Family-Friendly\n“Romeo and Juliet” (1968): Aesthetic: Historical, Authentic"
+    "text": "Aesthetics in storytelling\n\n\n\n\n\n\n\n\n\nRomeo and Juliet (1996)\n\n\n\n\n\n\n\nGnomeo and Juliet (2011)\n\n\n\n\n\n\n\n\n\nWest Side Story (1961)\n\n\n\n\n\n\n\nRomeo and Juliet (1968)\n\n\n\n\n\n\n“Romeo + Juliet” (1996): Aesthetic: Modern, Urban\n“West Side Story” (1961): Aesthetic: 1950s New York City, Musical\n“Gnomeo & Juliet” (2011): Aesthetic: Animated, Family-Friendly\n“Romeo and Juliet” (1968): Aesthetic: Historical, Authentic"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#aesthetic-usability-effect",
     "href": "lectures/lecture-storytelling.html#aesthetic-usability-effect",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Aesthetic-Usability Effect",
     "text": "Aesthetic-Usability Effect\n\nPeople perceive more aesthetic designs as much more intuitive than those considered to be less aesthetically pleasing."
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-12",
     "href": "lectures/lecture-storytelling.html#section-12",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Ugly charts are harder to read… and harder to believe"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#aesthetics-in-data-visualisation",
     "href": "lectures/lecture-storytelling.html#aesthetics-in-data-visualisation",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Aesthetics in data visualisation",
     "text": "Aesthetics in data visualisation\n\n\nColor\nFont\nText Hierarchy"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#aesthetics-in-data-visualisation-1",
     "href": "lectures/lecture-storytelling.html#aesthetics-in-data-visualisation-1",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Aesthetics in data visualisation",
     "text": "Aesthetics in data visualisation\n\n\nColor\n\n\nFont\n\n\nText hierarchy"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-13",
     "href": "lectures/lecture-storytelling.html#section-13",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "See flourish.studio/blog/color-in-data-visualization"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-14",
     "href": "lectures/lecture-storytelling.html#section-14",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "See flourish.studio/blog/color-in-data-visualization"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-15",
     "href": "lectures/lecture-storytelling.html#section-15",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "See flourish.studio/blog/color-in-data-visualization"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-16",
     "href": "lectures/lecture-storytelling.html#section-16",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Nikkei Stock Average (Nikkei 225). See indexes.nikkei.co.jp"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-17",
     "href": "lectures/lecture-storytelling.html#section-17",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Nikkei Stock Average (Nikkei 225). See indexes.nikkei.co.jp"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#colours-in-r",
     "href": "lectures/lecture-storytelling.html#colours-in-r",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Colours in R",
     "text": "Colours in R\n\nlibrary(RColorBrewer)\ndisplay.brewer.all()"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#online-palette-generators",
     "href": "lectures/lecture-storytelling.html#online-palette-generators",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Online palette generators",
     "text": "Online palette generators\n\ncoolors.co\nColorBrewer 2.0\n136 Shades of Grey"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#aesthetics-in-data-visualisation-2",
     "href": "lectures/lecture-storytelling.html#aesthetics-in-data-visualisation-2",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Aesthetics in data visualisation",
     "text": "Aesthetics in data visualisation\n\n\nColor\n\n\nFont\n\n\nText hierarchy"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#font",
     "href": "lectures/lecture-storytelling.html#font",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Font",
     "text": "Font\n\nWords have meaning. Type has spirit. The combination is spectacular.\n\n\n—Paula Scher"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-18",
     "href": "lectures/lecture-storytelling.html#section-18",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "See blog.datawrapper.de/fonts-for-data-visualization/"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-19",
     "href": "lectures/lecture-storytelling.html#section-19",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Living among snakes in Queensland, Australia by Diana MacDonald. See didoesdigital.com/snakes"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#aesthetics-in-data-visualisation-3",
     "href": "lectures/lecture-storytelling.html#aesthetics-in-data-visualisation-3",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Aesthetics in data visualisation",
     "text": "Aesthetics in data visualisation\n\n\nColor\n\n\nFont\n\n\nText hierarchy"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-21",
     "href": "lectures/lecture-storytelling.html#section-21",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Code\nlibrary(ggplot2)\nggplot(\n  data=ToothGrowth, \n  aes(x=dose, y=len, fill=supp)) + \n  geom_col(position = 'dodge') +\n  labs(\n    title = \"The Effect of Vitamin C on Tooth Growth\",\n    x = \"Dose\",\n    y = \"Tooth growth\"\n       ) +\n  scale_fill_manual(\"Supplement\", values = c('lightblue', 'maroon'), labels = c('Orange juice', 'Vitamin C'))"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-22",
     "href": "lectures/lecture-storytelling.html#section-22",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Level Up Your Plots by Cara Thompson see cararthompson.com/talks"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-23",
     "href": "lectures/lecture-storytelling.html#section-23",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Narrative"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#narrative-in-storytelling",
     "href": "lectures/lecture-storytelling.html#narrative-in-storytelling",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Narrative in storytelling",
     "text": "Narrative in storytelling\n\n\nKurt Vonnegut on the Shapes of Stories. From YouTube"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#narrative-in-data-visualisation",
     "href": "lectures/lecture-storytelling.html#narrative-in-data-visualisation",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Narrative in data visualisation",
     "text": "Narrative in data visualisation\n\n\nTitles and annotations\nNarrative structure\nInteractivity"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#narrative-in-data-visualisation-1",
     "href": "lectures/lecture-storytelling.html#narrative-in-data-visualisation-1",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Narrative in data visualisation",
     "text": "Narrative in data visualisation\n\n\nTitles and annotations\n\n\nNarrative structure\n\n\nInteractivity"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-24",
     "href": "lectures/lecture-storytelling.html#section-24",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "How can the next government improve hospital waits in England? by The Health Foundation. See health.ork.uk"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-25",
     "href": "lectures/lecture-storytelling.html#section-25",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "How can the next government improve hospital waits in England? by The Health Foundation. See health.ork.uk"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-26",
     "href": "lectures/lecture-storytelling.html#section-26",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "plot(astsa::birth)"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-27",
     "href": "lectures/lecture-storytelling.html#section-27",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Visualising the Baby Boom by Kieran Healy"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-28",
     "href": "lectures/lecture-storytelling.html#section-28",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "society6.com"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#narrative-in-data-visualisation-2",
     "href": "lectures/lecture-storytelling.html#narrative-in-data-visualisation-2",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Narrative in data visualisation",
     "text": "Narrative in data visualisation\n\n\nTitles and annotations\n\n\nNarrative structure\n\n\nInteractivity"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#narrative-structure",
     "href": "lectures/lecture-storytelling.html#narrative-structure",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Narrative structure",
     "text": "Narrative structure\n\nWe are the storytelling ape, and we are incredibly good at it. As soon as we are old enough to want to understand what is happening around us, we begin to live in a world of stories. We think in narrative\n\n\n—Terry Pratchett"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-29",
     "href": "lectures/lecture-storytelling.html#section-29",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "A Star is Born (2018) starring Lady Gaga"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-30",
     "href": "lectures/lecture-storytelling.html#section-30",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "A Star is Born (1976) starring Barbra Sreisand"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-31",
     "href": "lectures/lecture-storytelling.html#section-31",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "A Star is Born (1954) starring Judy Garland"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-32",
     "href": "lectures/lecture-storytelling.html#section-32",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "A Star is Born (1937) starring Janet Gaynor"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#narrative-structure-1",
     "href": "lectures/lecture-storytelling.html#narrative-structure-1",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Narrative structure",
     "text": "Narrative structure\nThe simplest story structure:\n\nSetup\nConflict\nResolution"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-33",
     "href": "lectures/lecture-storytelling.html#section-33",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Sickly sweet: It’s time for a sugary drinks tax The Grattan Institute"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-34",
     "href": "lectures/lecture-storytelling.html#section-34",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Sickly sweet: It’s time for a sugary drinks tax The Grattan Institute"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-35",
     "href": "lectures/lecture-storytelling.html#section-35",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Sickly sweet: It’s time for a sugary drinks tax The Grattan Institute"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-36",
     "href": "lectures/lecture-storytelling.html#section-36",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Sickly sweet: It’s time for a sugary drinks tax The Grattan Institute"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#narrative-structure-2",
     "href": "lectures/lecture-storytelling.html#narrative-structure-2",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Narrative structure",
     "text": "Narrative structure\n\n\nDiabetes has nearly tripled since 2000\n\n\n\n\nOne can of soft drink can have nearly a day’s worth of sugar\n\n\n\n\nA tiered tax encourages manufacturers to reduce the sugar in their drinks\nUnder our proposed tax, people would switch from high-sugar drinks to low- or no-sugar drinks"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#narrative-in-data-visualisation-3",
     "href": "lectures/lecture-storytelling.html#narrative-in-data-visualisation-3",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Narrative in data visualisation",
     "text": "Narrative in data visualisation\n\n\nTitles and annotations\n\n\nNarrative structure\n\n\nInteractivity"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-37",
     "href": "lectures/lecture-storytelling.html#section-37",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "What if? by Owen Cho. See healthpolicy.github.io/nhs_whatif"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-38",
     "href": "lectures/lecture-storytelling.html#section-38",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Emotion"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#emotion-in-data-visualisation",
     "href": "lectures/lecture-storytelling.html#emotion-in-data-visualisation",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Emotion in data visualisation",
     "text": "Emotion in data visualisation\n\nThey may forget what you said — but they will never forget how you made them feel.\n\n\n—Carl W. Buehner"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#emotion-in-data-visualisation-1",
     "href": "lectures/lecture-storytelling.html#emotion-in-data-visualisation-1",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Emotion in data visualisation",
     "text": "Emotion in data visualisation\n\n\nSurprise\nDelight\nConcern"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#emotion-in-data-visualisation-2",
     "href": "lectures/lecture-storytelling.html#emotion-in-data-visualisation-2",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Emotion in data visualisation",
     "text": "Emotion in data visualisation\n\n\nSurprise\n\n\nDelight\n\n\nConcern"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-39",
     "href": "lectures/lecture-storytelling.html#section-39",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "By Mona Chalabi via instagram"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#emotion-in-data-visualisation-3",
     "href": "lectures/lecture-storytelling.html#emotion-in-data-visualisation-3",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Emotion in data visualisation",
     "text": "Emotion in data visualisation\n\n\nSurprise\n\n\nDelight\n\n\nConcern"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-40",
     "href": "lectures/lecture-storytelling.html#section-40",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "Beautiful news daily from Information is beautiful"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#emotion-in-data-visualisation-4",
     "href": "lectures/lecture-storytelling.html#emotion-in-data-visualisation-4",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Emotion in data visualisation",
     "text": "Emotion in data visualisation\n\n\nSurprise\n\n\nDelight\n\n\nConcern"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#section-41",
     "href": "lectures/lecture-storytelling.html#section-41",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "",
     "text": "little picture: sea level trend. See climate.esa.int/en/littlepicturescompetition"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#mini-exercise",
     "href": "lectures/lecture-storytelling.html#mini-exercise",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 15 minutes\n\nPractive storytelling with data\n\n\n\n\n\n\nGoalPlotStarter code\n\n\nUse storytelling tricks to enhance the starter plot examining popular baby names over time. Choose any names you like!\n\nColour (try coolors.co)\nTitle and subtitle\nText hierarchy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(babynames)\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(ggtext)\n\nbabynames |&gt; \n  filter(name %in% c(\"Olivia\", \"Mia\", \"Luna\") & sex=='F') |&gt; \n  ggplot(aes(x = year, y = n, color = name)) +\n  geom_line(linewidth = 2) +\n  labs(\n    title = \"XYZ\",\n    subtitle = \"ABC\"\n  ) +\n  theme(\n    plot.title.position = \"plot\",\n    plot.title = element_text(size = 8),\n    plot.subtitle = element_text(size = 8)\n  )"
+    "text": "Mini-Exercise\n\n 15 minutes\n\n\nPractive storytelling with data\n\n\n\n\n\n\nGoalPlotStarter code\n\n\nUse storytelling tricks to enhance the starter plot examining popular baby names over time. Choose any names you like!\n\nColour (try coolors.co)\nTitle and subtitle\nText hierarchy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(babynames)\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(ggtext)\n\nbabynames |&gt; \n  filter(name %in% c(\"Olivia\", \"Mia\", \"Luna\") & sex=='F') |&gt; \n  ggplot(aes(x = year, y = n, color = name)) +\n  geom_line(linewidth = 2) +\n  labs(\n    title = \"XYZ\",\n    subtitle = \"ABC\"\n  ) +\n  theme(\n    plot.title.position = \"plot\",\n    plot.title = element_text(size = 8),\n    plot.subtitle = element_text(size = 8)\n  )"
   },
   {
     "objectID": "lectures/lecture-storytelling.html#academic-references",
     "href": "lectures/lecture-storytelling.html#academic-references",
-    "title": "Data Viz with R",
+    "title": "Storytelling is the oldest data storage format",
     "section": "Academic References",
-    "text": "Academic References\n\n\nNunn, Patrick D, and Nicholas J Reid. 2016. “Aboriginal Memories of Inundation of the Australian Coast Dating from More Than 7000 Years Ago.” Australian Geographer 47 (1): 11–47. https://doi.org/10.1080/00049182.2015.1077539."
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#reproducible-research-with-git-and-github",
-    "href": "lectures/lecture-git-github.html#reproducible-research-with-git-and-github",
-    "title": "Data Viz with R",
-    "section": "Reproducible research with Git and GitHub",
-    "text": "Reproducible research with Git and GitHub"
+    "text": "Academic References"
   },
   {
     "objectID": "lectures/lecture-git-github.html#the-challenge",
     "href": "lectures/lecture-git-github.html#the-challenge",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "The Challenge",
     "text": "The Challenge\nAs data analysts, we produce a lot of files\n\ncode\nfigures\ntables\nreports\n\nOrganising these files is an important, albeit often unglamorous, part of our job."
   },
   {
     "objectID": "lectures/lecture-git-github.html#the-challenge-1",
     "href": "lectures/lecture-git-github.html#the-challenge-1",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "The Challenge",
     "text": "The Challenge\n\nManaging versions What do you do with old code?\nEnsuring reproducibility Can others reproduce your results? What about your future self?\nFacilitating collaboration Can other team members easily contribute?"
   },
   {
     "objectID": "lectures/lecture-git-github.html#the-old-school-solution",
     "href": "lectures/lecture-git-github.html#the-old-school-solution",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "The old school solution 🛵",
     "text": "The old school solution 🛵\nThe old school solution combines many practical strategies:\n\n\nUsing file naming conventions to track different file versions\n\nanalysis-16jun2024.do\nanalysis-19jun2024-mh.do\nanalysis-final.do\nanalysis-final-final.do\n\nNote changes directly in code comments or separate documentation\nUse shared folders, google drive etc\nShare code and code snippets over email, slack etc"
   },
   {
     "objectID": "lectures/lecture-git-github.html#the-old-school-solution-1",
     "href": "lectures/lecture-git-github.html#the-old-school-solution-1",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "The old school solution 🛵",
     "text": "The old school solution 🛵\n\nThis is ok(ish) for one person working on a small project. But if the project is large, involves many people or goes on for a long time this approach very quickly breaks down"
   },
   {
     "objectID": "lectures/lecture-git-github.html#the-new-school-solution",
     "href": "lectures/lecture-git-github.html#the-new-school-solution",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "The new school solution 🚀",
     "text": "The new school solution 🚀\nThe new school solution is to use dedicated version control software.\nThere are a few options out there but by far the most popular choice is the combination of git + GitHub"
   },
   {
     "objectID": "lectures/lecture-git-github.html#section",
     "href": "lectures/lecture-git-github.html#section",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "",
     "text": "Via git-scm.com\n\n\nGit is software for tracking different versions of code files you are working on locally.\n\n\n\nVia logos-world.net\n\n\nGitHub is a cloud-based platform for sharing and collaborating on projects managed with Git"
   },
   {
     "objectID": "lectures/lecture-git-github.html#how-does-it-work",
     "href": "lectures/lecture-git-github.html#how-does-it-work",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "How does it work?",
-    "text": "How does it work?\nCommitting, branching and merging with Git"
+    "text": "How does it work?\n\nCommitting, branching and merging with Git"
   },
   {
     "objectID": "lectures/lecture-git-github.html#how-does-it-work-1",
     "href": "lectures/lecture-git-github.html#how-does-it-work-1",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "How does it work?",
-    "text": "How does it work?\nCommitting, branching and merging with Git"
+    "text": "How does it work?\n\nCommitting, branching and merging with Git"
   },
   {
     "objectID": "lectures/lecture-git-github.html#how-does-it-work-2",
     "href": "lectures/lecture-git-github.html#how-does-it-work-2",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "How does it work?",
-    "text": "How does it work?\nSharing versions with GitHub"
+    "text": "How does it work?\n\nSharing versions with GitHub"
   },
   {
     "objectID": "lectures/lecture-git-github.html#section-1",
     "href": "lectures/lecture-git-github.html#section-1",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "",
     "text": "Illustrations from the Openscapes blog GitHub for supporting, contributing, and failing safely by Allison Horst and Julia Lowndes."
   },
   {
     "objectID": "lectures/lecture-git-github.html#how-does-it-work-3",
     "href": "lectures/lecture-git-github.html#how-does-it-work-3",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "How does it work?",
-    "text": "How does it work?\nSharing versions with GitHub"
+    "text": "How does it work?\n\nSharing versions with GitHub"
   },
   {
     "objectID": "lectures/lecture-git-github.html#how-does-it-work-4",
     "href": "lectures/lecture-git-github.html#how-does-it-work-4",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "How does it work?",
-    "text": "How does it work?\nSharing versions with GitHub"
+    "text": "How does it work?\n\nSharing versions with GitHub"
   },
   {
     "objectID": "lectures/lecture-git-github.html#it-seems-a-bit-complicated",
     "href": "lectures/lecture-git-github.html#it-seems-a-bit-complicated",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "It seems a bit complicated",
     "text": "It seems a bit complicated\n\nVia GIPHY\nIs it worth it?"
   },
   {
     "objectID": "lectures/lecture-git-github.html#yes-it-is-definitely-worth-it",
     "href": "lectures/lecture-git-github.html#yes-it-is-definitely-worth-it",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Yes!! It is definitely worth it!",
-    "text": "Yes!! It is definitely worth it!\n\n\nVersion control | Essential for reproducibility\nCollaboration | OpenSAFELY, OHDSI, R package development\nOrganisation | e.g. Code, data & outputs all stored together\nEasy web presence | e.g. any public GitHub repo; these slides!\nGreat for teaching\nPowerful search\nIssue tracking | Hyperlink the bug, discussion about the bug & the solution!\nIt is all free*\n\n\n\n\n*Well, mostly. The free products will cover most academic/research use cases."
+    "text": "Yes!! It is definitely worth it!\n\n\nVersion control | Essential for reproducibility\nCollaboration | OpenSAFELY, OHDSI, R package development\nOrganisation | e.g. Code, data & outputs all stored together\nEasy web presence | e.g. any public GitHub repo; these slides!\nGreat for teaching\nPowerful search\nIssue tracking | Hyperlink the bug, discussion about the bug & the solution!\nIt is all free*\n\n\n. . .\n\n*Well, mostly. The free products will cover most academic/research use cases."
   },
   {
     "objectID": "lectures/lecture-git-github.html#lets-check-out-an-example",
     "href": "lectures/lecture-git-github.html#lets-check-out-an-example",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Let’s Check out an example",
     "text": "Let’s Check out an example\n\ngithub.com/CBDRH/vaccineQueueNetworks\n\n\n\nIf reading this at home explore the repo for:\nCommit history\nBranches\nVersion comparison"
   },
   {
     "objectID": "lectures/lecture-git-github.html#lets-check-out-an-example-1",
     "href": "lectures/lecture-git-github.html#lets-check-out-an-example-1",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Let’s check out an example",
     "text": "Let’s check out an example\nYou can even compare difference versions of images!\n\n\nYou can try this example here"
   },
   {
     "objectID": "lectures/lecture-git-github.html#working-locally-git-client",
     "href": "lectures/lecture-git-github.html#working-locally-git-client",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Working locally: Git client",
-    "text": "Working locally: Git client\nTo use Git on your computer you need a Git Client. There are heaps of git clients available, with different pros and cons. Here are a few examples:\n\n\n\n1. Command line\n\nTerminal (Mac)\nGit bash (Windows)\nPowerShell (Windows)"
+    "text": "Working locally: Git client\nTo use Git on your computer you need a Git Client. There are heaps of git clients available, with different pros and cons. Here are a few examples:\n. . .\n\n\n\n1. Command line\n\nTerminal (Mac)\nGit bash (Windows)\nPowerShell (Windows)"
   },
   {
     "objectID": "lectures/lecture-git-github.html#working-locally-git-client-1",
     "href": "lectures/lecture-git-github.html#working-locally-git-client-1",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Working locally: Git client",
-    "text": "Working locally: Git client\nTo use Git on your computer you need a Git Client. There are heaps of git clients available, with different pros and cons. Here are a few examples:\n\n\n2. RStudio interface\n\nThis is what we will use!\nCheck out happygitwithr.com"
+    "text": "Working locally: Git client\nTo use Git on your computer you need a Git Client. There are heaps of git clients available, with different pros and cons. Here are a few examples:\n\n\n\n2. RStudio interface\n\nThis is what we will use!\nCheck out happygitwithr.com"
   },
   {
     "objectID": "lectures/lecture-git-github.html#working-locally-git-client-2",
     "href": "lectures/lecture-git-github.html#working-locally-git-client-2",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Working locally: Git client",
-    "text": "Working locally: Git client\nTo use Git on your computer you need a Git Client. There are heaps of git clients available, with different pros and cons. Here are a few examples:\n\n\n3. SAS Enterprise Guide 8 interface\n\nFor SAS users!\nUnderstanding Git Integration in SAS Enterprise Guide"
+    "text": "Working locally: Git client\nTo use Git on your computer you need a Git Client. There are heaps of git clients available, with different pros and cons. Here are a few examples:\n\n\n\n3. SAS Enterprise Guide 8 interface\n\nFor SAS users!\nUnderstanding Git Integration in SAS Enterprise Guide"
   },
   {
     "objectID": "lectures/lecture-git-github.html#collaboration-git-hosting-service",
     "href": "lectures/lecture-git-github.html#collaboration-git-hosting-service",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Collaboration: Git hosting service",
-    "text": "Collaboration: Git hosting service\nTo enable collaboration you need a Git Hosting service. There are heaps of options with different pros and cons, but the core functionality is usually the same.\n\n\n\nGitHub\n\nWidely used\nLots of resources"
+    "text": "Collaboration: Git hosting service\nTo enable collaboration you need a Git Hosting service. There are heaps of options with different pros and cons, but the core functionality is usually the same.\n. . .\n\n\n\nGitHub\n\nWidely used\nLots of resources"
   },
   {
     "objectID": "lectures/lecture-git-github.html#collaboration-git-hosting-service-1",
     "href": "lectures/lecture-git-github.html#collaboration-git-hosting-service-1",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Collaboration: Git hosting service",
-    "text": "Collaboration: Git hosting service\nTo enable collaboration you need a Git Hosting service. There are heaps of options with different pros and cons, but the core functionality is usually the same.\n\n\nGitea\n\nA light-weight easy to install option.\nImplemented in SURE and ERICA."
+    "text": "Collaboration: Git hosting service\nTo enable collaboration you need a Git Hosting service. There are heaps of options with different pros and cons, but the core functionality is usually the same.\n\n\n\nGitea\n\nA light-weight easy to install option.\nImplemented in SURE and ERICA."
   },
   {
     "objectID": "lectures/lecture-git-github.html#collaboration-git-hosting-service-2",
     "href": "lectures/lecture-git-github.html#collaboration-git-hosting-service-2",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Collaboration: Git hosting service",
-    "text": "Collaboration: Git hosting service\nTo enable collaboration you need a Git Hosting service. There are heaps of options with different pros and cons, but the core functionality is usually the same.\n\n\nGitLab\n\nCan be hosted on a private server so ideal for sensitive projects."
+    "text": "Collaboration: Git hosting service\nTo enable collaboration you need a Git Hosting service. There are heaps of options with different pros and cons, but the core functionality is usually the same.\n\n\n\nGitLab\n\nCan be hosted on a private server so ideal for sensitive projects."
   },
   {
     "objectID": "lectures/lecture-git-github.html#key-concept-repository",
     "href": "lectures/lecture-git-github.html#key-concept-repository",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Key concept: Repository",
-    "text": "Key concept: Repository\n\n\n\n\nA repository is where the magic happens \n\nReferred to as a repo* \n1 git project = 1 repo\nDatabase of changes to your code (aka diffs)\nHidden folder on your system named .git"
+    "text": "Key concept: Repository\n\n\n\n\n\nA repository is where the magic happens \n\nReferred to as a repo* \n1 git project = 1 repo\nDatabase of changes to your code (aka diffs)\nHidden folder on your system named .git"
   },
   {
     "objectID": "lectures/lecture-git-github.html#key-concept-commit",
     "href": "lectures/lecture-git-github.html#key-concept-commit",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Key concept: Commit",
-    "text": "Key concept: Commit\n\n\n\n\nCommit\n\nA Commit is like clicking save in a MS Word document\nIt saves a snapshot of the code at that point in time\nWhy you commit you must write a message explaining what changed\nCommitting is a two stage process - more on this later"
+    "text": "Key concept: Commit\n\n\n\n\n\nCommit\n\nA Commit is like clicking save in a MS Word document\nIt saves a snapshot of the code at that point in time\nWhy you commit you must write a message explaining what changed\nCommitting is a two stage process - more on this later"
   },
   {
     "objectID": "lectures/lecture-git-github.html#key-concept-diff",
     "href": "lectures/lecture-git-github.html#key-concept-diff",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Key concept: Diff",
-    "text": "Key concept: Diff\n\n\n\n\nDiff\n\nA diff is the set of changes between two versions of a file\nWhen you commit, it is the diff that gets recorded, not the whole version\nThe screenshot highlights a single diff: deletion of the word “clinic”"
+    "text": "Key concept: Diff\n\n\n\n\n\nDiff\n\nA diff is the set of changes between two versions of a file\nWhen you commit, it is the diff that gets recorded, not the whole version\nThe screenshot highlights a single diff: deletion of the word “clinic”"
   },
   {
     "objectID": "lectures/lecture-git-github.html#workflow-1",
     "href": "lectures/lecture-git-github.html#workflow-1",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Workflow",
     "text": "Workflow"
   },
   {
     "objectID": "lectures/lecture-git-github.html#workflow-2",
     "href": "lectures/lecture-git-github.html#workflow-2",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Workflow",
     "text": "Workflow"
   },
   {
     "objectID": "lectures/lecture-git-github.html#workflow-3",
     "href": "lectures/lecture-git-github.html#workflow-3",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Workflow",
-    "text": "Workflow\nHow you actual perform these commands depends on the git client you are using…\n\nWe will use the RStudio Interface"
+    "text": "Workflow\nHow you actual perform these commands depends on the git client you are using…\n. . .\nWe will use the RStudio Interface"
   },
   {
     "objectID": "lectures/lecture-git-github.html#what-files-can-i-track",
     "href": "lectures/lecture-git-github.html#what-files-can-i-track",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "What files can I track?",
-    "text": "What files can I track?\n\nThis all works best for non-binary or text files e.g. your typical code files (.sas, .do, .R, .Rmd, .py) but also .png, .csv etc\nYou can include non-binary files (.pdf, .docx, .xlsx etc) in a git repo but the diff features won’t work. It can still be useful if using the repo as a central organisation point (e.g. if you save your published manuscript with the analysis code)."
+    "text": "What files can I track?\n. . .\nThis all works best for non-binary or text files e.g. your typical code files (.sas, .do, .R, .Rmd, .py) but also .png, .csv etc\nYou can include non-binary files (.pdf, .docx, .xlsx etc) in a git repo but the diff features won’t work. It can still be useful if using the repo as a central organisation point (e.g. if you save your published manuscript with the analysis code)."
   },
   {
     "objectID": "lectures/lecture-git-github.html#how-often-should-i-commit",
     "href": "lectures/lecture-git-github.html#how-often-should-i-commit",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "How often should I commit?",
-    "text": "How often should I commit?\n\nWell, it depends.\nJust like when you start writing a word document you might not click save very often as you spew out lots of ideas, but at the end of your thesis you will carefully save every change!\nIt is best practice to keep commits fairly small and related, especially for mature projects."
+    "text": "How often should I commit?\n. . .\nWell, it depends.\nJust like when you start writing a word document you might not click save very often as you spew out lots of ideas, but at the end of your thesis you will carefully save every change!\nIt is best practice to keep commits fairly small and related, especially for mature projects."
   },
   {
     "objectID": "lectures/lecture-git-github.html#whats-with-the-staging-area",
     "href": "lectures/lecture-git-github.html#whats-with-the-staging-area",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "What’s with the staging area?",
-    "text": "What’s with the staging area?\n\nThere are advantages of breaking up the commit into two steps\n\nYou can split a big edit into bite-sized pieces\nEasier to review\nIf you make a mistake you can unstage. You can’t un-commit!"
+    "text": "What’s with the staging area?\n. . .\nThere are advantages of breaking up the commit into two steps\n\nYou can split a big edit into bite-sized pieces\nEasier to review\nIf you make a mistake you can unstage. You can’t un-commit!"
   },
   {
     "objectID": "lectures/lecture-git-github.html#what-about-my-sensitive-datacode",
     "href": "lectures/lecture-git-github.html#what-about-my-sensitive-datacode",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "What about my sensitive data/code?",
     "text": "What about my sensitive data/code?\nIf your data are sensitive be very careful not to track with Git (more tips on this later).\nPrivate repos are available if you don’t want the public to see your code (you can change to public later if desired.)\nGit Hosting Services like Gitea are available in secure analysis environments (SURE/ERICA etc)"
   },
   {
     "objectID": "lectures/lecture-git-github.html#how-does-my-repo-align-with-my-project-folder",
     "href": "lectures/lecture-git-github.html#how-does-my-repo-align-with-my-project-folder",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "How does my repo align with my project folder?",
-    "text": "How does my repo align with my project folder?\n\n\nYou need to actively think about this!\nOption: Root folder of the project\nOption: Specific folder (e.g. just Code/)\nGit ignores files and folders listed in the special .gitignore file"
+    "text": "How does my repo align with my project folder?\n. . .\n\nYou need to actively think about this!\nOption: Root folder of the project\nOption: Specific folder (e.g. just Code/)\nGit ignores files and folders listed in the special .gitignore file"
   },
   {
     "objectID": "lectures/lecture-git-github.html#mini-exercise",
     "href": "lectures/lecture-git-github.html#mini-exercise",
-    "title": "Data Viz with R",
+    "title": "Interfacing with Git",
     "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 15 minutes\n\nFork the exercise repo\n\n\n\n\n\n\nClick here and follow the directions to create a personal fork of the Exercises repo on GitHub\n\nClone this repo as a new project in RStudio\n\nClick on the Code icon and copy the HTTPS url to your clipboard\nIn RStudio, create a new project using this url:\n\nNew Project &gt; Version Control &gt; Git\nPaste the copied url into the Repository URL field\nCarefully choose where you want to store these files on your computer"
-  },
-  {
-    "objectID": "lectures/lecture-data-vis.html#data-visualisation-with-ggplot2",
-    "href": "lectures/lecture-data-vis.html#data-visualisation-with-ggplot2",
-    "title": "Data Viz with R",
-    "section": "Data visualisation with ggplot2",
-    "text": "Data visualisation with ggplot2"
+    "text": "Mini-Exercise\n\n 15 minutes\n\n\nFork the exercise repo\n\n\n\n\n\n\nClick here and follow the directions to create a personal fork of the Exercises repo on GitHub\n\nClone this repo as a new project in RStudio\n\nClick on the Code icon and copy the HTTPS url to your clipboard\nIn RStudio, create a new project using this url:\n\nNew Project &gt; Version Control &gt; Git\nPaste the copied url into the Repository URL field\nCarefully choose where you want to store these files on your computer"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#section-1",
     "href": "lectures/lecture-data-vis.html#section-1",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "",
     "text": "Artwork by @allison_horst"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#ggplot2",
     "href": "lectures/lecture-data-vis.html#ggplot2",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "ggplot2",
     "text": "ggplot2\n\n\n\nA grammar of graphics\nConsistent syntax\nFlexible\nCustomisable\nggplot2.tidyverse.org\nexts.ggplot2.tidyverse.org/gallery"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#components-of-ggplot-function",
     "href": "lectures/lecture-data-vis.html#components-of-ggplot-function",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Components of ggplot() function",
     "text": "Components of ggplot() function\n\n\nData (data =)\nCoordinate system (x and y)\nAesthetics (aes())\nGeometries (geom_*)"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#ggplot2-components-data",
     "href": "lectures/lecture-data-vis.html#ggplot2-components-data",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "ggplot2 components: Data",
-    "text": "ggplot2 components: Data\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins\n)"
+    "text": "ggplot2 components: Data\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins\n)"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#ggplot2-components-coordinates",
     "href": "lectures/lecture-data-vis.html#ggplot2-components-coordinates",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "ggplot2 components: Coordinates",
-    "text": "ggplot2 components: Coordinates\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)\n)"
+    "text": "ggplot2 components: Coordinates\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)\n)"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#ggplot2-components-geom",
     "href": "lectures/lecture-data-vis.html#ggplot2-components-geom",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "ggplot2 components: Geom",
-    "text": "ggplot2 components: Geom\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)) + \n  geom_histogram()"
+    "text": "ggplot2 components: Geom\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)) + \n  geom_histogram()"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#ggplot2-components-static-aesthetics",
     "href": "lectures/lecture-data-vis.html#ggplot2-components-static-aesthetics",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "ggplot2 components: Static Aesthetics",
-    "text": "ggplot2 components: Static Aesthetics\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)) + \n  geom_histogram(\n    color = 'navy',\n    fill = 'lightblue'\n  )"
+    "text": "ggplot2 components: Static Aesthetics\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)) + \n  geom_histogram(\n    color = 'navy',\n    fill = 'lightblue'\n  )"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#ggplot2-components-mapped-aesthetics",
     "href": "lectures/lecture-data-vis.html#ggplot2-components-mapped-aesthetics",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "ggplot2 components: Mapped Aesthetics",
-    "text": "ggplot2 components: Mapped Aesthetics\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g, fill = ..x..)) + \n  geom_histogram() +\n  scale_fill_gradient(low = 'lightblue', \n                      high = 'navy')"
+    "text": "ggplot2 components: Mapped Aesthetics\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g, fill = ..x..)) + \n  geom_histogram() +\n  scale_fill_gradient(low = 'lightblue', \n                      high = 'navy')"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#two-numeric-variables",
     "href": "lectures/lecture-data-vis.html#two-numeric-variables",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Two numeric variables",
-    "text": "Two numeric variables\n\n\n# Plot\nggplot(\n  data = penguins,\n  aes(x = flipper_length_mm, \n      y = bill_length_mm)) + \n  geom_point()"
+    "text": "Two numeric variables\n\n# Plot\nggplot(\n  data = penguins,\n  aes(x = flipper_length_mm, \n      y = bill_length_mm)) + \n  geom_point()"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#one-numeric-one-categorical",
     "href": "lectures/lecture-data-vis.html#one-numeric-one-categorical",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "One numeric, One categorical",
-    "text": "One numeric, One categorical\n\n\n# Plot\nggplot(\n  data = penguins,\n  aes(x = island, \n      y = body_mass_g)) + \n  geom_boxplot()"
+    "text": "One numeric, One categorical\n\n# Plot\nggplot(\n  data = penguins,\n  aes(x = island, \n      y = body_mass_g)) + \n  geom_boxplot()"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#more-elaborate-combinations",
     "href": "lectures/lecture-data-vis.html#more-elaborate-combinations",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "More elaborate combinations",
     "text": "More elaborate combinations\n\n\nCode\nlibrary(palmerpenguins)\nlibrary(ggplot2)\nlibrary(RColorBrewer)\nlibrary(colorspace)\nlibrary(ggtext)\n\nmyCols &lt;- brewer.pal(3, 'Set2')\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point(shape = 21, size = 3) +\n  geom_smooth(method=\"lm\", size=3) +\n  scale_color_manual(\"\", values = myCols) +\n  scale_fill_manual(\"\", values = lighten(myCols, 0.5)) +\n  scale_x_continuous(labels = scales::comma) +\n  labs(y = \"Flipper length (mm)\",\n       x = \"Body mass (g)\",\n       title = \"&lt;span style='color: #8DA0CB'&gt;**Gentoo**&lt;/span&gt; penguins are larger and heavier than \n       &lt;span style='color: #66C2A5'&gt;**Adelie**&lt;/span&gt; or\n       &lt;span style='color: #FC8D62'&gt;**Chinstrap**&lt;/span&gt;\",\n       subtitle = \"**Penguin body mass (g) versus flipper length (mm) by species**\",\n       caption = \"**Data** from the Palmer Penguins dataset\") +\n  theme_minimal() +\n  theme(\n    plot.title.position = \"plot\",\n    plot.title = element_markdown(color='grey10', size=24),\n    plot.subtitle = element_markdown(color='grey60', size=16,\n                                 margin = margin(5,0,10,0)),\n    plot.caption = element_markdown(color = \"grey60\",\n                                size=10, hjust=0),\n    axis.title = element_text(color='grey10', size=16),\n    axis.text = element_text(color='grey10', size=14)\n  )"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#ggplot2-a-note-on-style",
     "href": "lectures/lecture-data-vis.html#ggplot2-a-note-on-style",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "ggplot2 A note on style",
-    "text": "ggplot2 A note on style\n\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)) + \n  geom_histogram(\n    color = 'navy',\n    fill = 'lightblue')\n\n\n\nlibrary() calls on top\nPlenty of # Comments\nSpacing x = body_mass_g\nIndentation\ndata = and (aes()) on separate lines\nGeoms on new lines\ncolor and fill on new lines\n\n\n\n\n\n\nggplot(data=penguins,aes(x=body_mass_g))+geom_histogram(color='navy',fill='lightblue')\n\nDoes the same but harder to read and debug!"
+    "text": "ggplot2 A note on style\n\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)) + \n  geom_histogram(\n    color = 'navy',\n    fill = 'lightblue')\n\n\n\nlibrary() calls on top\nPlenty of # Comments\nSpacing x = body_mass_g\nIndentation\ndata = and (aes()) on separate lines\nGeoms on new lines\ncolor and fill on new lines\n\n\n\n. . .\n\n\nggplot(data=penguins,aes(x=body_mass_g))+geom_histogram(color='navy',fill='lightblue')\n\nDoes the same but harder to read and debug!"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#mini-exercise",
     "href": "lectures/lecture-data-vis.html#mini-exercise",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 5 minutes\n\nModify the starter code to produce the figure\n\n\n\n\n\n\nFigureStarter codeHints\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)) + \n  geom_histogram(\n    color = 'navy',\n    fill = 'lightblue'\n  )\n\n\n\n\nThis is a density plot\nEnter ?geom_density() at the console to open the R Documentation. Scroll down to the section on Aesthetics to read about other modifiable aesthetics."
+    "text": "Mini-Exercise\n\n 5 minutes\n\n\nModify the starter code to produce the figure\n\n\n\n\n\n\nFigureStarter codeHints\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\n# Call ggplot\nggplot(\n  data = penguins,\n  aes(x = body_mass_g)) + \n  geom_histogram(\n    color = 'navy',\n    fill = 'lightblue'\n  )\n\n\n\n\nThis is a density plot\nEnter ?geom_density() at the console to open the R Documentation. Scroll down to the section on Aesthetics to read about other modifiable aesthetics."
   },
   {
     "objectID": "lectures/lecture-data-vis.html#aesthetic-mappings",
     "href": "lectures/lecture-data-vis.html#aesthetic-mappings",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Aesthetic mappings",
     "text": "Aesthetic mappings\nMap variables to visual elements\n\n\nColour\nFill\nShape\nSize\nLine type"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#map-colour-to-body-mass",
     "href": "lectures/lecture-data-vis.html#map-colour-to-body-mass",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Map colour to body mass",
-    "text": "Map colour to body mass\n\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = body_mass_g, \n    y = flipper_length_mm,\n    color = body_mass_g)) + \n  geom_point()"
+    "text": "Map colour to body mass\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = body_mass_g, \n    y = flipper_length_mm,\n    color = body_mass_g)) + \n  geom_point()"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#map-size-to-body-mass",
     "href": "lectures/lecture-data-vis.html#map-size-to-body-mass",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Map size to body mass",
-    "text": "Map size to body mass\n\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = body_mass_g, \n    y = flipper_length_mm,\n    size = body_mass_g)) + \n  geom_point()"
+    "text": "Map size to body mass\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = body_mass_g, \n    y = flipper_length_mm,\n    size = body_mass_g)) + \n  geom_point()"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#map-colour-to-species",
     "href": "lectures/lecture-data-vis.html#map-colour-to-species",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Map colour to species",
-    "text": "Map colour to species\n\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = body_mass_g, \n    y = flipper_length_mm,\n    color = species)) + \n  geom_point()"
+    "text": "Map colour to species\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = body_mass_g, \n    y = flipper_length_mm,\n    color = species)) + \n  geom_point()"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#map-species-to-colour-and-shape",
     "href": "lectures/lecture-data-vis.html#map-species-to-colour-and-shape",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Map species to colour and shape",
-    "text": "Map species to colour and shape\n\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = body_mass_g, \n    y = flipper_length_mm,\n    color = species,\n    shape = species)) + \n  geom_point()"
+    "text": "Map species to colour and shape\n\n# Scatterplot\nggplot(\n  data = penguins,\n  aes(\n    x = body_mass_g, \n    y = flipper_length_mm,\n    color = species,\n    shape = species)) + \n  geom_point()"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#mini-exercise-1",
     "href": "lectures/lecture-data-vis.html#mini-exercise-1",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 5 minutes\n\nModify the starter code to produce the figure!\n\n\n\n\n\n\nFigureStarter code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Plot\nggplot(\n  data = penguins,\n  aes(x = island, \n      y = body_mass_g)) + \n  geom_boxplot()"
+    "text": "Mini-Exercise\n\n 5 minutes\n\n\nModify the starter code to produce the figure!\n\n\n\n\n\n\nFigureStarter code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Plot\nggplot(\n  data = penguins,\n  aes(x = island, \n      y = body_mass_g)) + \n  geom_boxplot()"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#base-plot",
     "href": "lectures/lecture-data-vis.html#base-plot",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Base plot",
-    "text": "Base plot\n\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point()"
+    "text": "Base plot\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point()"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#layering-geoms",
     "href": "lectures/lecture-data-vis.html#layering-geoms",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Layering geoms",
-    "text": "Layering geoms\n\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point() +\n  geom_smooth(method = 'lm')"
+    "text": "Layering geoms\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point() +\n  geom_smooth(method = 'lm')"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#add-color-scale",
     "href": "lectures/lecture-data-vis.html#add-color-scale",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Add color scale",
-    "text": "Add color scale\n\n\nmyCols &lt;- c(\"skyblue\", \"orange\", \"forestgreen\")\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point() +\n  geom_smooth(method = 'lm') + \n  scale_color_manual(values = myCols)"
+    "text": "Add color scale\n\nmyCols &lt;- c(\"skyblue\", \"orange\", \"forestgreen\")\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point() +\n  geom_smooth(method = 'lm') + \n  scale_color_manual(values = myCols)"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#add-fill-scale",
     "href": "lectures/lecture-data-vis.html#add-fill-scale",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Add fill scale",
-    "text": "Add fill scale\n\n\nmyCols &lt;- c(\"skyblue\", \"orange\", \"forestgreen\")\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point() +\n  geom_smooth(method = 'lm') + \n  scale_color_manual(values = myCols) +\n  scale_fill_manual(values = myCols)"
+    "text": "Add fill scale\n\nmyCols &lt;- c(\"skyblue\", \"orange\", \"forestgreen\")\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point() +\n  geom_smooth(method = 'lm') + \n  scale_color_manual(values = myCols) +\n  scale_fill_manual(values = myCols)"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#vary-static-aesthetics",
     "href": "lectures/lecture-data-vis.html#vary-static-aesthetics",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Vary static aesthetics",
-    "text": "Vary static aesthetics\n\n\nmyCols &lt;- c(\"skyblue\", \"orange\", \"forestgreen\")\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point(size = 2) +\n  geom_smooth(method = 'lm', size = 2) + \n  scale_color_manual(values = myCols) +\n  scale_fill_manual(values = myCols)"
+    "text": "Vary static aesthetics\n\nmyCols &lt;- c(\"skyblue\", \"orange\", \"forestgreen\")\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point(size = 2) +\n  geom_smooth(method = 'lm', size = 2) + \n  scale_color_manual(values = myCols) +\n  scale_fill_manual(values = myCols)"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#add-x-and-y-scales",
     "href": "lectures/lecture-data-vis.html#add-x-and-y-scales",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Add x and y scales",
-    "text": "Add x and y scales\n\n\nmyCols &lt;- c(\"skyblue\", \"orange\", \"forestgreen\")\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point(size = 2) +\n  geom_smooth(method = 'lm', size = 2) + \n  scale_color_manual(values = myCols) +\n  scale_fill_manual(values = myCols) +\n  scale_x_continuous(\"Body mass (g)\") +\n  scale_y_continuous(\"Flipper length (mm)\")"
+    "text": "Add x and y scales\n\nmyCols &lt;- c(\"skyblue\", \"orange\", \"forestgreen\")\n\nggplot(data=penguins,\n       aes(x = body_mass_g, \n           y = flipper_length_mm,\n           color = species,\n           fill = species)) +\n  geom_point(size = 2) +\n  geom_smooth(method = 'lm', size = 2) + \n  scale_color_manual(values = myCols) +\n  scale_fill_manual(values = myCols) +\n  scale_x_continuous(\"Body mass (g)\") +\n  scale_y_continuous(\"Flipper length (mm)\")"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#mini-exercise-2",
     "href": "lectures/lecture-data-vis.html#mini-exercise-2",
-    "title": "Data Viz with R",
+    "title": "Adding aesthetic mappings",
     "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 15 minutes\n\nUse ggplot2 and the penguins data to produce the figure\n\n\n\n\n\n\nFigureHints Seriously, help\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStart by identifying the x, y and fill aesthetics that will go in to aes().\nThis plot combines geom_jitter() and geom_boxplot()\nSetting the alpha = argument makes the boxplots transparent\nUse scale_fill_manual() to control the fill colors for the three different species\n\n\n\n\n\n# Fill in the blanks!\nggplot(\n  data = ,\n  aes(x = ,\n      y = ,\n      fill = )) +\n  geom_jitter(shape = ) +\n  geom_boxplot(\n    alpha = ) + \n  scale_y_continuous(\n    \" \",\n    limits = c( ,  )) + \n  scale_x_discrete(NULL) + \n  scale_fill_manual(NULL,\n    values = c(' ',' ',' '))"
+    "text": "Mini-Exercise\n\n 15 minutes\n\n\nUse ggplot2 and the penguins data to produce the figure\n\n\n\n\n\n\nFigureHints Seriously, help\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStart by identifying the x, y and fill aesthetics that will go in to aes().\nThis plot combines geom_jitter() and geom_boxplot()\nSetting the alpha = argument makes the boxplots transparent\nUse scale_fill_manual() to control the fill colors for the three different species\n\n\n\n\n\n# Fill in the blanks!\nggplot(\n  data = ,\n  aes(x = ,\n      y = ,\n      fill = )) +\n  geom_jitter(shape = ) +\n  geom_boxplot(\n    alpha = ) + \n  scale_y_continuous(\n    \" \",\n    limits = c( ,  )) + \n  scale_x_discrete(NULL) + \n  scale_fill_manual(NULL,\n    values = c(' ',' ',' '))"
   }
 ]
