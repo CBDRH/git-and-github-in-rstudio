@@ -3,8 +3,16 @@ project:
   output-dir: docs
 website:
   title: Data Viz with R
-  site-url: https://cbdrh.github.io/data-viz-workshop/home/
+  image: images/hot-air-balloon.png
+  open-graph:
+    title: "Reproducible data visualisation with R"
+    description: "A two-day workshop building core skills for data visualisation in R."
+  twitter-card:
+    title: "Reproducible data visualisation with R"
+    description: "A two-day workshop building core skills for data visualisation in R."
+  site-url: https://cbdrh.github.io/data-viz-workshop
   page-navigation: true
+  back-to-top-navigation: true
   page-footer:
     center:
     - text: © UNSW 2024
