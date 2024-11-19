@@ -6,6 +6,7 @@ format:
     theme: [litera, ../custom.scss]
     code-overflow: wrap
     back-to-top-navigation: false
+    page-navigation: false
 ---
 
 :::: {.cr-section layout="sidebar-right" style="font-size:30px;"}

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/home/orientation.html</loc>
-    <lastmod>2024-11-19T22:31:29.089Z</lastmod>
-  </url>
-  <url>
     <loc>https://cbdrh.github.io/data-viz-workshop/cars-analysis.html</loc>
     <lastmod>2024-11-10T02:49:37.000Z</lastmod>
   </url>
@@ -41,8 +37,16 @@
     <lastmod>2024-11-16T09:02:34.156Z</lastmod>
   </url>
   <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/exercises/exercise3-2.html</loc>
-    <lastmod>2024-11-16T10:40:32.272Z</lastmod>
+    <loc>https://cbdrh.github.io/data-viz-workshop/exercises/exercise1-1.html</loc>
+    <lastmod>2024-10-28T00:45:48.003Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/index.html</loc>
+    <lastmod>2024-11-17T01:16:26.168Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/poll.html</loc>
+    <lastmod>2024-11-17T05:05:11.108Z</lastmod>
   </url>
   <url>
     <loc>https://cbdrh.github.io/data-viz-workshop/home/prerequisites.html</loc>
@@ -57,8 +61,16 @@
     <lastmod>2024-11-17T04:32:57.535Z</lastmod>
   </url>
   <url>
-    <loc>https://cbdrh.github.io/data-viz-workshop/exercises/exercise1-1.html</loc>
-    <lastmod>2024-10-28T00:45:48.003Z</lastmod>
+    <loc>https://cbdrh.github.io/data-viz-workshop/home/orientation.html</loc>
+    <lastmod>2024-11-19T23:40:27.507Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/exercises/exercise3-2.html</loc>
+    <lastmod>2024-11-16T10:40:32.272Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/data-viz-workshop/exercises/overview.html</loc>
+    <lastmod>2024-11-17T00:52:35.431Z</lastmod>
   </url>
   <url>
     <loc>https://cbdrh.github.io/data-viz-workshop/exercises/exercise3-3.html</loc>

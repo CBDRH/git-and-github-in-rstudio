@@ -75,9 +75,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
-<script src="../site_libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
-<script src="../site_libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
 <link href="../site_libs/quarto-contrib/line-highlight-1.0.0/line-highlight.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -106,11 +103,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<meta cr-debug-mode="false">
-<meta cr-remove-header-space="false">
 
 
-<link rel="stylesheet" href="../site_libs/quarto-contrib/quarto-project/qmd-lab/closeread/closeread.css">
 <meta property="og:title" content="Reproducible data visualisation with R">
 <meta property="og:description" content="A two-day workshop building core skills for data visualisation in R.">
 <meta property="og:image" content="https://cbdrh.github.io/data-viz-workshop/exercises/images/hot-air-balloon.png">
@@ -174,7 +168,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
@@ -398,10 +392,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#set-up-your-code-file-meta-data" id="toc-set-up-your-code-file-meta-data" class="nav-link active" data-scroll-target="#set-up-your-code-file-meta-data"><span class="header-section-number">1</span> Set up your code file meta data</a></li>
+  <li><a href="#load-libraries" id="toc-load-libraries" class="nav-link" data-scroll-target="#load-libraries"><span class="header-section-number">2</span> Load libraries</a></li>
+  <li><a href="#load-your-data" id="toc-load-your-data" class="nav-link" data-scroll-target="#load-your-data"><span class="header-section-number">3</span> Load your data</a></li>
+  <li><a href="#start-with-a-base-plot" id="toc-start-with-a-base-plot" class="nav-link" data-scroll-target="#start-with-a-base-plot"><span class="header-section-number">4</span> Start with a base plot</a></li>
+  <li><a href="#add-points" id="toc-add-points" class="nav-link" data-scroll-target="#add-points"><span class="header-section-number">5</span> Add points</a></li>
+  <li><a href="#add-colours" id="toc-add-colours" class="nav-link" data-scroll-target="#add-colours"><span class="header-section-number">6</span> Add colours</a></li>
+  <li><a href="#add-fill-colour-for-the-points" id="toc-add-fill-colour-for-the-points" class="nav-link" data-scroll-target="#add-fill-colour-for-the-points"><span class="header-section-number">7</span> Add fill colour for the points</a></li>
+  <li><a href="#remove-the-legend" id="toc-remove-the-legend" class="nav-link" data-scroll-target="#remove-the-legend"><span class="header-section-number">8</span> Remove the legend</a></li>
+  <li><a href="#remove-the-axis-titles" id="toc-remove-the-axis-titles" class="nav-link" data-scroll-target="#remove-the-axis-titles"><span class="header-section-number">9</span> Remove the axis titles</a></li>
+  <li><a href="#adjust-the-ranges-on-the-x-axis-and-y-axis" id="toc-adjust-the-ranges-on-the-x-axis-and-y-axis" class="nav-link" data-scroll-target="#adjust-the-ranges-on-the-x-axis-and-y-axis"><span class="header-section-number">10</span> Adjust the ranges on the x-axis and y-axis</a></li>
+  <li><a href="#add-title-subtitle-and-caption" id="toc-add-title-subtitle-and-caption" class="nav-link" data-scroll-target="#add-title-subtitle-and-caption"><span class="header-section-number">11</span> Add title, subtitle, and caption</a></li>
+  <li><a href="#add-text-labels" id="toc-add-text-labels" class="nav-link" data-scroll-target="#add-text-labels"><span class="header-section-number">12</span> Add text labels</a></li>
+  <li><a href="#shift-text-labels-to-the-right-and-make-them-smaller" id="toc-shift-text-labels-to-the-right-and-make-them-smaller" class="nav-link" data-scroll-target="#shift-text-labels-to-the-right-and-make-them-smaller"><span class="header-section-number">13</span> Shift text labels to the right and make them smaller</a></li>
+  <li><a href="#remove-the-grey-background" id="toc-remove-the-grey-background" class="nav-link" data-scroll-target="#remove-the-grey-background"><span class="header-section-number">14</span> Remove the grey background</a></li>
+  <li><a href="#add-in-major-grid-lines" id="toc-add-in-major-grid-lines" class="nav-link" data-scroll-target="#add-in-major-grid-lines"><span class="header-section-number">15</span> Add in major grid lines</a></li>
+  <li><a href="#remove-axis-ticks" id="toc-remove-axis-ticks" class="nav-link" data-scroll-target="#remove-axis-ticks"><span class="header-section-number">16</span> Remove axis ticks</a></li>
+  <li><a href="#increase-the-line-size-for-the-highlighted-lines" id="toc-increase-the-line-size-for-the-highlighted-lines" class="nav-link" data-scroll-target="#increase-the-line-size-for-the-highlighted-lines"><span class="header-section-number">17</span> Increase the line size for the highlighted lines</a></li>
+  <li><a href="#emphasise-the-key-words-in-the-title" id="toc-emphasise-the-key-words-in-the-title" class="nav-link" data-scroll-target="#emphasise-the-key-words-in-the-title"><span class="header-section-number">18</span> Emphasise the key words in the title</a></li>
+  <li><a href="#add-text-hierarchy-in-the-title-subtitle-and-caption" id="toc-add-text-hierarchy-in-the-title-subtitle-and-caption" class="nav-link" data-scroll-target="#add-text-hierarchy-in-the-title-subtitle-and-caption"><span class="header-section-number">19</span> Add text hierarchy in the title, subtitle and caption</a></li>
+  <li><a href="#add-percentage-symbol-to-y-axis-label" id="toc-add-percentage-symbol-to-y-axis-label" class="nav-link" data-scroll-target="#add-percentage-symbol-to-y-axis-label"><span class="header-section-number">20</span> Add percentage symbol to y-axis label</a></li>
+  <li><a href="#tidy-up-condition-labels" id="toc-tidy-up-condition-labels" class="nav-link" data-scroll-target="#tidy-up-condition-labels"><span class="header-section-number">21</span> Tidy up condition labels</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full column-body" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/overview.html">Exercises</a></li><li class="breadcrumb-item">Day 2. Visualisation</li><li class="breadcrumb-item"><a href="../exercises/exercise4-1.html">Exercise 4 (Advanced)</a></li><li class="breadcrumb-item"><a href="../exercises/exercise4-2.html">Step-by-step guide</a></li></ol></nav>
 <div class="quarto-title">
@@ -410,7 +430,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div class="quarto-title-meta column-body">
+<div class="quarto-title-meta">
 
     
   
@@ -1416,7 +1436,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-body">
+<nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../exercises/exercise4-1.html" class="pagination-link" aria-label="Getting started">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Getting started</span>
