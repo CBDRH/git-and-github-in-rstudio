@@ -45,8 +45,8 @@ website:
             href: home/introduction.qmd
           - text: "Introductions"  
             href: home/poll.qmd
-          # - text: "Orientation"
-          #   href: home/orientation.qmd
+          - text: "Orientation"
+            href: home/orientation.qmd
         - text: "Lectures"
           href: lectures/overview.qmd
         - section: "Exercises"

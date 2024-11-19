@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../lectures/overview.html" rel="next">
+<link href="../home/poll.html" rel="prev">
 <link href="../images/hot-air-balloon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -138,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content page-columns page-full column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">Housekeeping</a></li><li class="breadcrumb-item"><a href="../home/orientation.html">Orientation</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Orientation to RStudio</h1>
 </div>
@@ -179,17 +181,17 @@ ul.task-list li input[type="checkbox"] {
 <p>Let’s break it down.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-myimage" data-pan-to="30%, 20%" data-scale-by="1.5">
+<div class="trigger new-trigger" data-pan-to="30%, 20%" data-scale-by="1.5" data-focus-on="cr-myimage">
 <div class="narrative">
 <p>This is an R script file (<code>.R</code> extension). Here you can write R code to clean, analyse, and visualise data</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-myimage" data-pan-to="60%, 80%" data-scale-by="2">
+<div class="trigger new-trigger" data-pan-to="60%, 80%" data-scale-by="2" data-focus-on="cr-myimage">
 <div class="narrative">
 <p>Notice that this file is saved with a proper file name <code>analysis.R</code> so we can open and close the file and come back to the code as needed.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-myimage" data-pan-to="-30%, 40%" data-scale-by="1.5">
+<div class="trigger new-trigger" data-pan-to="-30%, 40%" data-scale-by="1.5" data-focus-on="cr-myimage">
 <div class="narrative">
 <p>This area has several tabs. The <strong>Environment</strong> tab plays a key role in managing and visualizing the objects that exist in the current R session.</p>
 </div>
@@ -209,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Notice the <strong>Git</strong> tab is also in this area. We’ll use that later.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-myimage" data-pan-to="-30%, -40%" data-scale-by="1.5">
+<div class="trigger new-trigger" data-pan-to="-30%, -40%" data-scale-by="1.5" data-focus-on="cr-myimage">
 <div class="narrative">
 <p>There are several important tabs in the bottom right-hand corner</p>
 </div>
@@ -229,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Other important tabs in this area includes the <strong>Plots</strong> tab, where are plots will appear, and the <strong>Packages</strong> tab that has a list of all the installed packages.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-myimage" data-pan-to="30%, -40%" data-scale-by="1.5">
+<div class="trigger new-trigger" data-pan-to="30%, -40%" data-scale-by="1.5" data-focus-on="cr-myimage">
 <div class="narrative">
 <p>Here we have the console.</p>
 </div>
@@ -249,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Working in the console is convenient for quick, interactive commands, but it doesn’t save a persistent record of your entered commands so important code should always be saved in a script.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-myimage" data-pan-to="-80%, 80%" data-scale-by="1.5">
+<div class="trigger new-trigger" data-pan-to="-80%, 80%" data-scale-by="1.5" data-focus-on="cr-myimage">
 <div class="narrative">
 <p>Finally, note this icon in the top right-hand corner. This tells us we are working in an R Project named <code>cars-study</code>.</p>
 </div>
@@ -266,29 +268,23 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p><br><br></p>
-<section id="mini-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="mini-exercise">Mini-Exercise</h2>
-<div class="clock-cr">
-<p><i class="fa-solid fa-clock" aria-label="clock"></i> 5 minutes</p>
-</div>
-<section id="make-yourself-at-home" class="level3">
-<h3 class="anchored" data-anchor-id="make-yourself-at-home">Make yourself at home</h3>
-<div class="columns">
-<div class="column" style="width:34%;">
-<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&amp;color=yellow&amp;hrs=0&amp;min=5&amp;sec=0" frameborder="0">
-</iframe>
-</div><div class="column" style="width:66%;">
-<ol type="1">
-<li><p>Enter <code>getwd()</code> at the console to see your current working directory. Make a note of this location!</p></li>
-<li><p>In the RStudio menu navigate to <code>Tools &gt; Global Options &gt; Appearance</code> and choose an editor theme that you like!</p></li>
-</ol>
-</div>
-</div>
+<!-- <br><br> -->
+<!-- ## Mini-Exercise -->
+<!-- ::: {.clock-cr} -->
+<!--  5 minutes -->
+<!-- ::: -->
+<!-- ### Make yourself at home -->
+<!-- :::: {.columns} -->
+<!-- ::: {.column width=34%} -->
+<!-- <iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=5&sec=0" frameborder="0"></iframe> -->
+<!-- ::: -->
+<!-- ::: {.column width=66%} -->
+<!-- 1. Enter `getwd()` at the console to see your current working directory. Make a note of this location!  -->
+<!-- 2. In the RStudio menu navigate to `Tools > Global Options > Appearance` and choose an editor theme that you like! -->
+<!-- ::: -->
+<!-- :::: -->
 
 
-</section>
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -700,6 +696,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="../home/poll.html" class="pagination-link" aria-label="Introductions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introductions</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../lectures/overview.html" class="pagination-link" aria-label="Lectures">
+        <span class="nav-page-text">Lectures</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

@@ -59,32 +59,32 @@ Finally, note this icon in the top right-hand corner. This tells us we are worki
 ::::
 
 
-<br><br>
+<!-- <br><br> -->
 
-## Mini-Exercise
+<!-- ## Mini-Exercise -->
 
-::: {.clock-cr}
+<!-- ::: {.clock-cr} -->
 
-{{< fa clock >}} 5 minutes
+<!-- {{< fa clock >}} 5 minutes -->
 
-:::
+<!-- ::: -->
 
-### Make yourself at home
+<!-- ### Make yourself at home -->
 
-:::: {.columns}
+<!-- :::: {.columns} -->
 
-::: {.column width=34%}
+<!-- ::: {.column width=34%} -->
 
-<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=5&sec=0" frameborder="0"></iframe>
-  
-:::
+<!-- <iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=5&sec=0" frameborder="0"></iframe> -->
 
-::: {.column width=66%}
+<!-- ::: -->
 
-1. Enter `getwd()` at the console to see your current working directory. Make a note of this location! 
+<!-- ::: {.column width=66%} -->
 
-2. In the RStudio menu navigate to `Tools > Global Options > Appearance` and choose an editor theme that you like!
+<!-- 1. Enter `getwd()` at the console to see your current working directory. Make a note of this location!  -->
+
+<!-- 2. In the RStudio menu navigate to `Tools > Global Options > Appearance` and choose an editor theme that you like! -->
 
 
-:::
-::::
+<!-- ::: -->
+<!-- :::: -->
