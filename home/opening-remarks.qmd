@@ -44,8 +44,11 @@ The 80/20 rule in Data Visualisation
 >80% of the work is getting the data in the right shape
 
 
-## {background-video="../images/slippers.M4V" background-size="contain"}
+<!-- ## {background-video="../images/slippers.M4V" background-size="contain"} -->
 
+## The Puppy Principle
+
+{{< video ../images/slippers.M4V width="1000" height="600">}}
 
 ## Day 1: The RStudio environment
 
