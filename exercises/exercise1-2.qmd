@@ -56,18 +56,12 @@ Note that you don't need to wrap the package name in quotation marks when loadin
 Start as you mean to go on and commit your changes to git, then push these to your repo on GitHub.
 
 1. Make sure to save your changes to the code file
-2. In the git panel, tick the box next to `exercises/1-code/clean-self-assessed-health.R` @Aarathy
 
-::: {.aside}
-![In the Git panel tick the box then slect commit](../images/screenshot-placeholder.png)
-:::
+2. In the git panel, tick the box next to `exercises/1-code/clean-self-assessed-health.R` 
 
 3. Select Commit
-4. Write a short commit message in the box @Aarathy
 
-::: {.aside}
-![Write a short commit message then click Push](../images/screenshot-placeholder.png)
-:::
+4. Write a short commit message in the box
 
 5. Click Push
 
@@ -123,15 +117,10 @@ The `mode = 'wb'` argument is important because the file being downloaded is a n
 ::: {.callout-caution}
 
 ## Checkpoint
-If you have run this code successfully, the file `national-health-survey-2022-table-2.xlsx` should be saved in your `exercises/2-raw-data` folder. Go ahead and open it---you can do so from within R Studio by going to the **Files** tab, clicking on the file name and selecting **View File**. @Aarathy
+If you have run this code successfully, the file `national-health-survey-2022-table-2.xlsx` should be saved in your `exercises/2-raw-data` folder. Go ahead and open it---you can do so from within R Studio by going to the **Files** tab, clicking on the file name and selecting **View File**.
 
 :::
 
-::: {.aside}
-
-![Open the downloaded `.xlsx` file from the Files tab ](../images/screenshot-placeholder.png)
-
-:::
 
 <hr> 
 
@@ -178,10 +167,6 @@ All going smoothly, you now have the raw data in your local R environment. You c
 :::
 
 Notice that the first column (named `X` because it was blank in the raw file) has many different categories corresponding to the first column of the `xlsx` file. We only want the categories relating to self-assessed health, so filtering them out is the next step.
-
-::: {.aside}
-![View the `df1Raw` dataframe in the Environment tab](../images/screenshot-placeholder.png)
-:::
 
 <br>
 
