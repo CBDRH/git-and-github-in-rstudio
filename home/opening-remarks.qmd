@@ -2,7 +2,6 @@
 format: 
   revealjs:
     theme: [white]
-page: true
 ---
 
 ## {background-image="../images/hot-air-balloon.png" background-size="contain"}
