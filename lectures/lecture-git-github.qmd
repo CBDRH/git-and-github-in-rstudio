@@ -437,7 +437,7 @@ To enable collaboration you need a _Git Hosting service_. There are heaps of [op
 
 ::: {.column}
 
-![](../images/commit-example.png)
+![](../images/diff-example.png)
 
 :::
 
