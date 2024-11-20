@@ -684,8 +684,8 @@
     ]
   },
   {
-    "objectID": "home/opening-remarks.html#section-2",
-    "href": "home/opening-remarks.html#section-2",
+    "objectID": "home/opening-remarks.html#section-6",
+    "href": "home/opening-remarks.html#section-6",
     "title": "Data Viz with R",
     "section": "",
     "text": "Artwork by @allison_horst"
@@ -744,28 +744,28 @@
     "href": "home/opening-remarks.html#day-1-data-preparation-with-dplyr",
     "title": "Data Viz with R",
     "section": "Day 1: Data preparation with dplyr",
-    "text": "Day 1: Data preparation with dplyr\n\n\nIllustrations from the Openscapes blog Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst."
+    "text": "Day 1: Data preparation with dplyr\n\nIllustrations from the Openscapes blog Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst."
   },
   {
     "objectID": "home/opening-remarks.html#day-2-data-visualisation-with-ggplot2",
     "href": "home/opening-remarks.html#day-2-data-visualisation-with-ggplot2",
     "title": "Data Viz with R",
     "section": "Day 2: Data visualisation with ggplot2",
-    "text": "Day 2: Data visualisation with ggplot2\n\n\nArtwork by @allison_horst"
+    "text": "Day 2: Data visualisation with ggplot2\n\nArtwork by @allison_horst"
   },
   {
     "objectID": "home/opening-remarks.html#day-2-story-telling-with-data",
     "href": "home/opening-remarks.html#day-2-story-telling-with-data",
     "title": "Data Viz with R",
     "section": "Day 2: Story telling with data",
-    "text": "Day 2: Story telling with data"
+    "text": "Day 2: Story telling with data\n\nStorytelling with data"
   },
   {
     "objectID": "home/opening-remarks.html#day-2-literate-programming-with-rmarkdown",
     "href": "home/opening-remarks.html#day-2-literate-programming-with-rmarkdown",
     "title": "Data Viz with R",
     "section": "Day 2: Literate programming with rmarkdown",
-    "text": "Day 2: Literate programming with rmarkdown\n\n\nArtwork by @allison_horst"
+    "text": "Day 2: Literate programming with rmarkdown\n\nArtwork by @allison_horst"
   },
   {
     "objectID": "home/opening-remarks.html#end-goal",

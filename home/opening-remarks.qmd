@@ -1,10 +1,19 @@
 ---
 format: 
   revealjs:
-    theme: [white, ../custom.scss]
+    theme: [white]
+page: true
 ---
 
 ## {background-image="../images/hot-air-balloon.png" background-size="contain"}
+
+## {background-image="../images/cairns.jpg" background-size="contain"}
+
+## {background-image="../images/sheep-cairns.jpg" background-size="contain"}
+
+## {background-image="../images/kayak.jpg" background-size="contain"}
+
+## {background-image="../images/molly-snoozy.png" background-size="contain"}
 
 ## {background-image="../images/the-bfg.webp" background-size="contain"}
 
@@ -72,40 +81,27 @@ The 80/20 rule in Data Visualisation
 
 ## Day 1: Data preparation with `dplyr`
 
-::: {.center-image}
-![](../images/horst/tidy-data-friends.jpg)
+![Illustrations from the [Openscapes](https://www.openscapes.org/) blog [Tidy Data for reproducibility, efficiency, and collaboration](https://www.openscapes.org/blog/2020/10/12/tidy-data/) by Julia Lowndes and Allison Horst.](../images/horst/tidy-data-friends.jpg){align='center'}
 
-Illustrations from the [Openscapes](https://www.openscapes.org/) blog [Tidy Data for reproducibility, efficiency, and collaboration](https://www.openscapes.org/blog/2020/10/12/tidy-data/) by Julia Lowndes and Allison Horst.
-
-:::
 
 
 ## Day 2: Data visualisation with `ggplot2`
 
-::: {.center-image}
+![[Artwork by @allison_horst](https://twitter.com/allison_horst){align='center'}
+](../images/horst/ggplot2-data-masterpiece.png)
 
-![](../images/horst/ggplot2-data-masterpiece.png)
-
-[Artwork by @allison_horst](https://twitter.com/allison_horst)
-
-:::
 
 
 ## Day 2: Story telling with data
 
-::: {.center-image}
-![](../images/story-image.jpg){width=50%}
-:::
+![Storytelling with data](../images/story-image.jpg){width=50% centre='align'}
+
 
 
 ## Day 2: Literate programming with `rmarkdown`
 
-::: {.center-image}
-![](../images/horst/rmarkdown-band.png)
+![[Artwork by @allison_horst](https://twitter.com/allison_horst)](../images/horst/rmarkdown-band.png)
 
-[Artwork by @allison_horst](https://twitter.com/allison_horst)
-
-:::
 
 ## End goal
 
