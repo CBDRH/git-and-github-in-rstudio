@@ -1,67 +1,17 @@
 ---
-title: Orientation to RStudio
+title: ""
 format: 
-  closeread-html:
-    cr-style:
-      section-background-color: white
-    sidebar: false
+  html:
     theme: [litera, ../custom.scss]
-    # code-overflow: wrap
-    # back-to-top-navigation: false
-    # page-navigation: false
 ---
 
-:::: {.cr-section layout="sidebar-right" style="font-size:30px;"}
-
-We're going to spend two days working on R code so let's take a moment to open up RStudio to orientate ourselves. @cr-blank
-
-Here is a snapshot of the RStudio environment.  @cr-myimage
-
-There's a lot going on! 
-
-Let's break it down.
-
-This is an R script file (`.R` extension). Here you can write R code to clean, analyse, and visualise data [@cr-myimage]{pan-to="30%, 20%" scale-by="1.5"}
-
-Notice that this file is saved with a proper file name `analysis.R` so we can open and close the file and come back to the code as needed. [@cr-myimage]{pan-to="60%, 80%" scale-by="2"}
-
-This area has several tabs. The **Environment** tab plays a key role in managing and visualizing the objects that exist in the current R session. [@cr-myimage]{pan-to="-30%, 40%" scale-by="1.5"}
-
-Various types of objects can exist in your environment, for example vectors, dataframes and lists.
-
-Currently we can see the `cars` dataset and the `meanSpeed` value stored in the environment.
-
-Notice the **Git** tab is also in this area. We'll use that later.
-
-
-There are several important tabs in the bottom right-hand corner [@cr-myimage]{pan-to="-30%, -40%" scale-by="1.5"}
-
-The **Files** tab shows us all the file in our project. Spot `analsis.R`!
-
-From here we can open files or navigate to different folders. 
-
-Other important tabs in this area includes the **Plots** tab, where are plots will appear, and the **Packages** tab that has a list of all the installed packages.
-
-Here we have the console. [@cr-myimage]{pan-to="30%, -40%" scale-by="1.5"}
-
-The console allows you to run R commands interactively. You can type a command directly into the console and press Enter to execute it and view the results straight away. 
-
-The console keeps track of previously executed commands. You can use the {{< fa arrow-up >}} up and {{< fa arrow-down >}} down arrow keys to scroll through past commands, making it easy to re-run commands or modify and execute them again.
-
-Working in the console is convenient for quick, interactive commands, but it doesn't save a persistent record of your entered commands so important code should always be saved in a script.
-
-Finally, note this icon in the top right-hand corner. This tells us we are working in an R Project named `cars-study`. [@cr-myimage]{pan-to="-80%, 80%" scale-by="1.5"}
-
-:::{#cr-blank}
-
+::: {.column-screen-right style="margin-right: 10px;"}
+<iframe 
+  src="https://markhanly.github.io/rstudio-orientation/" 
+  width="95%" 
+  style="height:80vh; border:none;">
+</iframe>
 :::
-
-:::{#cr-myimage}
-![](../images/rstudio-blank.png)
-:::
-
-::::
-
 
 <br><br>
 

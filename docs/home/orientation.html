@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Viz with R - Orientation to RStudio</title>
+<title>Data Viz with R -</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,9 +42,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
-<script src="../site_libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
-<script src="../site_libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
 <link href="../site_libs/quarto-contrib/line-highlight-1.0.0/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
@@ -75,11 +72,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<meta cr-debug-mode="false">
-<meta cr-remove-header-space="false">
 
 
-<link rel="stylesheet" href="_extensions/qmd-lab/closeread/closeread.css">
 <meta property="og:title" content="Reproducible data visualisation with R">
 <meta property="og:description" content="A two-day workshop building core skills for data visualisation in R.">
 <meta property="og:image" content="https://cbdrh.github.io/data-viz-workshop/home/images/hot-air-balloon.png">
@@ -90,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -111,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> <i class="bi bi-house-fill" role="img">
+    <a class="nav-link active" href="../index.html" aria-current="page"> <i class="bi bi-house-fill" role="img">
 </i> 
 <span class="menu-text">Home</span></a>
   </li>  
@@ -131,149 +125,253 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">Housekeeping</a></li><li class="breadcrumb-item"><a href="../home/orientation.html">Orientation</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-<!-- margin-sidebar -->
-    
-<!-- main -->
-<main class="content column-page" id="quarto-document-content">
-      <!-- user-provided yaml closeread style options -->
-      <style>
-        :root {
-          --cr-section-background-color: white;
-        }
-      </style>
-    
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">Housekeeping</a></li><li class="breadcrumb-item"><a href="../home/orientation.html">Orientation</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Orientation to RStudio</h1>
-</div>
-
-
-
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Housekeeping</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
   </div>
-  
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../home/prerequisites.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prerequisites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../home/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../home/poll.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introductions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../home/orientation.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Orientation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lectures</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Exercises</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 1. GitHub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">Day 1. Data cleaning</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">Exercise 1 (Beginner)</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise1-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting started</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise1-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step-by-step guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+ <span class="menu-text">Exercise 2 (Advanced)</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise2-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting started</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise2-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step-by-step guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+ <span class="menu-text">Day 2. Visualisation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+ <span class="menu-text">Exercise 3 (Beginner)</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise3-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting started</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+ <span class="menu-text">Step-by-step guide</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise3-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 1. The base plot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise3-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 2. Adding text labels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise3-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 3. Adding highlight colours in the title</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise3-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 4. Adding a bespoke legend</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
+ <span class="menu-text">Exercise 4 (Advanced)</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise4-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting started</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/exercise4-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step-by-step guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
 
 
-</header>
 
 
-<div class="cr-section cr-column-screen sidebar-right">
-<div class="narrative-col">
-<div class="trigger new-trigger" data-focus-on="cr-blank">
-<div class="narrative">
-<p>We’re going to spend two days working on R code so let’s take a moment to open up RStudio to orientate ourselves.</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-myimage">
-<div class="narrative">
-<p>Here is a snapshot of the RStudio environment.</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>There’s a lot going on!</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>Let’s break it down.</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-scale-by="1.5" data-pan-to="30%, 20%" data-focus-on="cr-myimage">
-<div class="narrative">
-<p>This is an R script file (<code>.R</code> extension). Here you can write R code to clean, analyse, and visualise data</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-scale-by="2" data-pan-to="60%, 80%" data-focus-on="cr-myimage">
-<div class="narrative">
-<p>Notice that this file is saved with a proper file name <code>analysis.R</code> so we can open and close the file and come back to the code as needed.</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-scale-by="1.5" data-pan-to="-30%, 40%" data-focus-on="cr-myimage">
-<div class="narrative">
-<p>This area has several tabs. The <strong>Environment</strong> tab plays a key role in managing and visualizing the objects that exist in the current R session.</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>Various types of objects can exist in your environment, for example vectors, dataframes and lists.</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>Currently we can see the <code>cars</code> dataset and the <code>meanSpeed</code> value stored in the environment.</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>Notice the <strong>Git</strong> tab is also in this area. We’ll use that later.</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-scale-by="1.5" data-pan-to="-30%, -40%" data-focus-on="cr-myimage">
-<div class="narrative">
-<p>There are several important tabs in the bottom right-hand corner</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>The <strong>Files</strong> tab shows us all the file in our project. Spot <code>analsis.R</code>!</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>From here we can open files or navigate to different folders.</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>Other important tabs in this area includes the <strong>Plots</strong> tab, where are plots will appear, and the <strong>Packages</strong> tab that has a list of all the installed packages.</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-scale-by="1.5" data-pan-to="30%, -40%" data-focus-on="cr-myimage">
-<div class="narrative">
-<p>Here we have the console.</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>The console allows you to run R commands interactively. You can type a command directly into the console and press Enter to execute it and view the results straight away.</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>The console keeps track of previously executed commands. You can use the <i class="fa-solid fa-arrow-up" aria-label="arrow-up"></i> up and <i class="fa-solid fa-arrow-down" aria-label="arrow-down"></i> down arrow keys to scroll through past commands, making it easy to re-run commands or modify and execute them again.</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>Working in the console is convenient for quick, interactive commands, but it doesn’t save a persistent record of your entered commands so important code should always be saved in a script.</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-scale-by="1.5" data-pan-to="-80%, 80%" data-focus-on="cr-myimage">
-<div class="narrative">
-<p>Finally, note this icon in the top right-hand corner. This tells us we are working in an R Project named <code>cars-study</code>.</p>
-</div>
-</div>
-</div>
-<div class="sticky-col">
-<div class="sticky-col-stack">
-<div id="cr-blank" class="sticky">
-
-</div>
-<div id="cr-myimage" class="sticky">
-<p><img src="../images/rstudio-blank.png" class="img-fluid"></p>
-</div>
-</div>
-</div>
+<div class="column-screen-right" style="margin-right: 10px;">
+<iframe src="https://markhanly.github.io/rstudio-orientation/" width="95%" style="height:80vh; border:none;">
+</iframe>
 </div>
 <p><br><br></p>
 <section id="mini-exercise" class="level2">
@@ -709,7 +807,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page">
+<nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../home/poll.html" class="pagination-link" aria-label="Introductions">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introductions</span>
