@@ -98,6 +98,18 @@ GitHub is a **cloud-based** platform for sharing and collaborating on projects m
 ::::
 
 
+## {.center-slide}
+
+![](../images/horst/git-commit.png)
+
+::: {.figLab}
+
+Illustrations from the [Openscapes](https://www.openscapes.org/) blog [GitHub for supporting, contributing, and failing safely](https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/) by Allison Horst and Julia Lowndes.
+
+:::
+
+
+
 ## How does it work?
 
 ### Committing, branching and merging with Git
@@ -109,23 +121,6 @@ GitHub is a **cloud-based** platform for sharing and collaborating on projects m
 ### Committing, branching and merging with Git
 
 ![](../images/commit-gif-end.png)
-
-## How does it work?
-
-### Sharing versions with GitHub
-
-![](../images/commit-gif-end.png)
-
-## {.center-slide}
-
-![](../images/horst/git-commit.png)
-
-::: {.figLab}
-
-Illustrations from the [Openscapes](https://www.openscapes.org/) blog [GitHub for supporting, contributing, and failing safely](https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/) by Allison Horst and Julia Lowndes.
-
-:::
-
 
 ## How does it work?
 
@@ -520,6 +515,8 @@ There are advantages of breaking up the commit into two steps
 
 ## What about my sensitive data/code? 
 
+. . . 
+
 If your data are sensitive be very careful not to track with Git (more tips on this later). 
 
 Private repos are available if you don't want the public to see your code (you can change to public later if desired.)
@@ -552,7 +549,7 @@ Git Hosting Services like Gitea are available in secure analysis environments (S
 
 :::
 
-### Fork the exercise repo
+### Fork the exercise repo and practice the git workflow
 
 :::: {.columns}
 
@@ -564,16 +561,11 @@ Git Hosting Services like Gitea are available in secure analysis environments (S
 
 ::: {.column width=66%}
 
-1. Click here and follow the directions to create a personal fork of the **Exercises** repo on GitHub
+See **Exercises: Day 1. Github**
 
-Clone this repo as a new project in RStudio
+1. Fork the Course Materials
 
-1. Click on the Code icon and copy the **HTTPS** url to your clipboard
-
-1. In RStudio, create a new project using this url:
-    - New Project > Version Control > Git 
-    - Paste the copied url into the Repository URL field
-    - Carefully choose where you want to store these files on your computer
+1. Practice the add-commit-push workflow
 
 :::
 

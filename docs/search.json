@@ -1423,6 +1423,13 @@
     "text": "Via git-scm.com\n\n\nGit is software for tracking different versions of code files you are working on locally.\n\n\n\nVia logos-world.net\n\n\nGitHub is a cloud-based platform for sharing and collaborating on projects managed with Git"
   },
   {
+    "objectID": "lectures/lecture-git-github.html#section-1",
+    "href": "lectures/lecture-git-github.html#section-1",
+    "title": "Data Viz with R",
+    "section": "",
+    "text": "Illustrations from the Openscapes blog GitHub for supporting, contributing, and failing safely by Allison Horst and Julia Lowndes."
+  },
+  {
     "objectID": "lectures/lecture-git-github.html#how-does-it-work",
     "href": "lectures/lecture-git-github.html#how-does-it-work",
     "title": "Data Viz with R",
@@ -1444,22 +1451,8 @@
     "text": "How does it work?\nSharing versions with GitHub"
   },
   {
-    "objectID": "lectures/lecture-git-github.html#section-1",
-    "href": "lectures/lecture-git-github.html#section-1",
-    "title": "Data Viz with R",
-    "section": "",
-    "text": "Illustrations from the Openscapes blog GitHub for supporting, contributing, and failing safely by Allison Horst and Julia Lowndes."
-  },
-  {
     "objectID": "lectures/lecture-git-github.html#how-does-it-work-3",
     "href": "lectures/lecture-git-github.html#how-does-it-work-3",
-    "title": "Data Viz with R",
-    "section": "How does it work?",
-    "text": "How does it work?\nSharing versions with GitHub"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#how-does-it-work-4",
-    "href": "lectures/lecture-git-github.html#how-does-it-work-4",
     "title": "Data Viz with R",
     "section": "How does it work?",
     "text": "How does it work?\nSharing versions with GitHub"
@@ -1602,7 +1595,7 @@
     "href": "lectures/lecture-git-github.html#what-about-my-sensitive-datacode",
     "title": "Data Viz with R",
     "section": "What about my sensitive data/code?",
-    "text": "What about my sensitive data/code?\nIf your data are sensitive be very careful not to track with Git (more tips on this later).\nPrivate repos are available if you don’t want the public to see your code (you can change to public later if desired.)\nGit Hosting Services like Gitea are available in secure analysis environments (SURE/ERICA etc)"
+    "text": "What about my sensitive data/code?\n\nIf your data are sensitive be very careful not to track with Git (more tips on this later).\nPrivate repos are available if you don’t want the public to see your code (you can change to public later if desired.)\nGit Hosting Services like Gitea are available in secure analysis environments (SURE/ERICA etc)"
   },
   {
     "objectID": "lectures/lecture-git-github.html#how-does-my-repo-align-with-my-project-folder",
@@ -1616,7 +1609,7 @@
     "href": "lectures/lecture-git-github.html#mini-exercise",
     "title": "Data Viz with R",
     "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 15 minutes\n\nFork the exercise repo\n\n\n\n\n\n\nClick here and follow the directions to create a personal fork of the Exercises repo on GitHub\n\nClone this repo as a new project in RStudio\n\nClick on the Code icon and copy the HTTPS url to your clipboard\nIn RStudio, create a new project using this url:\n\nNew Project &gt; Version Control &gt; Git\nPaste the copied url into the Repository URL field\nCarefully choose where you want to store these files on your computer"
+    "text": "Mini-Exercise\n\n 15 minutes\n\nFork the exercise repo and practice the git workflow\n\n\n\n\n\nSee Exercises: Day 1. Github\n\nFork the Course Materials\nPractice the add-commit-push workflow"
   },
   {
     "objectID": "lectures/lecture-data-vis.html#data-visualisation-with-ggplot2",
