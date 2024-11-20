@@ -806,6 +806,18 @@
     ]
   },
   {
+    "objectID": "home/orientation.html#mini-exercise",
+    "href": "home/orientation.html#mini-exercise",
+    "title": "Orientation to RStudio",
+    "section": "Mini-Exercise",
+    "text": "Mini-Exercise\n\n 5 minutes\n\n\nMake yourself at home\n\n\n\n\n\n\nEnter getwd() at the console to see your current working directory. Make a note of this location!\nIn the RStudio menu navigate to Tools &gt; Global Options &gt; Appearance and choose an editor theme that you like!",
+    "crumbs": [
+      "Home",
+      "Housekeeping",
+      "Orientation"
+    ]
+  },
+  {
     "objectID": "exercises/exercise3-2.html",
     "href": "exercises/exercise3-2.html",
     "title": "Part 1. The base plot",
