@@ -1,7 +1,0 @@
----
-title: Introduce yourself
----
-
-
-
-<iframe src="https://wall.sli.do/event/7v4z6MPLgQ4Scc9Bk36Ere?section=a34d0b0e-3286-4c03-8ffc-76b103b7e6d7" height="90%" width="100%" frameBorder="0" style="min-height: 560px;" allow="clipboard-write" title="Slido"></iframe>

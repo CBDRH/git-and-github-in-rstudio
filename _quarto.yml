@@ -2,101 +2,58 @@ project:
   type: website
   output-dir: docs
 website:
-  title: Data Viz with R
+  title: Getting Started with Git and GitHub in RStudio
   image: images/hot-air-balloon.png
   open-graph:
-    title: "Reproducible data visualisation with R"
-    description: "A two-day workshop building core skills for data visualisation in R."
+    title: ""
+    description: "Getting Started with Git and GitHub in RStudio."
   twitter-card:
-    title: "Reproducible data visualisation with R"
-    description: "A two-day workshop building core skills for data visualisation in R."
-  site-url: https://cbdrh.github.io/data-viz-workshop
+    title: "Getting Started with Git and GitHub in RStudio"
+    description: "Getting Started with Git and GitHub in RStudio."
+  site-url: https://cbdrh.github.io/git-and-github-in-rstudio
   page-navigation: true
   back-to-top-navigation: true
   page-footer:
     center:
-    - text: © UNSW 2024
+    - text: © UNSW 2025
   favicon: images/hot-air-balloon.png
   navbar: 
     logo: images/hot-air-balloon.png
     search: true
     left:
-      - text: "Home"
-        href: index.qmd
-        icon: house-fill
-      - text: "Lectures"
-        href: lectures/overview.qmd
-        icon: easel3-fill
-      - text: "Exercises"
-        href: exercises/overview.qmd  
-        icon: code-slash
-
+    - text: "Home"
+      href: index.qmd
+      icon: house-fill
+    - text: "Slides"
+      href: under-construction.qmd
+      icon: easel3-fill
+    - text: "Exercises"
+      href: under-construction.qmd
+      icon: code
+      
   sidebar:
+  
+    - title: "Home"
       style: "docked"
-      collape-level: 1
+      background: dark
       contents:
-        - section: "Housekeeping"
-          contents:
-          - text: "Schedule"
-            href: index.qmd
-          - text: "Prerequisites"
-            href: home/prerequisites.qmd
-          - text: "Overview"
-            href: home/introduction.qmd
-          - text: "Introductions"  
-            href: home/poll.qmd
-          - text: "Orientation"
-            href: home/orientation.qmd
-        - text: "Lectures"
-          href: lectures/overview.qmd
-        - section: "Exercises"
-          contents:
-            - text: Overview
-              href: exercises/overview.qmd
-            - text: Day 1. GitHub
-              href: exercises/github.qmd
-            - section: "Day 1. Data cleaning"
-              contents:
-              - section: "Exercise 1 (Beginner)"
-                contents:
-                  - exercises/exercise1-1.qmd
-                  - exercises/exercise1-2.qmd
-              - section: "Exercise 2 (Advanced)"
-                contents:
-                  - exercises/exercise2-1.qmd
-                  - exercises/exercise2-2.qmd
-            - section: "Day 2. Visualisation"
-              contents:
-              - section: "Exercise 3 (Beginner)"
-                contents:
-                  - exercises/exercise3-1.qmd
-                  - section: "Step-by-step guide"
-                    contents:
-                    - exercises/exercise3-2.qmd
-                    - exercises/exercise3-3.qmd
-                    - exercises/exercise3-4.qmd
-                    - exercises/exercise3-5.qmd
-              - section: "Exercise 4 (Advanced)"
-                contents:
-                  - exercises/exercise4-1.qmd
-                  - exercises/exercise4-2.qmd            
+        - exercises/overview.qmd
+        - exercises/github.qmd
+        
+    - title: "Slides"
+      contents:
+        - exercises/overview.qmd
+        - exercises/github.qmd
+          
+    - title: "Exercises"
+      contents:
+        - exercises/overview.qmd
+        - exercises/github.qmd
 format:
   html:
-    theme: [litera, custom.scss]
+    theme: [darkly, custom.scss]
     toc: true
     toc-depth: 1
     code-copy: true
-filters:
-  - line-highlight
-
-crossref:
-  custom:
-    - kind: float
-      reference-prefix: ☠ Hint
-      key: hint
-
-execute:
-  freeze: auto
-  cache: true
 
 

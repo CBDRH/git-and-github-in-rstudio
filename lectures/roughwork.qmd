@@ -1,0 +1,103 @@
+---
+format: 
+  revealjs:
+    theme: [night, ../custom.scss]
+    highlight-style: monokai
+footer: '<a href="/lectures/overview.qmd">{{< fa house >}}</a>'
+slide-number: c/t
+---
+
+<!-- Mini Exercise 1. Create a New Repo -->
+
+## Mini-Exercise
+
+::: {.clock}
+
+{{< fa clock >}} 3 minutes
+
+:::
+
+### Create a new project in RStudio
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=3&sec=0" frameborder="0"></iframe>
+  
+:::
+
+::: {.column width=66%}
+
+1. In the top right-hand corner of Rstudio (i) click the arrow and (ii) choose **New Project** <span><img src="/images/rstudio-new-project.png"/></span>
+1. Select **New Directory** then **New Project**
+1. Specify a directory name and subdirectory
+1. Tick **Create a Git Repository**
+
+:::
+::::
+
+
+<!-- Mini Exercise 2. Are you here -->
+
+## Mini-Exercise
+
+::: {.clock}
+
+{{< fa clock >}} 3 minutes
+
+:::
+
+### Are you `here` yet?
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=3&sec=0" frameborder="0"></iframe>
+  
+:::
+
+::: {.column width=66%}
+
+1. Enter `here::here()` at the console to see your current working directory. This should be where you saved your project!
+
+2. Enter `here::here(".gitignore")` at the console. What happens?
+
+3. Enter `file.exists(here::here(".gitignore"))` at the console. This should return `TRUE`. Note that you don't need the full path to locate the file! 
+
+:::
+::::
+
+::: {.figLab}
+**Note** We will talk more about what the `.gitignore` file actually does later
+:::
+
+<!-- Mini Exercise 3. Practice add-commit workflow -->
+
+## Mini-Exercise
+
+::: {.clock}
+
+{{< fa clock >}} 3 minutes
+
+:::
+
+### PRactice adding and committing
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=3&sec=0" frameborder="0"></iframe>
+  
+:::
+
+::: {.column width=66%}
+
+1. Create and save a new R script `code.R` 
+1. 
+
+:::
+::::
+

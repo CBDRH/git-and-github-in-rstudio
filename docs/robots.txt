@@ -1,1 +1,1 @@
-Sitemap: https://cbdrh.github.io/data-viz-workshop/sitemap.xml
+Sitemap: https://cbdrh.github.io/git-and-github-in-rstudio/sitemap.xml
