@@ -36,7 +36,7 @@ time <- c(
    "Overview of Git and GitHub",
    "Exercise: Working with Projects in RStudio",
    "Morning tea",
-   "Exercise: Working with <span class='code-font'>git</span> locally",
+   "Exercise: Working with git locally",
    "Exercise: Branching and merging",
    "Questions and close"
  )
@@ -77,9 +77,9 @@ kbl(df,
 
 
 Thank you for enrolling in the <span style="display: inline-flex; align-items: center;">
-  <img src="../images/hot-air-balloon.png" style="height: 1em; vertical-align: middle;">
+  <img src="/images/hot-air-balloon.png" style="height: 1em; vertical-align: middle;">
 </span> **Git and GitHub in RStudio workshop** <span style="display: inline-flex; align-items: center;">
-  <img src="../images/hot-air-balloon.png" style="height: 1em; vertical-align: middle;">
+  <img src="/images/hot-air-balloon.png" style="height: 1em; vertical-align: middle;">
 </span> 
 
 To get the most out of the workshop, please run through the checklist below and make sure you have all the necessary software installed in advance. If you are already working with git in RStudio you may be ready to go already. If you are just getting started, keep in mind that these configuration steps can be half the battle. Don't worry if you get stuck, we are here to help. 
