@@ -1,0 +1,111 @@
+---
+title: "Exercise 3: Branching and pull requests"
+format:
+  html:
+    css: ../custom.scss
+    toc: true
+    toc-depth: 2
+    execute:
+      echo: true
+      eval: false 
+number-sections: true 
+---
+
+
+
+_**Overview:** If you are collaborating with others you will need to get work on local branches to avoid clashes. Here you can practice creating a new branch in RStudio then submitting a Merge Request to GitHub_
+
+# Create a new branch in RStudio
+
+## Create a new branch
+
+![](../images/ex3-new-branch.png) 
+* In the Git panel, click the New Branch icon to launch this dialogue box
+* Name the new branch something short and meaningful (no spaces!)
+* Click Create
+* Close the pop up 
+
+
+## Create a new file, then add and commit
+![](../images/ex3-new-file.png) 
+
+**Notes**
+
+* Create and save a new R Script, e.g. `extra-analysis.R`
+* Add and commit this file in the usual way
+* Remember to add a short, meaningful commit message
+
+## Push your branch to GitHub
+
+![](../images/ex3-push.png)
+
+* You can push from either (i) the Git pane or (ii) the commit dialogue box
+
+
+# Merge the pull request in GitHub
+
+## Click Compare & Pull Request
+
+![](../images/ex3-compare.png)
+
+**Notes**
+
+* This will create a new pull request
+* You got this ❤️
+
+## Click Create pull request
+![](..//images/ex3-pull-request.png)
+
+**Notes**
+
+* You should see the green tick **Able to merge**
+* In more complex projects there may be conflicts between user edits, but one step at a time.
+* Here you could optionally add labels, assign reviewers etc
+* When you are ready click Create pull request. 
+
+
+## Merge pull request
+
+![](..//images/ex3-merge.png)
+**Notes**
+
+* Because there are no conflicts, merging can be performed automatically
+* When you are ready click Merge pull request then Confirm merge
+
+# In RStudio, pull the updated main branch
+
+## Switch back to the main branch
+
+![](../images/ex3-main-branch.png)
+
+**Notes**
+
+* If you left your additional file open in RStudio you might now get a pop-up to say it has been deleted. Don't panic, it is just not on the main branch (yet!)
+
+::: {.aside}
+
+At this point you will have the option to delete your branch in GitHub. You can if you like, but if you think you might make more related changes later you can leave it open.
+
+:::
+
+## Pull the remote changes to your local repo
+
+![](../images/ex3-pull.png)
+**Notes**
+
+* This will pull the changes in the remote branch to your local repo
+
+::: {.aside}
+
+If you have left your branch open, you can change back if there are more edits needed. 
+
+:::
+
+<br>
+
+<hr> 
+
+Made it this far? Legend!    
+
+![](https://octodex.github.com/images/class-act.png)
+

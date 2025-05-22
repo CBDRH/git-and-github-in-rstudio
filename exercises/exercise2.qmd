@@ -1,0 +1,64 @@
+---
+title: "Exercise 2: Creating a repo in GitHub and cloning to RStudio"
+format:
+  html:
+    css: ../custom.scss
+    toc: true
+    toc-depth: 2
+    execute:
+      echo: true
+      eval: false 
+number-sections: true 
+---
+
+
+
+_**Overview:** An alternative workflow is to create a remote repo in GitHub and then clone it locally_ 
+
+# Create a new remote repo in GitHub
+
+## Go to [github.com](https://github.com/) and create a new repository
+
+![](../images/ex2-new-repo.png)
+
+**Notes**
+
+* Name the repo **Exercise 2**
+* This time click to add a README file and choose the .gitignore template for R
+* When you are ready, click Create Repo
+
+# Clone the new repo from GitHub to RStudio
+
+## Copy the repo HTTPS url to your clipboard
+![](../images/ex2-clone.png)
+
+**Notes**
+
+* Make sure you are choosing the HTTPS url
+
+
+## In RStudio, create a new project with this url
+
+![](../images/ex2-new-project.png)
+
+* Launch the New Project wizard and choose New Project > Version Control Git
+* Paste in the repository url and name the Project **Exercise 2**
+* Tick the box to open the repo in a new session
+* When you are ready click Create Project
+
+
+::: {.aside}
+
+That's it, you're done! Try adding and saving some new files then practice committing and then pushing. You should be able to see your commit history in GitHub. 
+
+:::
+
+
+<br>
+
+<hr> 
+
+Made it this far? Legend!    
+
+![](https://octodex.github.com/images/class-act.png)
+

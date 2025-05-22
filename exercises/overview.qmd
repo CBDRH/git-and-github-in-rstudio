@@ -1,17 +1,16 @@
 ---
-title: "Guided exercises"
-format:
-  html:
-    css: ../custom.scss
+title: "Exercises overview"
 ---
 
+In these exercises you will practice three common workflows: 
 
-![](../images/horst/we-believe-in-you.png)
+1. Pushing a repo that exists in RStudio to GitHub
+1. Creating a repo in GitHub and cloning to RStudio
+1. Branching and pull requests
+
+![Don't worry if you get stuck---just shout for help!](../images/horst/git-hug.png)
 
 ::: {.figLab}
-[Artwork by @allison_horst](https://twitter.com/allison_horst)
+
+Artwork by [@allison_horst](https://twitter.com/allison_horst).
 :::
-
-Now it's your turn to really get hands-on with the data! Work through the guided exercises. If you get stuck, refer to the notes or to the examples in the lecture slides. If you can't get unstuck just raise your hand and someone will be there to help!
-
-

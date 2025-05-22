@@ -1,0 +1,67 @@
+---
+title: "Exercise 1: Pushing a repo that exists in RStudio to GitHub"
+format:
+  html:
+    css: ../custom.scss
+    toc: true
+    toc-depth: 2
+    execute:
+      echo: true
+      eval: false 
+number-sections: true 
+---
+
+
+
+_**Overview:** You already have a repo named `Exercise1` in your local RStudio, in this exercise you will create an empty remote repo in GitHub and link it to your local repo_ 
+
+# Create an empty repo in GitHub
+
+## Go to [github.com](https://github.com/), and click the + symbol then New repository
+![](../images/ex1-new-repo.png)
+
+## Specify yourself as the owner and name the repo **Exercise 1**
+![](../images/ex1-name-repo.png)
+
+**Notes**
+
+* Optionally add a description for your repo
+* You can choose Public or Private---Public repos can be viewed online by anyone. 
+* Because you already have a local repo, **don't** add a README file, a .gitignore file, or a license. 
+* When you are ready, click **Create Repository**. 
+
+::: {.aside}
+
+The remote repo name doesn't have to match your local repo or RStudio Project name, but it can be good practice to keep things organised!
+
+:::
+
+
+## Copy the quick setup code to your clipboard
+![](../images/ex1-quick-code.png)
+
+
+# In RStudio, link your local repo to this new remote repo
+![](../images/ex1-terminal.png)
+
+**Notes** 
+
+* Go back to RStudio
+* Open the Terminal (it's next to the console)
+* Paste the code and hit Enter
+* If you want to confirm it worked enter `git remote -v` at the terminal---it should return the url of your remote repo
+
+# In the RStudio git panel, click push to push your local changes to the remote repo
+![](../images/ex1-push.png)
+
+**Notes**
+
+* That's it! If you go back to GitHub and refresh the webpage you should see your `recipe.txt` file and your commit history. 
+
+<br>
+<hr>
+
+Made it this far? Legend!    
+
+![](https://octodex.github.com/images/class-act.png)
+

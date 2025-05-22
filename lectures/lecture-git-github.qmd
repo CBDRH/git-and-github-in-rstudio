@@ -3,13 +3,171 @@ format:
   revealjs:
     theme: [night, ../custom.scss]
     highlight-style: monokai
-footer: '<a href="/lectures/overview.qmd">{{< fa house >}}</a>'
 slide-number: c/t
 ---
 
 ## `Git` and `GitHub` in RStudio {.title-slide}
 
-<img src="../images/github-mark-white.png"></img>
+![](https://octodex.github.com/images/total-eclipse-of-the-octocat.jpg)
+
+
+# Introductions - About me
+
+## 
+
+:::: {.columns}
+
+::: {.column width=50%}
+![](../images/octocat-mh.png)
+
+::: {.figLab}
+Personalised octocat from [myoctocat.com](https://myoctocat.com/)
+:::
+
+:::
+
+::: {.column width=50% .incremental}
+
+Hi, I'm Mark
+
+* Statistician
+
+* Centre for Big Data Research in Health UNSW
+
+* Analysing linked data
+
+* Data visualisation
+
+* Reproducible research software and workflows
+
+:::
+
+::::
+
+
+## {background-image="../images/sheep-cairns.jpg" background-size="contain"}
+
+## {background-image="../images/cairns.jpg" background-size="contain"}
+
+## {background-image="../images/kayak.jpg" background-size="contain"}
+
+## {background-image="../images/molly-snoozy.png" background-size="contain"}
+
+
+# Introductions - About you!
+
+## What institution are you from?
+
+```{r}
+library(dplyr)
+library(ggwordcloud)
+library(ggplot2)
+
+df <- read.csv("../participant-data.csv")
+
+# Organisation
+set.seed(12)
+df |> 
+  group_by(uni) |> 
+  summarise(n = n()) |> 
+  mutate(
+    angle = 45 * sample(-2:2, n(), replace = TRUE, prob = c(1, 1, 4, 1, 1)),
+    col = factor(sample.int(10, n(), replace = TRUE))
+    )  |> 
+    ggplot(aes(label = uni, size = n, angle = angle, color = col)) +
+      geom_text_wordcloud() +
+      scale_radius(range = c(5, 15), limits = c(0, NA)) +
+      theme_minimal() + 
+  theme(plot.background = element_rect(fill = "#111111", colour = "transparent"))
+```
+
+## What's your role?
+
+```{r}
+df |> 
+  group_by(role) |> 
+  summarise(n = n()) |> 
+  mutate(
+    angle = 45 * sample(-2:2, n(), replace = TRUE, prob = c(1, 1, 4, 1, 1)),
+    col = factor(sample.int(10, n(), replace = TRUE))
+  )  |> 
+  ggplot(aes(label = role, size = n, angle = angle, color = col)) +
+  geom_text_wordcloud() +
+  scale_radius(range = c(5, 15), limits = c(0, NA)) +
+  theme_minimal() + 
+  theme(plot.background = element_rect(fill = "#111111", colour = "transparent"))
+```
+
+## What software do you use? 
+
+```{r}
+df |> 
+  group_by(software) |> 
+  summarise(n = n()) |> 
+  arrange(n) |> 
+  mutate(software = factor(software, 
+                           levels = c('Python', 'Stata', 'SAS', 'R'))) |>
+  ggplot(aes(y = software, x = n)) +
+  geom_col(fill = "#e7ad52") +
+  scale_x_continuous(NULL) +
+  scale_y_discrete(NULL) +
+  theme_minimal() + 
+  theme(
+    plot.background = element_rect(fill = "#111111", colour = "transparent"),
+    axis.text = element_text(color = "grey90", size = 28))
+```
+
+## How familiar are you with RStudio?
+
+```{r}
+df |> 
+  group_by(rstudio) |> 
+  summarise(n = n()) |> 
+  arrange(n) |> 
+  mutate(rstudio = factor(rstudio, 
+                      levels = c("Have done complex data analysis",
+                                 "Have used it to make a simple figure",
+                                 "No experience"), 
+                      labels = c("Have done complex\ndata analysis",
+                                 "Have used it to make\na simple figure",
+                                 "No experience"))) |> 
+  ggplot(aes(y = rstudio, x = n)) + 
+  geom_col(fill = "#e7ad52") +
+  scale_x_continuous(NULL, breaks = c(0, 5,10)) +
+  scale_y_discrete(NULL) +
+  theme_minimal() + 
+  theme(
+    plot.background = element_rect(fill = "#111111", colour = "transparent"),
+    axis.text = element_text(color = "grey90", size = 28))
+```
+
+
+## How familiar are you with Git?
+
+```{r}
+df |> 
+  group_by(git) |> 
+  summarise(n = n()) |> 
+  arrange(n) |> 
+  mutate(git = factor(git, 
+                       levels = c("Have created my own GitHub repository to store code but don't use Git very often when I code",
+                                  "Have only looked at other people's GitHub repositories",
+                                  "No experience"),
+                       labels = c("Have created my own repo\nbut don't use Git often",
+                                  "Have only looked at\nother people's repos",
+                                  "No experience"
+                                  ))) |>
+  ggplot(aes(y = git, x = n)) +
+  geom_col(fill = "#e7ad52") +
+  scale_x_continuous(NULL, breaks = c(0, 5,10)) +
+  scale_y_discrete(NULL) +
+  theme_minimal() + 
+  theme(
+    plot.background = element_rect(fill = "#111111", colour = "transparent"),
+    axis.text = element_text(color = "grey90", size = 28))
+```
+
+# Motivation: Why learn Git and GitHub?
 
 ## The Challenge
 
@@ -110,6 +268,12 @@ Illustrations from the [Openscapes](https://www.openscapes.org/) blog [GitHub fo
 :::
 
 
+## How does it work?
+
+### Committing, branching and merging with Git
+
+![](../images/commit-gif-end.png)
+
 
 ## How does it work?
 
@@ -117,24 +281,20 @@ Illustrations from the [Openscapes](https://www.openscapes.org/) blog [GitHub fo
 
 ![](../images/commit.gif)
 
-## How does it work?
 
-### Committing, branching and merging with Git
-
-![](../images/commit-gif-end.png)
-
-## How does it work?
-
-### Sharing versions with GitHub
-
-![](../images/push.gif)
 
 
 ## How does it work?
 
-### Sharing versions with GitHub
+### Collaborating with GitHub
 
 ![](../images/push-gif-end.png)
+
+## How does it work?
+
+### Collaborating with GitHub
+
+![](../images/push.gif)
 
 
 ## It seems a bit complicated {.center-slide}
@@ -228,7 +388,7 @@ You can try this example [here](https://github.com/MarkHanly/getting-started-wit
 
 # Interfacing with Git
 
-![](../images/github-mark-white.png)
+![](https://octodex.github.com/images/collabocats.jpg)
 
 
 ## Working locally: **Git client**
@@ -502,12 +662,12 @@ setwd("/Users/z3509778/Library/CloudStorage/OneDrive-UNSW/Data Vis Workshop/Cour
 
 :::
 
-::: {.column}
+::: {.column .incremental}
 
 ### A repository is where the magic happens {{<fa wand-magic-sparkles >}}
 
-* Referred to as a **repo* **
-* 1 git project = 1 repo
+* Referred to as a **repo**
+* 1 git project = 1 repo = 1 RStudio Project
 * Database of changes to your code (aka _diffs_)
 * Hidden folder on your system named **.git**
 
@@ -526,7 +686,7 @@ setwd("/Users/z3509778/Library/CloudStorage/OneDrive-UNSW/Data Vis Workshop/Cour
 
 :::
 
-::: {.column}
+::: {.column .incremental}
 
 ### Commit
 
@@ -536,7 +696,7 @@ setwd("/Users/z3509778/Library/CloudStorage/OneDrive-UNSW/Data Vis Workshop/Cour
 
 * Why you commit you must write a message explaining what changed
 
-* Committing is a two stage process - more on this later
+* Committing is a two stage process...
 
 :::
 
@@ -670,104 +830,35 @@ Once you ignore the file it is no longer being tracked and it should disappear f
 :::
 ::::
 
-## Key Concept: Fork
-
-To `fork` a repo means to take a copy of the repo on GitHub
-
-## Key Concept: Clone
-
-<!-- Mini Exercise 4. Clone a remote repo -->
-
-## Mini-Exercise 
-
-::: {.clock}
-
-{{< fa clock >}} 5 minutes
-
-:::
-
-### Clone a remote repo
-
-
-**A note on this exercise:** In this exercise you will clone a remote repo from GitHub to your local RStudio. The example uses a repo from the [tame](https://www.medrxiv.org/content/10.1101/2024.06.24.24309427v2) R package for identifying clusters of medication use based on dose, timing and type of medication published by Anna Laksafoss from the University of Copenhagen. You will use Git's powerful search function to find this repo but **note you can do this exercise with any repo you like!**
-
-
-
-## Mini-Exercise 
-
-::: {.clock}
-
-{{< fa clock >}} 5 minutes
-
-:::
-
-### Clone a remote repo
-
-:::: {.columns}
-
-::: {.column width=25%}
-
-<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=5&sec=0" frameborder="0"></iframe>
-  
-:::
-
-::: {.column width=75%}
-
-::: {.panel-tabset}
-
-### Task
-
-1. On [github.com](https://github.com/) search **Anna Laksafoss**  and open the `tame` R package repo <i class="fa-solid fa-camera"></i>
-
-1. Within the repo, click on <span style="background-color: #238636; color:white; border-radius: 10px; padding:2px 5px 2px 5px"> <i class="fa-solid fa-code"></i> Code</span> and copy the HTTPS url to your clipboard <i class="fa-solid fa-camera"></i>
-
-1. Launch the RStudio New Project Wizard, but this time select **Version Control** then **Git** 
-
-1. Paste the HTTPS url into the **Repository URL** box and specify a sensible subdirectory location for this new repo <i class="fa-solid fa-camera"></i>
-
-1. Optionally tick ✅  **Open in new session** then select **Create Project**
-
-### <i class="fa-solid fa-camera"></i> GitHub
-
-![](../images/minex4-repo.png)
-
-### <i class="fa-solid fa-camera"></i> URL
-
-![](../images/minex4-url.png)
-
-### <i class="fa-solid fa-camera"></i> Clone
-
-![](../images/minex4-clone.png)
-
-:::
-
-
-:::
-::::
-
 
 # Workflow
 
-## Workflow
+## Cloning from GitHub to RStudio
 
-![](../images/workflow.gif)
+![](../images/workflow-clone.gif)
 
-## Workflow
+## Cloning from GitHub to RStudio
 
-![](../images/workflow-gif-end.png)
+![](../images/workflow-clone-last.png)
+
+## Forking in GitHub
+
+![](../images/workflow-fork.gif)
+
+## Forking in GitHub
+
+![](../images/workflow-fork-last.png)
+
+## Branching
+
+![](../images/workflow-branch.gif)
+
+## Branching
+
+![](../images/workflow-branch-last.png)
 
 
-## Workflow
-
-How you actual perform these commands depends on the git client you are using...
-
-. . . 
-
-We will use the RStudio Interface
-
-![](../images/rstudio-pane.png)
-
-
+# Demo and exercise: Clone a repo from Git
 
 
 # Frequently asked questions 
@@ -818,5 +909,24 @@ It is best practice to keep commits fairly small and related, especially for mat
 
 * Git ignores files and folders listed in the special `.gitignore` file
 
-# Any other questions? 
 
+# Closing thoughts
+
+## Next steps for the Medicines Intelligence CRE?
+
+![](https://octodex.github.com/images/socialite.jpg){width=50%}
+
+. . .
+
+* Setting up/joining an Organisational GitHub account?
+* Advocating for Gitea in your secure analysis environment?
+* Setting up a repo for shared code? 
+* Tracking your next analysis with Git/GitHub?
+
+## Any final questions? 
+
+. . .
+
+Please complete the post-event survey! ❤️
+
+![](../images/QRCode for MI-CRE Getting started with Git and GitHub - Post-workshop evaluation.png){width=50%}

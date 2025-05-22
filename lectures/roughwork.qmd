@@ -9,6 +9,74 @@ slide-number: c/t
 
 
 
+<!-- Mini Exercise 4. Clone a remote repo -->
+
+## Mini-Exercise 
+
+::: {.clock}
+
+{{< fa clock >}} 5 minutes
+
+:::
+
+### Clone a remote repo
+
+
+**A note on this exercise:** In this exercise you will clone a remote repo from GitHub to your local RStudio. The example uses a repo from the [tame](https://www.medrxiv.org/content/10.1101/2024.06.24.24309427v2) R package for identifying clusters of medication use based on dose, timing and type of medication published by Anna Laksafoss from the University of Copenhagen. You will use Git's powerful search function to find this repo but **note you can do this exercise with any repo you like!**
+
+
+
+## Mini-Exercise 
+
+::: {.clock}
+
+{{< fa clock >}} 5 minutes
+
+:::
+
+### Clone a remote repo
+
+:::: {.columns}
+
+::: {.column width=25%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=5&sec=0" frameborder="0"></iframe>
+  
+:::
+
+::: {.column width=75%}
+
+::: {.panel-tabset}
+
+### Task
+
+1. On [github.com](https://github.com/) search **Anna Laksafoss**  and open the `tame` R package repo <i class="fa-solid fa-camera"></i>
+
+1. Within the repo, click on <span style="background-color: #238636; color:white; border-radius: 10px; padding:2px 5px 2px 5px"> <i class="fa-solid fa-code"></i> Code</span> and copy the HTTPS url to your clipboard <i class="fa-solid fa-camera"></i>
+
+1. Launch the RStudio New Project Wizard, but this time select **Version Control** then **Git** 
+
+1. Paste the HTTPS url into the **Repository URL** box and specify a sensible subdirectory location for this new repo <i class="fa-solid fa-camera"></i>
+
+1. Optionally tick ✅  **Open in new session** then select **Create Project**
+
+### <i class="fa-solid fa-camera"></i> GitHub
+
+![](../images/minex4-repo.png)
+
+### <i class="fa-solid fa-camera"></i> URL
+
+![](../images/minex4-url.png)
+
+### <i class="fa-solid fa-camera"></i> Clone
+
+![](../images/minex4-clone.png)
+
+:::
+
+
+:::
+::::
 
 
 

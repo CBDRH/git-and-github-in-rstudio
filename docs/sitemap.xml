@@ -2,38 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cbdrh.github.io/git-and-github-in-rstudio/lectures/lecture-git-github.html</loc>
-    <lastmod>2025-05-19T09:21:38.475Z</lastmod>
+    <lastmod>2025-05-22T10:47:27.029Z</lastmod>
   </url>
   <url>
     <loc>https://cbdrh.github.io/git-and-github-in-rstudio/lectures/roughwork.html</loc>
-    <lastmod>2025-05-19T06:00:23.949Z</lastmod>
+    <lastmod>2025-05-22T03:33:13.920Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/git-and-github-in-rstudio/exercises/exercise3.html</loc>
+    <lastmod>2025-05-22T08:24:23.813Z</lastmod>
   </url>
   <url>
     <loc>https://cbdrh.github.io/git-and-github-in-rstudio/exercises/overview.html</loc>
-    <lastmod>2024-11-17T00:52:35.431Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/git-and-github-in-rstudio/under-construction.html</loc>
-    <lastmod>2025-05-18T06:56:54.499Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/git-and-github-in-rstudio/home/prerequisites.html</loc>
-    <lastmod>2024-11-18T07:58:27.054Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cbdrh.github.io/git-and-github-in-rstudio/home/introduction.html</loc>
-    <lastmod>2024-11-17T04:32:57.535Z</lastmod>
+    <lastmod>2025-05-22T07:12:36.348Z</lastmod>
   </url>
   <url>
     <loc>https://cbdrh.github.io/git-and-github-in-rstudio/index.html</loc>
-    <lastmod>2025-05-19T00:10:39.921Z</lastmod>
+    <lastmod>2025-05-22T10:32:19.930Z</lastmod>
   </url>
   <url>
-    <loc>https://cbdrh.github.io/git-and-github-in-rstudio/exercises/github.html</loc>
-    <lastmod>2024-11-16T09:02:34.156Z</lastmod>
+    <loc>https://cbdrh.github.io/git-and-github-in-rstudio/exercises/exercise1.html</loc>
+    <lastmod>2025-05-22T07:18:10.489Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cbdrh.github.io/git-and-github-in-rstudio/exercises/exercise2.html</loc>
+    <lastmod>2025-05-22T07:36:07.018Z</lastmod>
   </url>
   <url>
     <loc>https://cbdrh.github.io/git-and-github-in-rstudio/lectures/overview.html</loc>
-    <lastmod>2024-11-17T00:54:24.781Z</lastmod>
+    <lastmod>2025-05-22T10:43:15.055Z</lastmod>
   </url>
 </urlset>

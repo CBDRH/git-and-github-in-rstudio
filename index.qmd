@@ -23,49 +23,35 @@ library(fontawesome)
 
 time <- c(
   "10:00 - 10:10",
-  "10:10 - 10:50",
-  "10:50 - 11:10",
+  "10:10 - 10:20",
+  "10:20 - 11:10",
   "11:10 - 11:20",
-  "11:20 - 11:45",
-  "11:45 - 12:15",
-  "12:15 - 12:30"
+  "11:20 - 12:10",
+  "12:10 - 12:30"
 )
 
  activity <- c(
-   "Welcome and housekeeping",
-   "Overview of Git and GitHub",
-   "Exercise: Working with Projects in RStudio",
+   "Introductions and housekeeping",
+   "Motivation: Why use Git and GitHub",
+   "Working with GitHub in RStudio + Mini Exercises",
    "Morning tea",
-   "Exercise: Working with git locally",
-   "Exercise: Branching and merging",
-   "Questions and close"
+   "Hands-on exercises",
+   "Questions and discussion"
  )
-
-links <- c(
-  "",
-  "<a href='lectures/overview.html#version-control-with-git-and-github-with-dplyr'>🔗</a>",
-  "",
-  "<a href='exercises/github.html'>🔗</a>",
-  "<a href='lectures/overview.html#data-cleaning-with-dplyr'>🔗</a>",
-  "",
-  "<a href='exercises/exercise1-1.html'>🔗</a>"
-  )
 
 # Combine into dataframe
 df <-
   data.frame(
     time = time,
-    activity = activity,
-    links = links
+    activity = activity
   )
 
 kbl(df,
     escape = FALSE, 
-    align = c('l', 'l', 'c'),
-    col.names = c('Time', 'Activity', "") ) |> 
-  column_spec(1, width = "30%") |> 
-  column_spec(2, width = "60%") |> 
-  column_spec(3, width = "10%") |> 
+    align = c('l', 'l'),
+    col.names = c('Time', 'Activity') ) |> 
+  column_spec(1, width = "35%") |> 
+  column_spec(2, width = "65%") |> 
   kable_styling(bootstrap_options = "hover")
   
 ```

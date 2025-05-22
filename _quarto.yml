@@ -25,30 +25,32 @@ website:
       href: index.qmd
       icon: house-fill
     - text: "Slides"
-      href: under-construction.qmd
+      href: lectures/overview.qmd
       icon: easel3-fill
     - text: "Exercises"
-      href: under-construction.qmd
+      href: exercises/overview.qmd
       icon: code
       
   sidebar:
-  
-    - title: "Home"
       style: "docked"
       background: dark
       contents:
-        - exercises/overview.qmd
-        - exercises/github.qmd
-        
-    - title: "Slides"
-      contents:
-        - exercises/overview.qmd
-        - exercises/github.qmd
-          
-    - title: "Exercises"
-      contents:
-        - exercises/overview.qmd
-        - exercises/github.qmd
+        - text: "Home"
+          href: index.qmd
+        - text: "Slides"
+          href: lectures/overview.qmd 
+        - section: "Exercises"
+          contents:
+            - text: Overview
+              href: exercises/overview.qmd
+            - text: Exercise 1
+              href: exercises/exercise1.qmd
+            - text: Exercise 2
+              href: exercises/exercise2.qmd
+            - text: Exercise 3
+              href: exercises/exercise3.qmd
+      
+
 format:
   html:
     theme: [darkly, custom.scss]

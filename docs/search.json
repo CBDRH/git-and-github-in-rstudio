@@ -1,10 +1,52 @@
 [
   {
-    "objectID": "lectures/lecture-git-github.html#reproducible-research-with-git-and-github",
-    "href": "lectures/lecture-git-github.html#reproducible-research-with-git-and-github",
+    "objectID": "lectures/lecture-git-github.html#git-and-github-in-rstudio",
+    "href": "lectures/lecture-git-github.html#git-and-github-in-rstudio",
     "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Reproducible research with Git and GitHub",
-    "text": "Reproducible research with Git and GitHub"
+    "section": "Git and GitHub in RStudio",
+    "text": "Git and GitHub in RStudio"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#section",
+    "href": "lectures/lecture-git-github.html#section",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "",
+    "text": "Personalised octocat from myoctocat.com\n\n\nHi, I’m Mark\n\nStatistician\nCentre for Big Data Research in Health UNSW\nAnalysing linked data\nData visualisation\nReproducible research software and workflows"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#what-institution-are-you-from",
+    "href": "lectures/lecture-git-github.html#what-institution-are-you-from",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "What institution are you from?",
+    "text": "What institution are you from?"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#whats-your-role",
+    "href": "lectures/lecture-git-github.html#whats-your-role",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "What’s your role?",
+    "text": "What’s your role?"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#what-software-do-you-use",
+    "href": "lectures/lecture-git-github.html#what-software-do-you-use",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "What software do you use?",
+    "text": "What software do you use?"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#how-familiar-are-you-with-rstudio",
+    "href": "lectures/lecture-git-github.html#how-familiar-are-you-with-rstudio",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "How familiar are you with RStudio?",
+    "text": "How familiar are you with RStudio?"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#how-familiar-are-you-with-git",
+    "href": "lectures/lecture-git-github.html#how-familiar-are-you-with-git",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "How familiar are you with Git?",
+    "text": "How familiar are you with Git?"
   },
   {
     "objectID": "lectures/lecture-git-github.html#the-challenge",
@@ -42,15 +84,15 @@
     "text": "The new school solution 🚀\nThe new school solution is to use dedicated version control software.\nThere are a few options out there but by far the most popular choice is the combination of git + GitHub"
   },
   {
-    "objectID": "lectures/lecture-git-github.html#section",
-    "href": "lectures/lecture-git-github.html#section",
+    "objectID": "lectures/lecture-git-github.html#section-5",
+    "href": "lectures/lecture-git-github.html#section-5",
     "title": "Getting Started with Git and GitHub in RStudio",
     "section": "",
     "text": "Via git-scm.com\n\n\nGit is software for tracking different versions of code files you are working on locally.\n\n\n\nVia logos-world.net\n\n\nGitHub is a cloud-based platform for sharing and collaborating on projects managed with Git"
   },
   {
-    "objectID": "lectures/lecture-git-github.html#section-1",
-    "href": "lectures/lecture-git-github.html#section-1",
+    "objectID": "lectures/lecture-git-github.html#section-6",
+    "href": "lectures/lecture-git-github.html#section-6",
     "title": "Getting Started with Git and GitHub in RStudio",
     "section": "",
     "text": "Illustrations from the Openscapes blog GitHub for supporting, contributing, and failing safely by Allison Horst and Julia Lowndes."
@@ -74,14 +116,14 @@
     "href": "lectures/lecture-git-github.html#how-does-it-work-2",
     "title": "Getting Started with Git and GitHub in RStudio",
     "section": "How does it work?",
-    "text": "How does it work?\nSharing versions with GitHub"
+    "text": "How does it work?\nCollaborating with GitHub"
   },
   {
     "objectID": "lectures/lecture-git-github.html#how-does-it-work-3",
     "href": "lectures/lecture-git-github.html#how-does-it-work-3",
     "title": "Getting Started with Git and GitHub in RStudio",
     "section": "How does it work?",
-    "text": "How does it work?\nSharing versions with GitHub"
+    "text": "How does it work?\nCollaborating with GitHub"
   },
   {
     "objectID": "lectures/lecture-git-github.html#it-seems-a-bit-complicated",
@@ -154,67 +196,11 @@
     "text": "Collaboration: Git hosting service\nTo enable collaboration you need a Git Hosting service. There are heaps of options with different pros and cons, but the core functionality is usually the same.\n\n\nGitLab\n\nCan be hosted on a private server so ideal for sensitive projects."
   },
   {
-    "objectID": "lectures/lecture-git-github.html#key-concept-repository",
-    "href": "lectures/lecture-git-github.html#key-concept-repository",
+    "objectID": "lectures/lecture-git-github.html#key-concept-r-projects",
+    "href": "lectures/lecture-git-github.html#key-concept-r-projects",
     "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Key concept: Repository",
-    "text": "Key concept: Repository\n\n\n\n\nA repository is where the magic happens \n\nReferred to as a repo* \n1 git project = 1 repo\nDatabase of changes to your code (aka diffs)\nHidden folder on your system named .git"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#key-concept-commit",
-    "href": "lectures/lecture-git-github.html#key-concept-commit",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Key concept: Commit",
-    "text": "Key concept: Commit\n\n\n\n\nCommit\n\nA Commit is like clicking save in a MS Word document\nIt saves a snapshot of the code at that point in time\nWhy you commit you must write a message explaining what changed\nCommitting is a two stage process - more on this later"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#key-concept-diff",
-    "href": "lectures/lecture-git-github.html#key-concept-diff",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Key concept: Diff",
-    "text": "Key concept: Diff\n\n\n\n\nDiff\n\nA diff is the set of changes between two versions of a file\nWhen you commit, it is the diff that gets recorded, not the whole version\nThe screenshot highlights a single diff: deletion of the word “clinic”"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#workflow-1",
-    "href": "lectures/lecture-git-github.html#workflow-1",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Workflow",
-    "text": "Workflow"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#workflow-2",
-    "href": "lectures/lecture-git-github.html#workflow-2",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Workflow",
-    "text": "Workflow"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#workflow-3",
-    "href": "lectures/lecture-git-github.html#workflow-3",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Workflow",
-    "text": "Workflow\nHow you actual perform these commands depends on the git client you are using…\n\nWe will use the RStudio Interface"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#r-projects",
-    "href": "lectures/lecture-git-github.html#r-projects",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "R Projects",
-    "text": "R Projects\n\nWe use R projects to keep all our code and files organised in a single space\n\n\nArtwork by @allison_horst"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#absolute-paths",
-    "href": "lectures/lecture-git-github.html#absolute-paths",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Absolute paths",
-    "text": "Absolute paths\n\nsetwd(\"/Users/z3509778/Library/CloudStorage/OneDrive-UNSW/Data Vis Workshop/CourseSite\")\n\n\n\n\nIf the first line of your R script is\nsetwd(\"C:\\Users\\jenny\\path\\that\\only\\I\\have\")\nI will come into your office and SET YOUR COMPUTER ON FIRE 🔥.\n\n\n—Jenny Bryan in Project-oriented workflow"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#relative-paths-with-herehere",
-    "href": "lectures/lecture-git-github.html#relative-paths-with-herehere",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Relative paths with here::here()",
-    "text": "Relative paths with here::here()\n\nArtwork by @allison_horst"
+    "section": "Key concept: R Projects",
+    "text": "Key concept: R Projects\n\nWe use R projects to keep all our code and files organised in a single space\n\n\n\nArtwork by @allison_horst"
   },
   {
     "objectID": "lectures/lecture-git-github.html#mini-exercise",
@@ -222,6 +208,111 @@
     "title": "Getting Started with Git and GitHub in RStudio",
     "section": "Mini-Exercise",
     "text": "Mini-Exercise\n\n 3 minutes\n\nCreate a new project in RStudio\n\n\n\n\n\n\nIn the top right-hand corner of Rstudio (i) click the arrow and (ii) choose New Project \nSelect New Directory then New Project\nSet the directory name to Exercise 1 and choose a sensible subdirectory location (this is where the project will live on your computer)\nTick ✅ Create a Git Repository\nClick Create Project"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#key-concept-absolute-paths",
+    "href": "lectures/lecture-git-github.html#key-concept-absolute-paths",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Key concept: Absolute paths",
+    "text": "Key concept: Absolute paths\n\nsetwd(\"/Users/z3509778/Library/CloudStorage/OneDrive-UNSW/Data Vis Workshop/CourseSite\")\n\n\n\n\nIf the first line of your R script is\nsetwd(\"C:\\Users\\jenny\\path\\that\\only\\I\\have\")\nI will come into your office and SET YOUR COMPUTER ON FIRE 🔥.\n\n\n—Jenny Bryan in Project-oriented workflow"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#key-concept-relative-paths-with-herehere",
+    "href": "lectures/lecture-git-github.html#key-concept-relative-paths-with-herehere",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Key concept: Relative paths with here::here()",
+    "text": "Key concept: Relative paths with here::here()\n\n\nArtwork by @allison_horst"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#mini-exercise-1",
+    "href": "lectures/lecture-git-github.html#mini-exercise-1",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Mini-Exercise",
+    "text": "Mini-Exercise\n\n 3 minutes\n\nAre you here yet?\n\n\n\n\n\n\nMake sure you are working in the R Project you created earlier \nEnter here::here() at the console to see your current working directory. This should be where you saved your project!\nEnter here::here(\".gitignore\") at the console. What happens?\nEnter file.exists(here::here(\".gitignore\")) at the console. This should return TRUE. Note that you don’t need the full path to locate the file!\n\n\n\nNote We will talk more about what the .gitignore file actually does later"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#key-concept-repository",
+    "href": "lectures/lecture-git-github.html#key-concept-repository",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Key concept: Repository",
+    "text": "Key concept: Repository\n\n\n\n\nA repository is where the magic happens \n\nReferred to as a repo\n1 git project = 1 repo = 1 RStudio Project\nDatabase of changes to your code (aka diffs)\nHidden folder on your system named .git"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#key-concept-commit",
+    "href": "lectures/lecture-git-github.html#key-concept-commit",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Key concept: Commit",
+    "text": "Key concept: Commit\n\n\n\n\nCommit\n\nA Commit is like clicking save in a MS Word document\nIt saves a snapshot of the code at that point in time\nWhy you commit you must write a message explaining what changed\nCommitting is a two stage process…"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#key-concept-staging-area",
+    "href": "lectures/lecture-git-github.html#key-concept-staging-area",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Key concept: Staging area",
+    "text": "Key concept: Staging area\nYou can only commit files that have been added to the staging area\n\n\nThere are a few advantages to breaking commits into two steps:\n\nYou can split a big edit into bite-sized pieces\nEasier to review\nIf you make a mistake you can unstage. You can’t un-commit!"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#mini-exercise-2",
+    "href": "lectures/lecture-git-github.html#mini-exercise-2",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Mini-Exercise",
+    "text": "Mini-Exercise\n\n 3 minutes\n\nTry adding and committing\n\n\n\n\n\n\nTask New File Add Commit\n\n\n\nMake sure you are working in the R Project you created earlier \nCreate and save a new text file named recipe.txt (File &gt; New File &gt; Text File). You should be able to see the new file in the Git panel \nIn the Git panel, tick the box next to recipe.txt to add the file to the staging area \nClick the commit icon  to commit the file. Add a sensible message then click Commit"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#key-concept-the-.gitignore-file",
+    "href": "lectures/lecture-git-github.html#key-concept-the-.gitignore-file",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Key concept: The .gitignore file",
+    "text": "Key concept: The .gitignore file\nYou can tell git to ignore specific files and folders by listing them in a special file: .gitignore\n\nThe default .gitignore file for R projects list files that are specific to your configuration—these are personal so we don’t want to share them.\n.Rproj.user\n.Rhistory\n.RData\n.Ruserdata\n\n\n.gitignore also recognises patterns:\n\n*.xlsx (ignore all xlsx files)\n*.Rda (ignore all .Rda files)\n/Data (ignore everything in the folder named Data)"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#mini-exercise-3",
+    "href": "lectures/lecture-git-github.html#mini-exercise-3",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Mini-Exercise",
+    "text": "Mini-Exercise\n\n 3 minutes\n\nThe .gitignore file\n\n\n\n\n\n\nMake sure you are working in the R Project you created earlier \nCreate and save a new file private.txt (File &gt; New File &gt; Text File). Git should automatically detect the new file so you should see the file appear in the git panel.\nOpen the .gitignore file and add the text private.txt on a new line. Click save.\n\nOnce you ignore the file it is no longer being tracked and it should disappear from the git panel."
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#cloning-from-github-to-rstudio",
+    "href": "lectures/lecture-git-github.html#cloning-from-github-to-rstudio",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Cloning from GitHub to RStudio",
+    "text": "Cloning from GitHub to RStudio"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#cloning-from-github-to-rstudio-1",
+    "href": "lectures/lecture-git-github.html#cloning-from-github-to-rstudio-1",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Cloning from GitHub to RStudio",
+    "text": "Cloning from GitHub to RStudio"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#forking-in-github",
+    "href": "lectures/lecture-git-github.html#forking-in-github",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Forking in GitHub",
+    "text": "Forking in GitHub"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#forking-in-github-1",
+    "href": "lectures/lecture-git-github.html#forking-in-github-1",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Forking in GitHub",
+    "text": "Forking in GitHub"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#branching",
+    "href": "lectures/lecture-git-github.html#branching",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Branching",
+    "text": "Branching"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#branching-1",
+    "href": "lectures/lecture-git-github.html#branching-1",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Branching",
+    "text": "Branching"
   },
   {
     "objectID": "lectures/lecture-git-github.html#what-files-can-i-track",
@@ -238,13 +329,6 @@
     "text": "How often should I commit?\n\nWell, it depends.\nJust like when you start writing a word document you might not click save very often as you spew out lots of ideas, but at the end of your thesis you will carefully save every change!\nIt is best practice to keep commits fairly small and related, especially for mature projects."
   },
   {
-    "objectID": "lectures/lecture-git-github.html#whats-with-the-staging-area",
-    "href": "lectures/lecture-git-github.html#whats-with-the-staging-area",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "What’s with the staging area?",
-    "text": "What’s with the staging area?\n\nThere are advantages of breaking up the commit into two steps\n\nYou can split a big edit into bite-sized pieces\nEasier to review\nIf you make a mistake you can unstage. You can’t un-commit!"
-  },
-  {
     "objectID": "lectures/lecture-git-github.html#what-about-my-sensitive-datacode",
     "href": "lectures/lecture-git-github.html#what-about-my-sensitive-datacode",
     "title": "Getting Started with Git and GitHub in RStudio",
@@ -259,291 +343,268 @@
     "text": "How does my repo align with my project folder?\n\n\nYou need to actively think about this!\nOption: Root folder of the project\nOption: Specific folder (e.g. just Code/)\nGit ignores files and folders listed in the special .gitignore file"
   },
   {
-    "objectID": "lectures/lecture-git-github.html#mini-exercise-1",
-    "href": "lectures/lecture-git-github.html#mini-exercise-1",
+    "objectID": "lectures/lecture-git-github.html#next-steps-for-the-medicines-intelligence-cre",
+    "href": "lectures/lecture-git-github.html#next-steps-for-the-medicines-intelligence-cre",
     "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 3 minutes\n\nAre you here yet?\n\n\n\n\n\n\nMake sure you are working in the R Project you created earlier \nEnter here::here() at the console to see your current working directory. This should be where you saved your project!\nEnter here::here(\".gitignore\") at the console. What happens?\nEnter file.exists(here::here(\".gitignore\")) at the console. This should return TRUE. Note that you don’t need the full path to locate the file!\n\n\n\nNote We will talk more about what the .gitignore file actually does later"
+    "section": "Next steps for the Medicines Intelligence CRE?",
+    "text": "Next steps for the Medicines Intelligence CRE?\n\n\n\nSetting up/joining an Organisational GitHub account?\nAdvocating for Gitea in your secure analysis environment?\nSetting up a repo for shared code?\nTracking your next analysis with Git/GitHub?"
+  },
+  {
+    "objectID": "lectures/lecture-git-github.html#any-final-questions",
+    "href": "lectures/lecture-git-github.html#any-final-questions",
+    "title": "Getting Started with Git and GitHub in RStudio",
+    "section": "Any final questions?",
+    "text": "Any final questions?\n\nPlease complete the post-event survey! ❤️"
   },
   {
     "objectID": "lectures/roughwork.html#mini-exercise",
     "href": "lectures/roughwork.html#mini-exercise",
     "title": "Getting Started with Git and GitHub in RStudio",
     "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 3 minutes\n\nCreate a new project in RStudio\n\n\n\n\n\n\nIn the top right-hand corner of Rstudio (i) click the arrow and (ii) choose New Project \nSelect New Directory then New Project\nSet the directory name to Exercise 1 and choose a sensible subdirectory location (this is where the project will live on your computer)\nTick ✅ Create a Git Repository\nClick Create Project"
+    "text": "Mini-Exercise\n\n 5 minutes\n\nClone a remote repo\nA note on this exercise: In this exercise you will clone a remote repo from GitHub to your local RStudio. The example uses a repo from the tame R package for identifying clusters of medication use based on dose, timing and type of medication published by Anna Laksafoss from the University of Copenhagen. You will use Git’s powerful search function to find this repo but note you can do this exercise with any repo you like!"
   },
   {
     "objectID": "lectures/roughwork.html#mini-exercise-1",
     "href": "lectures/roughwork.html#mini-exercise-1",
     "title": "Getting Started with Git and GitHub in RStudio",
     "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 3 minutes\n\nAre you here yet?\n\n\n\n\n\n\nMake sure you are working in the R Project you created earlier \nEnter here::here() at the console to see your current working directory. This should be where you saved your project!\nEnter here::here(\".gitignore\") at the console. What happens?\nEnter file.exists(here::here(\".gitignore\")) at the console. This should return TRUE. Note that you don’t need the full path to locate the file!\n\n\n\nNote We will talk more about what the .gitignore file actually does later"
+    "text": "Mini-Exercise\n\n 5 minutes\n\nClone a remote repo\n\n\n\n\n\n\nTask GitHub URL Clone\n\n\n\nOn github.com search Anna Laksafoss and open the tame R package repo \nWithin the repo, click on   Code and copy the HTTPS url to your clipboard \nLaunch the RStudio New Project Wizard, but this time select Version Control then Git\nPaste the HTTPS url into the Repository URL box and specify a sensible subdirectory location for this new repo \nOptionally tick ✅ Open in new session then select Create Project"
   },
   {
-    "objectID": "lectures/roughwork.html#mini-exercise-2",
-    "href": "lectures/roughwork.html#mini-exercise-2",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 3 minutes\n\nTry adding and committing\n\n\n\n\n\n\nTask New File Add Commit\n\n\n\nMake sure you are working in the R Project you created earlier \nCreate and save a new text file named recipe.txt (File &gt; New File &gt; Text File). You should be able to see the new file in the Git panel \nIn the Git panel, tick the box next to recipe.txt to add the file to the staging area \nClick the commit icon  to commit the file. Add a sensible message then click Commit"
+    "objectID": "exercises/exercise3.html",
+    "href": "exercises/exercise3.html",
+    "title": "Exercise 3: Branching and pull requests",
+    "section": "",
+    "text": "Overview: If you are collaborating with others you will need to get work on local branches to avoid clashes. Here you can practice creating a new branch in RStudio then submitting a Merge Request to GitHub",
+    "crumbs": [
+      "Home",
+      "Exercises",
+      "Exercise 3"
+    ]
+  },
+  {
+    "objectID": "exercises/exercise3.html#create-a-new-branch",
+    "href": "exercises/exercise3.html#create-a-new-branch",
+    "title": "Exercise 3: Branching and pull requests",
+    "section": "1.1 Create a new branch",
+    "text": "1.1 Create a new branch\n * In the Git panel, click the New Branch icon to launch this dialogue box * Name the new branch something short and meaningful (no spaces!) * Click Create * Close the pop up",
+    "crumbs": [
+      "Home",
+      "Exercises",
+      "Exercise 3"
+    ]
+  },
+  {
+    "objectID": "exercises/exercise3.html#create-a-new-file-then-add-and-commit",
+    "href": "exercises/exercise3.html#create-a-new-file-then-add-and-commit",
+    "title": "Exercise 3: Branching and pull requests",
+    "section": "1.2 Create a new file, then add and commit",
+    "text": "1.2 Create a new file, then add and commit\n\nNotes\n\nCreate and save a new R Script, e.g. extra-analysis.R\nAdd and commit this file in the usual way\nRemember to add a short, meaningful commit message",
+    "crumbs": [
+      "Home",
+      "Exercises",
+      "Exercise 3"
+    ]
+  },
+  {
+    "objectID": "exercises/exercise3.html#push-your-branch-to-github",
+    "href": "exercises/exercise3.html#push-your-branch-to-github",
+    "title": "Exercise 3: Branching and pull requests",
+    "section": "1.3 Push your branch to GitHub",
+    "text": "1.3 Push your branch to GitHub\n\n\nYou can push from either (i) the Git pane or (ii) the commit dialogue box",
+    "crumbs": [
+      "Home",
+      "Exercises",
+      "Exercise 3"
+    ]
+  },
+  {
+    "objectID": "exercises/exercise3.html#click-compare-pull-request",
+    "href": "exercises/exercise3.html#click-compare-pull-request",
+    "title": "Exercise 3: Branching and pull requests",
+    "section": "2.1 Click Compare & Pull Request",
+    "text": "2.1 Click Compare & Pull Request\n\nNotes\n\nThis will create a new pull request\nYou got this ❤️",
+    "crumbs": [
+      "Home",
+      "Exercises",
+      "Exercise 3"
+    ]
+  },
+  {
+    "objectID": "exercises/exercise3.html#click-create-pull-request",
+    "href": "exercises/exercise3.html#click-create-pull-request",
+    "title": "Exercise 3: Branching and pull requests",
+    "section": "2.2 Click Create pull request",
+    "text": "2.2 Click Create pull request\n\nNotes\n\nYou should see the green tick Able to merge\nIn more complex projects there may be conflicts between user edits, but one step at a time.\nHere you could optionally add labels, assign reviewers etc\nWhen you are ready click Create pull request.",
+    "crumbs": [
+      "Home",
+      "Exercises",
+      "Exercise 3"
+    ]
+  },
+  {
+    "objectID": "exercises/exercise3.html#merge-pull-request",
+    "href": "exercises/exercise3.html#merge-pull-request",
+    "title": "Exercise 3: Branching and pull requests",
+    "section": "2.3 Merge pull request",
+    "text": "2.3 Merge pull request\n Notes\n\nBecause there are no conflicts, merging can be performed automatically\nWhen you are ready click Merge pull request then Confirm merge",
+    "crumbs": [
+      "Home",
+      "Exercises",
+      "Exercise 3"
+    ]
+  },
+  {
+    "objectID": "exercises/exercise3.html#switch-back-to-the-main-branch",
+    "href": "exercises/exercise3.html#switch-back-to-the-main-branch",
+    "title": "Exercise 3: Branching and pull requests",
+    "section": "3.1 Switch back to the main branch",
+    "text": "3.1 Switch back to the main branch\n\nNotes\n\nIf you left your additional file open in RStudio you might now get a pop-up to say it has been deleted. Don’t panic, it is just not on the main branch (yet!)\n\n\n\nAt this point you will have the option to delete your branch in GitHub. You can if you like, but if you think you might make more related changes later you can leave it open.",
+    "crumbs": [
+      "Home",
+      "Exercises",
+      "Exercise 3"
+    ]
+  },
+  {
+    "objectID": "exercises/exercise3.html#pull-the-remote-changes-to-your-local-repo",
+    "href": "exercises/exercise3.html#pull-the-remote-changes-to-your-local-repo",
+    "title": "Exercise 3: Branching and pull requests",
+    "section": "3.2 Pull the remote changes to your local repo",
+    "text": "3.2 Pull the remote changes to your local repo\n Notes\n\nThis will pull the changes in the remote branch to your local repo\n\n\n\nIf you have left your branch open, you can change back if there are more edits needed.\n\n\nMade it this far? Legend!",
+    "crumbs": [
+      "Home",
+      "Exercises",
+      "Exercise 3"
+    ]
   },
   {
     "objectID": "exercises/overview.html",
     "href": "exercises/overview.html",
-    "title": "Guided exercises",
+    "title": "Exercises overview",
     "section": "",
-    "text": "Artwork by @allison_horst\n\nNow it’s your turn to really get hands-on with the data! Work through the guided exercises. If you get stuck, refer to the notes or to the examples in the lecture slides. If you can’t get unstuck just raise your hand and someone will be there to help!\n\n\n\n Back to top",
+    "text": "In these exercises you will practice three common workflows:\n\nPushing a repo that exists in RStudio to GitHub\nCreating a repo in GitHub and cloning to RStudio\nBranching and pull requests\n\n\n\n\nDon’t worry if you get stuck—just shout for help!\n\n\n\nArtwork by @allison_horst.\n\n\n\n\n Back to top",
     "crumbs": [
-      "Guided exercises"
+      "Home",
+      "Exercises",
+      "Overview"
     ]
-  },
-  {
-    "objectID": "under-construction.html",
-    "href": "under-construction.html",
-    "title": "🚧 Under Construction 🔧",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "home/prerequisites.html",
-    "href": "home/prerequisites.html",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "",
-    "text": "Artwork by @allison_horst\n\nThank you for enrolling in the    Reproducible Data Visualisation with R workshop   \nTo get the most out of the workshop, please run through the checklist below and make sure you have all the necessary software installed in advance. If you are already working with git in RStudio you may be ready to go already. If you are just getting started, keep in mind that these configuration steps can be half the battle. Don’t worry if you get stuck, we are here to help.\n\n\n\n\n\n\n\n\nA note on the key reference\n\n\n\nConfiguring Git, GitHub and RStudio to work together is half the battle when it comes to using Git in RStudio.\nLuckily there is an excellent online reference for this: Happy Git and GitHub for the useR by Jennifer Bryan. The chapters linked below refer to key sections in this book.\nWe won’t have time to configure everybody’s laptop at the workshop so please try to work through these steps in advance! The best strategy is to carefully read the recommended sections in order and follow the directions diligently. But there is a lot of detail to work through so don’t worry if you get stuck—reach out for help!\n\n\n\n\nChecklist:\nCan you tick every item below?\n\nA laptop (and a charger!) \nAt least a basic working knowledge of R and RStudio. If you are a beginner or want a refresh, check out the one-hour webinar A gengle introduction to tidy statistics in R) \nA free GitHub user account. See Ch 4. Register a GitHub account \nA recent version of R (at least v4.3.0) and RStudio (at least a 2024 version) installed on your laptop. See Ch 5. Install or upgrade R and RStudio \nGit installed on your laptop. See Ch 6. Install Git \nSet up a Personal Access Token (PAT) to allow RStudio to communicate with GitHub. See Ch 9. Personal access token for HTTPS and in particular Section 9.1 TL;DR \n\n\n\n\n\n\n\n\n\nSetting up a Personal Access Token\n\n\n\nFollow Section 9.1 TL;DR from Happy Git and GitHub for the useR to set up your Personal Access Token. The easiest way to do this is to run the suggested commands from R. To run these commands you may need to install the usethis and gitcreds packages if they are not installed already. If you get an error message indicating that you don’t have the packages installed you can install them by entering the commands below at the console.\n\ninstall.packages(\"usethis\")\n\n\ninstall.packages(\"gitcreds\")\n\nAs per Section 9.1 TL;DR, the following R commands can be used to set up a Personal Access Token from RStudio.\n\nusethis::create_github_token()\n\n\nEntering a note to describe the tokens use case is useful for identifying and managing tokens. Choose a note that describes your use case, e.g. RStudio projects.\nSet the expiration to 30 days. You can always extend this.\nThe GitHub PAT scope is like a set of permissions that define what actions the token can perform on your behalf on GitHub. You can use the default scopes of workflow, gist, and user.\n\n\ngitcreds::gitcreds_set()\n\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "home/introduction.html",
-    "href": "home/introduction.html",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "",
-    "text": "Back to top"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "The Octocat—an octopus-cat with five appendages—is the beloved GitHub logo. Read more here.\n\n\nSchedule\n\n\n\n\n\n\nTime\nActivity\n\n\n\n\n\n10:00 - 10:10\nWelcome and housekeeping\n\n\n\n10:10 - 10:50\nOverview of Git and GitHub\n🔗\n\n\n10:50 - 11:10\nExercise: Working with Projects in RStudio\n\n\n\n11:10 - 11:20\nMorning tea\n🔗\n\n\n11:20 - 11:45\nExercise: Working with git locally\n🔗\n\n\n11:45 - 12:15\nExercise: Branching and merging\n\n\n\n12:15 - 12:30\nQuestions and close\n🔗\n\n\n\n\n\n\n\n\n\n\nPrerequisites\nThank you for enrolling in the    Git and GitHub in RStudio workshop   \nTo get the most out of the workshop, please run through the checklist below and make sure you have all the necessary software installed in advance. If you are already working with git in RStudio you may be ready to go already. If you are just getting started, keep in mind that these configuration steps can be half the battle. Don’t worry if you get stuck, we are here to help.\n\n\n\n\n\n\n\n\nA note on the key reference\n\n\n\nConfiguring Git, GitHub and RStudio to work together is half the battle when it comes to using Git in RStudio.\nLuckily there is an excellent online reference for this: Happy Git and GitHub for the useR by Jennifer Bryan. The chapters linked below refer to key sections in this book.\nWe won’t have time to configure everybody’s laptop at the workshop so please try to work through these steps in advance! The best strategy is to carefully read the recommended sections in order and follow the directions diligently. But there is a lot of detail to work through so don’t worry if you get stuck—reach out for help!\n\n\n\n\nChecklist:\nCan you tick every item below?\n\nAt least a basic familiarity with R and RStudio. If you are a beginner or want a refresh, check out the one-hour webinar A gengle introduction to tidy statistics in R) \nA free GitHub user account. See Ch 4. Register a GitHub account \nA recent version of R (at least v4.3.0) and RStudio (at least a 2024 version) installed on your laptop. See Ch 5. Install or upgrade R and RStudio \nGit installed on your laptop. See Ch 6. Install Git \nSet up a Personal Access Token (PAT) to allow RStudio to communicate with GitHub. See Ch 9. Personal access token for HTTPS and in particular Section 9.1 TL;DR \n\n\n\n\n\n\n\n\n\nSetting up a Personal Access Token\n\n\n\nFollow Section 9.1 TL;DR from Happy Git and GitHub for the useR to set up your Personal Access Token. The easiest way to do this is to run the suggested commands from R. To run these commands you may need to install the usethis and gitcreds packages if they are not installed already. If you get an error message indicating that you don’t have the packages installed you can install them by entering the commands below at the console.\n\ninstall.packages(\"usethis\")\n\n\ninstall.packages(\"gitcreds\")\n\nAs per Section 9.1 TL;DR, the following R commands can be used to set up a Personal Access Token from RStudio.\n\nusethis::create_github_token()\n\n\nEntering a note to describe the tokens use case is useful for identifying and managing tokens. Choose a note that describes your use case, e.g. RStudio projects.\nSet the expiration to 30 days. You can always extend this.\nThe GitHub PAT scope is like a set of permissions that define what actions the token can perform on your behalf on GitHub. You can use the default scopes of workflow, gist, and user.\n\n\ngitcreds::gitcreds_set()\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "The Octocat—an octopus-cat with five appendages—is the beloved GitHub logo. Read more here.\n\n\nSchedule\n\n\n\n\n\n\nTime\nActivity\n\n\n\n\n10:00 - 10:10\nIntroductions and housekeeping\n\n\n10:10 - 10:20\nMotivation: Why use Git and GitHub\n\n\n10:20 - 11:10\nWorking with GitHub in RStudio + Mini Exercises\n\n\n11:10 - 11:20\nMorning tea\n\n\n11:20 - 12:10\nHands-on exercises\n\n\n12:10 - 12:30\nQuestions and discussion\n\n\n\n\n\n\n\n\n\n\nPrerequisites\nThank you for enrolling in the    Git and GitHub in RStudio workshop   \nTo get the most out of the workshop, please run through the checklist below and make sure you have all the necessary software installed in advance. If you are already working with git in RStudio you may be ready to go already. If you are just getting started, keep in mind that these configuration steps can be half the battle. Don’t worry if you get stuck, we are here to help.\n\n\n\n\n\n\n\n\nA note on the key reference\n\n\n\nConfiguring Git, GitHub and RStudio to work together is half the battle when it comes to using Git in RStudio.\nLuckily there is an excellent online reference for this: Happy Git and GitHub for the useR by Jennifer Bryan. The chapters linked below refer to key sections in this book.\nWe won’t have time to configure everybody’s laptop at the workshop so please try to work through these steps in advance! The best strategy is to carefully read the recommended sections in order and follow the directions diligently. But there is a lot of detail to work through so don’t worry if you get stuck—reach out for help!\n\n\n\n\nChecklist:\nCan you tick every item below?\n\nAt least a basic familiarity with R and RStudio. If you are a beginner or want a refresh, check out the one-hour webinar A gengle introduction to tidy statistics in R) \nA free GitHub user account. See Ch 4. Register a GitHub account \nA recent version of R (at least v4.3.0) and RStudio (at least a 2024 version) installed on your laptop. See Ch 5. Install or upgrade R and RStudio \nGit installed on your laptop. See Ch 6. Install Git \nSet up a Personal Access Token (PAT) to allow RStudio to communicate with GitHub. See Ch 9. Personal access token for HTTPS and in particular Section 9.1 TL;DR \n\n\n\n\n\n\n\n\n\nSetting up a Personal Access Token\n\n\n\nFollow Section 9.1 TL;DR from Happy Git and GitHub for the useR to set up your Personal Access Token. The easiest way to do this is to run the suggested commands from R. To run these commands you may need to install the usethis and gitcreds packages if they are not installed already. If you get an error message indicating that you don’t have the packages installed you can install them by entering the commands below at the console.\n\ninstall.packages(\"usethis\")\n\n\ninstall.packages(\"gitcreds\")\n\nAs per Section 9.1 TL;DR, the following R commands can be used to set up a Personal Access Token from RStudio.\n\nusethis::create_github_token()\n\n\nEntering a note to describe the tokens use case is useful for identifying and managing tokens. Choose a note that describes your use case, e.g. RStudio projects.\nSet the expiration to 30 days. You can always extend this.\nThe GitHub PAT scope is like a set of permissions that define what actions the token can perform on your behalf on GitHub. You can use the default scopes of workflow, gist, and user.\n\n\ngitcreds::gitcreds_set()\n\n\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
-    "objectID": "exercises/github.html",
-    "href": "exercises/github.html",
-    "title": "Getting started with git and GitHub",
+    "objectID": "exercises/exercise1.html",
+    "href": "exercises/exercise1.html",
+    "title": "Exercise 1: Pushing a repo that exists in RStudio to GitHub",
     "section": "",
-    "text": "In this exercise you will:",
+    "text": "Overview: You already have a repo named Exercise1 in your local RStudio, in this exercise you will create an empty remote repo in GitHub and link it to your local repo",
     "crumbs": [
-      "Getting started with git and GitHub"
+      "Home",
+      "Exercises",
+      "Exercise 1"
     ]
   },
   {
-    "objectID": "exercises/github.html#fork-the-repo",
-    "href": "exercises/github.html#fork-the-repo",
-    "title": "Getting started with git and GitHub",
-    "section": "1.1 Fork the repo",
-    "text": "1.1 Fork the repo\n\nClick here and follow the instructions to create a personal fork of the workshop materials repo on Github.\nYou should see a message like the one below, except your repo will be tagged with your GitHub username https://github.com/data-viz-workshop/materials-&lt;username&gt;\n\n\n\nThis message indicates you’ve successfully forked the Materials repo\n\n\nOpen this link on a browser and you will be taken to the repo on GitHub. There are a lot of files and folders here, the main files you will use are in the exercises and solutions folders.",
+    "objectID": "exercises/exercise1.html#go-to-github.com-and-click-the-symbol-then-new-repository",
+    "href": "exercises/exercise1.html#go-to-github.com-and-click-the-symbol-then-new-repository",
+    "title": "Exercise 1: Pushing a repo that exists in RStudio to GitHub",
+    "section": "1.1 Go to github.com, and click the + symbol then New repository",
+    "text": "1.1 Go to github.com, and click the + symbol then New repository",
     "crumbs": [
-      "Getting started with git and GitHub"
+      "Home",
+      "Exercises",
+      "Exercise 1"
     ]
   },
   {
-    "objectID": "exercises/github.html#copy-the-repo-url",
-    "href": "exercises/github.html#copy-the-repo-url",
-    "title": "Getting started with git and GitHub",
-    "section": "1.2 Copy the repo url",
-    "text": "1.2 Copy the repo url\n\nClick on the  Code button and copy-paste the HTTPS url to your clipboard.",
+    "objectID": "exercises/exercise1.html#specify-yourself-as-the-owner-and-name-the-repo-exercise-1",
+    "href": "exercises/exercise1.html#specify-yourself-as-the-owner-and-name-the-repo-exercise-1",
+    "title": "Exercise 1: Pushing a repo that exists in RStudio to GitHub",
+    "section": "1.2 Specify yourself as the owner and name the repo Exercise 1",
+    "text": "1.2 Specify yourself as the owner and name the repo Exercise 1\n\nNotes\n\nOptionally add a description for your repo\nYou can choose Public or Private—Public repos can be viewed online by anyone.\nBecause you already have a local repo, don’t add a README file, a .gitignore file, or a license.\nWhen you are ready, click Create Repository.\n\n\n\nThe remote repo name doesn’t have to match your local repo or RStudio Project name, but it can be good practice to keep things organised!",
     "crumbs": [
-      "Getting started with git and GitHub"
+      "Home",
+      "Exercises",
+      "Exercise 1"
     ]
   },
   {
-    "objectID": "exercises/github.html#use-the-repo-url-to-create-a-new-project-in-rstudio",
-    "href": "exercises/github.html#use-the-repo-url-to-create-a-new-project-in-rstudio",
-    "title": "Getting started with git and GitHub",
-    "section": "1.3 Use the repo url to create a new project in RStudio",
-    "text": "1.3 Use the repo url to create a new project in RStudio\n\nIn RStudio, create a new project by clicking in the top-right hand corner and selecting New Project…\n\nSelect Version Control then Git.\n\n\n\n\n\n\n\n\n\n\nChoose Version Control\n\n\n\n\n\n\n\nThen choose Git\n\n\n\n\n\n\nPaste your repo url in the Repository URL field.\n\nThe Project directory name will be the name of the folder on your laptop so choose something sensible, e.g. Materials.\nFinally, select the field Create project as subdirectory of. This is where the Materials folder will be stored on your laptop. If you move the folder later it will break the link with GitHub, that can be fixed but it is easier to just choose somewhere sensible now.\n\n\n\n\n\n\n\n\n\nCheckpoint\n\n\n\nIf you have successfully completed this step you should see the name of your project in RStudio",
+    "objectID": "exercises/exercise1.html#copy-the-quick-setup-code-to-your-clipboard",
+    "href": "exercises/exercise1.html#copy-the-quick-setup-code-to-your-clipboard",
+    "title": "Exercise 1: Pushing a repo that exists in RStudio to GitHub",
+    "section": "1.3 Copy the quick setup code to your clipboard",
+    "text": "1.3 Copy the quick setup code to your clipboard",
     "crumbs": [
-      "Getting started with git and GitHub"
+      "Home",
+      "Exercises",
+      "Exercise 1"
     ]
   },
   {
-    "objectID": "exercises/github.html#open-the-practice-file",
-    "href": "exercises/github.html#open-the-practice-file",
-    "title": "Getting started with git and GitHub",
-    "section": "2.1 Open the practice file",
-    "text": "2.1 Open the practice file\nUsing the RStudio Files Pane, navigate to the folder exercises/1-code and open the file 0-practice-git-workflow.txt\n\n\n\nNavigate to exercises/1-code/0-practice-git-workflow.txt and open the file\n\n\nThe file should look like this. We are going to use this template to practice the git workflow.\n\n\n\n0-practice-git-workflow.txt\n\n# My favourite snack\n\n\n# Ingredients\n\n\n# Instructions",
+    "objectID": "exercises/exercise2.html",
+    "href": "exercises/exercise2.html",
+    "title": "Exercise 2: Creating a repo in GitHub and cloning to RStudio",
+    "section": "",
+    "text": "Overview: An alternative workflow is to create a remote repo in GitHub and then clone it locally",
     "crumbs": [
-      "Getting started with git and GitHub"
+      "Home",
+      "Exercises",
+      "Exercise 2"
     ]
   },
   {
-    "objectID": "exercises/github.html#edit-the-file",
-    "href": "exercises/github.html#edit-the-file",
-    "title": "Getting started with git and GitHub",
-    "section": "2.2 Edit the file",
-    "text": "2.2 Edit the file\n\nWrite in the name of your snack in the appropriate section.\nThe example is showing Gambas Pil Pil but you should choose your favourite!\nDon’t worry about Ingredients or Instructions for now\nMake sure to save the file when you are done.\n\n\n\n\n‘Pil pil’ is a word used in Spanish and Basque cuisines that describes a sauce made with garlic and chilli infused in hot olive oil. Some say ‘pil pil’ is the sound of popping garlic as it cooks in the hot oil.\nflawlessfood.co.uk/gambas-pil-pil/\n\n\n\n0-practice-git-workflow.txt\n\n# My favourite snack\nGambas Pil Pil (Garlic and Chilli Prawns)\n\n# Ingredients\n\n\n# Instructions",
+    "objectID": "exercises/exercise2.html#go-to-github.com-and-create-a-new-repository",
+    "href": "exercises/exercise2.html#go-to-github.com-and-create-a-new-repository",
+    "title": "Exercise 2: Creating a repo in GitHub and cloning to RStudio",
+    "section": "1.1 Go to github.com and create a new repository",
+    "text": "1.1 Go to github.com and create a new repository\n\nNotes\n\nName the repo Exercise 2\nThis time click to add a README file and choose the .gitignore template for R\nWhen you are ready, click Create Repo",
     "crumbs": [
-      "Getting started with git and GitHub"
+      "Home",
+      "Exercises",
+      "Exercise 2"
     ]
   },
   {
-    "objectID": "exercises/github.html#git-add-the-file",
-    "href": "exercises/github.html#git-add-the-file",
-    "title": "Getting started with git and GitHub",
-    "section": "2.3 git add the file",
-    "text": "2.3 git add the file\nIn the RStudio Git Pane, tick the box next to the 0-practice-git-workflow.txt. This adds your edited file to the staging area.\n\n\n\nClick the box next to file to add the file to the staging area",
+    "objectID": "exercises/exercise2.html#copy-the-repo-https-url-to-your-clipboard",
+    "href": "exercises/exercise2.html#copy-the-repo-https-url-to-your-clipboard",
+    "title": "Exercise 2: Creating a repo in GitHub and cloning to RStudio",
+    "section": "2.1 Copy the repo HTTPS url to your clipboard",
+    "text": "2.1 Copy the repo HTTPS url to your clipboard\n\nNotes\n\nMake sure you are choosing the HTTPS url",
     "crumbs": [
-      "Getting started with git and GitHub"
+      "Home",
+      "Exercises",
+      "Exercise 2"
     ]
   },
   {
-    "objectID": "exercises/github.html#git-commit-the-file",
-    "href": "exercises/github.html#git-commit-the-file",
-    "title": "Getting started with git and GitHub",
-    "section": "2.4 git commit the file",
-    "text": "2.4 git commit the file\n\nClick on the Commit button to commit the file\nThis will launch a dialogue box\nAdd a commit message\nClick commit\n\n\n\n\nAdd a commit messge then click commit",
+    "objectID": "exercises/exercise2.html#in-rstudio-create-a-new-project-with-this-url",
+    "href": "exercises/exercise2.html#in-rstudio-create-a-new-project-with-this-url",
+    "title": "Exercise 2: Creating a repo in GitHub and cloning to RStudio",
+    "section": "2.2 In RStudio, create a new project with this url",
+    "text": "2.2 In RStudio, create a new project with this url\n\n\nLaunch the New Project wizard and choose New Project &gt; Version Control Git\nPaste in the repository url and name the Project Exercise 2\nTick the box to open the repo in a new session\nWhen you are ready click Create Project\n\n\n\nThat’s it, you’re done! Try adding and saving some new files then practice committing and then pushing. You should be able to see your commit history in GitHub.\n\n\nMade it this far? Legend!",
     "crumbs": [
-      "Getting started with git and GitHub"
-    ]
-  },
-  {
-    "objectID": "exercises/github.html#git-push-the-file",
-    "href": "exercises/github.html#git-push-the-file",
-    "title": "Getting started with git and GitHub",
-    "section": "2.5 git push the file",
-    "text": "2.5 git push the file\n\nClick on the Push button to push the file\nIf it runs successfully you should get a dialogue box that looks something like this (which you can then close).\n\n\n\n\nA successful push to the remote repo\n\n\n\nPay attention to the messages that pop up here: if something goes wrong you may see an error\nIf you see the message “Everything up-to-date” make sure you fully completed the commit step by clicking Commit after adding your commit message in the previous box\n\n\n\n\n\n\n\n\n\nCheckpoint\n\n\n\nIf this has all worked smoothly you should see your recent commit message when you view your repo on GitHub\n\n\n\nYour changes will be in the exercises folder",
-    "crumbs": [
-      "Getting started with git and GitHub"
-    ]
-  },
-  {
-    "objectID": "exercises/github.html#add-your-ingredients",
-    "href": "exercises/github.html#add-your-ingredients",
-    "title": "Getting started with git and GitHub",
-    "section": "2.6 Add your ingredients",
-    "text": "2.6 Add your ingredients\n\n\n\n0-practice-git-workflow.txt\n\n# My favourite snack\nGambas Pil Pil (Garlic and Chilli Prawns)\n\n# Ingredients\n- Prawns \n- Garlic\n- Chilli\n- Oil\n- Bread\n\n# Instructions\n\n\n\nEdit the file to include the ingredients for your snack\nSave the file\nRepeat the steps above to git add, commit and push the file to GitHub\nConfirm you can see your changes on GitHub\n\n\n\n\nConfirm you can see your changes on GitHub",
-    "crumbs": [
-      "Getting started with git and GitHub"
-    ]
-  },
-  {
-    "objectID": "exercises/github.html#add-your-instructions",
-    "href": "exercises/github.html#add-your-instructions",
-    "title": "Getting started with git and GitHub",
-    "section": "2.7 Add your instructions",
-    "text": "2.7 Add your instructions\n\n\n\n0-practice-git-workflow.txt\n\n# My favourite snack\nGambas Pil Pil (Garlic and Chilli Prawns)\n\n# Ingredients\n- Prawns \n- Garlic\n- Chilli\n- Oil\n- Parsley\n- Bread\n\n# Instructions\n\n- Heat the oil with the garlic and chilli\n- Add the prawns\n- Garnish with parsley\n- Serve with bread\n\n\n\nEdit the file to include the instructions to prepare your snack\nSave the file\nRepeat the steps above to git add, commit and push the file to GitHub\nConfirm you can see your changes on GitHub\n\n\n\n\nConfirm you can see your changes on GitHub\n\n\n\n\nMade it this far? Nailed it!\n\n\n\nvia GIPHY",
-    "crumbs": [
-      "Getting started with git and GitHub"
+      "Home",
+      "Exercises",
+      "Exercise 2"
     ]
   },
   {
     "objectID": "lectures/overview.html",
     "href": "lectures/overview.html",
-    "title": "Lectures",
+    "title": "Slide deck",
     "section": "",
-    "text": "Artwork by @allison_horst\n\n\nVersion control with Git and GitHub\n\nView slides in full screen\n\n\nData cleaning with dplyr\n\nView slides in full screen\n\n\nData visualisation with ggplot2\n\nView slides in full screen\n\n\nStorytelling with data\n\nView slides in full screen\n\n\nLiterate programming with rmarkdown\n\nView slides in full screen\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "lectures/roughwork.html#mini-exercise-3",
-    "href": "lectures/roughwork.html#mini-exercise-3",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 5 minutes\n\nClone a remote repo\nA note on this exercise: In this exercise you will clone a remote repo from GitHub to your local RStudio. The example uses a repo from the tame R package for identifying clusters of medication use based on dose, timing and type of medication published by Anna Laksafoss from the University of Copenhagen. You will use Git’s powerful search function to find this repo but note you can do this exercise with any repo you like!"
-  },
-  {
-    "objectID": "lectures/roughwork.html#mini-exercise-4",
-    "href": "lectures/roughwork.html#mini-exercise-4",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 5 minutes\n\nClone a remote repo\n\n\n\n\n\n\nTask GitHub URL Clone\n\n\n\nOn github.com search Anna Laksafoss and open the tame R package repo \nWithin the repo, click on   Code and copy the HTTPS url to your clipboard \nLaunch the RStudio New Project Wizard, but this time select Version Control then Git\nPaste the HTTPS url into the Repository URL box and specify a sensible subdirectory location for this new repo \nOptionally tick ✅ Open in new session then select Create Project"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#key-concept-r-projects",
-    "href": "lectures/lecture-git-github.html#key-concept-r-projects",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Key concept: R Projects",
-    "text": "Key concept: R Projects\n\nWe use R projects to keep all our code and files organised in a single space\n\n\n\nArtwork by @allison_horst"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#key-concept-absolute-paths",
-    "href": "lectures/lecture-git-github.html#key-concept-absolute-paths",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Key concept: Absolute paths",
-    "text": "Key concept: Absolute paths\n\nsetwd(\"/Users/z3509778/Library/CloudStorage/OneDrive-UNSW/Data Vis Workshop/CourseSite\")\n\n\n\n\nIf the first line of your R script is\nsetwd(\"C:\\Users\\jenny\\path\\that\\only\\I\\have\")\nI will come into your office and SET YOUR COMPUTER ON FIRE 🔥.\n\n\n—Jenny Bryan in Project-oriented workflow"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#key-concept-relative-paths-with",
-    "href": "lectures/lecture-git-github.html#key-concept-relative-paths-with",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Key concept: Relative paths with",
-    "text": "Key concept: Relative paths with\n\n\nArtwork by @allison_horst"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#mini-exercise-2",
-    "href": "lectures/lecture-git-github.html#mini-exercise-2",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 3 minutes\n\nTry adding and committing\n\n\n\n\n\n\nTask New File Add Commit\n\n\n\nMake sure you are working in the R Project you created earlier \nCreate and save a new text file named recipe.txt (File &gt; New File &gt; Text File). You should be able to see the new file in the Git panel \nIn the Git panel, tick the box next to recipe.txt to add the file to the staging area \nClick the commit icon  to commit the file. Add a sensible message then click Commit"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#key-concept-clone",
-    "href": "lectures/lecture-git-github.html#key-concept-clone",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Key Concept: Clone",
-    "text": "Key Concept: Clone"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#mini-exercise-3",
-    "href": "lectures/lecture-git-github.html#mini-exercise-3",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 3 minutes\n\nThe .gitignore file\n\n\n\n\n\n\nMake sure you are working in the R Project you created earlier \nCreate and save a new file private.txt (File &gt; New File &gt; Text File). Git should automatically detect the new file so you should see the file appear in the git panel.\nOpen the .gitignore file and add the text private.txt on a new line. Click save.\n\nOnce you ignore the file it is no longer being tracked and it should disappear from the git panel."
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#mini-exercise-4",
-    "href": "lectures/lecture-git-github.html#mini-exercise-4",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 5 minutes\n\nClone a remote repo\nA note on this exercise: In this exercise you will clone a remote repo from GitHub to your local RStudio. The example uses a repo from the tame R package for identifying clusters of medication use based on dose, timing and type of medication published by Anna Laksafoss from the University of Copenhagen. You will use Git’s powerful search function to find this repo but note you can do this exercise with any repo you like!"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#mini-exercise-5",
-    "href": "lectures/lecture-git-github.html#mini-exercise-5",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Mini-Exercise",
-    "text": "Mini-Exercise\n\n 5 minutes\n\nClone a remote repo\n\n\n\n\n\n\nTask GitHub URL Clone\n\n\n\nOn github.com search Anna Laksafoss and open the tame R package repo \nWithin the repo, click on   Code and copy the HTTPS url to your clipboard \nLaunch the RStudio New Project Wizard, but this time select Version Control then Git\nPaste the HTTPS url into the Repository URL box and specify a sensible subdirectory location for this new repo \nOptionally tick ✅ Open in new session then select Create Project"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#key-concept-relative-paths-with-herehere",
-    "href": "lectures/lecture-git-github.html#key-concept-relative-paths-with-herehere",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Key concept: Relative paths with here::here()",
-    "text": "Key concept: Relative paths with here::here()\n\n\nArtwork by @allison_horst"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#git-and-github-in-rstudio",
-    "href": "lectures/lecture-git-github.html#git-and-github-in-rstudio",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Git and GitHub in RStudio",
-    "text": "Git and GitHub in RStudio"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#key-concept-staging-area",
-    "href": "lectures/lecture-git-github.html#key-concept-staging-area",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Key concept: Staging area",
-    "text": "Key concept: Staging area\nYou can only commit files that have been added to the staging area\n\n\nThere are a few advantages to breaking commits into two steps:\n\nYou can split a big edit into bite-sized pieces\nEasier to review\nIf you make a mistake you can unstage. You can’t un-commit!"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#key-concept-the-.gitignore-file",
-    "href": "lectures/lecture-git-github.html#key-concept-the-.gitignore-file",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Key concept: The .gitignore file",
-    "text": "Key concept: The .gitignore file\nYou can tell git to ignore specific files and folders by listing them in a special file: .gitignore\n\nThe default .gitignore file for R projects list files that are specific to your configuration—these are personal so we don’t want to share them.\n.Rproj.user\n.Rhistory\n.RData\n.Ruserdata\n\n\n.gitignore also recognises patterns:\n\n*.xlsx (ignore all xlsx files)\n*.Rda (ignore all .Rda files)\n/Data (ignore everything in the folder named Data)"
-  },
-  {
-    "objectID": "lectures/lecture-git-github.html#key-concept-fork",
-    "href": "lectures/lecture-git-github.html#key-concept-fork",
-    "title": "Getting Started with Git and GitHub in RStudio",
-    "section": "Key Concept: Fork",
-    "text": "Key Concept: Fork\nTo fork a repo means to take a copy of the repo on GitHub"
+    "text": "View slides in full screen\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "Slides"
+    ]
   }
 ]
