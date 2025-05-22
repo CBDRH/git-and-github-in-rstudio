@@ -1,0 +1,19 @@
+{
+  "hash": "339e27f6cb6e525d4c8ff8994a45b85c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\n---\n\n\n\n\n\n![](https://octodex.github.com/images/daftpunktocat-thomas.gif)\n\n\n::: {fig-lab}\n\nThe Octocat---an octopus-cat with five appendages---is the beloved GitHub logo. Read more [here](https://cameronmcefee.com/work/the-octocat/). \n:::\n\n\n# Schedule\n\n:::{r}\n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n`````{=html}\n<table class=\"table table-hover\" style=\"margin-left: auto; margin-right: auto;\">\n <thead>\n  <tr>\n   <th style=\"text-align:left;\"> Time </th>\n   <th style=\"text-align:left;\"> Activity </th>\n   <th style=\"text-align:center;\">  </th>\n  </tr>\n </thead>\n<tbody>\n  <tr>\n   <td style=\"text-align:left;width: 30%; \"> 10:00 - 10:10 </td>\n   <td style=\"text-align:left;width: 60%; \"> Welcome and housekeeping </td>\n   <td style=\"text-align:center;width: 10%; \">  </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;width: 30%; \"> 10:10 - 10:50 </td>\n   <td style=\"text-align:left;width: 60%; \"> Overview of Git and GitHub </td>\n   <td style=\"text-align:center;width: 10%; \"> <a href=\"lectures/overview.html#version-control-with-git-and-github-with-dplyr\">🔗</a> </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;width: 30%; \"> 10:50 - 11:10 </td>\n   <td style=\"text-align:left;width: 60%; \"> Exercise: Working with Projects in RStudio </td>\n   <td style=\"text-align:center;width: 10%; \">  </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;width: 30%; \"> 11:10 - 11:20 </td>\n   <td style=\"text-align:left;width: 60%; \"> Morning tea </td>\n   <td style=\"text-align:center;width: 10%; \"> <a href=\"exercises/github.html\">🔗</a> </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;width: 30%; \"> 11:20 - 11:45 </td>\n   <td style=\"text-align:left;width: 60%; \"> Exercise: Working with <span class=\"code-font\">git</span> locally </td>\n   <td style=\"text-align:center;width: 10%; \"> <a href=\"lectures/overview.html#data-cleaning-with-dplyr\">🔗</a> </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;width: 30%; \"> 11:45 - 12:15 </td>\n   <td style=\"text-align:left;width: 60%; \"> Exercise: Branching and merging </td>\n   <td style=\"text-align:center;width: 10%; \">  </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;width: 30%; \"> 12:15 - 12:30 </td>\n   <td style=\"text-align:left;width: 60%; \"> Questions and close </td>\n   <td style=\"text-align:center;width: 10%; \"> <a href=\"exercises/exercise1-1.html\">🔗</a> </td>\n  </tr>\n</tbody>\n</table>\n\n`````\n:::\n:::\n\n\n\n\n:::\n\n\n\n# Prerequisites",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"site_libs/kePrint-0.0.1/kePrint.js\"></script>\n<link href=\"site_libs/lightable-0.0.1/lightable.css\" rel=\"stylesheet\" />\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

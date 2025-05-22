@@ -1,0 +1,44 @@
+---
+title: ""
+format: 
+  html:
+    theme: [litera, ../custom.scss]
+---
+
+::: {.column-screen-right style="margin-right: 10px;"}
+<iframe 
+  src="https://markhanly.github.io/rstudio-orientation/" 
+  width="95%" 
+  style="height:80vh; border:none;">
+</iframe>
+:::
+
+<br><br>
+
+## Mini-Exercise
+
+::: {.clock-cr}
+
+{{< fa clock >}} 5 minutes
+
+:::
+
+### Make yourself at home
+
+:::: {.columns}
+
+::: {.column width=34%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=5&sec=0" frameborder="0"></iframe>
+
+:::
+
+::: {.column width=66%}
+
+1. Enter `getwd()` at the console to see your current working directory. Make a note of this location!
+
+2. In the RStudio menu navigate to `Tools > Global Options > Appearance` and choose an editor theme that you like!
+
+
+:::
+::::

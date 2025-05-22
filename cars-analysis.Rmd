@@ -1,0 +1,21 @@
+---
+title: "Cars analysis"
+output: pdf_document
+date: "2024-11-10"
+---
+
+## Introduction
+Here are the first few lines of the `cars` dataset:
+
+```{r cars}
+summary(cars)
+```
+
+There are `r nrow(cars)` rows in total. You can also embed plots, for example:
+
+```{r scatterplot, echo=FALSE}
+plot(cars)
+```
+
+
+

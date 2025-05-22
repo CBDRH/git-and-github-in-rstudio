@@ -202,8 +202,8 @@
     <div class="slides">
 
 
-<section id="reproducible-research-with-git-and-github" class="slide level2 title-slide center">
-<h2>Reproducible research with <code>Git</code> and <code>GitHub</code></h2>
+<section id="git-and-github-in-rstudio" class="slide level2 title-slide center">
+<h2><code>Git</code> and <code>GitHub</code> in RStudio</h2>
 
 <img src="../images/github-mark-white.png" class="r-stretch"></section>
 <section id="the-challenge" class="slide level2">
@@ -220,9 +220,11 @@
 <section id="the-challenge-1" class="slide level2">
 <h2>The Challenge</h2>
 <div>
-<p><strong>Managing versions</strong> What do you do with old code?</p>
-<p><strong>Ensuring reproducibility</strong> Can others reproduce your results? What about your future self?</p>
-<p><strong>Facilitating collaboration</strong> Can other team members easily contribute?</p>
+<ul>
+<li class="fragment"><p><strong>Managing versions</strong> What do you do with old code?</p></li>
+<li class="fragment"><p><strong>Ensuring reproducibility</strong> Can others reproduce your results? What about your future self?</p></li>
+<li class="fragment"><p><strong>Facilitating collaboration</strong> Can other team members easily contribute?</p></li>
+</ul>
 </div>
 </section>
 <section id="the-old-school-solution" class="slide level2 smaller">
@@ -232,10 +234,10 @@
 <ul>
 <li class="fragment"><p>Using file naming conventions to track different file versions</p>
 <ul>
-<li class="fragment">analysis-16jun2024.do</li>
-<li class="fragment">analysis-19jun2024-mh.do</li>
-<li class="fragment">analysis-final.do</li>
-<li class="fragment">analysis-final-final.do</li>
+<li class="fragment">analysis-16may2025.R</li>
+<li class="fragment">analysis-19may2025-mh.R</li>
+<li class="fragment">analysis-final.R</li>
+<li class="fragment">analysis-final-final.R</li>
 </ul></li>
 <li class="fragment"><p>Note changes directly in code comments or separate documentation</p></li>
 <li class="fragment"><p>Use shared folders, google drive etc</p></li>
@@ -246,7 +248,7 @@
 <section id="the-old-school-solution-1" class="slide level2">
 <h2>The old school solution 🛵</h2>
 <blockquote>
-<p>This is ok(ish) for one person working on a small project. But if the project is <strong>large</strong>, involves <strong>many people</strong> or goes on for a <strong>long time</strong> this approach very quickly breaks down</p>
+<p>This is ok(ish) for 1-2 people working on a small project. But if the project is <strong>large</strong>, involves <strong>many people</strong> or goes on for a <strong>long time</strong> this approach very quickly breaks down</p>
 </blockquote>
 </section>
 <section id="the-new-school-solution" class="slide level2">
@@ -367,6 +369,7 @@
 <li>Terminal (Mac)</li>
 <li>Git bash (Windows)</li>
 <li>PowerShell (Windows)</li>
+<li>RStudio Terminal</li>
 </ul>
 </div><div class="column" style="width:66%;">
 <p><img data-src="../images/git-bash.png"></p>
@@ -449,6 +452,78 @@
 <h1>Key concepts</h1>
 
 </section>
+<section id="key-concept-r-projects" class="slide level2">
+<h2>Key concept: R Projects</h2>
+<blockquote>
+<p>We use R projects to keep all our code and files organised in a single space</p>
+</blockquote>
+
+<!-- Mini Exercise 1. Create a New Repo -->
+<img data-src="../images/horst/rproject-skater.png" data-align="center" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://twitter.com/allison_horst">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></p></section>
+<section id="mini-exercise" class="slide level2">
+<h2>Mini-Exercise</h2>
+<div class="clock">
+<p><i class="fa-solid fa-clock" aria-label="clock"></i> 3 minutes</p>
+</div>
+<h3 id="create-a-new-project-in-rstudio">Create a new project in RStudio</h3>
+<div class="columns">
+<div class="column" style="width:25%;">
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&amp;color=yellow&amp;hrs=0&amp;min=3&amp;sec=0" frameborder="0">
+</iframe>
+</div><div class="column" style="width:75%;">
+<ol type="1">
+<li>In the top right-hand corner of Rstudio (i) click the arrow and (ii) choose <strong>New Project</strong> <span><img src="../images/rstudio-new-project.png"></span></li>
+<li>Select <strong>New Directory</strong> then <strong>New Project</strong></li>
+<li>Set the directory name to <strong>Exercise 1</strong> and choose a sensible subdirectory location (this is where the project will live on your computer)</li>
+<li>Tick ✅ <strong>Create a Git Repository</strong></li>
+<li>Click <strong>Create Project</strong></li>
+</ol>
+</div></div>
+</section>
+<section id="key-concept-absolute-paths" class="slide level2">
+<h2>Key concept: Absolute paths</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">setwd</span>(<span class="st">"/Users/z3509778/Library/CloudStorage/OneDrive-UNSW/Data Vis Workshop/CourseSite"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>If the first line of your R script is</p>
+<p><code>setwd("C:\Users\jenny\path\that\only\I\have")</code></p>
+<p>I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.</p>
+</blockquote>
+<div class="figLab">
+<p>—Jenny Bryan in <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Project-oriented workflow</a></p>
+</div>
+</div>
+</section>
+<section id="key-concept-relative-paths-with-herehere" class="slide level2">
+<h2>Key concept: Relative paths with <code>here::here()</code></h2>
+
+<!-- Mini Exercise 2. Are you here -->
+<img data-src="../images/horst/here-here.png" data-align="center" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://twitter.com/allison_horst">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></p></section>
+<section id="mini-exercise-1" class="slide level2">
+<h2>Mini-Exercise</h2>
+<div class="clock">
+<p><i class="fa-solid fa-clock" aria-label="clock"></i> 3 minutes</p>
+</div>
+<h3 id="are-you-here-yet">Are you <code>here</code> yet?</h3>
+<div class="columns">
+<div class="column" style="width:25%;">
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&amp;color=yellow&amp;hrs=0&amp;min=3&amp;sec=0" frameborder="0">
+</iframe>
+</div><div class="column" style="width:75%;">
+<ol type="1">
+<li><p>Make sure you are working in the R Project you created earlier <span><img src="../images/project-exercise1.png" height="28pts" style="vertical-align: middle;"></span></p></li>
+<li><p>Enter <code>here::here()</code> at the console to see your current working directory. This should be where you saved your project!</p></li>
+<li><p>Enter <code>here::here(".gitignore")</code> at the console. What happens?</p></li>
+<li><p>Enter <code>file.exists(here::here(".gitignore"))</code> at the console. This should return <code>TRUE</code>. Note that you don’t need the full path to locate the file!</p></li>
+</ol>
+</div></div>
+<div class="figLab">
+<p><strong>Note</strong> We will talk more about what the <code>.gitignore</code> file actually does later</p>
+</div>
+</section>
 <section id="key-concept-repository" class="slide level2">
 <h2>Key concept: Repository</h2>
 <div class="columns">
@@ -479,18 +554,145 @@
 </ul>
 </div></div>
 </section>
-<section id="key-concept-diff" class="slide level2">
-<h2>Key concept: Diff</h2>
-<div class="columns">
-<div class="column">
-<p><img data-src="../images/diff-example.png"></p>
-</div><div class="column">
-<h3 id="diff">Diff</h3>
+<section id="key-concept-staging-area" class="slide level2">
+<h2>Key concept: Staging area</h2>
+<p>You can only commit files that have been <code>added to the staging area</code></p>
+<div class="fragment">
+<div>
+<p>There are a few advantages to breaking commits into two steps:</p>
 <ul>
-<li><p>A diff is the set of changes between two versions of a file</p></li>
-<li><p>When you commit, it is the <em>diff</em> that gets recorded, not the whole version</p></li>
-<li><p>The screenshot highlights a single diff: deletion of the word “clinic”</p></li>
+<li class="fragment"><p>You can split a big edit into bite-sized pieces</p></li>
+<li class="fragment"><p>Easier to review</p></li>
+<li class="fragment"><p>If you make a mistake you can <em>unstage</em>. You can’t un-commit!</p></li>
 </ul>
+</div>
+<!-- Mini Exercise 3. Practice add-commit workflow -->
+</div>
+</section>
+<section id="mini-exercise-2" class="slide level2">
+<h2>Mini-Exercise</h2>
+<div class="clock">
+<p><i class="fa-solid fa-clock" aria-label="clock"></i> 3 minutes</p>
+</div>
+<h3 id="try-adding-and-committing">Try adding and committing</h3>
+<div class="columns">
+<div class="column" style="width:25%;">
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&amp;color=yellow&amp;hrs=0&amp;min=3&amp;sec=0" frameborder="0">
+</iframe>
+</div><div class="column" style="width:75%;">
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Task</a></li><li><a href="#tabset-1-2"><i class="fa-solid fa-camera"></i> New File</a></li><li><a href="#tabset-1-3"><i class="fa-solid fa-camera"></i> Add</a></li><li><a href="#tabset-1-4"><i class="fa-solid fa-camera"></i> Commit</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<ol type="1">
+<li><p>Make sure you are working in the R Project you created earlier <span><img src="../images/project-exercise1.png" height="28pts" style="vertical-align: middle;"></span></p></li>
+<li><p>Create and save a new text file named <code>recipe.txt</code> (File &gt; New File &gt; Text File). You should be able to see the new file in the Git panel <i class="fa-solid fa-camera"></i></p></li>
+<li><p>In the Git panel, tick the box next to <code>recipe.txt</code> to add the file to the staging area <i class="fa-solid fa-camera"></i></p></li>
+<li><p>Click the commit icon <span><img src="../images/commit-icon.png" height="28pts" style="vertical-align: middle;"></span> to commit the file. Add a sensible message then click <strong>Commit</strong> <i class="fa-solid fa-camera"></i></p></li>
+</ol>
+</div>
+<div id="tabset-1-2">
+<p><img data-src="../images/exercise1-newfile.png"></p>
+</div>
+<div id="tabset-1-3">
+<p><img data-src="../images/exercise1-add.png"></p>
+</div>
+<div id="tabset-1-4">
+<p><img data-src="../images/exercise1-commit.png"></p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="key-concept-the-.gitignore-file" class="slide level2">
+<h2>Key concept: The <code>.gitignore</code> file</h2>
+<p>You can tell git to ignore specific files and folders by listing them in a special file: <code>.gitignore</code></p>
+<div class="fragment">
+<p>The default <code>.gitignore</code> file for R projects list files that are specific to your configuration—these are personal so we don’t want to share them.</p>
+<pre><code>.Rproj.user
+.Rhistory
+.RData
+.Ruserdata</code></pre>
+</div>
+<div class="fragment">
+<p><code>.gitignore</code> also recognises patterns:</p>
+<ul>
+<li><code>*.xlsx</code> (ignore all xlsx files)</li>
+<li><code>*.Rda</code> (ignore all .Rda files)</li>
+<li><code>/Data</code> (ignore everything in the folder named Data)</li>
+</ul>
+<!-- Mini Exercise 5. .gitignore file -->
+</div>
+</section>
+<section id="mini-exercise-3" class="slide level2">
+<h2>Mini-Exercise</h2>
+<div class="clock">
+<p><i class="fa-solid fa-clock" aria-label="clock"></i> 3 minutes</p>
+</div>
+<h3 id="the-.gitignore-file">The <code>.gitignore</code> file</h3>
+<div class="columns">
+<div class="column" style="width:25%;">
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&amp;color=yellow&amp;hrs=0&amp;min=3&amp;sec=0" frameborder="0">
+</iframe>
+</div><div class="column" style="width:75%;">
+<ol type="1">
+<li><p>Make sure you are working in the R Project you created earlier <span><img src="../images/project-exercise1.png" height="28pts" style="vertical-align: middle;"></span></p></li>
+<li><p>Create and save a new file <code>private.txt</code> (File &gt; New File &gt; Text File). Git should automatically detect the new file so you should see the file appear in the git panel.</p></li>
+<li><p>Open the <code>.gitignore</code> file and add the text <code>private.txt</code> on a new line. Click save.</p></li>
+</ol>
+<p>Once you ignore the file it is no longer being tracked and it should disappear from the git panel.</p>
+</div></div>
+</section>
+<section id="key-concept-fork" class="slide level2">
+<h2>Key Concept: Fork</h2>
+<p>To <code>fork</code> a repo means to take a copy of the repo on GitHub</p>
+</section>
+<section id="key-concept-clone" class="slide level2">
+<h2>Key Concept: Clone</h2>
+<!-- Mini Exercise 4. Clone a remote repo -->
+</section>
+<section id="mini-exercise-4" class="slide level2">
+<h2>Mini-Exercise</h2>
+<div class="clock">
+<p><i class="fa-solid fa-clock" aria-label="clock"></i> 5 minutes</p>
+</div>
+<h3 id="clone-a-remote-repo">Clone a remote repo</h3>
+<p><strong>A note on this exercise:</strong> In this exercise you will clone a remote repo from GitHub to your local RStudio. The example uses a repo from the <a href="https://www.medrxiv.org/content/10.1101/2024.06.24.24309427v2">tame</a> R package for identifying clusters of medication use based on dose, timing and type of medication published by Anna Laksafoss from the University of Copenhagen. You will use Git’s powerful search function to find this repo but <strong>note you can do this exercise with any repo you like!</strong></p>
+</section>
+<section id="mini-exercise-5" class="slide level2">
+<h2>Mini-Exercise</h2>
+<div class="clock">
+<p><i class="fa-solid fa-clock" aria-label="clock"></i> 5 minutes</p>
+</div>
+<h3 id="clone-a-remote-repo-1">Clone a remote repo</h3>
+<div class="columns">
+<div class="column" style="width:25%;">
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&amp;color=yellow&amp;hrs=0&amp;min=5&amp;sec=0" frameborder="0">
+</iframe>
+</div><div class="column" style="width:75%;">
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Task</a></li><li><a href="#tabset-2-2"><i class="fa-solid fa-camera"></i> GitHub</a></li><li><a href="#tabset-2-3"><i class="fa-solid fa-camera"></i> URL</a></li><li><a href="#tabset-2-4"><i class="fa-solid fa-camera"></i> Clone</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<ol type="1">
+<li><p>On <a href="https://github.com/">github.com</a> search <strong>Anna Laksafoss</strong> and open the <code>tame</code> R package repo <i class="fa-solid fa-camera"></i></p></li>
+<li><p>Within the repo, click on <span style="background-color: #238636; color:white; border-radius: 10px; padding:2px 5px 2px 5px"> <i class="fa-solid fa-code"></i> Code</span> and copy the HTTPS url to your clipboard <i class="fa-solid fa-camera"></i></p></li>
+<li><p>Launch the RStudio New Project Wizard, but this time select <strong>Version Control</strong> then <strong>Git</strong></p></li>
+<li><p>Paste the HTTPS url into the <strong>Repository URL</strong> box and specify a sensible subdirectory location for this new repo <i class="fa-solid fa-camera"></i></p></li>
+<li><p>Optionally tick ✅ <strong>Open in new session</strong> then select <strong>Create Project</strong></p></li>
+</ol>
+</div>
+<div id="tabset-2-2">
+<p><img data-src="../images/minex4-repo.png"></p>
+</div>
+<div id="tabset-2-3">
+<p><img data-src="../images/minex4-url.png"></p>
+</div>
+<div id="tabset-2-4">
+<p><img data-src="../images/minex4-clone.png"></p>
+</div>
+</div>
+</div>
 </div></div>
 </section></section>
 <section>
@@ -513,52 +715,6 @@
 <p>We will use the RStudio Interface</p>
 <p><img data-src="../images/rstudio-pane.png"></p>
 </div>
-</section>
-<section id="r-projects" class="slide level2">
-<h2>R Projects</h2>
-<blockquote>
-<p>We use R projects to keep all our code and files organised in a single space</p>
-</blockquote>
-
-<img data-src="../images/horst/rproject-skater.png" data-align="center" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://twitter.com/allison_horst">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></p></section>
-<section id="absolute-paths" class="slide level2">
-<h2>Absolute paths</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">setwd</span>(<span class="st">"/Users/z3509778/Library/CloudStorage/OneDrive-UNSW/Data Vis Workshop/CourseSite"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<p><br></p>
-<blockquote>
-<p>If the first line of your R script is</p>
-<p><code>setwd("C:\Users\jenny\path\that\only\I\have")</code></p>
-<p>I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.</p>
-</blockquote>
-<div class="figLab">
-<p>—Jenny Bryan in <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Project-oriented workflow</a></p>
-</div>
-</div>
-</section>
-<section id="relative-paths-with-herehere" class="slide level2">
-<h2>Relative paths with <code>here::here()</code></h2>
-
-<img data-src="../images/horst/here-here.png" data-align="center" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://twitter.com/allison_horst">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></p></section>
-<section id="mini-exercise" class="slide level2">
-<h2>Mini-Exercise</h2>
-<div class="clock">
-<p><i class="fa-solid fa-clock" aria-label="clock"></i> 3 minutes</p>
-</div>
-<h3 id="are-you-here-yet">Are you <code>here</code> yet?</h3>
-<div class="columns">
-<div class="column" style="width:34%;">
-<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&amp;color=yellow&amp;hrs=0&amp;min=3&amp;sec=0" frameborder="0">
-</iframe>
-</div><div class="column" style="width:66%;">
-<ol type="1">
-<li><p>Enter <code>here::here()</code> at the console to see your current working directory. This should be where you saved your project!</p></li>
-<li><p>Enter <code>here::here("exercises")</code> at the console. What happens?</p></li>
-<li><p>Enter <code>list.files(here::here("exercises"))</code> at the console. Note that you don’t need the full path!</p></li>
-</ol>
-</div></div>
 </section></section>
 <section>
 <section id="frequently-asked-questions" class="title-slide slide level1 center">
@@ -580,23 +736,16 @@
 <p>It is best practice to keep commits fairly small and related, especially for mature projects.</p>
 </div>
 </section>
-<section id="whats-with-the-staging-area" class="slide level2">
-<h2>What’s with the staging area?</h2>
-<div class="fragment">
-<p>There are advantages of breaking up the commit into two steps</p>
-<ul>
-<li><p>You can split a big edit into bite-sized pieces</p></li>
-<li><p>Easier to review</p></li>
-<li><p>If you make a mistake you can <em>unstage</em>. You can’t un-commit!</p></li>
-</ul>
-</div>
-</section>
 <section id="what-about-my-sensitive-datacode" class="slide level2">
 <h2>What about my sensitive data/code?</h2>
 <div class="fragment">
-<p>If your data are sensitive be very careful not to track with Git (more tips on this later).</p>
-<p>Private repos are available if you don’t want the public to see your code (you can change to public later if desired.)</p>
-<p>Git Hosting Services like Gitea are available in secure analysis environments (SURE/ERICA etc)</p>
+<div class="{incremental}">
+<ul>
+<li><p>If your data are sensitive be very careful not to track with Git</p></li>
+<li><p>Private repos are available if you don’t want the public to see your code (you can change to public later if desired.)</p></li>
+<li><p>Git Hosting Services like Gitea are available in secure analysis environments (SURE/ERICA etc)</p></li>
+</ul>
+</div>
 </div>
 </section>
 <section id="how-does-my-repo-align-with-my-project-folder" class="slide level2">
@@ -613,33 +762,8 @@
 <section id="any-other-questions" class="title-slide slide level1 center">
 <h1>Any other questions?</h1>
 
-</section>
-
-<section>
-<section id="demo" class="title-slide slide level1 center">
-<h1>Demo</h1>
 
 </section>
-<section id="mini-exercise-1" class="slide level2 smaller">
-<h2>Mini-Exercise</h2>
-<div class="clock">
-<p><i class="fa-solid fa-clock" aria-label="clock"></i> 15 minutes</p>
-</div>
-<h3 id="fork-the-exercise-repo-and-practice-the-git-workflow">Fork the exercise repo and practice the git workflow</h3>
-<div class="columns">
-<div class="column" style="width:34%;">
-<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&amp;color=yellow&amp;hrs=0&amp;min=15&amp;sec=0" frameborder="0">
-</iframe>
-</div><div class="column" style="width:66%;">
-<p>See <strong>Exercises: Day 1. Github</strong></p>
-<ol type="1">
-<li><p>Fork the Course Materials</p></li>
-<li><p>Practice the add-commit-push workflow</p></li>
-</ol>
-</div></div>
-
-
-</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

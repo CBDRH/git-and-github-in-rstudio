@@ -1,0 +1,130 @@
+---
+format: 
+  revealjs:
+    theme: [white]
+---
+
+## {background-image="../images/hot-air-balloon.png" background-size="contain"}
+
+## {background-image="../images/cairns.jpg" background-size="contain"}
+
+## {background-image="../images/sheep-cairns.jpg" background-size="contain"}
+
+## {background-image="../images/kayak.jpg" background-size="contain"}
+
+## {background-image="../images/molly-snoozy.png" background-size="contain"}
+
+## {background-image="../images/the-bfg.webp" background-size="contain"}
+
+## {.center-slide}
+
+![[Artwork by @allison_horst](https://twitter.com/allison_horst)
+](../images/horst/r-at-first-i-was-like.png)
+
+## The Pareto Principle
+
+AKA The 80/20 rule
+
+. . . 
+
+>80% of Italy's land was owned by 20% of the population 
+><br>
+>_---Vilfredo Pareto 1848--1923_
+
+
+## The Pareto Principle
+
+AKA The 80/20 rule
+
+>20% of your clothes are worn 80% of the time, while the other 80% just hang there judging you
+
+## The Pareto Principle
+
+AKA The 80/20 rule
+
+>80% of parenting is just repeating 20% of the phrases: _Don’t touch that_, _Put that down_, and _Because I said so_
+
+
+## The Pareto Principle
+
+The 80/20 rule in Data Visualisation
+
+>80% of the work is getting the data in the right shape
+
+
+<!-- ## {background-video="../images/slippers.M4V" background-size="contain"} -->
+
+## The Puppy Principle
+
+{{< video ../images/slippers.M4V width="1000" height="600">}}
+
+## Day 1: The RStudio environment
+
+::: {.center-image}
+![](../images/horst/rproject-skater.png)
+
+[Artwork by @allison_horst](https://twitter.com/allison_horst)
+
+:::
+
+
+## Day 1: Reproducible research with `Git` and `GitHub`
+
+::: {.center-image}
+![](../images/horst/git-commit.png)
+
+[Artwork by @allison_horst](https://twitter.com/allison_horst)
+
+:::
+
+
+## Day 1: Data preparation with `dplyr`
+
+![Illustrations from the [Openscapes](https://www.openscapes.org/) blog [Tidy Data for reproducibility, efficiency, and collaboration](https://www.openscapes.org/blog/2020/10/12/tidy-data/) by Julia Lowndes and Allison Horst.](../images/horst/tidy-data-friends.jpg){align='center'}
+
+
+
+## Day 2: Data visualisation with `ggplot2`
+
+![[Artwork by @allison_horst](https://twitter.com/allison_horst){align='center'}
+](../images/horst/ggplot2-data-masterpiece.png)
+
+
+
+## Day 2: Story telling with data
+
+![Storytelling with data](../images/story-image.jpg){width=50% centre='align'}
+
+
+
+## Day 2: Literate programming with `rmarkdown`
+
+![[Artwork by @allison_horst](https://twitter.com/allison_horst)](../images/horst/rmarkdown-band.png)
+
+
+## End goal
+
+![Figure 1](../images/self-assessed-health.png){align='center'}
+
+## End goal
+
+![Figure 2](../images/chronic-conditions-2001-2022.png){align='center'}
+
+## How do we get there?
+
+:::: {.column-page-inset}
+
+::: {layout-ncol=2}
+
+![This took 4 lines of code](../images/figure1-baseplot.png)
+
+![How many lines of code did this take?](../images/self-assessed-health.png)
+:::
+
+::::
+
+# We get there one step at a time
+
+## {background-video="../images/figure1-step-by-step.mp4" background-size="contain"}
+
+

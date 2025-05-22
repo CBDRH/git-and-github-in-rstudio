@@ -7,7 +7,7 @@ footer: '<a href="/lectures/overview.qmd">{{< fa house >}}</a>'
 slide-number: c/t
 ---
 
-## Reproducible research with `Git` and `GitHub` {.title-slide}
+## `Git` and `GitHub` in RStudio {.title-slide}
 
 <img src="../images/github-mark-white.png"></img>
 
@@ -26,13 +26,14 @@ Organising these files is an important, albeit often unglamorous, part of our jo
 
 ::: {.incremental}
 
-**Managing versions** What do you do with old code? 
+* **Managing versions** What do you do with old code? 
 
-**Ensuring reproducibility** Can others reproduce your results? What about your future self? 
+* **Ensuring reproducibility** Can others reproduce your results? What about your future self? 
 
-**Facilitating collaboration** Can other team members easily contribute?
+* **Facilitating collaboration** Can other team members easily contribute?
 
 :::
+
 ## The old school solution 🛵 {.smaller}
 
 The old school solution combines many practical strategies:
@@ -40,10 +41,10 @@ The old school solution combines many practical strategies:
 ::: {.incremental}
 * Using file naming conventions to track different file versions 
 
-    * analysis-16jun2024.do 
-    * analysis-19jun2024-mh.do 
-    * analysis-final.do 
-    * analysis-final-final.do
+    * analysis-16may2025.R 
+    * analysis-19may2025-mh.R 
+    * analysis-final.R 
+    * analysis-final-final.R
 
 * Note changes directly in code comments or separate documentation
 
@@ -56,7 +57,7 @@ The old school solution combines many practical strategies:
 
 ## The old school solution 🛵
 
-> This is ok(ish) for one person working on a small project. But if the project is **large**, involves **many people** or goes on for a **long time** this approach very quickly breaks down 
+> This is ok(ish) for 1-2 people working on a small project. But if the project is **large**, involves **many people** or goes on for a **long time** this approach very quickly breaks down 
 
 ## The new school solution 🚀
 
@@ -245,6 +246,7 @@ To use Git on your computer you need a _Git Client_. There are [heaps](https://g
 * Terminal (Mac) 
 * Git bash (Windows) 
 * PowerShell (Windows)
+* RStudio Terminal
 
 :::
 
@@ -381,6 +383,115 @@ To enable collaboration you need a _Git Hosting service_. There are heaps of [op
 
 # Key concepts
 
+## Key concept: R Projects
+
+>We use R projects to keep all our code and files organised in a single space
+
+![[Artwork by @allison_horst](https://twitter.com/allison_horst)](../images/horst/rproject-skater.png){align='center'}
+
+
+<!-- Mini Exercise 1. Create a New Repo -->
+
+## Mini-Exercise
+
+::: {.clock}
+
+{{< fa clock >}} 3 minutes
+
+:::
+
+### Create a new project in RStudio
+
+:::: {.columns}
+
+::: {.column width=25%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=3&sec=0" frameborder="0"></iframe>
+  
+:::
+
+::: {.column width=75%}
+
+1. In the top right-hand corner of Rstudio (i) click the arrow and (ii) choose **New Project** <span><img src="/images/rstudio-new-project.png"/></span>
+1. Select **New Directory** then **New Project**
+1. Set the directory name to **Exercise 1** and choose a sensible subdirectory location (this is where the project will live on your computer)
+1. Tick ✅ **Create a Git Repository**
+1. Click **Create Project**
+:::
+::::
+
+
+## Key concept: Absolute paths 
+
+```{r}
+#| echo: true
+#| eval: false
+
+setwd("/Users/z3509778/Library/CloudStorage/OneDrive-UNSW/Data Vis Workshop/CourseSite")
+
+```
+
+. . . 
+
+<br>
+
+> If the first line of your R script is
+>
+> `setwd("C:\Users\jenny\path\that\only\I\have")`
+>
+> I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.
+
+::: {.figLab}
+
+---Jenny Bryan in [Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)
+
+:::
+
+
+## Key concept: Relative paths with `here::here()`
+
+![[Artwork by @allison_horst](https://twitter.com/allison_horst)](../images/horst/here-here.png){align='center'}
+
+
+<!-- Mini Exercise 2. Are you here -->
+
+## Mini-Exercise
+
+::: {.clock}
+
+{{< fa clock >}} 3 minutes
+
+:::
+
+### Are you `here` yet?
+
+:::: {.columns}
+
+::: {.column width=25%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=3&sec=0" frameborder="0"></iframe>
+  
+:::
+
+::: {.column width=75%}
+
+
+1. Make sure you are working in the R Project you created earlier <span><img src="/images/project-exercise1.png" height="28pts" style="vertical-align: middle;"/></span> 
+
+1. Enter `here::here()` at the console to see your current working directory. This should be where you saved your project!
+
+1. Enter `here::here(".gitignore")` at the console. What happens?
+
+1. Enter `file.exists(here::here(".gitignore"))` at the console. This should return `TRUE`. Note that you don't need the full path to locate the file! 
+
+:::
+::::
+
+::: {.figLab}
+**Note** We will talk more about what the `.gitignore` file actually does later
+:::
+
+
 ## Key concept: Repository 
 
 :::: {.columns}
@@ -431,28 +542,207 @@ To enable collaboration you need a _Git Hosting service_. There are heaps of [op
 
 ::::
 
-## Key concept: Diff 
+## Key concept: Staging area
+
+You can only commit files that have been `added to the staging area`
+
+. . .
+
+::: {.incremental}
+
+There are a few advantages to breaking commits into two steps:
+
+* You can split a big edit into bite-sized pieces 
+
+* Easier to review
+
+* If you make a mistake you can _unstage_. You can't un-commit!
+
+:::
+
+<!-- Mini Exercise 3. Practice add-commit workflow -->
+
+## Mini-Exercise
+
+::: {.clock}
+
+{{< fa clock >}} 3 minutes
+
+:::
+
+### Try adding and committing
 
 :::: {.columns}
 
-::: {.column}
+::: {.column width=25%}
 
-![](../images/diff-example.png)
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=3&sec=0" frameborder="0"></iframe>
+  
+:::
+
+::: {.column width=75%}
+
+::: {.panel-tabset}
+
+### Task
+
+1. Make sure you are working in the R Project you created earlier <span><img src="/images/project-exercise1.png" height="28pts" style="vertical-align: middle;"/></span> 
+
+1. Create and save a new text file named `recipe.txt` (File > New File > Text File). You should be able to see the new file in the Git panel <i class="fa-solid fa-camera"></i>
+
+1. In the Git panel, tick the box next to `recipe.txt` to add the file to the staging area <i class="fa-solid fa-camera"></i>
+
+1. Click the commit icon <span><img src="/images/commit-icon.png" height="28pts" style="vertical-align: middle;"/></span> to commit the file. Add a sensible message then click **Commit** <i class="fa-solid fa-camera"></i>
+
+### <i class="fa-solid fa-camera"></i> New File
+
+![](../images/exercise1-newfile.png)
+
+### <i class="fa-solid fa-camera"></i> Add
+
+![](../images/exercise1-add.png)
+
+### <i class="fa-solid fa-camera"></i> Commit
+
+![](../images/exercise1-commit.png)
 
 :::
 
-::: {.column}
 
-### Diff
+:::
+::::
 
-* A diff is the set of changes between two versions of a file 
 
-* When you commit, it is the _diff_ that gets recorded, not the whole version
+## Key concept: The `.gitignore` file
 
-* The screenshot highlights a single diff: deletion of the word "clinic" 
+You can tell git to ignore specific files and folders by listing them in a special file: `.gitignore`
+
+. . . 
+
+The default `.gitignore` file for R projects list files that are specific to your configuration---these are personal so we don't want to share them. 
+
+```
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+```
+
+. . . 
+
+`.gitignore` also recognises patterns: 
+
+ 
+* `*.xlsx` (ignore all xlsx files)
+* `*.Rda` (ignore all .Rda files)
+* `/Data` (ignore everything in the folder named Data)
+
+<!-- Mini Exercise 5. .gitignore file -->
+
+## Mini-Exercise 
+
+::: {.clock}
+
+{{< fa clock >}} 3 minutes
 
 :::
 
+### The `.gitignore` file
+
+:::: {.columns}
+
+::: {.column width=25%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=3&sec=0" frameborder="0"></iframe>
+  
+:::
+
+::: {.column width=75%}
+
+1. Make sure you are working in the R Project you created earlier <span><img src="/images/project-exercise1.png" height="28pts" style="vertical-align: middle;"/></span> 
+
+1. Create and save a new file `private.txt` (File > New File > Text File). Git should automatically detect the new file so you should see the file appear in the git panel. 
+
+1. Open the `.gitignore` file and add the text `private.txt` on a new line. Click save.
+
+Once you ignore the file it is no longer being tracked and it should disappear from the git panel. 
+
+:::
+::::
+
+## Key Concept: Fork
+
+To `fork` a repo means to take a copy of the repo on GitHub
+
+## Key Concept: Clone
+
+<!-- Mini Exercise 4. Clone a remote repo -->
+
+## Mini-Exercise 
+
+::: {.clock}
+
+{{< fa clock >}} 5 minutes
+
+:::
+
+### Clone a remote repo
+
+
+**A note on this exercise:** In this exercise you will clone a remote repo from GitHub to your local RStudio. The example uses a repo from the [tame](https://www.medrxiv.org/content/10.1101/2024.06.24.24309427v2) R package for identifying clusters of medication use based on dose, timing and type of medication published by Anna Laksafoss from the University of Copenhagen. You will use Git's powerful search function to find this repo but **note you can do this exercise with any repo you like!**
+
+
+
+## Mini-Exercise 
+
+::: {.clock}
+
+{{< fa clock >}} 5 minutes
+
+:::
+
+### Clone a remote repo
+
+:::: {.columns}
+
+::: {.column width=25%}
+
+<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=5&sec=0" frameborder="0"></iframe>
+  
+:::
+
+::: {.column width=75%}
+
+::: {.panel-tabset}
+
+### Task
+
+1. On [github.com](https://github.com/) search **Anna Laksafoss**  and open the `tame` R package repo <i class="fa-solid fa-camera"></i>
+
+1. Within the repo, click on <span style="background-color: #238636; color:white; border-radius: 10px; padding:2px 5px 2px 5px"> <i class="fa-solid fa-code"></i> Code</span> and copy the HTTPS url to your clipboard <i class="fa-solid fa-camera"></i>
+
+1. Launch the RStudio New Project Wizard, but this time select **Version Control** then **Git** 
+
+1. Paste the HTTPS url into the **Repository URL** box and specify a sensible subdirectory location for this new repo <i class="fa-solid fa-camera"></i>
+
+1. Optionally tick ✅  **Open in new session** then select **Create Project**
+
+### <i class="fa-solid fa-camera"></i> GitHub
+
+![](../images/minex4-repo.png)
+
+### <i class="fa-solid fa-camera"></i> URL
+
+![](../images/minex4-url.png)
+
+### <i class="fa-solid fa-camera"></i> Clone
+
+![](../images/minex4-clone.png)
+
+:::
+
+
+:::
 ::::
 
 
@@ -478,73 +768,6 @@ We will use the RStudio Interface
 ![](../images/rstudio-pane.png)
 
 
-## R Projects
-
->We use R projects to keep all our code and files organised in a single space
-
-![[Artwork by @allison_horst](https://twitter.com/allison_horst)](../images/horst/rproject-skater.png){align='center'}
-
-
-## Absolute paths 
-
-```{r}
-#| echo: true
-#| eval: false
-
-setwd("/Users/z3509778/Library/CloudStorage/OneDrive-UNSW/Data Vis Workshop/CourseSite")
-
-```
-
-. . . 
-
-<br>
-
-> If the first line of your R script is
->
-> `setwd("C:\Users\jenny\path\that\only\I\have")`
->
-> I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.
-
-::: {.figLab}
-
----Jenny Bryan in [Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)
-
-:::
-
-
-## Relative paths with `here::here()`
-
-![[Artwork by @allison_horst](https://twitter.com/allison_horst)](../images/horst/here-here.png){align='center'}
-
-
-## Mini-Exercise
-
-::: {.clock}
-
-{{< fa clock >}} 3 minutes
-
-:::
-
-### Are you `here` yet?
-
-:::: {.columns}
-
-::: {.column width=34%}
-
-<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=3&sec=0" frameborder="0"></iframe>
-  
-:::
-
-::: {.column width=66%}
-
-1. Enter `here::here()` at the console to see your current working directory. This should be where you saved your project!
-
-2. Enter `here::here("exercises")` at the console. What happens?
-
-3. Enter `list.files(here::here("exercises"))` at the console. Note that you don't need the full path! 
-
-:::
-::::
 
 
 # Frequently asked questions 
@@ -569,29 +792,18 @@ Just like when you start writing a word document you might not click save very o
 It is best practice to keep commits fairly small and related, especially for mature projects. 
 
 
-## What's with the staging area? 
-
-. . .
-
-There are advantages of breaking up the commit into two steps 
-
-* You can split a big edit into bite-sized pieces 
-
-* Easier to review
-
-* If you make a mistake you can _unstage_. You can't un-commit!
-
 
 ## What about my sensitive data/code? 
 
 . . . 
 
-If your data are sensitive be very careful not to track with Git (more tips on this later). 
+::: {incremental}
+* If your data are sensitive be very careful not to track with Git 
 
-Private repos are available if you don't want the public to see your code (you can change to public later if desired.)
+* Private repos are available if you don't want the public to see your code (you can change to public later if desired.)
 
-Git Hosting Services like Gitea are available in secure analysis environments (SURE/ERICA etc)
-
+* Git Hosting Services like Gitea are available in secure analysis environments (SURE/ERICA etc)
+:::
 
 
 ## How does my repo align with my project folder?
@@ -607,36 +819,4 @@ Git Hosting Services like Gitea are available in secure analysis environments (S
 * Git ignores files and folders listed in the special `.gitignore` file
 
 # Any other questions? 
-
-# Demo
-
-## Mini-Exercise {.smaller}
-
-::: {.clock}
-
-{{< fa clock >}} 15 minutes
-
-:::
-
-### Fork the exercise repo and practice the git workflow
-
-:::: {.columns}
-
-::: {.column width=34%}
-
-<iframe style="width:100%;max-width:360px;height:360px;" src="https://stopwatch-app.com/widget/timer?theme=dark&color=yellow&hrs=0&min=15&sec=0" frameborder="0"></iframe>
-
-:::
-
-::: {.column width=66%}
-
-See **Exercises: Day 1. Github**
-
-1. Fork the Course Materials
-
-1. Practice the add-commit-push workflow
-
-:::
-
-::::
 
